@@ -1,0 +1,284 @@
+{
+  "metadata": {
+    "title": "Rakan Clinic - Medical Tourism Excellence",
+    "description": "World-class medical tourism services combining advanced healthcare with exceptional patient care"
+  },
+  "header": {
+    "brand": "Rakan Clinic",
+    "nav": {
+      "services": "Services",
+      "about": "About",
+      "contact": "Contact"
+    },
+    "cta": "Book Consultation"
+  },
+  "hero": {
+    "badge": "World-Class Medical Tourism",
+    "title": {
+      "line1": "Your Health Journey",
+      "line2": "Starts Here"
+    },
+    "description": "Experience exceptional medical care with Rakan Clinic. We combine cutting-edge technology, expert physicians, and personalized care to deliver outstanding health outcomes.",
+    "cta": {
+      "primary": "Schedule Consultation",
+      "secondary": "Learn More"
+    }
+  },
+  "stemCell": {
+    "badge": "Advanced Regenerative Medicine",
+    "heading": "What is Stem Cell Therapy?",
+    "intro": "Stem cell therapy represents the forefront of regenerative medicine, offering revolutionary treatment options for a wide range of conditions.",
+    "description": "Our advanced stem cell treatments harness your body's natural healing capabilities to repair damaged tissues, reduce inflammation, and promote regeneration. Using cutting-edge protocols and the highest safety standards, we provide personalized treatment plans tailored to your unique health goals.",
+    "benefits": {
+      "title": "Benefits of Stem Cell Therapy",
+      "items": {
+        "regeneration": {
+          "title": "Tissue Regeneration",
+          "description": "Promotes natural healing and tissue repair"
+        },
+        "inflammation": {
+          "title": "Reduced Inflammation",
+          "description": "Decreases chronic inflammation naturally"
+        },
+        "recovery": {
+          "title": "Faster Recovery",
+          "description": "Accelerates healing and recovery time"
+        },
+        "pain": {
+          "title": "Pain Management",
+          "description": "Reduces chronic pain without surgery"
+        }
+      }
+    }
+  },
+  "doctors": {
+    "badge": "Our Medical Team",
+    "heading": "Meet Our Distinguished Physicians",
+    "subheading": "Board-certified specialists with decades of international experience in regenerative medicine.",
+    "team": {
+      "doctor1": {
+        "name": "Dr. Hiroshi Tanaka",
+        "title": "Medical Director, Regenerative Medicine Specialist",
+        "credentials": "MD, PhD - Tokyo University | 25+ years experience",
+        "bio": "Pioneering expert in stem cell therapy with international training from Johns Hopkins and specialized expertise in anti-aging and regenerative treatments."
+      },
+      "doctor2": {
+        "name": "Dr. Yuki Yamamoto",
+        "title": "Senior Consultant, Internal Medicine",
+        "credentials": "MD - Keio University | 20+ years experience",
+        "bio": "Specialist in comprehensive health optimization and preventive medicine, with extensive experience treating international patients."
+      },
+      "doctor3": {
+        "name": "Dr. Mei Chen",
+        "title": "Aesthetic Medicine Specialist",
+        "credentials": "MD - Peking University | 15+ years experience",
+        "bio": "Expert in aesthetic regenerative treatments, combining advanced medical techniques with natural beauty enhancement."
+      }
+    }
+  },
+  "whyTokyo": {
+    "badge": "Destination Excellence",
+    "heading": "Why Choose Tokyo?",
+    "intro": "Tokyo offers the perfect combination of medical excellence, cultural richness, and modern infrastructure for international medical tourists.",
+    "reasons": {
+      "excellence": {
+        "title": "Medical Excellence",
+        "description": "Japan ranks #1 globally in healthcare quality and patient outcomes"
+      },
+      "technology": {
+        "title": "Advanced Technology",
+        "description": "Access to the world's most cutting-edge medical equipment and protocols"
+      },
+      "safety": {
+        "title": "Safety & Hygiene",
+        "description": "Highest standards of cleanliness and patient safety protocols"
+      },
+      "accessibility": {
+        "title": "Easy Accessibility",
+        "description": "Major international airport hub with excellent transportation"
+      },
+      "experience": {
+        "title": "Cultural Experience",
+        "description": "Combine treatment with an unforgettable cultural journey"
+      },
+      "service": {
+        "title": "Premium Service",
+        "description": "Japanese hospitality and attention to detail in every interaction"
+      }
+    }
+  },
+  "pricing": {
+    "badge": "Investment in Your Health",
+    "heading": "Treatment Programs",
+    "subheading": "Transparent pricing with comprehensive care packages tailored to your needs",
+    "plans": {
+      "essential": {
+        "name": "Essential",
+        "price": "Custom",
+        "description": "Comprehensive consultation and treatment",
+        "features": [
+          "Initial health assessment",
+          "Stem cell treatment (single session)",
+          "Follow-up consultation",
+          "Treatment plan design",
+          "English language support"
+        ],
+        "note": "Starting from ¥800,000"
+      },
+      "premium": {
+        "name": "Premium",
+        "price": "Custom",
+        "description": "Extended care with luxury amenities",
+        "features": [
+          "Comprehensive health evaluation",
+          "Advanced stem cell protocol (2-3 sessions)",
+          "Multiple specialist consultations",
+          "Luxury accommodation assistance",
+          "Multilingual concierge service",
+          "3-month follow-up program"
+        ],
+        "note": "Starting from ¥1,500,000",
+        "featured": true
+      },
+      "elite": {
+        "name": "Elite",
+        "price": "Custom",
+        "description": "Complete wellness optimization",
+        "features": [
+          "VIP comprehensive assessment",
+          "Platinum stem cell protocol (4+ sessions)",
+          "Priority access to all specialists",
+          "White-glove concierge service",
+          "Luxury accommodation included",
+          "6-month comprehensive follow-up",
+          "Complete wellness optimization"
+        ],
+        "note": "Starting from ¥3,000,000"
+      }
+    },
+    "disclaimer": "Final pricing determined during consultation based on individual treatment plan"
+  },
+  "testimonials": {
+    "badge": "Patient Success Stories",
+    "heading": "What Our Patients Say",
+    "subheading": "Real experiences from international patients who chose Rakan Clinic",
+    "reviews": {
+      "review1": {
+        "name": "Michael Chen",
+        "location": "Singapore",
+        "treatment": "Stem Cell Therapy for Joint Pain",
+        "rating": 5,
+        "quote": "After years of chronic knee pain, the stem cell treatment at Rakan Clinic gave me my life back. The professionalism and care exceeded all expectations.",
+        "result": "Pain reduced by 85% after 3 months"
+      },
+      "review2": {
+        "name": "Sarah Williams",
+        "location": "United States",
+        "treatment": "Anti-Aging Treatment",
+        "rating": 5,
+        "quote": "The entire experience was extraordinary. From the initial consultation to the follow-up care, every detail was handled with precision and genuine care.",
+        "result": "Visible improvement in energy and vitality"
+      },
+      "review3": {
+        "name": "Ahmed Al-Rashid",
+        "location": "UAE",
+        "treatment": "Regenerative Medicine",
+        "rating": 5,
+        "quote": "Tokyo's medical expertise combined with Rakan Clinic's personalized approach made this the best decision for my health. Highly recommended.",
+        "result": "Complete recovery, exceeded expectations"
+      }
+    }
+  },
+  "services": {
+    "heading": "Why Choose Rakan Clinic?",
+    "subheading": "We provide comprehensive medical tourism services designed to make your healthcare journey seamless.",
+    "features": {
+      "experts": {
+        "title": "Expert Medical Team",
+        "description": "Board-certified physicians with international training and decades of experience."
+      },
+      "standards": {
+        "title": "Global Standards",
+        "description": "State-of-the-art facilities meeting international healthcare accreditation standards."
+      },
+      "support": {
+        "title": "Full Support",
+        "description": "Complete assistance from consultation through treatment and recovery."
+      }
+    }
+  },
+  "about": {
+    "heading": "About Rakan Clinic",
+    "paragraph1": "Rakan Clinic is a leading destination for medical tourism, offering world-class healthcare services to patients from around the globe. Our mission is to provide accessible, affordable, and exceptional medical care in a comfortable and welcoming environment.",
+    "paragraph2": "With years of experience serving international patients, we understand the unique needs of medical tourists and have developed comprehensive programs to ensure your satisfaction.",
+    "stats": {
+      "experience": {
+        "number": "15+",
+        "label": "Years Experience"
+      },
+      "specialists": {
+        "number": "50+",
+        "label": "Specialists"
+      },
+      "patients": {
+        "number": "10K+",
+        "label": "Patients Served"
+      }
+    }
+  },
+  "contact": {
+    "heading": "Get in Touch",
+    "subheading": "Ready to start your health journey? Contact us today for a free consultation.",
+    "form": {
+      "firstName": {
+        "label": "First Name",
+        "placeholder": "John"
+      },
+      "lastName": {
+        "label": "Last Name",
+        "placeholder": "Doe"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "john@example.com"
+      },
+      "phone": {
+        "label": "Phone",
+        "placeholder": "+1 (555) 123-4567"
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Tell us about your medical needs..."
+      },
+      "submit": "Send Message"
+    }
+  },
+  "footer": {
+    "brand": {
+      "name": "Rakan Clinic",
+      "tagline": "Excellence in medical tourism and patient care."
+    },
+    "services": {
+      "title": "Services",
+      "consultations": "Medical Consultations",
+      "procedures": "Surgical Procedures",
+      "wellness": "Wellness Programs",
+      "travel": "Travel Assistance"
+    },
+    "company": {
+      "title": "Company",
+      "about": "About Us",
+      "team": "Our Team",
+      "testimonials": "Testimonials",
+      "contact": "Contact"
+    },
+    "contactInfo": {
+      "title": "Contact",
+      "email": "info@rakanclinic.com",
+      "phone": "+1 (555) 123-4567",
+      "support": "24/7 Support Available"
+    },
+    "copyright": "© 2025 Rakan Clinic. All rights reserved."
+  }
+}
+

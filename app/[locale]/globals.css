@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+:root {
+  /* Rakan Clinic Brand Colors */
+  --primary: #4a9b7f;
+  --gold: #c9a962;
+  --dark: #1a1a1a;
+  --cream: #f8f6f3;
+  --white: #ffffff;
+  --gray: #666666;
+  --light-gray: #e5e5e5;
+  
+  --background: #f8f6f3;
+  --foreground: #1a1a1a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-gold: var(--gold);
+  --color-cream: var(--cream);
+  --font-heading: var(--font-cormorant);
+  --font-body: var(--font-montserrat);
+}
+
+body {
+  background: var(--cream);
+  color: var(--dark);
+  font-family: var(--font-montserrat), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-cormorant), serif;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+  background-color: rgba(74, 155, 127, 0.2);
+  color: var(--dark);
+}
+
+/* Focus states */
+*:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Line clamp utilities */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Custom Utilities for Rakan Brand */
+.text-primary {
+  color: var(--primary);
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.text-gold {
+  color: var(--gold);
+}
+
+.bg-gold {
+  background-color: var(--gold);
+}
+
+.bg-cream {
+  background-color: var(--cream);
+}
+
+.font-heading {
+  font-family: var(--font-cormorant), serif;
+}
+
+.font-body {
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { 
+    transform: translate(0, 0) rotate(0deg); 
+  }
+  33% { 
+    transform: translate(30px, -50px) rotate(120deg); 
+  }
+  66% { 
+    transform: translate(-20px, 20px) rotate(240deg); 
+  }
+}
+
+/* Hide scrollbar but keep functionality */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Smooth scroll behavior */
+.overflow-x-auto {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}

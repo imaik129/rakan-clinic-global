@@ -1,0 +1,119 @@
+{
+  "metadata": {
+    "title": "Rakan Clinic - Medical Tourism Excellence",
+    "description": "World-class medical tourism services combining advanced healthcare with exceptional patient care"
+  },
+  "header": {
+    "brand": "Rakan Clinic",
+    "nav": {
+      "services": "Services",
+      "about": "About",
+      "contact": "Contact"
+    },
+    "cta": "Book Consultation"
+  },
+  "hero": {
+    "badge": "World-Class Medical Tourism",
+    "title": {
+      "line1": "Your Health Journey",
+      "line2": "Starts Here"
+    },
+    "description": "Experience exceptional medical care with Rakan Clinic. We combine cutting-edge technology, expert physicians, and personalized care to deliver outstanding health outcomes.",
+    "cta": {
+      "primary": "Schedule Consultation",
+      "secondary": "Learn More"
+    }
+  },
+  "services": {
+    "heading": "Why Choose Rakan Clinic?",
+    "subheading": "We provide comprehensive medical tourism services designed to make your healthcare journey seamless.",
+    "features": {
+      "experts": {
+        "title": "Expert Medical Team",
+        "description": "Board-certified physicians with international training and decades of experience."
+      },
+      "standards": {
+        "title": "Global Standards",
+        "description": "State-of-the-art facilities meeting international healthcare accreditation standards."
+      },
+      "support": {
+        "title": "Full Support",
+        "description": "Complete assistance from consultation through treatment and recovery."
+      }
+    }
+  },
+  "about": {
+    "heading": "About Rakan Clinic",
+    "paragraph1": "Rakan Clinic is a leading destination for medical tourism, offering world-class healthcare services to patients from around the globe. Our mission is to provide accessible, affordable, and exceptional medical care in a comfortable and welcoming environment.",
+    "paragraph2": "With years of experience serving international patients, we understand the unique needs of medical tourists and have developed comprehensive programs to ensure your satisfaction.",
+    "stats": {
+      "experience": {
+        "number": "15+",
+        "label": "Years Experience"
+      },
+      "specialists": {
+        "number": "50+",
+        "label": "Specialists"
+      },
+      "patients": {
+        "number": "10K+",
+        "label": "Patients Served"
+      }
+    }
+  },
+  "contact": {
+    "heading": "Get in Touch",
+    "subheading": "Ready to start your health journey? Contact us today for a free consultation.",
+    "form": {
+      "firstName": {
+        "label": "First Name",
+        "placeholder": "John"
+      },
+      "lastName": {
+        "label": "Last Name",
+        "placeholder": "Doe"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "john@example.com"
+      },
+      "phone": {
+        "label": "Phone",
+        "placeholder": "+1 (555) 123-4567"
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Tell us about your medical needs..."
+      },
+      "submit": "Send Message"
+    }
+  },
+  "footer": {
+    "brand": {
+      "name": "Rakan Clinic",
+      "tagline": "Excellence in medical tourism and patient care."
+    },
+    "services": {
+      "title": "Services",
+      "consultations": "Medical Consultations",
+      "procedures": "Surgical Procedures",
+      "wellness": "Wellness Programs",
+      "travel": "Travel Assistance"
+    },
+    "company": {
+      "title": "Company",
+      "about": "About Us",
+      "team": "Our Team",
+      "testimonials": "Testimonials",
+      "contact": "Contact"
+    },
+    "contactInfo": {
+      "title": "Contact",
+      "email": "info@rakanclinic.com",
+      "phone": "+1 (555) 123-4567",
+      "support": "24/7 Support Available"
+    },
+    "copyright": "© 2025 Rakan Clinic. All rights reserved."
+  }
+}
+

@@ -1,0 +1,68 @@
+# Development Rules for Rakan Clinic Website
+
+## 🌍 CRITICAL: Multi-Language Support
+
+**ALL text content MUST use the translation system. NO EXCEPTIONS.**
+
+### Required Pattern:
+```tsx
+import { useTranslations } from 'next-intl';
+
+export default function Component() {
+  const t = useTranslations();
+  return <h1>{t('section.key')}</h1>;
+}
+```
+
+### ❌ FORBIDDEN Patterns:
+```tsx
+// NEVER do this:
+<h1>Hardcoded Text</h1>
+<button>Click Here</button>
+<p>Any English text directly in JSX</p>
+```
+
+## When Adding New Content:
+
+1. **ALWAYS** add translation keys to ALL 7 language files in `messages/`:
+   - en.json (English)
+   - ar.json (Arabic)
+   - es.json (Spanish)
+   - fr.json (French)
+   - de.json (German)
+   - ru.json (Russian)
+   - zh.json (Chinese)
+
+2. **ALWAYS** use `useTranslations()` hook in components
+
+3. **ALWAYS** test in at least English AND Arabic (to verify RTL)
+
+## Code Review Checklist:
+
+- [ ] No hardcoded text strings in JSX
+- [ ] All translation keys exist in ALL language files
+- [ ] Component uses `useTranslations()` hook
+- [ ] Tested in multiple languages
+- [ ] Arabic (RTL) layout works correctly
+
+## File Structure Rules:
+
+- ✅ All pages go in `app/[locale]/`
+- ✅ All translations go in `messages/`
+- ✅ Reusable components go in `components/`
+- ❌ Never create pages outside `app/[locale]/`
+
+## Quick Reference:
+
+**Add text to component:**
+1. Add to all files in `messages/`
+2. Import: `import { useTranslations } from 'next-intl';`
+3. Use hook: `const t = useTranslations();`
+4. Display: `{t('your.key')}`
+
+**See**: I18N_GUIDE.md and QUICK_START.md for details.
+
+---
+
+**Violation of these rules will break multi-language support for international patients!**
+

@@ -1,0 +1,343 @@
+{
+  "metadata": {
+    "title": "Rakan Clinic - Medical Tourism Excellence",
+    "description": "World-class medical tourism services combining advanced healthcare with exceptional patient care"
+  },
+  "header": {
+    "brand": "Rakan Clinic",
+    "home": "Home",
+    "treatments": "Treatments",
+    "symptoms": "Symptoms",
+    "doctors": "Doctors",
+    "about": "About",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "bookOnline": "Book Online"
+  },
+  "hero": {
+    "badge": "Orthopedics & Regenerative Medicine",
+    "title": {
+      "line1": "A Pain-Free Future",
+      "line2": "with Regenerative Medicine"
+    },
+    "description": "Advanced orthopedic care and regenerative treatments in Azabudai Hills, Tokyo. We blend evidence-based Western medicine with proven Eastern techniques to address joint pain, sports injuries, and chronic musculoskeletal conditions.",
+    "cta": {
+      "primary": "Get an Estimate",
+      "secondary": "Learn More"
+    }
+  },
+  "stemCell": {
+    "badge": "Advanced Regenerative Medicine",
+    "heading": "Regenerative Orthopedic Treatments",
+    "intro": "We offer cutting-edge regenerative options including PRP therapy and autologous cell-based treatments to address joint pain and sports injuries without surgery.",
+    "description": "Our treatments include Platelet-Rich Plasma (PRP) therapy and adipose-derived stem cell therapy - evidence-based approaches that harness your body's natural healing capabilities. All treatments adhere to Japanese medical laws and ethical standards, with eligibility determined case-by-case following physician evaluation.",
+    "benefits": {
+      "title": "Common Treatment Applications",
+      "items": {
+        "regeneration": {
+          "title": "Knee Osteoarthritis",
+          "description": "PRP and cell therapy for cartilage preservation and joint pain relief"
+        },
+        "inflammation": {
+          "title": "Sports Injuries",
+          "description": "Tendon injuries, ligament issues, and soft tissue problems"
+        },
+        "recovery": {
+          "title": "Shoulder & Hip Pain",
+          "description": "Non-surgical options for chronic joint conditions"
+        },
+        "pain": {
+          "title": "Spine Conditions",
+          "description": "Minimally invasive approaches for back and neck pain"
+        }
+      }
+    }
+  },
+  "doctors": {
+    "badge": "Our Medical Team",
+    "heading": "Distinguished Physicians & Researchers",
+    "subheading": "World-renowned specialists in orthopedics, regenerative medicine, and osteoimmunology",
+    "team": {
+      "doctor1": {
+        "name": "Dr. Shimizu",
+        "nameJa": "清水医師",
+        "title": "Orthopedic Surgeon & Regenerative Medicine Specialist",
+        "motto": "The cutting-edge medical experience for your future self",
+        "specialties": "Orthopedics, Sports Medicine, Regenerative Medicine (Stem Cell & PRP Therapy)",
+        "credentials": "JOA-Certified Orthopedic Specialist | JOA Sports Medicine Certified | Certified Health Sports Physician",
+        "experience": "35+ years",
+        "bio": "Board-certified orthopedic surgeon with over 35 years of frontline orthopedic practice. Specializes in advanced regenerative medicine including autologous adipose-derived stem cell therapy and PRP treatments. Focuses on fundamental improvement of chronic joint pain and motor function previously difficult with conventional treatments. Provides highly personalized, tailored medical care with maximum consideration for patient time and privacy.",
+        "societies": "Japanese Orthopaedic Association, Japanese Society for Regenerative Medicine, Japanese Society for Joint Disease"
+      },
+      "doctor2": {
+        "name": "Prof. Hiroshi Takayanagi",
+        "nameJa": "高柳 広 教授",
+        "title": "Professor of Immunology, The University of Tokyo",
+        "specialties": "Orthopedics, Immune Diseases, Osteoimmunology",
+        "credentials": "MD, PhD | Professor, Graduate School of Medicine, The University of Tokyo",
+        "experience": "30+ years in research and clinical practice",
+        "bio": "Pioneering researcher who established the field of osteoimmunology - the study of bone-immune system interactions. Graduated from The University of Tokyo School of Medicine (1990), trained at Tokyo University Hospital and Tokyo Metropolitan Geriatric Hospital. Currently serves as Professor at The University of Tokyo since 2012. Holds multiple leadership positions including President of the Japanese Society for Bone and Mineral Research and Director of the Japanese Society of Osteoimmunology.",
+        "awards": "Japanese Society for Rheumatology Award (2004), Japan Medical Association Medical Award (2017), Uehara Prize (2019), Japan Academy Prize (2019)",
+        "publications": "Nature (2000, 2002, 2010, 2024), Nature Immunology (2022)"
+      },
+      "doctor3": {
+        "name": "Dr. Shigeki Toubaru",
+        "nameJa": "桃原 茂樹 医師",
+        "title": "Chairman, Hakuei-kai Medical Corporation",
+        "specialties": "Orthopedics, Rheumatoid Arthritis, Locomotor Disorders",
+        "credentials": "MD, PhD (Keio University) | JOA Specialist | Rheumatology Specialist & Supervisor",
+        "experience": "40+ years in orthopedics and rheumatology",
+        "bio": "Graduated from Keio University School of Medicine and obtained PhD from the same institution. Conducted research at Rush University Medical Center (USA) and participated in Japan-Europe Rheumatoid Surgery Exchange Program. After serving as Assistant, Lecturer, Professor, and Vice Director at Tokyo Women's Medical University Rheumatology Center, became Special Appointed Professor at Keio University before assuming current position in 2025.",
+        "expertise": "Leading Japanese expert in orthopedics and rheumatology, highly regarded for treatment and research in osteoarthritis, rheumatoid arthritis, spinal disorders, osteoporosis, gout, and pseudogout. Actively engaged in medical education and international exchange leveraging extensive clinical and teaching experience."
+      }
+    }
+  },
+  "whyTokyo": {
+    "badge": "Why Azabudai Hills, Tokyo",
+    "heading": "Japan's Leadership in Regenerative Medicine",
+    "intro": "Located in Azabudai Hills - just minutes from central Tokyo - our clinic offers world-class orthopedic regenerative care in a premium, easily accessible environment.",
+    "reasons": {
+      "excellence": {
+        "title": "Regulatory Excellence",
+        "description": "Japanese medical laws ensure the highest safety and ethical standards for regenerative treatments"
+      },
+      "technology": {
+        "title": "Evidence-Based Protocols",
+        "description": "Access to advanced PRP and cell-based therapies with rigorous quality controls"
+      },
+      "safety": {
+        "title": "Sterile Processing",
+        "description": "Reputable partner labs and strict sterility protocols for all cell handling procedures"
+      },
+      "accessibility": {
+        "title": "Central Location",
+        "description": "Azabudai Hills offers premium accessibility by subway and car from major Tokyo hubs"
+      },
+      "experience": {
+        "title": "Integrated Approach",
+        "description": "Unique fusion of Western orthopedics and Eastern medicine (acupuncture) for optimal results"
+      },
+      "service": {
+        "title": "International Support",
+        "description": "English-speaking coordinators, travel planning, hotel guidance, and telemedicine follow-up"
+      }
+    }
+  },
+  "pricing": {
+    "badge": "Investment in Your Health",
+    "heading": "Treatment Programs",
+    "subheading": "Transparent pricing with comprehensive care packages tailored to your needs",
+    "plans": {
+      "essential": {
+        "name": "Essential",
+        "price": "Custom",
+        "description": "Comprehensive consultation and treatment",
+        "features": [
+          "Initial health assessment",
+          "Stem cell treatment (single session)",
+          "Follow-up consultation",
+          "Treatment plan design",
+          "English language support"
+        ],
+        "note": "Starting from ¥800,000"
+      },
+      "premium": {
+        "name": "Premium",
+        "price": "Custom",
+        "description": "Extended care with luxury amenities",
+        "features": [
+          "Comprehensive health evaluation",
+          "Advanced stem cell protocol (2-3 sessions)",
+          "Multiple specialist consultations",
+          "Luxury accommodation assistance",
+          "Multilingual concierge service",
+          "3-month follow-up program"
+        ],
+        "note": "Starting from ¥1,500,000",
+        "featured": true
+      },
+      "elite": {
+        "name": "Elite",
+        "price": "Custom",
+        "description": "Complete wellness optimization",
+        "features": [
+          "VIP comprehensive assessment",
+          "Platinum stem cell protocol (4+ sessions)",
+          "Priority access to all specialists",
+          "White-glove concierge service",
+          "Luxury accommodation included",
+          "6-month comprehensive follow-up",
+          "Complete wellness optimization"
+        ],
+        "note": "Starting from ¥3,000,000"
+      }
+    },
+    "disclaimer": "Final pricing determined during consultation based on individual treatment plan"
+  },
+  "patientJourney": {
+    "badge": "Your Treatment Journey",
+    "heading": "International Patient Process",
+    "subheading": "A clear, step-by-step path from initial inquiry to post-treatment follow-up",
+    "steps": {
+      "step1": {
+        "title": "Contact & Records Review",
+        "description": "Send your inquiry with prior imaging and medical records for preliminary suitability screening"
+      },
+      "step2": {
+        "title": "Remote Consultation",
+        "description": "Discuss symptoms, goals, and treatment options with our medical team to determine if regenerative care is appropriate"
+      },
+      "step3": {
+        "title": "Travel Planning Support",
+        "description": "If you're a candidate, we provide visa letters (if needed), hotel recommendations, and airport/clinic transfers"
+      },
+      "step4": {
+        "title": "In-Clinic Evaluation",
+        "description": "On arrival in Tokyo, receive comprehensive examination and imaging to finalize your treatment plan"
+      },
+      "step5": {
+        "title": "Treatment Day",
+        "description": "Undergo your planned procedure (PRP or cell therapy) with clear pre- and post-procedure instructions"
+      },
+      "step6": {
+        "title": "Recovery & Follow-up",
+        "description": "Receive aftercare guidelines and arrange telemedicine follow-ups once you return home"
+      }
+    },
+    "compliance": "All treatments adhere to Japanese medical laws and ethical standards. Eligibility is determined case-by-case following physician evaluation."
+  },
+  "testimonials": {
+    "badge": "Patient Success Stories",
+    "heading": "International Patient Experiences",
+    "subheading": "Real outcomes from patients who traveled to Tokyo for orthopedic regenerative treatments",
+    "reviews": {
+      "review1": {
+        "name": "International Patient",
+        "location": "Singapore",
+        "treatment": "PRP Therapy for Knee Osteoarthritis",
+        "rating": 5,
+        "quote": "After years of chronic knee pain limiting my activities, the PRP treatment at Rakan Clinic has significantly improved my mobility. The integration of acupuncture with the regenerative treatment was uniquely effective.",
+        "result": "Significant pain reduction and improved mobility"
+      },
+      "review2": {
+        "name": "International Patient",
+        "location": "United States",
+        "treatment": "Adipose-Derived Cell Therapy",
+        "rating": 5,
+        "quote": "The entire journey was professional and supportive. The team helped with travel planning, provided clear explanations about treatment eligibility, and followed up via telemedicine after I returned home.",
+        "result": "Non-surgical solution that exceeded expectations"
+      },
+      "review3": {
+        "name": "International Patient",
+        "location": "Australia",
+        "treatment": "Shoulder Sports Injury Treatment",
+        "rating": 5,
+        "quote": "Japan's regulatory standards for regenerative medicine gave me confidence. The combination of Western orthopedics and Eastern medicine at Rakan Clinic provided comprehensive care I couldn't find elsewhere.",
+        "result": "Returned to sports without surgery"
+      }
+    }
+  },
+  "services": {
+    "heading": "Why Choose Rakan Clinic Tokyo?",
+    "subheading": "Evidence-based regenerative care for joint pain - safely, ethically, and with comprehensive international patient support.",
+    "features": {
+      "experts": {
+        "title": "35+ Years Orthopedic Expertise",
+        "description": "JOA-certified orthopedic specialists with extensive experience in regenerative treatments and integrative medicine."
+      },
+      "standards": {
+        "title": "Japanese Medical Standards",
+        "description": "All treatments comply with Japanese medical laws and ethical guidelines with transparent counseling."
+      },
+      "support": {
+        "title": "International Concierge",
+        "description": "English support, travel planning assistance, hotel guidance, and telemedicine follow-up for overseas patients."
+      }
+    }
+  },
+  "about": {
+    "heading": "About Rakan Clinic Tokyo",
+    "paragraph1": "Rakan Clinic Tokyo provides advanced orthopedic and regenerative care in Azabudai Hills, central Tokyo. Our team blends evidence-based Western medicine with proven Eastern techniques to address joint pain, sports injuries, and chronic musculoskeletal conditions while prioritizing safety, outcomes, and patient comfort.",
+    "paragraph2": "Licensed acupuncturists collaborate with board-certified orthopedic surgeons to address chronic issues like shoulder stiffness, back pain, and autonomic imbalance with a multi-faceted approach—targeting deep muscle tension and constitution, beyond where Western medicine alone may reach.",
+    "stats": {
+      "experience": {
+        "number": "15+",
+        "label": "Years Experience"
+      },
+      "specialists": {
+        "number": "50+",
+        "label": "Specialists"
+      },
+      "patients": {
+        "number": "10K+",
+        "label": "Patients Served"
+      }
+    }
+  },
+  "contact": {
+    "heading": "Get in Touch",
+    "subheading": "Ready to start your health journey? Contact us today for a free consultation.",
+    "form": {
+      "firstName": {
+        "label": "First Name",
+        "placeholder": "John"
+      },
+      "lastName": {
+        "label": "Last Name",
+        "placeholder": "Doe"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "john@example.com"
+      },
+      "phone": {
+        "label": "Phone",
+        "placeholder": "+1 (555) 123-4567"
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Tell us about your medical needs..."
+      },
+      "submit": "Send Message"
+    }
+  },
+  "safetyNotice": {
+    "heading": "Safety & Compliance",
+    "points": {
+      "evidence": "Evidence-based care and transparent counseling",
+      "certification": "Board-certified orthopedic surgeons and licensed acupuncturists",
+      "sterility": "Sterile protocols and reputable partner labs for cell processing",
+      "consent": "Clear informed consent, risk disclosure, and realistic expectations",
+      "followup": "Ongoing follow-up support for overseas patients"
+    },
+    "disclaimer": "Treatments are provided in accordance with Japanese medical laws and ethical standards. Individual eligibility and outcomes vary. Please consult our physicians for personalized guidance."
+  },
+  "footer": {
+    "brand": {
+      "name": "Rakan Clinic Tokyo",
+      "tagline": "Orthopedics & Regenerative Medicine in Azabudai Hills"
+    },
+    "services": {
+      "title": "Services",
+      "consultations": "Medical Consultations",
+      "procedures": "Surgical Procedures",
+      "wellness": "Wellness Programs",
+      "travel": "Travel Assistance"
+    },
+    "company": {
+      "title": "Company",
+      "about": "About Us",
+      "team": "Our Team",
+      "testimonials": "Testimonials",
+      "contact": "Contact"
+    },
+    "contactInfo": {
+      "title": "Contact",
+      "email": "info@rakanclinic.com",
+      "phone": "+1 (555) 123-4567",
+      "support": "24/7 Support Available"
+    },
+    "copyright": "© 2025 Rakan Clinic. All rights reserved."
+  }
+}
+

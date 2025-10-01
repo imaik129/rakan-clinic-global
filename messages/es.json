@@ -1,0 +1,119 @@
+{
+  "metadata": {
+    "title": "Clínica Rakan - Excelencia en Turismo Médico",
+    "description": "Servicios de turismo médico de clase mundial que combinan atención médica avanzada con cuidado excepcional del paciente"
+  },
+  "header": {
+    "brand": "Clínica Rakan",
+    "nav": {
+      "services": "Servicios",
+      "about": "Acerca de",
+      "contact": "Contacto"
+    },
+    "cta": "Reservar Consulta"
+  },
+  "hero": {
+    "badge": "Turismo Médico de Clase Mundial",
+    "title": {
+      "line1": "Tu Viaje de Salud",
+      "line2": "Comienza Aquí"
+    },
+    "description": "Experimenta atención médica excepcional con Clínica Rakan. Combinamos tecnología de vanguardia, médicos expertos y atención personalizada para ofrecer resultados de salud sobresalientes.",
+    "cta": {
+      "primary": "Programar Consulta",
+      "secondary": "Saber Más"
+    }
+  },
+  "services": {
+    "heading": "¿Por Qué Elegir Clínica Rakan?",
+    "subheading": "Ofrecemos servicios integrales de turismo médico diseñados para que tu viaje de salud sea perfecto.",
+    "features": {
+      "experts": {
+        "title": "Equipo Médico Experto",
+        "description": "Médicos certificados con formación internacional y décadas de experiencia."
+      },
+      "standards": {
+        "title": "Estándares Globales",
+        "description": "Instalaciones de última generación que cumplen con los estándares internacionales de acreditación sanitaria."
+      },
+      "support": {
+        "title": "Apoyo Completo",
+        "description": "Asistencia completa desde la consulta hasta el tratamiento y la recuperación."
+      }
+    }
+  },
+  "about": {
+    "heading": "Acerca de Clínica Rakan",
+    "paragraph1": "Clínica Rakan es un destino líder en turismo médico, ofreciendo servicios de atención médica de clase mundial a pacientes de todo el mundo. Nuestra misión es proporcionar atención médica accesible, asequible y excepcional en un entorno cómodo y acogedor.",
+    "paragraph2": "Con años de experiencia atendiendo a pacientes internacionales, entendemos las necesidades únicas de los turistas médicos y hemos desarrollado programas integrales para garantizar su satisfacción.",
+    "stats": {
+      "experience": {
+        "number": "15+",
+        "label": "Años de Experiencia"
+      },
+      "specialists": {
+        "number": "50+",
+        "label": "Especialistas"
+      },
+      "patients": {
+        "number": "10K+",
+        "label": "Pacientes Atendidos"
+      }
+    }
+  },
+  "contact": {
+    "heading": "Contáctanos",
+    "subheading": "¿Listo para comenzar tu viaje de salud? Contáctanos hoy para una consulta gratuita.",
+    "form": {
+      "firstName": {
+        "label": "Nombre",
+        "placeholder": "Juan"
+      },
+      "lastName": {
+        "label": "Apellido",
+        "placeholder": "García"
+      },
+      "email": {
+        "label": "Correo Electrónico",
+        "placeholder": "juan@example.com"
+      },
+      "phone": {
+        "label": "Teléfono",
+        "placeholder": "+34 912 345 678"
+      },
+      "message": {
+        "label": "Mensaje",
+        "placeholder": "Cuéntanos sobre tus necesidades médicas..."
+      },
+      "submit": "Enviar Mensaje"
+    }
+  },
+  "footer": {
+    "brand": {
+      "name": "Clínica Rakan",
+      "tagline": "Excelencia en turismo médico y atención al paciente."
+    },
+    "services": {
+      "title": "Servicios",
+      "consultations": "Consultas Médicas",
+      "procedures": "Procedimientos Quirúrgicos",
+      "wellness": "Programas de Bienestar",
+      "travel": "Asistencia de Viaje"
+    },
+    "company": {
+      "title": "Empresa",
+      "about": "Acerca de Nosotros",
+      "team": "Nuestro Equipo",
+      "testimonials": "Testimonios",
+      "contact": "Contacto"
+    },
+    "contactInfo": {
+      "title": "Contacto",
+      "email": "info@rakanclinic.com",
+      "phone": "+1 (555) 123-4567",
+      "support": "Soporte 24/7 Disponible"
+    },
+    "copyright": "© 2025 Clínica Rakan. Todos los derechos reservados."
+  }
+}
+

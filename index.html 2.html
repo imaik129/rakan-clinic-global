@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rakan Clinic Tokyo Azabudai | Advanced Stem Cell Therapy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #4a9b7f;
+            --gold: #c9a962;
+            --dark: #1a1a1a;
+            --cream: #f8f6f3;
+            --white: #ffffff;
+            --gray: #666666;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--cream);
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 400;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(248, 246, 243, 0.98);
+            backdrop-filter: blur(20px);
+            padding: 1.5rem 5%;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(74, 155, 127, 0.1);
+            transition: all 0.4s ease;
+        }
+
+        header.scrolled {
+            padding: 1rem 5%;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.05);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            transition: transform 0.3s ease;
+        }
+
+        .logo-container:hover .logo-icon {
+            transform: rotate(5deg) scale(1.05);
+        }
+
+        .logo-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--dark);
+            letter-spacing: 0.5px;
+        }
+
+        .logo-subtext {
+            font-size: 0.7rem;
+            color: var(--gray);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .menu-toggle {
+            display: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 3.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-size: 0.85rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--primary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 8rem 5% 4rem;
+            background: linear-gradient(135deg, var(--cream) 0%, #ffffff 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(74, 155, 127, 0.05) 0%, transparent 70%);
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(-30px, -30px); }
+        }
+
+        .hero-container {
+            max-width: 1600px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 8rem;
+            align-items: center;
+            position: relative;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(4rem, 8vw, 7rem);
+            line-height: 1;
+            margin-bottom: 2rem;
+            letter-spacing: -2px;
+            font-weight: 300;
+        }
+
+        .hero-content .accent {
+            font-style: italic;
+            color: var(--primary);
+            font-weight: 400;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: var(--gray);
+            margin-bottom: 3rem;
+            max-width: 500px;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        .cta-primary {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .cta-primary:hover::before {
+            left: 100%;
+        }
+
+        .cta-primary:hover {
+            background: #3d8269;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(74, 155, 127, 0.3);
+        }
+
+        .hero-image {
+            position: relative;
+            height: 600px;
+            border-radius: 0;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .hero-image:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Section Base */
+        section {
+            padding: 8rem 5%;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 6rem;
+        }
+
+        .section-label {
+            font-size: 0.75rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .section-title {
+            font-size: clamp(3rem, 6vw, 5rem);
+            margin-bottom: 2rem;
+            line-height: 1.1;
+            font-weight: 300;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--gray);
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        /* What is Stem Cell */
+        .intro {
+            background: white;
+        }
+
+        .intro-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .intro-content h3 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .intro-content p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            line-height: 1.9;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+
+        .intro-content .highlight {
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        /* Process */
+        .process {
+            background: var(--cream);
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .process-item {
+            text-align: center;
+            position: relative;
+        }
+
+        .process-number {
+            font-size: 6rem;
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--primary);
+            opacity: 0.2;
+            font-weight: 300;
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+
+        .process-item h4 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+
+        .process-item p {
+            color: var(--gray);
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        /* Doctors Section */
+        .doctors {
+            background: white;
+        }
+
+        .doctors-scroll {
+            overflow-x: auto;
+            padding: 2rem 0;
+            margin: 0 -5%;
+            padding-left: 5%;
+            padding-right: 5%;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .doctors-scroll::-webkit-scrollbar {
+            display: none;
+        }
+
+        .doctors-container {
+            display: flex;
+            gap: 3rem;
+            min-width: fit-content;
+        }
+
+        .doctor-card {
+            flex: 0 0 350px;
+            background: var(--cream);
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .doctor-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+        }
+
+        .doctor-image {
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .doctor-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .doctor-card:hover .doctor-image img {
+            transform: scale(1.1);
+        }
+
+        .doctor-info {
+            padding: 2rem;
+        }
+
+        .doctor-info h4 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            font-weight: 400;
+        }
+
+        .doctor-title {
+            font-size: 0.85rem;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .doctor-info p {
+            color: var(--gray);
+            line-height: 1.7;
+            font-size: 0.95rem;
+            font-weight: 300;
+        }
+
+        /* Why Rakan */
+        .why-rakan {
+            background: var(--dark);
+            color: white;
+        }
+
+        .why-rakan .section-label,
+        .why-rakan .section-title,
+        .why-rakan .section-subtitle {
+            color: white;
+        }
+
+        .why-rakan .section-label {
+            color: var(--gold);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 4rem;
+        }
+
+        .why-item {
+            display: flex;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        .why-icon {
+            flex-shrink: 0;
+            width: 80px;
+            height: 80px;
+            background: rgba(74, 155, 127, 0.1);
+            border: 1px solid rgba(74, 155, 127, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.4s ease;
+        }
+
+        .why-item:hover .why-icon {
+            background: rgba(74, 155, 127, 0.2);
+            transform: scale(1.1);
+        }
+
+        .why-content h4 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+
+        .why-content p {
+            color: rgba(255,255,255,0.7);
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        /* Pricing */
+        .pricing {
+            background: var(--cream);
+        }
+
+        .pricing-scroll {
+            overflow-x: auto;
+            padding: 2rem 0;
+            margin: 0 -5%;
+            padding-left: 5%;
+            padding-right: 5%;
+            scrollbar-width: thin;
+            scrollbar-color: var(--primary) rgba(0,0,0,0.1);
+        }
+
+        .pricing-scroll::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .pricing-scroll::-webkit-scrollbar-track {
+            background: rgba(0,0,0,0.05);
+        }
+
+        .pricing-scroll::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 4px;
+        }
+
+        .pricing-container {
+            display: flex;
+            gap: 2.5rem;
+            min-width: fit-content;
+            padding-bottom: 1rem;
+        }
+
+        .pricing-card {
+            flex: 0 0 380px;
+            background: white;
+            padding: 3rem;
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .pricing-card.featured {
+            background: var(--dark);
+            color: white;
+        }
+
+        .pricing-card.featured::before {
+            content: 'RECOMMENDED';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: var(--gold);
+            color: var(--dark);
+            padding: 0.5rem;
+            text-align: center;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        .pricing-card.featured {
+            padding-top: 4rem;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+        }
+
+        .pricing-card h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+        }
+
+        .price-amount {
+            font-size: 3.5rem;
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-weight: 300;
+        }
+
+        .pricing-card.featured .price-amount {
+            color: var(--gold);
+        }
+
+        .price-note {
+            font-size: 0.85rem;
+            color: var(--gray);
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        .pricing-card.featured .price-note {
+            color: rgba(255,255,255,0.6);
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .pricing-features li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            font-size: 0.9rem;
+            font-weight: 300;
+        }
+
+        .pricing-card.featured .pricing-features li {
+            border-bottom-color: rgba(255,255,255,0.1);
+        }
+
+        .pricing-disclaimer {
+            font-size: 0.8rem;
+            color: var(--gray);
+            font-style: italic;
+            font-weight: 300;
+        }
+
+        .pricing-card.featured .pricing-disclaimer {
+            color: rgba(255,255,255,0.5);
+        }
+
+        /* Contact */
+        .contact {
+            background: white;
+        }
+
+        .contact-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 6rem;
+            align-items: start;
+        }
+
+        .contact-info {
+            position: sticky;
+            top: 120px;
+        }
+
+        .contact-info h3 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        .contact-detail {
+            margin-bottom: 2rem;
+        }
+
+        .contact-detail-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .contact-detail-value {
+            font-size: 1.1rem;
+            color: var(--dark);
+            font-weight: 300;
+        }
+
+        .contact-form {
+            background: var(--cream);
+            padding: 3rem;
+        }
+
+        .form-title {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 400;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .contact-form label {
+            display: block;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--gray);
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid rgba(0,0,0,0.1);
+            background: white;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            font-weight: 300;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(74, 155, 127, 0.1);
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1.2rem;
+            background: var(--dark);
+            color: white;
+            border: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .submit-btn:hover {
+            background: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(74, 155, 127, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: rgba(255,255,255,0.6);
+            padding: 4rem 5%;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        footer p {
+            font-size: 0.85rem;
+            font-weight: 300;
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .hero-container {
+                gap: 4rem;
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+                gap: 4rem;
+            }
+
+            .contact-info {
+                position: static;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 1rem 1rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            section {
+                padding: 5rem 1rem;
+            }
+
+            .hero {
+                padding: 6rem 1rem 4rem;
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-image {
+                height: 400px;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-form {
+                padding: 2rem;
+            }
+
+            .doctor-card,
+            .pricing-card {
+                flex: 0 0 300px;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        [data-reveal] {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        [data-reveal].revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Note at bottom */
+        .note {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1rem;
+            margin: 2rem 0;
+            font-size: 0.85rem;
+            color: #856404;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <nav>
+            <div class="logo-container">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <radialGradient id="cellGrad" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" style="stop-color:#5fb894" />
+                                <stop offset="100%" style="stop-color:#4a9b7f" />
+                            </radialGradient>
+                        </defs>
+                        <circle cx="50" cy="50" r="45" fill="none" stroke="url(#cellGrad)" stroke-width="1"/>
+                        <circle cx="35" cy="45" r="4" fill="url(#cellGrad)"/>
+                        <circle cx="50" cy="38" r="5.5" fill="url(#cellGrad)"/>
+                        <circle cx="65" cy="45" r="4" fill="url(#cellGrad)"/>
+                        <circle cx="42" cy="58" r="3" fill="url(#cellGrad)"/>
+                        <circle cx="58" cy="58" r="3" fill="url(#cellGrad)"/>
+                        <circle cx="50" cy="68" r="2" fill="url(#cellGrad)"/>
+                    </svg>
+                </div>
+                <div>
+                    <div class="logo-text">RAKAN CLINIC</div>
+                    <div class="logo-subtext">Tokyo Azabudai</div>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#doctors">Physicians</a></li>
+                <li><a href="#why">Excellence</a></li>
+                <li><a href="#pricing">Investment</a></li>
+                <li><a href="#contact">Inquire</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content" data-reveal>
+                <h1>Advanced<br><span class="accent">Stem Cell</span><br>Therapy</h1>
+                <p class="hero-subtitle">Experience the pinnacle of regenerative medicine at Tokyo's most distinguished medical facility in Azabudai Hills</p>
+                <a href="#contact" class="cta-primary">Request Consultation</a>
+            </div>
+            <div class="hero-image" data-reveal>
+                <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=80" alt="Tokyo Azabudai Hills">
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="intro">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <div class="section-label">Understanding</div>
+                <h2 class="section-title">What is Stem Cell Therapy?</h2>
+            </div>
+            <div class="intro-content" data-reveal>
+                <p>Stem cells are the body's <span class="highlight">master cells</span> — capable of transforming into muscle, nerve, blood, and other specialized cells.</p>
+                <p>This remarkable versatility makes them exceptionally powerful for tissue repair and cellular regeneration, offering hope for conditions previously considered untreatable.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="process">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <div class="section-label">Our Process</div>
+                <h2 class="section-title">Three Steps to Regeneration</h2>
+            </div>
+            <div class="process-grid">
+                <div class="process-item" data-reveal>
+                    <div class="process-number">01</div>
+                    <h4>Collection</h4>
+                    <p>Stem cells are carefully extracted from your adipose tissue in a minimally invasive procedure performed under local anesthesia.</p>
+                </div>
+                <div class="process-item" data-reveal>
+                    <div class="process-number">02</div>
+                    <h4>Cultivation</h4>
+                    <p>Cells are processed in our certified in-house laboratory, where they are purified and cultivated for 6-8 weeks to ensure optimal quality.</p>
+                </div>
+                <div class="process-item" data-reveal>
+                    <div class="process-number">03</div>
+                    <h4>Administration</h4>
+                    <p>The concentrated solution is delivered via IV infusion or targeted injection, stimulating your body's natural healing mechanisms.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="doctors" class="doctors">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <div class="section-label">Our Team</div>
+                <h2 class="section-title">Distinguished Physicians</h2>
+                <p class="section-subtitle">World-renowned experts in regenerative medicine and stem cell therapy</p>
+            </div>
+        </div>
+        <div class="doctors-scroll">
+            <div class="doctors-container">
+                <div class="doctor-card" data-reveal>
+                    <div class="doctor-image">
+                        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=600&q=80" alt="Dr. Tanaka">
+                    </div>
+                    <div class="doctor-info">
+                        <h4>Dr. Hiroshi Tanaka</h4>
+                        <div class="doctor-title">Medical Director</div>
+                        <p>30+ years in regenerative medicine. Former researcher at University of Tokyo. Pioneer in autologous stem cell therapy.</p>
+                    </div>
+                </div>
+                <div class="doctor-card" data-reveal>
+                    <div class="doctor-image">
+                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&q=80" alt="Dr. Sato">
+                    </div>
+                    <div class="doctor-info">
+                        <h4>Dr. Yuki Sato</h4>
+                        <div class="doctor-title">Chief of Cellular Therapy</div>
+                        <p>Specialist in stem cell cultivation and cellular biology. Published over 50 peer-reviewed papers in regenerative medicine.</p>
+                    </div>
+                </div>
+                <div class="doctor-card" data-reveal>
+                    <div class="doctor-image">
+                        <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=600&q=80" alt="Dr. Nakamura">
+                    </div>
+                    <div class="doctor-info">
+                        <h4>Dr. Kenji Nakamura</h4>
+                        <div class="doctor-title">Senior Physician</div>
+                        <p>Expert in anti-aging medicine and aesthetic regeneration. International speaker on cellular rejuvenation therapies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="note">
+                <strong>Note:</strong> These are placeholder profiles for design purposes. Actual physician information and credentials must be verified and approved before publication.
+            </div>
+        </div>
+    </section>
+
+    <section id="why" class="why-rakan">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <div class="section-label">Excellence</div>
+                <h2 class="section-title">Why Choose Rakan Clinic</h2>
+                <p class="section-subtitle">Unparalleled expertise in the heart of Tokyo's most prestigious district</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-item" data-reveal>
+                    <div class="why-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#4a9b7f" stroke-width="1.5">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                    </div>
+                    <div class="why-content">
+                        <h4>Azabudai Hills Location</h4>
+                        <p>Situated in Tokyo's newest luxury development — a $4 billion district featuring Japan's tallest residential tower, world-class dining, and premium international amenities.</p>
+                    </div>
+                </div>
+                <div class="why-item" data-reveal>
+                    <div class="why-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#4a9b7f" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
+                    </div>
+                    <div class="why-content">
+                        <h4>In-House Cultivation Facility</h4>
+                        <p>Unlike most clinics, we maintain a certified cell processing laboratory on-premise, ensuring complete quality control and the freshest, most viable stem cells.</p>
+                    </div>
+                </div>
+                <div class="why-item" data-reveal>
+                    <div class="why-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#4a9b7f" stroke-width="1.5">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <div class="why-content">
+                        <h4>Elite International Clientele</h4>
+                        <p>Trusted by executives, professional athletes, and discerning individuals worldwide seeking the highest standard of regenerative care in absolute privacy.</p>
+                    </div>
+                </div>
+                <div class="why-item" data-reveal>
+                    <div class="why-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#4a9b7f" stroke-width="1.5">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                        </svg>
+                    </div>
+                    <div class="why-content">
+                        <h4>Academic Partnerships</h4>
+                        <p>Ongoing collaboration with the University of Tokyo and leading international research institutions keeps our protocols at the cutting edge of stem cell science.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <div class="section-label">Investment</div>
+                <h2 class="section-title">Treatment Programs</h2>
+                <p class="section-subtitle">Bespoke protocols tailored to your unique health objectives</p>
+            </div>
+        </div>
+        <div class="pricing-scroll">
+            <div class="pricing-container">
+                <div class="pricing-card" data-reveal>
+                    <h3>Essential</h3>
+                    <div class="price-amount">¥2.2M</div>
+                    <div class="price-note">Approximately $15,000 USD</div>
+                    <ul class="pricing-features">
+                        <li>Comprehensive medical consultation</li>
+                        <li>Adipose tissue collection procedure</li>
+                        <li>6-8 week cultivation period</li>
+                        <li>Single IV infusion treatment</li>
+                        <li>Post-treatment monitoring</li>
+                        <li>English language support</li>
+                    </ul>
+                    <p class="pricing-disclaimer">Final investment determined during consultation based on individual requirements</p>
+                </div>
+
+                <div class="pricing-card featured" data-reveal>
+                    <h3>Premium</h3>
+                    <div class="price-amount">¥2.8M</div>
+                    <div class="price-note">Approximately $19,000 USD</div>
+                    <ul class="pricing-features">
+                        <li>Extended consultation with specialists</li>
+                        <li>Advanced collection protocol</li>
+                        <li>Premium cultivation process</li>
+                        <li>Multiple treatment sessions</li>
+                        <li>Comprehensive follow-up program</li>
+                        <li>Luxury clinic experience</li>
+                        <li>Multilingual concierge service</li>
+                        <li>Culture supernatant therapy included</li>
+                    </ul>
+                    <p class="pricing-disclaimer">Personalized protocol developed with our medical team</p>
+                </div>
+
+                <div class="pricing-card" data-reveal>
+                    <h3>Elite</h3>
+                    <div class="price-amount">¥3.5M</div>
+                    <div class="price-note">Approximately $23,000 USD</div>
+                    <ul class="pricing-features">
+                        <li>VIP medical consultation</li>
+                        <li>Platinum collection procedure</li>
+                        <li>Extended 8-week cultivation</li>
+                        <li>Combination IV + targeted injections</li>
+                        <li>6-month comprehensive follow-up</li>
+                        <li>White-glove concierge service</li>
+                        <li>Priority scheduling & access</li>
+                        <li>Additional culture supernatant</li>
+                        <li>Complete wellness optimization</li>
+                    </ul>
+                    <p class="pricing-disclaimer">Fully bespoke treatment exclusively designed for you</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <div class="section-label">Get in Touch</div>
+                <h2 class="section-title">Begin Your Journey</h2>
+            </div>
+            <div class="contact-wrapper">
+                <div class="contact-info" data-reveal>
+                    <h3>Contact<br>Information</h3>
+                    <div class="contact-detail">
+                        <div class="contact-detail-label">Phone</div>
+                        <div class="contact-detail-value">+81-3-6277-6112</div>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="contact-detail-label">Email</div>
+                        <div class="contact-detail-value">international@rakanclinic-tokyo.jp</div>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="contact-detail-label">Location</div>
+                        <div class="contact-detail-value">Azabudai Hills Tower Plaza 4F<br>1-3-1 Azabudai, Minato-ku<br>Tokyo, Japan</div>
+                    </div>
+                </div>
+                <form class="contact-form" onsubmit="handleSubmit(event)" data-reveal>
+                    <h3 class="form-title">Request a Consultation</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>First Name</label>
+                            <input type="text" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Last Name</label>
+                            <input type="text" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <input type="tel" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Country of Residence</label>
+                        <input type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Your Health Goals</label>
+                        <textarea required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Submit Inquiry</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo">RAKAN CLINIC TOKYO</div>
+            <p>© 2025 Rakan Clinic Tokyo Azabudai. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', e => {
+                e.preventDefault();
+                const target = document.querySelector(anchor.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Scroll reveal
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -100px 0px' });
+
+        document.querySelectorAll('[data-reveal]').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Form submit
+        function handleSubmit(e) {
+            e.preventDefault();
+            alert('Thank you for your inquiry. A member of our team will contact you within 24 hours.');
+            e.target.reset();
+        }
+
+        // Smooth horizontal scroll with mouse wheel
+        document.querySelectorAll('.pricing-scroll, .doctors-scroll').forEach(container => {
+            container.addEventListener('wheel', (e) => {
+                if (e.deltaY !== 0) {
+                    e.preventDefault();
+                    container.scrollLeft += e.deltaY;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
