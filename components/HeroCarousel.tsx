@@ -120,11 +120,6 @@ export default function HeroCarousel() {
                         <p className="text-[1.2rem] leading-[1.6] font-light max-w-[700px] mx-auto whitespace-pre-line drop-shadow-md">
                             {images[currentImage].subtitle}
                         </p>
-                        {images[currentImage].englishTitle && (
-                            <div className="text-[clamp(1.5rem,4vw,3rem)] font-['Cormorant_Garamond'] font-light mt-4 drop-shadow-lg">
-                                {images[currentImage].englishTitle}
-                            </div>
-                        )}
                     </div>
 
                     {/* Enhanced Button Container */}

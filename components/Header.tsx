@@ -8,7 +8,7 @@ import LanguageSwitcher from './LanguageSwitcher';
 import { type Locale } from '@/i18n';
 
 interface HeaderProps {
-    locale: Locale;
+    locale: string;
 }
 
 export default function Header({ locale }: HeaderProps) {

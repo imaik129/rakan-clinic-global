@@ -16,7 +16,7 @@ import {
 export default async function Home({
   params,
 }: {
-  params: Promise<{ locale: Locale }>;
+  params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
   const t = await getTranslations();
