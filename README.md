@@ -1,41 +1,107 @@
-<<<<<<< HEAD
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Rakan Clinic Global
 
-## Getting Started
+A modern medical tourism website for Rakan Clinic Tokyo, featuring regenerative medicine treatments and international patient services.
 
-First, run the development server:
+## 🚀 Auto-Deploy Status
+This project is configured for automatic deployment to Vercel on every push to the main branch.
 
+## 🌟 Features
+
+- **Multi-language Support**: English, Japanese, Arabic, Spanish, French, German, Russian, Chinese
+- **International Contact Form**: Country code selection with Supabase integration
+- **Responsive Design**: Mobile-first design that works on all devices
+- **Modern UI**: Clean, professional design with smooth animations
+- **SEO Optimized**: Built with Next.js 15 and optimized for search engines
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 15 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Internationalization**: next-intl
+- **Database**: Supabase
+- **Deployment**: Vercel
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js 18+ 
+- npm or yarn
+- Supabase account
+
+### Installation
+
+1. **Clone the repository**
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/imaik129/rakan-clinic-global.git
+cd rakan-clinic-global
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Install dependencies**
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. **Set up environment variables**
+```bash
+cp env.example .env.local
+```
+Add your Supabase credentials to `.env.local`:
+```env
+NEXT_PUBLIC_SUPABASE_URL=your-supabase-url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
+SUPABASE_SERVICE_ROLE_KEY=your-service-role-key
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. **Run the development server**
+```bash
+npm run dev
+```
 
-## Learn More
+5. **Open your browser**
+Visit [http://localhost:3000](http://localhost:3000)
 
-To learn more about Next.js, take a look at the following resources:
+## 📊 Database Setup
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+See [SUPABASE_SETUP.md](./SUPABASE_SETUP.md) for detailed database configuration instructions.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🌍 Deployment
 
-## Deploy on Vercel
+This project is automatically deployed to Vercel when you push to the main branch.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Manual Deployment
+1. Push to GitHub: `git push origin main`
+2. Vercel automatically builds and deploys
+3. Your site will be live at `https://rakan-clinic-global.vercel.app`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-=======
-# rakan-clinic-global
-Rakan Clinic Global - Medical Tourism Website
->>>>>>> 7d6b529ef1d498d2a4412515f486d3dfdd43c861
+## 📁 Project Structure
+
+```
+rakan-global/
+├── app/
+│   ├── [locale]/           # Internationalized pages
+│   └── api/                # API routes
+├── components/             # React components
+├── lib/                    # Utilities and configurations
+├── messages/               # Translation files
+└── public/                 # Static assets
+```
+
+## 🔧 Development
+
+- **Add new translations**: Update files in `messages/` directory
+- **Add new pages**: Create in `app/[locale]/` directory
+- **Modify components**: Edit files in `components/` directory
+- **Database changes**: Update Supabase schema and run migrations
+
+## 📝 License
+
+This project is proprietary software for Rakan Clinic Tokyo.
+
+## 🤝 Contributing
+
+This is a private project. For internal development, please follow the established patterns and ensure all changes are tested before deployment.
+
+---
+
+**Built with ❤️ for Rakan Clinic Tokyo**
