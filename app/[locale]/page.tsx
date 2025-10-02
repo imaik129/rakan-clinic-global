@@ -107,7 +107,7 @@ export default async function Home({
                     className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
-                </div>
+              </div>
 
                 {/* Content - Bottom 75% */}
                 <div className="relative z-10 pt-[25%] p-5">
@@ -199,26 +199,26 @@ export default async function Home({
                       </svg>
                       <p className="text-[0.92rem] font-light leading-[1.75] text-white/90">
                         State-of-the-art regenerative medicine facility with sterile processing labs
-                      </p>
-                    </div>
+              </p>
+            </div>
                     <div className="flex items-start gap-3">
                       <svg className="w-5 h-5 text-[#c9a962] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                       <p className="text-[0.92rem] font-light leading-[1.75] text-white/90">
                         Private consultation rooms ensuring complete discretion for VIP patients
-                      </p>
-                    </div>
+              </p>
+            </div>
                     <div className="flex items-start gap-3">
                       <svg className="w-5 h-5 text-[#c9a962] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                       <p className="text-[0.92rem] font-light leading-[1.75] text-white/90">
                         Premium location in Tokyo's most prestigious international district
-                      </p>
-                    </div>
-                  </div>
-                </div>
+              </p>
+            </div>
+          </div>
+        </div>
               </div>
             </div>
           </div>
@@ -227,15 +227,15 @@ export default async function Home({
           <div className="max-w-[1000px] mx-auto">
             {/* Stats - Compact Inline */}
             <div className="flex flex-wrap justify-center gap-8 mb-8">
-              <div className="text-center">
+                <div className="text-center">
                 <div className="text-[2.5rem] font-['Cormorant_Garamond'] text-[#4a9b7f] font-light leading-none mb-1">
                   35+
                 </div>
                 <div className="text-[0.75rem] font-semibold text-[#1a1a1a] uppercase tracking-[1px]">
                   Years Experience
                 </div>
-              </div>
-              <div className="text-center">
+                </div>
+                <div className="text-center">
                 <div className="text-[2.5rem] font-['Cormorant_Garamond'] text-[#4a9b7f] font-light leading-none mb-1">
                   100%
                 </div>
@@ -463,14 +463,14 @@ export default async function Home({
           <div className="grid md:grid-cols-[1fr_1.5fr] gap-[4rem] max-w-[1200px] mx-auto">
             {/* Contact Info */}
             <div className="space-y-8">
-              <div>
+            <div>
                 <h3 className="font-['Cormorant_Garamond'] text-[2.5rem] mb-6 font-light leading-tight">
                   Contact<br />Information
                 </h3>
               </div>
 
               {[
-                { label: 'Phone', value: '+1 (555) 123-4567' },
+                { label: 'Phone', value: '+81-3-6277-6112' },
                 { label: 'Email', value: 'international@rakanclinic.com' },
                 { label: 'Location', value: 'Premium Medical District\nGlobal Healthcare Center' }
               ].map((item, i) => (
@@ -488,7 +488,7 @@ export default async function Home({
             {/* Contact Form */}
             <ContactForm />
           </div>
-        </div>
+            </div>
       </section>
 
       {/* 10. Safety & Compliance Notice */}
@@ -506,7 +506,7 @@ export default async function Home({
                 <p className="text-[0.9rem] font-light text-white/80">
                   {t(`safetyNotice.points.${point}`)}
                 </p>
-              </div>
+            </div>
             ))}
           </div>
           <div className="text-center p-6 bg-white/5 rounded-lg border border-white/10">
