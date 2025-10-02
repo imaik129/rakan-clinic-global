@@ -114,12 +114,12 @@
       "phone": "+81-3-6277-6112",
       "support": "24/7 Support Available"
     },
-    "contactSection": {
-      "phone": "Telefon",
-      "location": "Standort",
-      "access": "Anfahrt"
-    },
     "copyright": "© 2025 Rakan Clinic. All rights reserved."
+  },
+  "contactSection": {
+    "phone": "Telefon",
+    "location": "Standort",
+    "access": "Anfahrt"
   }
 }
 

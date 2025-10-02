@@ -103,10 +103,10 @@ function DoctorCard({ doctor, doctorImage }: { doctor: string; doctorImage: stri
             <div className="p-5">
                 {/* Name and Title */}
                 <div className="mb-3">
-                    <h3 className="text-lg font-bold text-gray-900 mb-1">
+                    <h3 className="text-2xl font-black text-gray-900 mb-2 tracking-tight leading-tight">
                         {t(`doctors.team.${doctor}.name`)}
                     </h3>
-                    <p className="text-sm text-[#4a9b7f] font-medium">
+                    <p className="text-base text-[#4a9b7f] font-semibold">
                         {t(`doctors.team.${doctor}.title`)}
                     </p>
                 </div>

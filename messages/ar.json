@@ -114,12 +114,12 @@
       "phone": "+81-3-6277-6112",
       "support": "دعم على مدار الساعة"
     },
-    "contactSection": {
-      "phone": "الهاتف",
-      "location": "الموقع",
-      "access": "الوصول"
-    },
     "copyright": "© 2025 عيادة راكان. جميع الحقوق محفوظة."
+  },
+  "contactSection": {
+    "phone": "الهاتف",
+    "location": "الموقع",
+    "access": "الوصول"
   }
 }
 
