@@ -471,8 +471,7 @@ export default async function Home({
 
               {[
                 { label: 'Phone', value: '+81-3-6277-6112' },
-                { label: 'Email', value: 'international@rakanclinic.com' },
-                { label: 'Location', value: 'Premium Medical District\nGlobal Healthcare Center' }
+                { label: 'Location', value: '〒106-0041\n東京都港区麻布台1-3-1\n麻布台ヒルズ タワープラザ4F\n\nJust 20 minutes by car from Tokyo Station' }
               ].map((item, i) => (
                 <div key={i}>
                   <div className="text-[0.75rem] uppercase tracking-[2px] text-[#4a9b7f] mb-2 font-medium">
