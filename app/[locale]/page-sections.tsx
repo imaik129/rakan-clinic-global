@@ -287,7 +287,7 @@ export function WhyTokyoSection() {
                 </svg>
             ),
             title: "International Patient Concierge",
-            description: "Comprehensive support for overseas patients — English-speaking coordinators, travel planning assistance, hotel guidance, interpreter services, and telemedicine follow-up. High satisfaction ratings from 1,000+ international medical tourists."
+            description: "Comprehensive support for overseas patients — English-speaking coordinators, travel planning assistance, hotel guidance, interpreter services, and telemedicine follow-up."
         }
     ];
 
