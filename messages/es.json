@@ -109,9 +109,15 @@
     },
     "contactInfo": {
       "title": "Contacto",
-      "address": "〒106-0041\n東京都港区麻布台1-3-1\n麻布台ヒルズ タワープラザ4F\n\nJust 20 minutes by car from Tokyo Station",
+      "address": "〒106-0041\n東京都港区麻布台1-3-1\n麻布台ヒルズ タワープラザ4F",
+      "access": "Solo 20 minutos en coche desde la Estación de Tokio",
       "phone": "+81-3-6277-6112",
       "support": "Soporte 24/7 Disponible"
+    },
+    "contactSection": {
+      "phone": "Teléfono",
+      "location": "Ubicación",
+      "access": "Acceso"
     },
     "copyright": "© 2025 Clínica Rakan. Todos los derechos reservados."
   }

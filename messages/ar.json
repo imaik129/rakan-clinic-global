@@ -109,9 +109,15 @@
     },
     "contactInfo": {
       "title": "اتصل بنا",
-      "address": "〒106-0041\n東京都港区麻布台1-3-1\n麻布台ヒルズ タワープラザ4F\n\nJust 20 minutes by car from Tokyo Station",
+      "address": "〒106-0041\n東京都港区麻布台1-3-1\n麻布台ヒルズ タワープラザ4F",
+      "access": "20 دقيقة بالسيارة من محطة طوكيو",
       "phone": "+81-3-6277-6112",
       "support": "دعم على مدار الساعة"
+    },
+    "contactSection": {
+      "phone": "الهاتف",
+      "location": "الموقع",
+      "access": "الوصول"
     },
     "copyright": "© 2025 عيادة راكان. جميع الحقوق محفوظة."
   }

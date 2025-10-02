@@ -470,8 +470,9 @@ export default async function Home({
               </div>
 
               {[
-                { label: 'Phone', value: '+81-3-6277-6112' },
-                { label: 'Location', value: '〒106-0041\n東京都港区麻布台1-3-1\n麻布台ヒルズ タワープラザ4F\n\nJust 20 minutes by car from Tokyo Station' }
+                { label: t('contactSection.phone'), value: '+81-3-6277-6112' },
+                { label: t('contactSection.location'), value: '〒106-0041\n東京都港区麻布台1-3-1\n麻布台ヒルズ タワープラザ4F' },
+                { label: t('contactSection.access'), value: t('contactInfo.access') }
               ].map((item, i) => (
                 <div key={i}>
                   <div className="text-[0.75rem] uppercase tracking-[2px] text-[#4a9b7f] mb-2 font-medium">

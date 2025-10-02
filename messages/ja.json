@@ -13,5 +13,17 @@
     "pricing": "料金表",
     "contact": "アクセス/診療時間",
     "bookOnline": "オンライン予約"
+  },
+  "contactInfo": {
+    "title": "お問い合わせ",
+    "address": "〒106-0041\n東京都港区麻布台1-3-1\n麻布台ヒルズ タワープラザ4F",
+    "access": "東京駅から車で約20分",
+    "phone": "+81-3-6277-6112",
+    "support": "24時間サポート対応"
+  },
+  "contactSection": {
+    "phone": "電話",
+    "location": "所在地",
+    "access": "アクセス"
   }
 }
