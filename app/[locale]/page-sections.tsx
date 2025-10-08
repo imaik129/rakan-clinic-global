@@ -31,7 +31,7 @@ export function StemCellSection() {
     };
 
     return (
-        <section className="px-[5%] py-[4rem] bg-white">
+        <section className="px-[5%] py-[4rem] bg-gradient-to-br from-[#f0f9f6] via-white to-[#f5faf8]">
             <div className="max-w-[1200px] mx-auto">
                 <div className="text-center max-w-[700px] mx-auto mb-[3rem]">
                     <div className="text-[0.68rem] tracking-[2.5px] uppercase text-[#4a9b7f] mb-3 font-semibold">
@@ -54,7 +54,7 @@ export function StemCellSection() {
                     <div className="md:hidden grid grid-cols-2 gap-4">
                         {['regeneration', 'inflammation', 'recovery', 'pain'].map((benefit) => (
                             <div key={benefit} className="flex justify-center">
-                                <div className="group relative bg-gradient-to-br from-white to-gray-50 rounded-full p-5 border border-gray-200 hover:border-[#4a9b7f] transition-all duration-300 hover:shadow-lg hover:-translate-y-1 w-[175px] h-[175px] flex items-center justify-center">
+                                <div className="group relative bg-gradient-to-br from-white via-[#f0f9f6] to-[#e8f5f1] rounded-full p-5 border border-[#4a9b7f]/20 hover:border-[#4a9b7f] transition-all duration-300 hover:shadow-xl hover:-translate-y-1 w-[175px] h-[175px] flex items-center justify-center">
                                     <div className="flex flex-col items-center text-center">
                                         <div className="w-14 h-14 flex items-center justify-center mb-2 text-black group-hover:scale-110 transition-all duration-300">
                                             {treatmentIcons[benefit as keyof typeof treatmentIcons]}
@@ -75,7 +75,7 @@ export function StemCellSection() {
                     <div className="hidden md:block relative max-w-[750px] mx-auto min-h-[300px]">
                         {/* Top Row - Left (Knee) */}
                         <div className="absolute top-0 left-[80px]">
-                            <div className="group relative bg-gradient-to-br from-white to-gray-50 rounded-full p-6 border border-gray-200 hover:border-[#4a9b7f] transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:z-10 w-[200px] h-[200px] flex items-center justify-center">
+                            <div className="group relative bg-gradient-to-br from-white via-[#f0f9f6] to-[#e8f5f1] rounded-full p-6 border border-[#4a9b7f]/20 hover:border-[#4a9b7f] transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:z-10 w-[200px] h-[200px] flex items-center justify-center">
                                 <div className="flex flex-col items-center text-center">
                                     <div className="w-14 h-14 flex items-center justify-center mb-2 text-black group-hover:scale-110 transition-all duration-300">
                                         {treatmentIcons.regeneration}
@@ -92,7 +92,7 @@ export function StemCellSection() {
 
                         {/* Top Row - Right (Sports) */}
                         <div className="absolute top-0 right-[80px]">
-                            <div className="group relative bg-gradient-to-br from-white to-gray-50 rounded-full p-6 border border-gray-200 hover:border-[#4a9b7f] transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:z-10 w-[200px] h-[200px] flex items-center justify-center">
+                            <div className="group relative bg-gradient-to-br from-white via-[#f0f9f6] to-[#e8f5f1] rounded-full p-6 border border-[#4a9b7f]/20 hover:border-[#4a9b7f] transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:z-10 w-[200px] h-[200px] flex items-center justify-center">
                                 <div className="flex flex-col items-center text-center">
                                     <div className="w-14 h-14 flex items-center justify-center mb-2 text-black group-hover:scale-110 transition-all duration-300">
                                         {treatmentIcons.inflammation}
@@ -109,7 +109,7 @@ export function StemCellSection() {
 
                         {/* Bottom Row - Left (Shoulder) - Offset */}
                         <div className="absolute bottom-0 left-[180px]">
-                            <div className="group relative bg-gradient-to-br from-white to-gray-50 rounded-full p-6 border border-gray-200 hover:border-[#4a9b7f] transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:z-10 w-[200px] h-[200px] flex items-center justify-center">
+                            <div className="group relative bg-gradient-to-br from-white via-[#f0f9f6] to-[#e8f5f1] rounded-full p-6 border border-[#4a9b7f]/20 hover:border-[#4a9b7f] transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:z-10 w-[200px] h-[200px] flex items-center justify-center">
                                 <div className="flex flex-col items-center text-center">
                                     <div className="w-14 h-14 flex items-center justify-center mb-2 text-black group-hover:scale-110 transition-all duration-300">
                                         {treatmentIcons.recovery}
@@ -126,7 +126,7 @@ export function StemCellSection() {
 
                         {/* Bottom Row - Right (Spine) - Offset */}
                         <div className="absolute bottom-0 right-[180px]">
-                            <div className="group relative bg-gradient-to-br from-white to-gray-50 rounded-full p-6 border border-gray-200 hover:border-[#4a9b7f] transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:z-10 w-[200px] h-[200px] flex items-center justify-center">
+                            <div className="group relative bg-gradient-to-br from-white via-[#f0f9f6] to-[#e8f5f1] rounded-full p-6 border border-[#4a9b7f]/20 hover:border-[#4a9b7f] transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:z-10 w-[200px] h-[200px] flex items-center justify-center">
                                 <div className="flex flex-col items-center text-center">
                                     <div className="w-14 h-14 flex items-center justify-center mb-2 text-black group-hover:scale-110 transition-all duration-300">
                                         {treatmentIcons.pain}
@@ -158,7 +158,7 @@ function DoctorCard({ doctor, doctorImage }: { doctor: string; doctorImage: stri
     return (
         <div className="flex-shrink-0 w-[300px] bg-white border border-gray-100 rounded-2xl overflow-hidden hover:border-[#4a9b7f]/30 transition-all duration-300">
             {/* Doctor Photo - Full Image Visible with Rounded Corners */}
-            <div className="relative w-full h-[280px] overflow-hidden rounded-tl-[24px] rounded-br-[24px]">
+            <div className="relative w-full h-[340px] overflow-hidden rounded-tl-[24px] rounded-br-[24px]">
                 <Image
                     src={doctorImage}
                     alt={t(`doctors.team.${doctor}.name`)}
