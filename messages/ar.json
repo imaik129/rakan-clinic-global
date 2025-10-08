@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "عيادة راكان - التميز في السياحة العلاجية",
-    "description": "خدمات سياحة علاجية عالمية المستوى تجمع بين الرعاية الصحية المتقدمة والعناية الاستثنائية بالمرضى"
+    "title": "Rakan Clinic Tokyo - Premier Regenerative Therapy at Azabudai Hills",
+    "description": "Leading regenerative medicine clinic specializing in orthopedic treatments and stem cell therapy in the heart of Tokyo's prestigious Azabudai Hills"
   },
   "header": {
     "brand": "عيادة راكان",
@@ -118,6 +118,7 @@
   },
   "contactSection": {
     "phone": "الهاتف",
+    "email": "البريد الإلكتروني",
     "location": "الموقع",
     "access": "الوصول"
   }

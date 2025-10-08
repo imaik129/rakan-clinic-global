@@ -482,6 +482,7 @@ export default async function Home({
 
               {[
                 { label: t('contactSection.phone'), value: '+81-3-6277-6112' },
+                { label: t('contactSection.email'), value: 'rakanclinictokyo@gmail.com' },
                 { label: t('contactSection.location'), value: t('contactInfo.address') },
                 { label: t('contactSection.access'), value: t('contactInfo.access') }
               ].map((item, i) => (

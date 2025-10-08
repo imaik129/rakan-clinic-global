@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "Rakan Clinic - Medical Tourism Excellence",
-    "description": "World-class medical tourism services combining advanced healthcare with exceptional patient care"
+    "title": "Rakan Clinic Tokyo - Premier Regenerative Therapy at Azabudai Hills",
+    "description": "Leading regenerative medicine clinic specializing in orthopedic treatments and stem cell therapy in the heart of Tokyo's prestigious Azabudai Hills"
   },
   "header": {
     "brand": "Rakan Clinic",
@@ -118,6 +118,7 @@
   },
   "contactSection": {
     "phone": "Телефон",
+    "email": "Электронная почта",
     "location": "Адрес",
     "access": "Как добраться"
   }
