@@ -48,26 +48,36 @@ export function StemCellSection() {
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-[1000px] mx-auto">
+                <div className="grid md:grid-cols-2 gap-6 max-w-[1100px] mx-auto">
                     {['regeneration', 'inflammation', 'recovery', 'pain'].map((benefit) => (
-                        <div key={benefit} className="group relative bg-gradient-to-br from-[#f8f6f3] to-white p-4 rounded-xl border border-gray-100 hover:border-[#4a9b7f]/30 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                            {/* Icon with Gradient Background */}
-                            <div className="w-12 h-12 bg-gradient-to-br from-[#4a9b7f] to-[#3d8269] rounded-xl mx-auto mb-3 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                                {treatmentIcons[benefit as keyof typeof treatmentIcons]}
+                        <div 
+                            key={benefit} 
+                            className="group relative bg-white rounded-2xl border border-gray-200 hover:border-[#4a9b7f] transition-all duration-300 hover:shadow-xl hover:-translate-y-1 overflow-hidden"
+                        >
+                            {/* Decorative Background Element */}
+                            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#4a9b7f]/5 to-transparent rounded-bl-[100px] transition-all duration-300 group-hover:scale-110"></div>
+                            
+                            <div className="relative p-6 flex items-start gap-5">
+                                {/* Icon with Enhanced Background */}
+                                <div className="flex-shrink-0">
+                                    <div className="w-16 h-16 bg-gradient-to-br from-[#4a9b7f] to-[#3d8269] rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                                        {treatmentIcons[benefit as keyof typeof treatmentIcons]}
+                                    </div>
+                                </div>
+
+                                {/* Content */}
+                                <div className="flex-1 pt-1">
+                                    <h3 className="font-['Cormorant_Garamond'] text-[1.35rem] mb-2 font-semibold text-gray-900 group-hover:text-[#4a9b7f] transition-colors duration-300">
+                                        {t(`stemCell.benefits.items.${benefit}.title`)}
+                                    </h3>
+                                    <p className="text-[0.92rem] text-gray-600 font-light leading-[1.65]">
+                                        {t(`stemCell.benefits.items.${benefit}.description`)}
+                                    </p>
+                                </div>
                             </div>
 
-                            {/* Content */}
-                            <div className="text-center">
-                                <h3 className="font-['Cormorant_Garamond'] text-[1.1rem] mb-2 font-semibold text-gray-900 group-hover:text-[#4a9b7f] transition-colors duration-300">
-                                    {t(`stemCell.benefits.items.${benefit}.title`)}
-                                </h3>
-                                <p className="text-[0.8rem] text-[#666666] font-light leading-[1.5]">
-                                    {t(`stemCell.benefits.items.${benefit}.description`)}
-                                </p>
-                            </div>
-
-                            {/* Subtle Hover Effect */}
-                            <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-[#4a9b7f]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                            {/* Bottom Accent Line */}
+                            <div className="h-1 bg-gradient-to-r from-[#4a9b7f] to-[#3d8269] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
                         </div>
                     ))}
                 </div>
