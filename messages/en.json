@@ -11,6 +11,7 @@
     "doctors": "Doctors",
     "about": "About",
     "pricing": "Pricing",
+    "faq": "FAQ",
     "contact": "Contact",
     "bookOnline": "Book Online"
   },
@@ -334,12 +335,36 @@
     "copyright": "© 2025 Rakan Clinic. All rights reserved."
   },
   "contactInfo": {
-    "access": "Just 20 minutes by car from Tokyo Station"
+    "address": "Azabudai Hills Tower Plaza 4F\n1-3-1 Azabudai, Minato-ku\nTokyo 106-0041, Japan\n\n〒106-0041\n東京都港区麻布台1-3-1\n麻布台ヒルズ タワープラザ4F",
+    "access": "Just 20 minutes by car from Haneda Airport"
   },
   "contactSection": {
     "phone": "Phone",
     "location": "Location",
     "access": "Access"
+  },
+  "faq": {
+    "badge": "Frequently Asked Questions",
+    "heading": "Common Questions About Our Services",
+    "description": "Find answers to the most common questions about our regenerative medicine treatments, international patient services, and clinic procedures.",
+    "items": {
+      "question1": "What types of regenerative medicine treatments do you offer?",
+      "answer1": "We offer Platelet-Rich Plasma (PRP) therapy and autologous adipose-derived stem cell therapy. These evidence-based treatments harness your body's natural healing capabilities to address joint pain, sports injuries, and chronic musculoskeletal conditions without surgery. All treatments are performed by JOA-certified orthopedic specialists and adhere to Japanese medical laws and ethical standards.",
+      "question2": "How do I know if I'm a candidate for regenerative medicine?",
+      "answer2": "Eligibility is determined on a case-by-case basis following a thorough medical evaluation by our physicians. We review your medical history, imaging studies, and current symptoms during a remote consultation. Common candidates include those with knee osteoarthritis, sports injuries, shoulder and hip pain, and spine conditions. We provide preliminary suitability screening before you travel to Tokyo.",
+      "question3": "What is the cost of treatment and what does it include?",
+      "answer3": "Our treatment packages range from $25,000~ for a single session to $200,000~ for an annual care program. Single sessions include consultation, treatment, and 1-month follow-up. Three-session packages include personalized treatment plans and 3-month follow-up. Annual programs include unlimited treatments and dedicated concierge service. All prices are estimates and final costs depend on individual treatment requirements.",
+      "question4": "How long does the treatment process take?",
+      "answer4": "The complete process typically takes 3-5 days in Tokyo. Day 1: Initial consultation and evaluation. Day 2: Treatment day (PRP or stem cell therapy). Days 3-5: Recovery and follow-up instructions. We provide detailed pre- and post-procedure instructions, and arrange telemedicine follow-ups once you return home. Travel planning support is included for international patients.",
+      "question5": "Is regenerative medicine safe and what are the risks?",
+      "answer5": "Yes, our treatments are very safe when performed by qualified specialists. All procedures are performed by JOA-certified orthopedic surgeons in our state-of-the-art facility. We use your own cells (autologous), eliminating rejection risks. Potential side effects are minimal and typically include mild discomfort, swelling, or bruising at the injection site. We provide comprehensive pre-treatment screening to ensure safety.",
+      "question6": "Do you provide support for international patients?",
+      "answer6": "Yes, we offer comprehensive international patient services including visa letters (if needed), hotel recommendations, airport transfers, and multilingual support. Our English-speaking coordinators ensure smooth communication throughout your stay. We provide travel planning assistance and can arrange accommodations in Tokyo's premium Azabudai Hills district, just 20 minutes from Haneda Airport.",
+      "question7": "What makes Rakan Clinic different from other medical facilities?",
+      "answer7": "We combine 35+ years of JOA-certified orthopedic expertise with cutting-edge regenerative medicine research. Our team includes University of Tokyo professors and leading researchers in osteoimmunology. We offer state-of-the-art in-house laboratory facilities, private consultation rooms for VIP patients, and a unique blend of Western orthopedics with Eastern medicine approaches. Our Azabudai Hills location provides premium, discreet care for elite clientele.",
+      "question8": "How long does it take to see results from treatment?",
+      "answer8": "Results vary by individual and condition, but many patients report initial improvements within 2-4 weeks. Full benefits typically develop over 3-6 months as the regenerative process continues. We provide detailed recovery timelines and regular follow-up care to monitor progress. Our telemedicine follow-up system ensures continued support after you return home, with progress tracking and adjustment recommendations as needed."
+    }
   }
 }
 

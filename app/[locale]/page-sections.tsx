@@ -251,7 +251,7 @@ export function WhyTokyoSection() {
                 </svg>
             ),
             title: "Azabudai Hills - Premium Medical District",
-            description: "Situated in Tokyo's premier international district — home to luxury residences, Michelin-starred dining, and seamless transit connections. Minutes from Roppongi, Ginza, and Tokyo Station with premium accessibility."
+            description: "Situated in Tokyo's premier international district — home to luxury residences, Michelin-starred dining, and seamless transit connections. Minutes from Roppongi, Ginza, and Haneda Airport with premium accessibility."
         },
         {
             icon: (
@@ -853,6 +853,98 @@ export function TestimonialsSection() {
                 </div>
             </div>
         </section>
+    );
+}
+
+export function FAQSection() {
+    const t = useTranslations();
+
+    const faqs = [
+        {
+            question: t('faq.items.question1'),
+            answer: t('faq.items.answer1')
+        },
+        {
+            question: t('faq.items.question2'),
+            answer: t('faq.items.answer2')
+        },
+        {
+            question: t('faq.items.question3'),
+            answer: t('faq.items.answer3')
+        },
+        {
+            question: t('faq.items.question4'),
+            answer: t('faq.items.answer4')
+        },
+        {
+            question: t('faq.items.question5'),
+            answer: t('faq.items.answer5')
+        },
+        {
+            question: t('faq.items.question6'),
+            answer: t('faq.items.answer6')
+        },
+        {
+            question: t('faq.items.question7'),
+            answer: t('faq.items.answer7')
+        },
+        {
+            question: t('faq.items.question8'),
+            answer: t('faq.items.answer8')
+        }
+    ];
+
+    return (
+        <section id="faq" className="px-[5%] py-[4rem] bg-[#f8f6f3]">
+            <div className="max-w-[1000px] mx-auto">
+                <div className="text-center max-w-[700px] mx-auto mb-[3rem]">
+                    <div className="text-[0.68rem] tracking-[2.5px] uppercase text-[#4a9b7f] mb-3 font-semibold">
+                        {t('faq.badge')}
+                    </div>
+                    <h2 className="font-['Cormorant_Garamond'] text-[clamp(2rem,4.5vw,3.8rem)] mb-4 leading-[1.15] font-light">
+                        {t('faq.heading')}
+                    </h2>
+                    <p className="text-[0.98rem] text-[#666666] leading-[1.75] font-light">
+                        {t('faq.description')}
+                    </p>
+                </div>
+
+                <div className="space-y-4">
+                    {faqs.map((faq, index) => (
+                        <FAQItem key={index} question={faq.question} answer={faq.answer} />
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
+}
+
+function FAQItem({ question, answer }: { question: string; answer: string }) {
+    const [isOpen, setIsOpen] = useState(false);
+
+    return (
+        <div className="border border-gray-200 rounded-xl overflow-hidden">
+            <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="w-full px-6 py-5 text-left bg-white hover:bg-gray-50 transition-colors duration-200 flex items-center justify-between"
+            >
+                <h3 className="text-[1rem] font-semibold text-gray-900 pr-4">
+                    {question}
+                </h3>
+                <div className={`flex-shrink-0 w-6 h-6 flex items-center justify-center transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}>
+                    <svg className="w-4 h-4 text-[#4a9b7f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                </div>
+            </button>
+            <div className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
+                <div className="px-6 pb-5 bg-gray-50/30">
+                    <p className="text-[0.92rem] text-gray-700 leading-[1.75] font-light">
+                        {answer}
+                    </p>
+                </div>
+            </div>
+        </div>
     );
 }
 
