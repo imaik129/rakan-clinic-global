@@ -119,6 +119,7 @@
   "contactSection": {
     "phone": "电话",
     "email": "电子邮件",
+    "emailNote": "供国际患者使用",
     "location": "地址",
     "access": "交通"
   }

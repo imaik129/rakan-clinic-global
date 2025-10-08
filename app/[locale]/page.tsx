@@ -481,10 +481,10 @@ export default async function Home({
               </div>
 
               {[
-                { label: t('contactSection.phone'), value: '+81-3-6277-6112' },
-                { label: t('contactSection.email'), value: 'rakanclinictokyo@gmail.com' },
-                { label: t('contactSection.location'), value: t('contactInfo.address') },
-                { label: t('contactSection.access'), value: t('contactInfo.access') }
+                { label: t('contactSection.phone'), value: '+81-3-6277-6112', note: null },
+                { label: t('contactSection.email'), value: 'rakanclinictokyo@gmail.com', note: t('contactSection.emailNote') },
+                { label: t('contactSection.location'), value: t('contactInfo.address'), note: null },
+                { label: t('contactSection.access'), value: t('contactInfo.access'), note: null }
               ].map((item, i) => (
                 <div key={i}>
                   <div className="text-[0.75rem] uppercase tracking-[2px] text-[#4a9b7f] mb-2 font-medium">
@@ -493,6 +493,11 @@ export default async function Home({
                   <div className="text-[1.1rem] text-[#1a1a1a] font-light whitespace-pre-line">
                     {item.value}
                   </div>
+                  {item.note && (
+                    <div className="text-[0.75rem] text-gray-500 italic mt-1">
+                      {item.note}
+                    </div>
+                  )}
                 </div>
               ))}
             </div>

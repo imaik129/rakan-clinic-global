@@ -119,6 +119,7 @@
   "contactSection": {
     "phone": "Téléphone",
     "email": "E-mail",
+    "emailNote": "Pour les patients internationaux",
     "location": "Adresse",
     "access": "Accès"
   }

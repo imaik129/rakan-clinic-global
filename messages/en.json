@@ -341,6 +341,7 @@
   "contactSection": {
     "phone": "Phone",
     "email": "Email",
+    "emailNote": "For international patients",
     "location": "Location",
     "access": "Access"
   },

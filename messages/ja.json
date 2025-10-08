@@ -24,6 +24,7 @@
   "contactSection": {
     "phone": "電話",
     "email": "メール",
+    "emailNote": "海外の患者様向け",
     "location": "所在地",
     "access": "アクセス"
   }

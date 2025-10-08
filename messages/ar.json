@@ -119,6 +119,7 @@
   "contactSection": {
     "phone": "الهاتف",
     "email": "البريد الإلكتروني",
+    "emailNote": "للمرضى الدوليين",
     "location": "الموقع",
     "access": "الوصول"
   }
