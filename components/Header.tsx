@@ -21,12 +21,12 @@ export default function Header({ locale }: HeaderProps) {
 
     return (
         <header className="fixed top-0 w-full bg-white z-50 border-b border-[rgba(74,155,127,0.08)] shadow-[0_2px_10px_rgba(0,0,0,0.03)]">
-            <nav className="max-w-[1600px] mx-auto px-[5%] py-3">
+            <nav className="max-w-[1600px] mx-auto px-[3%] md:px-[5%] py-2 md:py-3">
                 {/* Top Row - Brand and Contact */}
-                <div className="flex items-center justify-between mb-3">
+                <div className="flex items-center justify-between mb-2 md:mb-3">
                     {/* Logo and Brand */}
-                    <Link href="#" className="flex items-center gap-3 group">
-                        <div className="relative w-10 h-10 flex-shrink-0">
+                    <Link href="#" className="flex items-center gap-2 md:gap-3 group">
+                        <div className="relative w-8 h-8 md:w-10 md:h-10 flex-shrink-0">
                             <Image
                                 src="/logo_nobg.png"
                                 alt="Rakan Clinic"
@@ -36,25 +36,25 @@ export default function Header({ locale }: HeaderProps) {
                             />
                         </div>
                         <div className="flex flex-col">
-                            <h1 className="font-['Cormorant_Garamond'] text-[1.1rem] font-semibold text-[#1a1a1a] tracking-[0.3px] transition-colors group-hover:text-[#4a9b7f]">
+                            <h1 className="font-['Cormorant_Garamond'] text-[0.9rem] md:text-[1.1rem] font-semibold text-[#1a1a1a] tracking-[0.3px] transition-colors group-hover:text-[#4a9b7f]">
                                 RAKAN CLINIC TOKYO
                             </h1>
-                            <div className="text-[0.6rem] text-[#4a9b7f] font-medium tracking-[1px] uppercase opacity-70">
+                            <div className="text-[0.55rem] md:text-[0.6rem] text-[#4a9b7f] font-medium tracking-[1px] uppercase opacity-70">
                                 AZABUDAI
                             </div>
                         </div>
                     </Link>
 
                     {/* Right Side - Mobile Menu + Desktop CTA */}
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-2 md:gap-4">
                         {/* Mobile Hamburger Menu */}
                         <button
                             onClick={toggleMobileMenu}
-                            className="md:hidden flex flex-col items-center justify-center w-8 h-8 space-y-1.5"
+                            className="md:hidden flex flex-col items-center justify-center w-7 h-7 space-y-1"
                         >
-                            <div className={`w-5 h-0.5 bg-[#1a1a1a] transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`}></div>
-                            <div className={`w-5 h-0.5 bg-[#1a1a1a] transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0' : ''}`}></div>
-                            <div className={`w-5 h-0.5 bg-[#1a1a1a] transition-all duration-300 ${isMobileMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></div>
+                            <div className={`w-4.5 h-0.5 bg-[#1a1a1a] transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-1.25' : ''}`}></div>
+                            <div className={`w-4.5 h-0.5 bg-[#1a1a1a] transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0' : ''}`}></div>
+                            <div className={`w-4.5 h-0.5 bg-[#1a1a1a] transition-all duration-300 ${isMobileMenuOpen ? '-rotate-45 -translate-y-1.25' : ''}`}></div>
                         </button>
 
                         {/* Desktop CTA */}

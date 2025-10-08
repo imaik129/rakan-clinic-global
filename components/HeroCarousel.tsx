@@ -81,7 +81,7 @@ export default function HeroCarousel() {
     };
 
     return (
-        <section className="relative w-full h-screen pt-[120px] overflow-hidden">
+        <section className="relative w-full h-screen pt-[70px] md:pt-[100px] overflow-hidden">
             {/* Full-width Image Carousel with Rounded Corners and Parallax */}
             <div
                 className="relative w-full h-full rounded-tl-[32px] rounded-br-[32px] overflow-hidden"
