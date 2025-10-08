@@ -48,94 +48,93 @@ export function StemCellSection() {
                     </p>
                 </div>
 
-                {/* Balanced Circular Layout */}
-                <div className="max-w-[1200px] mx-auto">
-                    {/* Mobile: Stack vertically */}
-                    <div className="md:hidden space-y-6">
+                {/* Olympics-Style Circular Layout */}
+                <div className="max-w-[1000px] mx-auto">
+                    {/* Mobile: 2x2 Grid */}
+                    <div className="md:hidden grid grid-cols-2 gap-4">
                         {['regeneration', 'inflammation', 'recovery', 'pain'].map((benefit) => (
-                            <div
-                                key={benefit}
-                                className="group relative bg-gradient-to-br from-white to-gray-50 rounded-full p-8 border-2 border-gray-200 hover:border-[#4a9b7f] transition-all duration-300 hover:shadow-2xl hover:-translate-y-2"
-                            >
-                                <div className="flex flex-col items-center text-center">
-                                    <div className="w-20 h-20 bg-gradient-to-br from-[#4a9b7f] to-[#3d8269] rounded-full flex items-center justify-center shadow-xl mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
-                                        {treatmentIcons[benefit as keyof typeof treatmentIcons]}
+                            <div key={benefit} className="flex justify-center">
+                                <div className="group relative bg-gradient-to-br from-white to-gray-50 rounded-full p-5 border border-gray-200 hover:border-[#4a9b7f] transition-all duration-300 hover:shadow-lg hover:-translate-y-1 w-[175px] h-[175px] flex items-center justify-center">
+                                    <div className="flex flex-col items-center text-center">
+                                        <div className="w-14 h-14 flex items-center justify-center mb-2 text-black group-hover:scale-110 transition-all duration-300">
+                                            {treatmentIcons[benefit as keyof typeof treatmentIcons]}
+                                        </div>
+                                        <h3 className="font-['Cormorant_Garamond'] text-[1rem] mb-1.5 font-semibold text-gray-900 group-hover:text-[#4a9b7f] transition-colors duration-300 leading-tight">
+                                            {t(`stemCell.benefits.items.${benefit}.title`)}
+                                        </h3>
+                                        <p className="text-[0.75rem] text-gray-600 font-light leading-[1.35]">
+                                            {t(`stemCell.benefits.items.${benefit}.description`)}
+                                        </p>
                                     </div>
-                                    <h3 className="font-['Cormorant_Garamond'] text-[1.4rem] mb-2 font-semibold text-gray-900 group-hover:text-[#4a9b7f] transition-colors duration-300">
-                                        {t(`stemCell.benefits.items.${benefit}.title`)}
-                                    </h3>
-                                    <p className="text-[0.9rem] text-gray-600 font-light leading-[1.6]">
-                                        {t(`stemCell.benefits.items.${benefit}.description`)}
-                                    </p>
                                 </div>
                             </div>
                         ))}
                     </div>
 
-                    {/* Desktop: Balanced 2x2 Grid with Circular Cards */}
-                    <div className="hidden md:grid md:grid-cols-2 gap-8 lg:gap-12 max-w-[900px] mx-auto">
-                        {/* Knee Osteoarthritis */}
-                        <div className="flex justify-center">
-                            <div className="group relative bg-gradient-to-br from-white to-gray-50 rounded-full p-8 border-2 border-gray-200 hover:border-[#4a9b7f] transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 w-[280px] h-[280px] flex items-center justify-center">
+                    {/* Desktop: Olympics-Style Staggered Layout */}
+                    <div className="hidden md:block relative max-w-[750px] mx-auto min-h-[300px]">
+                        {/* Top Row - Left (Knee) */}
+                        <div className="absolute top-0 left-[80px]">
+                            <div className="group relative bg-gradient-to-br from-white to-gray-50 rounded-full p-6 border border-gray-200 hover:border-[#4a9b7f] transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:z-10 w-[200px] h-[200px] flex items-center justify-center">
                                 <div className="flex flex-col items-center text-center">
-                                    <div className="w-20 h-20 bg-gradient-to-br from-[#4a9b7f] to-[#3d8269] rounded-full flex items-center justify-center shadow-xl mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                                    <div className="w-14 h-14 flex items-center justify-center mb-2 text-black group-hover:scale-110 transition-all duration-300">
                                         {treatmentIcons.regeneration}
                                     </div>
-                                    <h3 className="font-['Cormorant_Garamond'] text-[1.35rem] mb-2 font-semibold text-gray-900 group-hover:text-[#4a9b7f] transition-colors duration-300">
+                                    <h3 className="font-['Cormorant_Garamond'] text-[1.05rem] mb-1 font-semibold text-gray-900 group-hover:text-[#4a9b7f] transition-colors duration-300 leading-tight">
                                         {t('stemCell.benefits.items.regeneration.title')}
                                     </h3>
-                                    <p className="text-[0.85rem] text-gray-600 font-light leading-[1.5] px-2">
+                                    <p className="text-[0.72rem] text-gray-600 font-light leading-[1.3]">
                                         {t('stemCell.benefits.items.regeneration.description')}
                                     </p>
                                 </div>
                             </div>
                         </div>
 
-                        {/* Sports Injuries */}
-                        <div className="flex justify-center">
-                            <div className="group relative bg-gradient-to-br from-white to-gray-50 rounded-full p-8 border-2 border-gray-200 hover:border-[#4a9b7f] transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 w-[280px] h-[280px] flex items-center justify-center">
+                        {/* Top Row - Right (Sports) */}
+                        <div className="absolute top-0 right-[80px]">
+                            <div className="group relative bg-gradient-to-br from-white to-gray-50 rounded-full p-6 border border-gray-200 hover:border-[#4a9b7f] transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:z-10 w-[200px] h-[200px] flex items-center justify-center">
                                 <div className="flex flex-col items-center text-center">
-                                    <div className="w-20 h-20 bg-gradient-to-br from-[#4a9b7f] to-[#3d8269] rounded-full flex items-center justify-center shadow-xl mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                                    <div className="w-14 h-14 flex items-center justify-center mb-2 text-black group-hover:scale-110 transition-all duration-300">
                                         {treatmentIcons.inflammation}
                                     </div>
-                                    <h3 className="font-['Cormorant_Garamond'] text-[1.35rem] mb-2 font-semibold text-gray-900 group-hover:text-[#4a9b7f] transition-colors duration-300">
+                                    <h3 className="font-['Cormorant_Garamond'] text-[1.05rem] mb-1 font-semibold text-gray-900 group-hover:text-[#4a9b7f] transition-colors duration-300 leading-tight">
                                         {t('stemCell.benefits.items.inflammation.title')}
                                     </h3>
-                                    <p className="text-[0.85rem] text-gray-600 font-light leading-[1.5] px-2">
+                                    <p className="text-[0.72rem] text-gray-600 font-light leading-[1.3]">
                                         {t('stemCell.benefits.items.inflammation.description')}
                                     </p>
                                 </div>
                             </div>
                         </div>
 
-                        {/* Shoulder & Hip Pain */}
-                        <div className="flex justify-center">
-                            <div className="group relative bg-gradient-to-br from-white to-gray-50 rounded-full p-8 border-2 border-gray-200 hover:border-[#4a9b7f] transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 w-[280px] h-[280px] flex items-center justify-center">
+                        {/* Bottom Row - Left (Shoulder) - Offset */}
+                        <div className="absolute bottom-0 left-[180px]">
+                            <div className="group relative bg-gradient-to-br from-white to-gray-50 rounded-full p-6 border border-gray-200 hover:border-[#4a9b7f] transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:z-10 w-[200px] h-[200px] flex items-center justify-center">
                                 <div className="flex flex-col items-center text-center">
-                                    <div className="w-20 h-20 bg-gradient-to-br from-[#4a9b7f] to-[#3d8269] rounded-full flex items-center justify-center shadow-xl mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                                    <div className="w-14 h-14 flex items-center justify-center mb-2 text-black group-hover:scale-110 transition-all duration-300">
                                         {treatmentIcons.recovery}
                                     </div>
-                                    <h3 className="font-['Cormorant_Garamond'] text-[1.35rem] mb-2 font-semibold text-gray-900 group-hover:text-[#4a9b7f] transition-colors duration-300">
+                                    <h3 className="font-['Cormorant_Garamond'] text-[1.05rem] mb-1 font-semibold text-gray-900 group-hover:text-[#4a9b7f] transition-colors duration-300 leading-tight">
                                         {t('stemCell.benefits.items.recovery.title')}
                                     </h3>
-                                    <p className="text-[0.85rem] text-gray-600 font-light leading-[1.5] px-2">
+                                    <p className="text-[0.72rem] text-gray-600 font-light leading-[1.3]">
                                         {t('stemCell.benefits.items.recovery.description')}
                                     </p>
                                 </div>
                             </div>
                         </div>
 
-                        {/* Spine Conditions */}
-                        <div className="flex justify-center">
-                            <div className="group relative bg-gradient-to-br from-white to-gray-50 rounded-full p-8 border-2 border-gray-200 hover:border-[#4a9b7f] transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 w-[280px] h-[280px] flex items-center justify-center">
+                        {/* Bottom Row - Right (Spine) - Offset */}
+                        <div className="absolute bottom-0 right-[180px]">
+                            <div className="group relative bg-gradient-to-br from-white to-gray-50 rounded-full p-6 border border-gray-200 hover:border-[#4a9b7f] transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:z-10 w-[200px] h-[200px] flex items-center justify-center">
                                 <div className="flex flex-col items-center text-center">
-                                    <div className="w-20 h-20 bg-gradient-to-br from-[#4a9b7f] to-[#3d8269] rounded-full flex items-center justify-center shadow-xl mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                                    <div className="w-14 h-14 flex items-center justify-center mb-2 text-black group-hover:scale-110 transition-all duration-300">
                                         {treatmentIcons.pain}
                                     </div>
-                                    <h3 className="font-['Cormorant_Garamond'] text-[1.35rem] mb-2 font-semibold text-gray-900 group-hover:text-[#4a9b7f] transition-colors duration-300">
+                                    <h3 className="font-['Cormorant_Garamond'] text-[1.05rem] mb-1 font-semibold text-gray-900 group-hover:text-[#4a9b7f] transition-colors duration-300 leading-tight">
                                         {t('stemCell.benefits.items.pain.title')}
                                     </h3>
-                                    <p className="text-[0.85rem] text-gray-600 font-light leading-[1.5] px-2">
+                                    <p className="text-[0.72rem] text-gray-600 font-light leading-[1.3]">
                                         {t('stemCell.benefits.items.pain.description')}
                                     </p>
                                 </div>
