@@ -58,11 +58,16 @@ export default function Header({ locale }: HeaderProps) {
                         </button>
 
                         {/* Desktop CTA */}
-                        <Link href="#contact" className="hidden md:block">
+                        <a
+                            href="https://reservation.medical-force.com/c/b04884e74e2542e0a3e0ae50ce50c26b"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hidden md:block"
+                        >
                             <button className="bg-[#4a9b7f] text-white px-6 py-2 text-[0.7rem] font-semibold tracking-[1px] uppercase transition-all duration-300 hover:bg-[#3d8269] hover:shadow-lg rounded">
                                 {t('header.bookOnline')}
                             </button>
-                        </Link>
+                        </a>
                     </div>
                 </div>
 
@@ -182,11 +187,16 @@ export default function Header({ locale }: HeaderProps) {
 
                                 {/* Mobile CTA Button */}
                                 <div className="mt-8 pt-6 border-t border-gray-200">
-                                    <Link href="#contact" onClick={toggleMobileMenu}>
+                                    <a
+                                        href="https://reservation.medical-force.com/c/b04884e74e2542e0a3e0ae50ce50c26b"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        onClick={toggleMobileMenu}
+                                    >
                                         <button className="w-full bg-[#4a9b7f] text-white px-6 py-3 text-sm font-semibold tracking-[1px] uppercase transition-all duration-300 hover:bg-[#3d8269] hover:shadow-lg rounded">
                                             {t('header.bookOnline')}
                                         </button>
-                                    </Link>
+                                    </a>
                                 </div>
                             </div>
                         </div>
