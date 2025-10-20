@@ -158,7 +158,7 @@ function DoctorCard({ doctor, doctorImage }: { doctor: string; doctorImage: stri
     return (
         <div className="flex-shrink-0 w-[300px] bg-white border border-gray-100 rounded-2xl overflow-hidden hover:border-[#4a9b7f]/30 transition-all duration-300">
             {/* Doctor Photo - Full Image Visible with Rounded Corners */}
-            <div className="relative w-full h-[340px] overflow-hidden rounded-tl-[24px] rounded-br-[24px]">
+            <div className="relative w-full h-[340px] overflow-hidden rounded-t-2xl">
                 <Image
                     src={doctorImage}
                     alt={t(`doctors.team.${doctor}.name`)}
@@ -183,16 +183,18 @@ function DoctorCard({ doctor, doctorImage }: { doctor: string; doctorImage: stri
                 </div>
 
                 {/* Experience Badge */}
-                <div className="mb-4">
-                    <div className="inline-flex items-center px-2.5 py-1 bg-[#4a9b7f]/10 rounded-full">
-                        <svg className="w-3.5 h-3.5 text-[#4a9b7f] mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        <span className="text-xs font-semibold text-[#4a9b7f]">
-                            {t(`doctors.team.${doctor}.experience`)}
-                        </span>
+                {t.has(`doctors.team.${doctor}.experience`) && (
+                    <div className="mb-4">
+                        <div className="inline-flex items-center px-2.5 py-1 bg-[#4a9b7f]/10 rounded-full">
+                            <svg className="w-3.5 h-3.5 text-[#4a9b7f] mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span className="text-xs font-semibold text-[#4a9b7f]">
+                                {t(`doctors.team.${doctor}.experience`)}
+                            </span>
+                        </div>
                     </div>
-                </div>
+                )}
 
                 {/* Specialties - More Compact */}
                 <div className="mb-3">
@@ -248,10 +250,11 @@ export function DoctorsSection() {
     const doctorImages = {
         doctor1: '/images/doctors/shimizu.png',
         doctor2: '/images/doctors/takayanagi.jpg',
-        doctor3: '/images/doctors/toubaru.png'
+        doctor3: '/images/doctors/toubaru.png',
+        doctor4: '/images/doctors/sumiya.png'
     };
 
-    const doctors = ['doctor1', 'doctor2', 'doctor3'];
+    const doctors = ['doctor1', 'doctor2', 'doctor3', 'doctor4'];
 
     return (
         <section className="py-[6rem] bg-[#f8f6f3] overflow-hidden">
