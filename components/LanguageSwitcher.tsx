@@ -3,7 +3,7 @@
 import { usePathname, useRouter } from 'next/navigation';
 import { locales, localeNames, type Locale } from '@/i18n';
 
-export default function LanguageSwitcher({ currentLocale }: { currentLocale: Locale }) {
+export default function LanguageSwitcher({ currentLocale, isScrolled }: { currentLocale: Locale; isScrolled?: boolean }) {
     const router = useRouter();
     const pathname = usePathname();
 
@@ -17,7 +17,7 @@ export default function LanguageSwitcher({ currentLocale }: { currentLocale: Loc
     return (
         <div className="relative group">
             <button
-                className="flex items-center gap-1.5 px-2.5 py-1.5 text-[0.68rem] font-medium tracking-[0.5px] text-[#1a1a1a] hover:text-[#4a9b7f] transition-all duration-300 uppercase"
+                className={`flex items-center gap-1.5 px-2.5 py-1.5 text-[0.68rem] font-medium tracking-[0.5px] transition-all duration-300 uppercase hover:text-[#4a9b7f] ${isScrolled ? 'text-[#1a1a1a]' : 'text-white'}`}
                 aria-label="Change language"
             >
                 <svg

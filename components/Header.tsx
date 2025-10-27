@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import LanguageSwitcher from './LanguageSwitcher';
 import { type Locale } from '@/i18n';
@@ -13,14 +13,27 @@ interface HeaderProps {
 
 export default function Header({ locale }: HeaderProps) {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
     const t = useTranslations();
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 100);
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
     };
 
     return (
-        <header className="fixed top-0 w-full bg-white z-50 border-b border-[rgba(74,155,127,0.08)] shadow-[0_2px_10px_rgba(0,0,0,0.03)]">
+        <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+            isScrolled 
+                ? 'bg-white border-b border-[rgba(74,155,127,0.08)] shadow-[0_2px_10px_rgba(0,0,0,0.03)]' 
+                : 'bg-transparent'
+        }`}>
             <nav className="max-w-[1600px] mx-auto px-[3%] md:px-[5%] py-2 md:py-3">
                 {/* Top Row - Brand and Contact */}
                 <div className="flex items-center justify-between mb-2 md:mb-3">
@@ -36,10 +49,10 @@ export default function Header({ locale }: HeaderProps) {
                             />
                         </div>
                         <div className="flex flex-col">
-                            <h1 className="font-['Cormorant_Garamond'] text-[0.9rem] md:text-[1.1rem] font-semibold text-[#1a1a1a] tracking-[0.3px] transition-colors group-hover:text-[#4a9b7f]">
+                            <h1 className={`font-['Cormorant_Garamond'] text-[0.9rem] md:text-[1.1rem] font-semibold tracking-[0.3px] transition-colors group-hover:text-[#4a9b7f] ${isScrolled ? 'text-[#1a1a1a]' : 'text-white'}`}>
                                 RAKAN CLINIC TOKYO
                             </h1>
-                            <div className="text-[0.55rem] md:text-[0.6rem] text-[#4a9b7f] font-medium tracking-[1px] uppercase opacity-70">
+                            <div className={`text-[0.55rem] md:text-[0.6rem] font-medium tracking-[1px] uppercase transition-colors ${isScrolled ? 'text-[#4a9b7f] opacity-70' : 'text-white opacity-90'}`}>
                                 AZABUDAI
                             </div>
                         </div>
@@ -48,16 +61,16 @@ export default function Header({ locale }: HeaderProps) {
                     {/* Right Side - Language Toggle + Mobile Menu + Desktop CTA */}
                     <div className="flex items-center gap-2 md:gap-3">
                         {/* Language Switcher */}
-                        <LanguageSwitcher currentLocale={locale as Locale} />
+                        <LanguageSwitcher currentLocale={locale as Locale} isScrolled={isScrolled} />
 
                         {/* Mobile Hamburger Menu */}
                         <button
                             onClick={toggleMobileMenu}
                             className="md:hidden flex flex-col items-center justify-center w-7 h-7 space-y-1"
                         >
-                            <div className={`w-4.5 h-0.5 bg-[#1a1a1a] transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-1.25' : ''}`}></div>
-                            <div className={`w-4.5 h-0.5 bg-[#1a1a1a] transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0' : ''}`}></div>
-                            <div className={`w-4.5 h-0.5 bg-[#1a1a1a] transition-all duration-300 ${isMobileMenuOpen ? '-rotate-45 -translate-y-1.25' : ''}`}></div>
+                            <div className={`w-4.5 h-0.5 transition-all duration-300 ${isScrolled ? 'bg-[#1a1a1a]' : 'bg-white'} ${isMobileMenuOpen ? 'rotate-45 translate-y-1.25' : ''}`}></div>
+                            <div className={`w-4.5 h-0.5 transition-all duration-300 ${isScrolled ? 'bg-[#1a1a1a]' : 'bg-white'} ${isMobileMenuOpen ? 'opacity-0' : ''}`}></div>
+                            <div className={`w-4.5 h-0.5 transition-all duration-300 ${isScrolled ? 'bg-[#1a1a1a]' : 'bg-white'} ${isMobileMenuOpen ? '-rotate-45 -translate-y-1.25' : ''}`}></div>
                         </button>
 
                         {/* Desktop CTA */}
@@ -77,35 +90,35 @@ export default function Header({ locale }: HeaderProps) {
                 {/* Bottom Row - Desktop Navigation Only */}
                 <div className="hidden md:flex items-center justify-center">
                     <nav className="flex items-center gap-8">
-                        <a href="#" className="text-[#1a1a1a] text-[0.8rem] font-medium hover:text-[#4a9b7f] transition-colors relative after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[2px] after:bg-[#4a9b7f] after:transition-[width] after:duration-300 hover:after:w-full">
+                        <a href="#" className={`text-[0.8rem] font-medium transition-colors relative after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[2px] after:bg-[#4a9b7f] after:transition-[width] after:duration-300 hover:after:w-full ${isScrolled ? 'text-[#1a1a1a] hover:text-[#4a9b7f]' : 'text-white hover:text-[#4a9b7f]'}`}>
                             {t('header.home')}
                         </a>
-                        <div className="w-[1px] h-4 bg-[#4a9b7f]/20" />
-                        <a href={`/${locale}/treatments`} className="text-[#1a1a1a] text-[0.8rem] font-medium hover:text-[#4a9b7f] transition-colors relative after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[2px] after:bg-[#4a9b7f] after:transition-[width] after:duration-300 hover:after:w-full">
+                        <div className={`w-[1px] h-4 transition-colors ${isScrolled ? 'bg-[#4a9b7f]/20' : 'bg-white/20'}`} />
+                        <a href={`/${locale}/treatments`} className={`text-[0.8rem] font-medium transition-colors relative after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[2px] after:bg-[#4a9b7f] after:transition-[width] after:duration-300 hover:after:w-full ${isScrolled ? 'text-[#1a1a1a] hover:text-[#4a9b7f]' : 'text-white hover:text-[#4a9b7f]'}`}>
                             {t('header.treatments')}
                         </a>
-                        <div className="w-[1px] h-4 bg-[#4a9b7f]/20" />
-                        <a href="#doctors" className="text-[#1a1a1a] text-[0.8rem] font-medium hover:text-[#4a9b7f] transition-colors relative after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[2px] after:bg-[#4a9b7f] after:transition-[width] after:duration-300 hover:after:w-full">
+                        <div className={`w-[1px] h-4 transition-colors ${isScrolled ? 'bg-[#4a9b7f]/20' : 'bg-white/20'}`} />
+                        <a href="#doctors" className={`text-[0.8rem] font-medium transition-colors relative after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[2px] after:bg-[#4a9b7f] after:transition-[width] after:duration-300 hover:after:w-full ${isScrolled ? 'text-[#1a1a1a] hover:text-[#4a9b7f]' : 'text-white hover:text-[#4a9b7f]'}`}>
                             {t('header.doctors')}
                         </a>
-                        <div className="w-[1px] h-4 bg-[#4a9b7f]/20" />
-                        <a href="#about" className="text-[#1a1a1a] text-[0.8rem] font-medium hover:text-[#4a9b7f] transition-colors relative after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[2px] after:bg-[#4a9b7f] after:transition-[width] after:duration-300 hover:after:w-full">
+                        <div className={`w-[1px] h-4 transition-colors ${isScrolled ? 'bg-[#4a9b7f]/20' : 'bg-white/20'}`} />
+                        <a href="#about" className={`text-[0.8rem] font-medium transition-colors relative after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[2px] after:bg-[#4a9b7f] after:transition-[width] after:duration-300 hover:after:w-full ${isScrolled ? 'text-[#1a1a1a] hover:text-[#4a9b7f]' : 'text-white hover:text-[#4a9b7f]'}`}>
                             {t('header.about')}
                         </a>
-                        <div className="w-[1px] h-4 bg-[#4a9b7f]/20" />
-                        <a href="#pricing" className="text-[#1a1a1a] text-[0.8rem] font-medium hover:text-[#4a9b7f] transition-colors relative after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[2px] after:bg-[#4a9b7f] after:transition-[width] after:duration-300 hover:after:w-full">
+                        <div className={`w-[1px] h-4 transition-colors ${isScrolled ? 'bg-[#4a9b7f]/20' : 'bg-white/20'}`} />
+                        <a href="#pricing" className={`text-[0.8rem] font-medium transition-colors relative after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[2px] after:bg-[#4a9b7f] after:transition-[width] after:duration-300 hover:after:w-full ${isScrolled ? 'text-[#1a1a1a] hover:text-[#4a9b7f]' : 'text-white hover:text-[#4a9b7f]'}`}>
                             {t('header.pricing')}
                         </a>
-                        <div className="w-[1px] h-4 bg-[#4a9b7f]/20" />
-                        <a href="#faq" className="text-[#1a1a1a] text-[0.8rem] font-medium hover:text-[#4a9b7f] transition-colors relative after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[2px] after:bg-[#4a9b7f] after:transition-[width] after:duration-300 hover:after:w-full">
+                        <div className={`w-[1px] h-4 transition-colors ${isScrolled ? 'bg-[#4a9b7f]/20' : 'bg-white/20'}`} />
+                        <a href="#faq" className={`text-[0.8rem] font-medium transition-colors relative after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[2px] after:bg-[#4a9b7f] after:transition-[width] after:duration-300 hover:after:w-full ${isScrolled ? 'text-[#1a1a1a] hover:text-[#4a9b7f]' : 'text-white hover:text-[#4a9b7f]'}`}>
                             {t('header.faq')}
                         </a>
-                        <div className="w-[1px] h-4 bg-[#4a9b7f]/20" />
-                        <a href="#support" className="text-[#1a1a1a] text-[0.8rem] font-medium hover:text-[#4a9b7f] transition-colors relative after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[2px] after:bg-[#4a9b7f] after:transition-[width] after:duration-300 hover:after:w-full">
+                        <div className={`w-[1px] h-4 transition-colors ${isScrolled ? 'bg-[#4a9b7f]/20' : 'bg-white/20'}`} />
+                        <a href="#support" className={`text-[0.8rem] font-medium transition-colors relative after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[2px] after:bg-[#4a9b7f] after:transition-[width] after:duration-300 hover:after:w-full ${isScrolled ? 'text-[#1a1a1a] hover:text-[#4a9b7f]' : 'text-white hover:text-[#4a9b7f]'}`}>
                             {t('header.support')}
                         </a>
-                        <div className="w-[1px] h-4 bg-[#4a9b7f]/20" />
-                        <a href="#contact" className="text-[#1a1a1a] text-[0.8rem] font-medium hover:text-[#4a9b7f] transition-colors relative after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[2px] after:bg-[#4a9b7f] after:transition-[width] after:duration-300 hover:after:w-full">
+                        <div className={`w-[1px] h-4 transition-colors ${isScrolled ? 'bg-[#4a9b7f]/20' : 'bg-white/20'}`} />
+                        <a href="#contact" className={`text-[0.8rem] font-medium transition-colors relative after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[2px] after:bg-[#4a9b7f] after:transition-[width] after:duration-300 hover:after:w-full ${isScrolled ? 'text-[#1a1a1a] hover:text-[#4a9b7f]' : 'text-white hover:text-[#4a9b7f]'}`}>
                             {t('header.contact')}
                         </a>
                     </nav>

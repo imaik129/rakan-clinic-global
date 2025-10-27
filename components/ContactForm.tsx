@@ -67,7 +67,7 @@ interface FormData {
 export default function ContactForm() {
     const t = useTranslations();
     const locale = useLocale();
-    
+
     // Map locale to default country code
     const getDefaultCountry = () => {
         const localeCountryMap: Record<string, string> = {
@@ -77,7 +77,7 @@ export default function ContactForm() {
         const code = localeCountryMap[locale] || '+1';
         return countryCodes.find(c => c.code === code) || countryCodes[0];
     };
-    
+
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -90,7 +90,7 @@ export default function ContactForm() {
         phone: '',
         message: ''
     });
-    
+
     // Update country when locale changes
     useEffect(() => {
         const defaultCountry = getDefaultCountry();

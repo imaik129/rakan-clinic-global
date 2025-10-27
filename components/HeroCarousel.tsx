@@ -59,10 +59,10 @@ export default function HeroCarousel() {
     };
 
     return (
-        <section className="relative w-full h-screen pt-[70px] md:pt-[100px] overflow-hidden">
-            {/* Full-width Image Carousel with Rounded Corners and Parallax */}
+        <section className="relative w-full h-screen overflow-hidden">
+            {/* Full-width Image Carousel with Parallax */}
             <div
-                className="relative w-full h-full rounded-tl-[32px] rounded-br-[32px] overflow-hidden"
+                className="relative w-full h-full overflow-hidden"
                 style={{
                     transform: `translateY(${scrollY * 0.5}px)`
                 }}
@@ -88,7 +88,7 @@ export default function HeroCarousel() {
             </div>
 
             {/* Content Overlay */}
-            <div className="absolute inset-0 flex items-center justify-center z-10">
+            <div className="absolute inset-0 flex items-center justify-center z-10 pt-[120px] md:pt-[140px]">
                 <div className="text-center text-white px-[5%] max-w-[1200px] mx-auto">
                     {/* Enhanced Text Container with Better Spacing */}
                     <div className="mb-8">
