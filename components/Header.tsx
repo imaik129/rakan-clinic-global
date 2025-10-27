@@ -45,7 +45,7 @@ export default function Header({ locale }: HeaderProps) {
                         </div>
                     </Link>
 
-                                        {/* Right Side - Language Toggle + Mobile Menu + Desktop CTA */}
+                    {/* Right Side - Language Toggle + Mobile Menu + Desktop CTA */}
                     <div className="flex items-center gap-2 md:gap-3">
                         {/* Language Switcher */}
                         <LanguageSwitcher currentLocale={locale as Locale} />
@@ -61,9 +61,9 @@ export default function Header({ locale }: HeaderProps) {
                         </button>
 
                         {/* Desktop CTA */}
-                        <a 
-                            href="https://reservation.medical-force.com/c/b04884e74e2542e0a3e0ae50ce50c26b" 
-                            target="_blank" 
+                        <a
+                            href="https://reservation.medical-force.com/c/b04884e74e2542e0a3e0ae50ce50c26b"
+                            target="_blank"
                             rel="noopener noreferrer"
                             className="hidden md:block"
                         >
@@ -81,7 +81,7 @@ export default function Header({ locale }: HeaderProps) {
                             {t('header.home')}
                         </a>
                         <div className="w-[1px] h-4 bg-[#4a9b7f]/20" />
-                        <a href="#stem-cell" className="text-[#1a1a1a] text-[0.8rem] font-medium hover:text-[#4a9b7f] transition-colors relative after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[2px] after:bg-[#4a9b7f] after:transition-[width] after:duration-300 hover:after:w-full">
+                        <a href={`/${locale}/treatments`} className="text-[#1a1a1a] text-[0.8rem] font-medium hover:text-[#4a9b7f] transition-colors relative after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[2px] after:bg-[#4a9b7f] after:transition-[width] after:duration-300 hover:after:w-full">
                             {t('header.treatments')}
                         </a>
                         <div className="w-[1px] h-4 bg-[#4a9b7f]/20" />
@@ -138,7 +138,7 @@ export default function Header({ locale }: HeaderProps) {
                                         {t('header.home')}
                                     </a>
                                     <a
-                                        href="#stem-cell"
+                                        href={`/${locale}/treatments`}
                                         className="block text-[#1a1a1a] text-lg font-medium hover:text-[#4a9b7f] transition-colors py-2"
                                         onClick={toggleMobileMenu}
                                     >

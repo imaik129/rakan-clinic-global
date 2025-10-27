@@ -52,8 +52,8 @@ export default function LanguageSwitcher({ currentLocale }: { currentLocale: Loc
                             key={locale}
                             onClick={() => changeLocale(locale)}
                             className={`w-full text-left px-4 py-2.5 text-[0.75rem] transition-all duration-150 font-light tracking-[0.3px] ${locale === currentLocale
-                                    ? 'bg-[#4a9b7f] text-white font-medium'
-                                    : 'text-[#1a1a1a] hover:bg-[#f8f6f3]'
+                                ? 'bg-[#4a9b7f] text-white font-medium'
+                                : 'text-[#1a1a1a] hover:bg-[#f8f6f3]'
                                 }`}
                         >
                             {localeNames[locale]}

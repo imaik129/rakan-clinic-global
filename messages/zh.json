@@ -472,6 +472,118 @@
       }
     },
     "footer": "东京首屈一指的再生骨科诊所"
+  },
+  "treatmentsPage": {
+    "badge": "治疗定价",
+    "heading": "再生医学与静脉治疗",
+    "description": "PRP、外泌体、NMN、NAD⁺和预防性检测服务的全面定价",
+    "sections": {
+      "stemCell": {
+        "title": "干细胞疗法"
+      },
+      "prp": {
+        "title": "PRP疗法"
+      },
+      "exosome": {
+        "title": "外泌体疗法"
+      },
+      "nmn": {
+        "title": "NMN静脉治疗"
+      },
+      "nad": {
+        "title": "NAD⁺静脉治疗"
+      },
+      "testing": {
+        "title": "检测与预防护理"
+      }
+    },
+    "table": {
+      "treatment": "治疗",
+      "test": "检测",
+      "jpy": "日元",
+      "usd": "美元",
+      "description": "说明"
+    },
+    "treatments": {
+      "stemCellSingle": {
+        "name": "单次干细胞治疗",
+        "description": "每次进行脂肪组织采集和细胞培养。无冷冻保存。无血液检测监控。一次性治疗，新鲜细胞培养。"
+      },
+      "stemCellThree": {
+        "name": "年度3次疗程",
+        "description": "第一次疗程采集并冷冻细胞。1年内用于3次治疗。包括存储费和每次访问的血液检测。最受欢迎的选项。"
+      },
+      "stemCellSix": {
+        "name": "2年6次疗程",
+        "description": "第一次疗程采集并冷冻细胞。2年内用于最多6次治疗。包括存储费和每次访问的血液检测。最具价值的选项。"
+      },
+      "superRichPRP": {
+        "name": "超级富血小板血浆",
+        "description": "高浓度血小板衍生生长因子，旨在加速关节再生、减少炎症并增强长期功能恢复。为每位患者量身定制浓度。"
+      },
+      "exosome": {
+        "name": "外泌体输注（UC/DP/BM）",
+        "description": "促进组织修复、免疫调节和抗炎改善的再生信使。建议多瓶治疗以获得最佳效果。"
+      },
+      "nmn150": {
+        "name": "NMN滴注 150 mg",
+        "description": "NMN转化为NAD⁺，增强线粒体能量、新陈代谢和耐力。"
+      },
+      "nmn300": {
+        "name": "NMN滴注 300 mg",
+        "description": "更高剂量的线粒体支持，抗衰老效果更强。"
+      },
+      "nmn450": {
+        "name": "NMN滴注 450 mg",
+        "description": "高效再生效果，适合注重表现的客户。"
+      },
+      "nmnSupplement": {
+        "name": "NMN补充剂（口服）—日本制造",
+        "description": "100%国产NMN补充剂，支持NAD⁺产生，用于日常能量、新陈代谢和抗衰老优化。"
+      },
+      "nad50": {
+        "name": "NAD⁺滴注 50 mg",
+        "description": "支持脑功能和快速疲劳恢复。"
+      },
+      "nad100": {
+        "name": "NAD⁺滴注 100 mg",
+        "description": "增强抗压能力和专注力。"
+      },
+      "nad200": {
+        "name": "NAD⁺滴注 200 mg",
+        "description": "强大的认知和代谢增强。"
+      },
+      "nad300": {
+        "name": "NAD⁺滴注 300 mg",
+        "description": "高绩效生活方式的最大效力。"
+      },
+      "nadTest": {
+        "name": "NAD⁺检测",
+        "description": "通过NAD⁺水平评估细胞衰老。"
+      },
+      "telomereTest": {
+        "name": "端粒检测",
+        "description": "用于生物年龄测量的遗传标记检测。"
+      },
+      "vitaminTest": {
+        "name": "维生素和矿物质分析",
+        "description": "识别营养缺乏和代谢平衡。"
+      },
+      "gutTest": {
+        "name": "肠道微生物群检测",
+        "description": "评估肠道菌群以优化免疫和消化。"
+      },
+      "ageTest": {
+        "name": "AGEs检测",
+        "description": "测量与皮肤和血管老化相关的有害糖化。"
+      }
+    },
+    "cta": {
+      "title": "准备开始您的治疗？",
+      "description": "联系我们进行个性化咨询，讨论最适合您的治疗方案。",
+      "bookConsultation": "预约咨询",
+      "contactUs": "联系我们"
+    }
   }
 }
 

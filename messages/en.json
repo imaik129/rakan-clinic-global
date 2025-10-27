@@ -492,6 +492,118 @@
       "question8": "How long does it take to see results from treatment?",
       "answer8": "Results vary by individual and condition, but many patients report initial improvements within 2-4 weeks. Full benefits typically develop over 3-6 months as the regenerative process continues. We provide detailed recovery timelines and regular follow-up care to monitor progress. Our telemedicine follow-up system ensures continued support after you return home, with progress tracking and adjustment recommendations as needed."
     }
+  },
+  "treatmentsPage": {
+    "badge": "Treatment Pricing",
+    "heading": "Regenerative Medicine & IV Therapy",
+    "description": "Comprehensive pricing for PRP, Exosome, NMN, NAD⁺, and preventive testing services",
+    "sections": {
+      "stemCell": {
+        "title": "Stem Cell Therapy"
+      },
+      "prp": {
+        "title": "PRP Therapy"
+      },
+      "exosome": {
+        "title": "Exosome Therapy"
+      },
+      "nmn": {
+        "title": "NMN IV Therapy"
+      },
+      "nad": {
+        "title": "NAD⁺ IV Therapy"
+      },
+      "testing": {
+        "title": "Testing & Preventive Care"
+      }
+    },
+    "table": {
+      "treatment": "Treatment",
+      "test": "Test",
+      "jpy": "JPY",
+      "usd": "USD",
+      "description": "Description"
+    },
+    "treatments": {
+      "stemCellSingle": {
+        "name": "Single Session Stem Cell Therapy",
+        "description": "Adipose tissue collection and cell cultivation are performed each time. No cryopreservation. No blood test monitoring. One-time treatment with fresh cell cultivation."
+      },
+      "stemCellThree": {
+        "name": "3 Sessions Per Year",
+        "description": "Cells collected and frozen at first session. Used for 3 treatments in 1 year. Includes storage fee and blood test at each visit. Most popular option."
+      },
+      "stemCellSix": {
+        "name": "6 Sessions Over 2 Years",
+        "description": "Cells collected and frozen at first session. Used for up to 6 treatments over 2 years. Includes storage fee and blood test at each visit. Best value option."
+      },
+      "superRichPRP": {
+        "name": "Super Rich PRP",
+        "description": "High-concentration platelet-derived growth factors designed to accelerate joint regeneration, reduce inflammation, and enhance long-term functional recovery. Tailored concentration for each patient."
+      },
+      "exosome": {
+        "name": "Exosome Infusion (UC/DP/BM)",
+        "description": "Regenerative messengers that promote tissue repair, immune modulation, and anti-inflammatory improvement. Recommended multi-vial therapy for best results."
+      },
+      "nmn150": {
+        "name": "NMN Drip 150 mg",
+        "description": "NMN converts to NAD⁺ boosting mitochondrial energy, metabolism, and endurance."
+      },
+      "nmn300": {
+        "name": "NMN Drip 300 mg",
+        "description": "Higher-dose mitochondria support for stronger anti-aging effect."
+      },
+      "nmn450": {
+        "name": "NMN Drip 450 mg",
+        "description": "High potent regeneration effect, ideal for performance-focused clients."
+      },
+      "nmnSupplement": {
+        "name": "NMN Supplement (Oral) — Made in Japan",
+        "description": "100% domestically manufactured NMN supplement supporting NAD⁺ production for daily energy, metabolism, and anti-aging optimization."
+      },
+      "nad50": {
+        "name": "NAD⁺ Drip 50 mg",
+        "description": "Supports brain function and rapid fatigue recovery."
+      },
+      "nad100": {
+        "name": "NAD⁺ Drip 100 mg",
+        "description": "Enhances stress resilience and focus."
+      },
+      "nad200": {
+        "name": "NAD⁺ Drip 200 mg",
+        "description": "Strong cognitive and metabolic enhancement."
+      },
+      "nad300": {
+        "name": "NAD⁺ Drip 300 mg",
+        "description": "Maximum potency for high-performance lifestyles."
+      },
+      "nadTest": {
+        "name": "NAD⁺ Test",
+        "description": "Evaluates cellular aging through NAD⁺ level."
+      },
+      "telomereTest": {
+        "name": "Telomere Test",
+        "description": "Genetic marker test for biological age measurement."
+      },
+      "vitaminTest": {
+        "name": "Vitamin & Mineral Analysis",
+        "description": "Identifies nutritional deficiencies and metabolic balance."
+      },
+      "gutTest": {
+        "name": "Gut Microbiota Test",
+        "description": "Assesses gut flora for immunity and digestion optimization."
+      },
+      "ageTest": {
+        "name": "AGEs Test",
+        "description": "Measures harmful glycation linked to aging in skin and vessels."
+      }
+    },
+    "cta": {
+      "title": "Ready to Begin Your Treatment?",
+      "description": "Contact us for a personalized consultation and to discuss which treatment options are best for you.",
+      "bookConsultation": "Book Consultation",
+      "contactUs": "Contact Us"
+    }
   }
 }
 
