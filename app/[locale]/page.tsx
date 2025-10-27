@@ -5,6 +5,7 @@ import Header from '@/components/Header';
 import HeroCarousel from '@/components/HeroCarousel';
 import ContactForm from '@/components/ContactForm';
 import BackToTopButton from '@/components/BackToTopButton';
+import TreatmentGoalsMobile from '@/components/TreatmentGoalsMobile';
 import { type Locale } from '@/i18n';
 import {
   StemCellSection,
@@ -35,73 +36,92 @@ export default async function Home({
       <HeroCarousel />
 
       {/* 2. Treatment Goals / Who We Help */}
-      <section className="px-[5%] py-[4rem] bg-gradient-to-b from-white to-gray-50">
+      <section className="px-[5%] md:py-[5rem] py-[3.5rem] bg-gradient-to-b from-white via-gray-50/50 to-white">
         <div className="max-w-[1200px] mx-auto">
-          <div className="text-center max-w-[700px] mx-auto mb-[3rem]">
-            <span className="text-[0.7rem] tracking-[2px] uppercase text-[#4a9b7f] font-bold">
+          <div className="text-center max-w-[700px] mx-auto mb-[4rem] md:mb-[4rem] mb-[2.5rem]">
+            <span className="inline-block px-4 py-2 text-[0.7rem] tracking-[2px] uppercase text-[#4a9b7f] font-bold bg-[#4a9b7f]/10 rounded-full mb-3 md:mb-4">
               {t('treatmentGoals.badge')}
             </span>
-            <h2 className="font-['Cormorant_Garamond'] text-[clamp(2rem,4vw,3.5rem)] mb-3 leading-[1.1] font-light text-gray-900">
+            <h2 className="font-['Cormorant_Garamond'] text-[clamp(1.8rem,4.5vw,3.8rem)] mb-3 md:mb-4 leading-[1.15] font-light text-gray-900">
               {t('treatmentGoals.heading')}
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-4">
-            {[
-              { key: 'longevity', image: "/images/reuseable/1.png" },
-              { key: 'performance', image: "/images/reuseable/2.png" },
-              { key: 'disease', image: "/images/reuseable/3.png" },
-              { key: 'recovery', image: "/images/reuseable/4.png" }
-            ].map((goal) => (
-              <div
-                key={goal.key}
-                className="relative bg-white rounded-xl p-5 border border-gray-200 hover:border-[#4a9b7f]/40 hover:shadow-lg transition-all duration-300 overflow-hidden"
-              >
-                {/* Background Image - Opaque */}
-                <div className="absolute inset-0 opacity-[0.08]">
-                  <Image
-                    src={goal.image}
-                    alt=""
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
-                </div>
+          {/* Olympics-Style Circular Layout */}
+          <div className="max-w-[1100px] mx-auto px-0 md:px-0">
+            {/* Mobile: Horizontal Scroll with Nav Buttons */}
+            <div className="md:hidden">
+              <TreatmentGoalsMobile
+                goals={[
+                  {
+                    key: 'longevity',
+                    image: '/images/reuseable/1.png',
+                    category: t('treatmentGoals.goals.longevity.category'),
+                    title: t('treatmentGoals.goals.longevity.title'),
+                    description: t('treatmentGoals.goals.longevity.description')
+                  },
+                  {
+                    key: 'performance',
+                    image: '/images/reuseable/2.png',
+                    category: t('treatmentGoals.goals.performance.category'),
+                    title: t('treatmentGoals.goals.performance.title'),
+                    description: t('treatmentGoals.goals.performance.description')
+                  },
+                  {
+                    key: 'disease',
+                    image: '/images/reuseable/3.png',
+                    category: t('treatmentGoals.goals.disease.category'),
+                    title: t('treatmentGoals.goals.disease.title'),
+                    description: t('treatmentGoals.goals.disease.description')
+                  },
+                  {
+                    key: 'recovery',
+                    image: '/images/reuseable/4.png',
+                    category: t('treatmentGoals.goals.recovery.category'),
+                    title: t('treatmentGoals.goals.recovery.title'),
+                    description: t('treatmentGoals.goals.recovery.description')
+                  }
+                ]}
+              />
+            </div>
 
-                {/* Content - Relative z-index */}
-                <div className="relative z-10">
-                  {/* Title */}
-                  <h3 className="font-['Cormorant_Garamond'] text-[1.4rem] mb-2 font-bold text-gray-900">
-                    {t(`treatmentGoals.goals.${goal.key}.title`)}
-                  </h3>
-
-                  {/* Description */}
-                  <p className="text-[0.9rem] text-gray-600 leading-relaxed mb-3">
-                    {t(`treatmentGoals.goals.${goal.key}.description`)}
-                  </p>
-
-                  {/* Benefits */}
-                  <div className="space-y-1.5">
-                    {(t.raw(`treatmentGoals.goals.${goal.key}.benefits`) as string[]).map((benefit, i) => (
-                      <div key={i} className="flex items-center gap-2 text-[0.8rem] text-gray-700">
-                        <svg className="w-3.5 h-3.5 text-[#4a9b7f] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                        </svg>
-                        {benefit}
-                      </div>
-                    ))}
+            {/* Desktop: 4 in a Row */}
+            <div className="hidden md:grid grid-cols-4 gap-4 max-w-[1200px] mx-auto">
+              {[
+                { key: 'longevity', image: '/images/reuseable/1.png' },
+                { key: 'performance', image: '/images/reuseable/2.png' },
+                { key: 'disease', image: '/images/reuseable/3.png' },
+                { key: 'recovery', image: '/images/reuseable/4.png' }
+              ].map((goal) => (
+                <div key={goal.key}>
+                  {/* Image Section - Rounded corners with shadow */}
+                  <div className="relative w-full h-[280px] overflow-hidden rounded-2xl shadow-lg mb-3">
+                    <Image
+                      src={goal.image}
+                      alt=""
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 1200px) 25vw, 300px"
+                    />
+                  </div>
+                  {/* Content Section */}
+                  <div className="space-y-1">
+                    <p className="text-[0.7rem] text-gray-500 font-medium uppercase tracking-wider">
+                      {t(`treatmentGoals.goals.${goal.key}.category`)}
+                    </p>
+                    <h3 className="font-['Cormorant_Garamond'] text-[1.2rem] font-bold text-gray-900">
+                      {t(`treatmentGoals.goals.${goal.key}.title`)}
+                    </h3>
+                    <p className="text-[0.85rem] text-gray-600 font-light leading-[1.5]">
+                      {t(`treatmentGoals.goals.${goal.key}.description`)}
+                    </p>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
-
-      {/* 3. What is Stem Cell Therapy */}
-      <div id="stem-cell">
-        <StemCellSection />
-      </div>
 
 
       {/* 4. Meet Our Doctors */}

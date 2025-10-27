@@ -54,6 +54,7 @@
     "description": "From athletic performance to healthy aging, our advanced regenerative treatments are designed to help you achieve your specific health and wellness objectives.",
     "goals": {
       "longevity": {
+        "category": "REGENERATE",
         "title": "Longevity & Vitality",
         "description": "Reverse cellular aging with advanced stem cell therapies. Boost energy, enhance metabolism, and maintain youthful vitality through cutting-edge regenerative medicine.",
         "benefits": [
@@ -64,6 +65,7 @@
         ]
       },
       "performance": {
+        "category": "ENHANCE",
         "title": "Enhanced Performance",
         "description": "Maximize athletic potential with PRP and stem cell treatments. Accelerate recovery, build resilience, and achieve peak performance naturally.",
         "benefits": [
@@ -74,6 +76,7 @@
         ]
       },
       "disease": {
+        "category": "MANAGE",
         "title": "Chronic Disease Management",
         "description": "Combat chronic conditions with evidence-based regenerative protocols. Slow disease progression and restore quality of life through advanced cellular therapy.",
         "benefits": [
@@ -84,6 +87,7 @@
         ]
       },
       "recovery": {
+        "category": "RECOVER",
         "title": "Pain & Injury Recovery",
         "description": "Accelerate healing from sports injuries and trauma. Natural pain relief and tissue repair through targeted PRP and stem cell injections.",
         "benefits": [

@@ -54,6 +54,7 @@
     "description": "从运动表现到健康老龄化，我们的先进再生治疗旨在帮助您实现特定的健康和保健目标。",
     "goals": {
       "longevity": {
+        "category": "再生",
         "title": "长寿与活力",
         "description": "通过先进的干细胞疗法逆转细胞衰老。增强能量，改善新陈代谢，并通过尖端再生医学保持年轻活力。",
         "benefits": [
@@ -64,6 +65,7 @@
         ]
       },
       "performance": {
+        "category": "增强",
         "title": "增强表现",
         "description": "通过PRP和干细胞治疗最大化运动潜力。加速恢复，增强韧性，自然达到峰值表现。",
         "benefits": [
@@ -74,6 +76,7 @@
         ]
       },
       "disease": {
+        "category": "管理",
         "title": "慢性疾病管理",
         "description": "通过循证再生方案对抗慢性疾病。减缓疾病进展，通过先进细胞治疗恢复生活质量。",
         "benefits": [
@@ -84,6 +87,7 @@
         ]
       },
       "recovery": {
+        "category": "恢复",
         "title": "疼痛与损伤恢复",
         "description": "加速运动损伤和创伤的愈合。通过靶向PRP和干细胞注射实现自然疼痛缓解和组织修复。",
         "benefits": [
