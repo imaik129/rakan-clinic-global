@@ -11,6 +11,7 @@ import {
   StemCellSection,
   DoctorsSection,
   WhyTokyoSection,
+  ClientExperienceSection,
   PatientJourneySection,
   TestimonialsSection,
   FAQSection

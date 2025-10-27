@@ -483,6 +483,11 @@
     },
     "footer": "东京首屈一指的再生骨科诊所"
   },
+  "clientExperience": {
+    "badge": "客户体验",
+    "heading": "顶级专业人士的选择",
+    "subheading": "加入选择了Rakan Clinic满足再生医学需求的世界级运动员、高管和创新者。"
+  },
   "treatmentsPage": {
     "badge": "治疗定价",
     "heading": "再生医学与静脉治疗",

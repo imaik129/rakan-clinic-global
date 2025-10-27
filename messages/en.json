@@ -211,6 +211,11 @@
     },
     "footer": "Tokyo's Premier Regenerative Orthopedic Clinic"
   },
+  "clientExperience": {
+    "badge": "Client Experiences",
+    "heading": "Trusted by Top Performers",
+    "subheading": "Join world-class athletes, executives, and innovators who have chosen Rakan Clinic for their regenerative medicine needs."
+  },
   "pricing": {
     "badge": "Treatment Packages",
     "heading": "Transparent Pricing for Regenerative Medicine",

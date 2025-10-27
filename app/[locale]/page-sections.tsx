@@ -5,6 +5,7 @@ import { useState } from "react";
 import { useTranslations } from 'next-intl';
 import DoctorsMobile from '../../components/DoctorsMobile';
 import DoctorsDesktop from '../../components/DoctorsDesktop';
+import ClientSlideshow from '../../components/ClientSlideshow';
 
 export function StemCellSection() {
     const t = useTranslations();
@@ -296,81 +297,65 @@ export function DoctorsSection() {
 export function WhyTokyoSection() {
     const t = useTranslations();
 
-    const featureIcons = {
-        expertise: (
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-        ),
-        location: (
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-            </svg>
-        ),
-        standards: (
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-            </svg>
-        ),
-        research: (
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-            </svg>
-        ),
-        facility: (
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-            </svg>
-        ),
-        support: (
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-        )
-    };
-
     const featureKeys = ['expertise', 'location', 'standards', 'research', 'facility', 'support'];
 
     return (
-        <section id="services" className="px-[5%] py-[5rem] bg-gradient-to-b from-white to-[#f8f6f3]">
+        <section id="services" className="px-[5%] py-[6rem] bg-white">
             <div className="max-w-[1400px] mx-auto">
                 {/* Header */}
-                <div className="text-center max-w-[900px] mx-auto mb-[3.5rem]">
+                <div className="text-center max-w-[900px] mx-auto mb-[4rem]">
                     <div className="text-[0.68rem] tracking-[2.5px] uppercase text-[#4a9b7f] mb-3 font-semibold">
                         {t('whyTokyo.badge')}
                     </div>
-                    <h2 className="font-['Cormorant_Garamond'] text-[clamp(2rem,4.5vw,3.5rem)] mb-4 leading-[1.15] font-light">
+                    <h2 className="font-['Cormorant_Garamond'] text-[clamp(2.2rem,5vw,3.8rem)] mb-5 leading-[1.1] font-light">
                         {t('whyTokyo.heading')}
                     </h2>
-                    <p className="text-[0.98rem] text-[#666666] leading-[1.8] font-light">
+                    <p className="text-[1.05rem] text-[#666666] leading-[1.8] font-light max-w-[750px] mx-auto">
                         {t('whyTokyo.intro')}
                     </p>
                 </div>
 
-                {/* Features Grid */}
-                <div className="grid md:grid-cols-3 gap-6 max-w-[1200px] mx-auto">
+                {/* Features Grid - Modern 3 Column Layout */}
+                <div className="grid md:grid-cols-3 gap-8 max-w-[1200px] mx-auto">
                     {featureKeys.map((key) => (
                         <div
                             key={key}
-                            className="flex flex-col gap-4 items-start p-6 bg-white hover:shadow-[0_10px_40px_rgba(0,0,0,0.08)] transition-all duration-300 hover:-translate-y-1 border border-[#f0f0f0]"
+                            className="group bg-[#f8f6f3] hover:bg-white p-8 rounded-2xl border-2 border-transparent hover:border-[#4a9b7f]/20 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
                         >
-                            <div className="w-12 h-12 bg-[#4a9b7f] rounded-lg flex-shrink-0 flex items-center justify-center text-white">
-                                {featureIcons[key as keyof typeof featureIcons]}
-                            </div>
-                            <div>
-                                <h3 className="font-['Cormorant_Garamond'] text-[1.25rem] mb-2 font-medium text-[#1a1a1a]">
-                                    {t(`whyTokyo.features.${key}.title`)}
-                                </h3>
-                                <p className="text-[0.88rem] text-[#666666] leading-[1.7] font-light">
-                                    {t(`whyTokyo.features.${key}.description`)}
-                                </p>
-                            </div>
+                            <h3 className="font-['Cormorant_Garamond'] text-[1.5rem] mb-3 font-medium text-[#1a1a1a]">
+                                {t(`whyTokyo.features.${key}.title`)}
+                            </h3>
+                            <p className="text-[0.92rem] text-[#666666] leading-[1.7] font-light">
+                                {t(`whyTokyo.features.${key}.description`)}
+                            </p>
                         </div>
                     ))}
                 </div>
+
+                {/* Client Experience Slider */}
+                <ClientExperienceSection />
             </div>
         </section>
+    );
+}
+
+export function ClientExperienceSection() {
+    const t = useTranslations();
+
+    return (
+        <div className="py-[4rem] bg-white">
+            <div className="max-w-[1400px] mx-auto px-[5%]">
+                {/* Header */}
+                <div className="text-center mb-[3rem]">
+                    <h2 className="font-['Cormorant_Garamond'] text-[clamp(2rem,4vw,2.8rem)] text-[#1a1a1a] mb-2 font-medium">
+                        {t('clientExperience.heading')}
+                    </h2>
+                </div>
+
+                {/* Auto-scrolling Slider */}
+                <ClientSlideshow />
+            </div>
+        </div>
     );
 }
 
