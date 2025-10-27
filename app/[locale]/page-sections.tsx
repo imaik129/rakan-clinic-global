@@ -294,6 +294,44 @@ export function DoctorsSection() {
     );
 }
 
+function WhyTokyoCard({ featureKey, index }: { featureKey: string; index: number }) {
+    const t = useTranslations();
+    const [isExpanded, setIsExpanded] = useState(false);
+
+    return (
+        <div
+            className="group bg-[#f8f6f3] hover:bg-white p-6 md:p-8 rounded-md border-2 border-transparent hover:border-[#4a9b7f]/20 transition-all duration-300"
+        >
+            <div className="flex items-start justify-between gap-3">
+                <h3 className="font-['Cormorant_Garamond'] text-[1.2rem] md:text-[1.5rem] mb-3 font-medium text-[#1a1a1a] flex-1">
+                    {t(`whyTokyo.features.${featureKey}.title`)}
+                </h3>
+                <button
+                    onClick={() => setIsExpanded(!isExpanded)}
+                    className="md:hidden flex-shrink-0 text-[#4a9b7f] hover:text-[#3d8269] transition-colors"
+                    aria-label={isExpanded ? 'Collapse' : 'Expand'}
+                >
+                    <svg
+                        className={`w-5 h-5 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+            </div>
+            <div
+                className={`text-[0.92rem] text-[#666666] leading-[1.7] font-light overflow-hidden transition-all duration-300 ${
+                    isExpanded ? 'max-h-[500px]' : 'max-h-[60px] md:max-h-none'
+                }`}
+            >
+                <p>{t(`whyTokyo.features.${featureKey}.description`)}</p>
+            </div>
+        </div>
+    );
+}
+
 export function WhyTokyoSection() {
     const t = useTranslations();
 
@@ -315,20 +353,10 @@ export function WhyTokyoSection() {
                     </p>
                 </div>
 
-                {/* Features Grid - Modern 3 Column Layout */}
-                <div className="grid md:grid-cols-3 gap-8 max-w-[1200px] mx-auto">
-                    {featureKeys.map((key) => (
-                        <div
-                            key={key}
-                            className="group bg-[#f8f6f3] hover:bg-white p-8 rounded-md border-2 border-transparent hover:border-[#4a9b7f]/20 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
-                        >
-                            <h3 className="font-['Cormorant_Garamond'] text-[1.5rem] mb-3 font-medium text-[#1a1a1a]">
-                                {t(`whyTokyo.features.${key}.title`)}
-                            </h3>
-                            <p className="text-[0.92rem] text-[#666666] leading-[1.7] font-light">
-                                {t(`whyTokyo.features.${key}.description`)}
-                            </p>
-                        </div>
+                {/* Features Grid - Modern 3 Column Layout with Expandable Mobile Cards */}
+                <div className="grid md:grid-cols-3 gap-6 md:gap-8 max-w-[1200px] mx-auto">
+                    {featureKeys.map((key, index) => (
+                        <WhyTokyoCard key={key} featureKey={key} index={index} />
                     ))}
                 </div>
 
