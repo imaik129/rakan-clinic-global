@@ -4,6 +4,7 @@ import { getTranslations } from 'next-intl/server';
 import Header from '@/components/Header';
 import HeroCarousel from '@/components/HeroCarousel';
 import ContactForm from '@/components/ContactForm';
+import BackToTopButton from '@/components/BackToTopButton';
 import { type Locale } from '@/i18n';
 import {
   StemCellSection,
@@ -26,6 +27,9 @@ export default async function Home({
     <div className="min-h-screen bg-[#f8f6f3] scroll-smooth">
       {/* Header Component */}
       <Header locale={locale} />
+
+      {/* Back to Top Button */}
+      <BackToTopButton />
 
       {/* 1. Hero Carousel - Full Width with Rounded Corners */}
       <HeroCarousel />
