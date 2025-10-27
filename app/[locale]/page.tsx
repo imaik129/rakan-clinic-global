@@ -129,115 +129,105 @@ export default async function Home({
         <DoctorsSection />
       </div>
 
-      {/* 5. About Section - Consolidated */}
-      <section id="about" className="px-[5%] py-[5rem] bg-white">
-        <div className="max-w-[1400px] mx-auto">
-          <div className="text-center max-w-[750px] mx-auto mb-[3rem]">
-            <div className="text-[0.68rem] tracking-[2.5px] uppercase text-[#4a9b7f] mb-3 font-semibold">
+      {/* 5. About Section - Redesigned */}
+      <section id="about" className="px-[5%] py-[5rem] bg-gradient-to-b from-white via-gray-50/50 to-white">
+        <div className="max-w-[1200px] mx-auto">
+          {/* Header */}
+          <div className="text-center max-w-[800px] mx-auto mb-[4rem]">
+            <div className="inline-block px-4 py-2 text-[0.7rem] tracking-[2px] uppercase text-[#4a9b7f] font-bold bg-[#4a9b7f]/10 rounded-full mb-4">
               {t('about.badge')}
             </div>
-            <h2 className="font-['Cormorant_Garamond'] text-[clamp(2rem,4.5vw,3.8rem)] mb-4 leading-[1.15] font-light">
+            <h2 className="font-['Cormorant_Garamond'] text-[clamp(2.2rem,4.5vw,3.8rem)] mb-4 leading-[1.15] font-light text-gray-900">
               {t('about.heading')}
             </h2>
-            <p className="text-[0.98rem] text-[#666666] leading-[1.75] font-light">
+            <p className="text-[1rem] text-gray-600 leading-[1.75] font-light">
               {t('about.description')}
             </p>
           </div>
 
-          {/* Clinic Entrance Full-Width Showcase - TOP */}
-          <div className="max-w-[1200px] mx-auto mb-[3.5rem]">
-            <div className="relative h-[420px] overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.12)] rounded-tl-[32px] rounded-br-[32px] group">
-              <div className="absolute inset-0 rounded-tl-[32px] rounded-br-[32px] overflow-hidden">
-                <Image
-                  src="/images/rakan_entrance.png"
-                  alt="Rakan Clinic Tokyo - Azabudai Hills Entrance"
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  sizes="(max-width: 1200px) 100vw, 1200px"
-                />
+          {/* Two Column Layout */}
+          <div className="grid md:grid-cols-2 gap-8 items-start mb-[4rem]">
+            {/* Left: Image */}
+            <div className="relative h-[400px] overflow-hidden rounded-lg">
+              <Image
+                src="/images/rakan_entrance.png"
+                alt="Rakan Clinic Tokyo - Azabudai Hills Entrance"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
+
+            {/* Right: Facility Info */}
+            <div className="space-y-6">
+              <div>
+                <p className="text-xs font-bold text-[#4a9b7f] uppercase tracking-wider mb-3">
+                  {t('about.facility.title')}
+                </p>
+                <h3 className="font-['Cormorant_Garamond'] text-[2rem] font-light text-gray-900 mb-4">
+                  {t('about.facility.clinicName')}
+                </h3>
               </div>
-              <div className="absolute inset-0 bg-gradient-to-r from-[#1a1a1a]/80 via-[#1a1a1a]/50 to-transparent flex items-center rounded-tl-[32px] rounded-br-[32px]">
-                <div className="text-white px-[8%] max-w-[700px]">
-                  <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#4a9b7f]/20 backdrop-blur-sm border border-[#4a9b7f]/30 rounded-full mb-4">
-                    <svg className="w-3.5 h-3.5 text-[#4a9b7f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                    </svg>
-                    <p className="text-[0.65rem] text-[#4a9b7f] font-semibold tracking-[2px] uppercase">
-                      {t('about.facility.title')}
-                    </p>
-                  </div>
-                  <h3 className="font-['Cormorant_Garamond'] text-[2.3rem] mb-4 font-light leading-tight">
-                    {t('about.facility.clinicName')}
-                  </h3>
-                  <div className="space-y-3">
-                    <div className="flex items-start gap-3">
-                      <svg className="w-5 h-5 text-[#4a9b7f] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      <p className="text-[0.92rem] font-light leading-[1.75] text-white/90">
-                        {t('about.facility.features.0')}
-                      </p>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <svg className="w-5 h-5 text-[#4a9b7f] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      <p className="text-[0.92rem] font-light leading-[1.75] text-white/90">
-                        {t('about.facility.features.1')}
-                      </p>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <svg className="w-5 h-5 text-[#4a9b7f] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      <p className="text-[0.92rem] font-light leading-[1.75] text-white/90">
-                        {t('about.facility.features.2')}
-                      </p>
-                    </div>
-                  </div>
+
+              <div className="space-y-3">
+                <div className="flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 bg-[#4a9b7f] rounded-full mt-2 flex-shrink-0"></div>
+                  <p className="text-sm text-gray-700 leading-relaxed">
+                    {t('about.facility.features.0')}
+                  </p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 bg-[#4a9b7f] rounded-full mt-2 flex-shrink-0"></div>
+                  <p className="text-sm text-gray-700 leading-relaxed">
+                    {t('about.facility.features.1')}
+                  </p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 bg-[#4a9b7f] rounded-full mt-2 flex-shrink-0"></div>
+                  <p className="text-sm text-gray-700 leading-relaxed">
+                    {t('about.facility.features.2')}
+                  </p>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Simplified Bottom Content */}
-          <div className="max-w-[1000px] mx-auto">
-            {/* Stats - Compact Inline */}
-            <div className="flex flex-wrap justify-center gap-8 mb-8">
+          {/* Stats and Trust */}
+          <div className="max-w-[900px] mx-auto">
+            {/* Stats */}
+            <div className="grid md:grid-cols-2 gap-12 mb-8 border-t border-gray-200 pt-8">
               <div className="text-center">
-                <div className="text-[2.5rem] font-['Cormorant_Garamond'] text-[#4a9b7f] font-light leading-none mb-1">
+                <div className="text-[3.5rem] font-['Cormorant_Garamond'] text-[#4a9b7f] font-light leading-none mb-2">
                   35+
                 </div>
-                <div className="text-[0.75rem] font-semibold text-[#1a1a1a] uppercase tracking-[1px]">
+                <div className="text-xs font-semibold text-gray-700 uppercase tracking-wider">
                   {t('about.stats.experience.label')}
                 </div>
               </div>
               <div className="text-center">
-                <div className="text-[2.5rem] font-['Cormorant_Garamond'] text-[#4a9b7f] font-light leading-none mb-1">
+                <div className="text-[3.5rem] font-['Cormorant_Garamond'] text-[#4a9b7f] font-light leading-none mb-2">
                   100%
                 </div>
-                <div className="text-[0.75rem] font-semibold text-[#1a1a1a] uppercase tracking-[1px]">
+                <div className="text-xs font-semibold text-gray-700 uppercase tracking-wider">
                   {t('about.stats.standards.label')}
                 </div>
               </div>
             </div>
 
-            {/* Description */}
-            <div className="text-center max-w-[800px] mx-auto mb-6">
-              <p className="text-[0.9rem] text-[#666666] leading-[1.8] font-light">
+            {/* Trust Statement */}
+            <div className="text-center mb-6">
+              <p className="text-[0.95rem] text-gray-600 leading-[1.8] font-light max-w-[800px] mx-auto">
                 {t('about.trustStatement')}
               </p>
             </div>
 
-            {/* Trusted By - Elite Clientele */}
+            {/* Trusted By */}
             <div className="text-center">
-              <div className="inline-flex items-center gap-2 mb-3">
+              <div className="inline-flex items-center gap-2 text-xs text-gray-500 font-medium">
                 <svg className="w-4 h-4 text-[#c9a962]" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                 </svg>
-                <p className="text-[0.8rem] text-[#666666] font-medium">
-                  {t('about.trustedBy.title')}
-                </p>
+                {t('about.trustedBy.title')}
               </div>
             </div>
           </div>
