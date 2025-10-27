@@ -15,6 +15,7 @@ export default function ClientSlideshow() {
         '/images/client/S__142327966_0.jpg',
         '/images/client/S__142328019_0.jpg',
         '/images/client/S__142328028.jpg',
+        '/images/client/S__143450251.jpg',
     ];
 
     // Triple the images for seamless loop
@@ -53,23 +54,30 @@ export default function ClientSlideshow() {
     }, [clientImages.length]);
 
     return (
-        <div className="relative overflow-x-auto scrollbar-hide cursor-grab active:cursor-grabbing">
-            <div ref={scrollRef} className="flex gap-6 will-change-transform">
-                {allImages.map((image, index) => (
-                    <div 
-                        key={`${image}-${index}`}
-                        className="flex-shrink-0 w-[280px] h-[350px] overflow-hidden rounded-md shadow-md group"
-                    >
-                        <Image
-                            src={image}
-                            alt={`Client experience ${(index % clientImages.length) + 1}`}
-                            width={280}
-                            height={350}
-                            className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
-                        />
-                    </div>
-                ))}
+        <div className="relative">
+            {/* Container with scrolling */}
+            <div className="overflow-x-auto scrollbar-hide cursor-grab active:cursor-grabbing">
+                <div ref={scrollRef} className="flex gap-6 will-change-transform">
+                    {allImages.map((image, index) => (
+                        <div 
+                            key={`${image}-${index}`}
+                            className="flex-shrink-0 w-[280px] h-[350px] overflow-hidden rounded-md shadow-lg group"
+                        >
+                            <Image
+                                src={image}
+                                alt={`Client experience ${(index % clientImages.length) + 1}`}
+                                width={280}
+                                height={350}
+                                className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
+                            />
+                        </div>
+                    ))}
+                </div>
             </div>
+            
+            {/* Fixed gradient fades that don't scroll */}
+            <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-white via-white/50 to-transparent z-10 pointer-events-none"></div>
+            <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-white via-white/50 to-transparent z-10 pointer-events-none"></div>
         </div>
     );
 }
