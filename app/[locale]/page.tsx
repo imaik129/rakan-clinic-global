@@ -220,43 +220,42 @@ export default async function Home({
       <WhyTokyoSection />
 
       {/* 7. Pricing Section */}
-      <section id="pricing" className="px-[5%] py-[6rem] bg-gradient-to-b from-gray-50 to-white">
-        <div className="max-w-[1400px] mx-auto">
-          <div className="text-center max-w-[800px] mx-auto mb-[4rem]">
-            <div className="inline-flex items-center px-4 py-2 bg-[#4a9b7f]/10 rounded-full mb-6">
-              <div className="w-2 h-2 bg-[#4a9b7f] rounded-full mr-3"></div>
-              <span className="text-[0.7rem] tracking-[2px] uppercase text-[#4a9b7f] font-bold">
+      <section id="pricing" className="px-[5%] py-[4rem] bg-white">
+        <div className="max-w-[1200px] mx-auto">
+          <div className="text-center max-w-[700px] mx-auto mb-[3rem]">
+            <div className="inline-block px-3 py-1 bg-[#4a9b7f]/10 rounded-sm mb-4">
+              <span className="text-[0.65rem] tracking-[1.5px] uppercase text-[#4a9b7f] font-bold">
                 {t('pricing.badge')}
               </span>
             </div>
-            <h2 className="font-['Cormorant_Garamond'] text-[clamp(2rem,4.5vw,3.8rem)] mb-6 leading-[1.1] font-bold text-gray-900">
+            <h2 className="font-['Cormorant_Garamond'] text-[clamp(2rem,4vw,3.2rem)] mb-3 leading-[1.15] font-bold text-gray-900">
               {t('pricing.heading')}
             </h2>
-            <p className="text-[1.1rem] text-gray-600 leading-[1.8] font-light max-w-[600px] mx-auto">
+            <p className="text-[0.95rem] text-gray-600 leading-[1.6] font-light max-w-[600px] mx-auto">
               {t('pricing.subheading')}
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-[1200px] mx-auto">
+          <div className="grid md:grid-cols-3 gap-6 max-w-[1100px] mx-auto">
             {/* Single Session */}
-            <div className="bg-white rounded-sm p-8 border border-gray-200 hover:border-[#4a9b7f]/30 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-              <div className="text-center mb-6">
-                <div className="inline-block px-4 py-2 bg-[#c9a962] text-white rounded-sm mb-4">
-                  <span className="text-sm font-bold tracking-wide">{t('pricing.packages.single.name')}</span>
+            <div className="bg-gray-50 rounded-md p-6 border border-gray-200 hover:border-[#4a9b7f]/30 transition-all duration-300">
+              <div className="text-center mb-5">
+                <div className="inline-block px-3 py-1.5 bg-[#c9a962] text-white rounded-sm mb-3">
+                  <span className="text-xs font-bold tracking-wide">{t('pricing.packages.single.name')}</span>
                 </div>
-                <div className="text-[3rem] font-['Cormorant_Garamond'] text-[#4a9b7f] font-light mb-2">
+                <div className="text-[2.5rem] font-['Cormorant_Garamond'] text-[#4a9b7f] font-light mb-1.5">
                   {t('pricing.packages.single.price')}
                 </div>
               </div>
-              <div className="space-y-4">
-                <p className="text-gray-600 text-sm leading-relaxed">
+              <div className="space-y-3">
+                <p className="text-gray-600 text-xs leading-relaxed text-center">
                   {t('pricing.packages.single.description')}
                 </p>
-                <div className="pt-4 border-t border-gray-100">
-                  <ul className="space-y-2 text-sm text-gray-700">
+                <div className="pt-3 border-t border-gray-200">
+                  <ul className="space-y-1.5 text-xs text-gray-700">
                     {(t.raw('pricing.packages.single.features') as string[]).map((feature, i) => (
                       <li key={i} className="flex items-center gap-2">
-                        <svg className="w-4 h-4 text-[#4a9b7f] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-3.5 h-3.5 text-[#4a9b7f] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
                         {feature}
@@ -268,28 +267,28 @@ export default async function Home({
             </div>
 
             {/* 3 Sessions Per Year */}
-            <div className="bg-white rounded-sm p-8 border-2 border-[#4a9b7f] hover:border-[#3d8269] transition-all duration-300 hover:-translate-y-2 hover:shadow-xl relative">
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#4a9b7f] text-white px-6 py-2 rounded-full text-xs font-bold tracking-wide">
+            <div className="bg-white rounded-md p-6 border-2 border-[#4a9b7f] hover:border-[#3d8269] transition-all duration-300 relative">
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#4a9b7f] text-white px-4 py-1.5 rounded-full text-[0.7rem] font-bold tracking-wide">
                 {t('pricing.packages.three.featured')}
               </div>
-              <div className="text-center mb-6">
-                <div className="inline-block px-4 py-2 bg-[#c9a962] text-white rounded-sm mb-4">
-                  <span className="text-sm font-bold tracking-wide">{t('pricing.packages.three.name')}</span>
+              <div className="text-center mb-5">
+                <div className="inline-block px-3 py-1.5 bg-[#c9a962] text-white rounded-sm mb-3">
+                  <span className="text-xs font-bold tracking-wide">{t('pricing.packages.three.name')}</span>
                 </div>
-                <div className="text-[3rem] font-['Cormorant_Garamond'] text-[#4a9b7f] font-light mb-2">
+                <div className="text-[2.5rem] font-['Cormorant_Garamond'] text-[#4a9b7f] font-light mb-1.5">
                   {t('pricing.packages.three.price')}
                 </div>
-                <div className="text-sm text-gray-500">{t('pricing.packages.three.pricePerSession')}</div>
+                <div className="text-xs text-gray-500">{t('pricing.packages.three.pricePerSession')}</div>
               </div>
-              <div className="space-y-4">
-                <p className="text-gray-600 text-sm leading-relaxed">
+              <div className="space-y-3">
+                <p className="text-gray-600 text-xs leading-relaxed text-center">
                   {t('pricing.packages.three.description')}
                 </p>
-                <div className="pt-4 border-t border-gray-100">
-                  <ul className="space-y-2 text-sm text-gray-700">
+                <div className="pt-3 border-t border-gray-200">
+                  <ul className="space-y-1.5 text-xs text-gray-700">
                     {(t.raw('pricing.packages.three.features') as string[]).map((feature, i) => (
                       <li key={i} className="flex items-center gap-2">
-                        <svg className="w-4 h-4 text-[#4a9b7f] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-3.5 h-3.5 text-[#4a9b7f] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
                         {feature}
@@ -301,25 +300,25 @@ export default async function Home({
             </div>
 
             {/* 6 Sessions Over 2 Years */}
-            <div className="bg-white rounded-sm p-8 border border-gray-200 hover:border-[#4a9b7f]/30 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-              <div className="text-center mb-6">
-                <div className="inline-block px-4 py-2 bg-[#c9a962] text-white rounded-sm mb-4">
-                  <span className="text-sm font-bold tracking-wide">{t('pricing.packages.six.name')}</span>
+            <div className="bg-gray-50 rounded-md p-6 border border-gray-200 hover:border-[#4a9b7f]/30 transition-all duration-300">
+              <div className="text-center mb-5">
+                <div className="inline-block px-3 py-1.5 bg-[#c9a962] text-white rounded-sm mb-3">
+                  <span className="text-xs font-bold tracking-wide">{t('pricing.packages.six.name')}</span>
                 </div>
-                <div className="text-[3rem] font-['Cormorant_Garamond'] text-[#4a9b7f] font-light mb-2">
+                <div className="text-[2.5rem] font-['Cormorant_Garamond'] text-[#4a9b7f] font-light mb-1.5">
                   {t('pricing.packages.six.price')}
                 </div>
-                <div className="text-sm text-gray-500">{t('pricing.packages.six.pricePerSession')}</div>
+                <div className="text-xs text-gray-500">{t('pricing.packages.six.pricePerSession')}</div>
               </div>
-              <div className="space-y-4">
-                <p className="text-gray-600 text-sm leading-relaxed">
+              <div className="space-y-3">
+                <p className="text-gray-600 text-xs leading-relaxed text-center">
                   {t('pricing.packages.six.description')}
                 </p>
-                <div className="pt-4 border-t border-gray-100">
-                  <ul className="space-y-2 text-sm text-gray-700">
+                <div className="pt-3 border-t border-gray-200">
+                  <ul className="space-y-1.5 text-xs text-gray-700">
                     {(t.raw('pricing.packages.six.features') as string[]).map((feature, i) => (
                       <li key={i} className="flex items-center gap-2">
-                        <svg className="w-4 h-4 text-[#4a9b7f] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-3.5 h-3.5 text-[#4a9b7f] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
                         {feature}
@@ -331,27 +330,40 @@ export default async function Home({
             </div>
           </div>
 
-          {/* Pricing Disclaimer */}
-          <div className="mt-12 max-w-[800px] mx-auto text-center">
-            <p className="text-sm text-gray-500 italic">
-              {t('pricing.includes')}
-            </p>
-          </div>
+          {/* Bottom Section */}
+          <div className="mt-8 max-w-[900px] mx-auto">
+            {/* Pricing Disclaimer */}
+            <div className="text-center mb-4">
+              <p className="text-xs text-gray-500 italic">
+                {t('pricing.includes')}
+              </p>
+            </div>
 
-          {/* Additional Services Notice */}
-          <div className="mt-8 max-w-[800px] mx-auto text-center p-6 bg-[#f8f6f3] rounded-xl border border-gray-200">
-            <p className="text-sm text-gray-600 font-light">
-              {t('pricing.additionalServices')}
-            </p>
-          </div>
+            {/* Additional Services Notice */}
+            <div className="mb-6 text-center p-4 bg-gray-50 rounded-md border border-gray-200">
+              <p className="text-xs text-gray-600 font-light">
+                {t('pricing.additionalServices')}
+              </p>
+            </div>
 
-          {/* CTA Section */}
-          <div className="mt-12 text-center">
-            <a href="#contact">
-              <button className="bg-[#4a9b7f] text-white px-8 py-4 text-sm font-semibold tracking-[1.5px] uppercase transition-all duration-300 hover:bg-[#3d8269] hover:-translate-y-1 hover:shadow-lg">
-                {t('pricing.cta')}
-              </button>
-            </a>
+            {/* CTA Buttons */}
+            <div className="flex flex-col gap-3 w-full sm:w-auto sm:flex-row items-stretch sm:items-center justify-center">
+              <a href="#contact" className="w-full sm:w-auto">
+                <button className="w-full bg-[#4a9b7f] text-white px-8 py-3.5 text-sm font-semibold tracking-wide uppercase transition-all duration-300 hover:bg-[#3d8269] rounded-md">
+                  {t('pricing.cta')}
+                </button>
+              </a>
+              
+              <a
+                href={`/${locale}/treatments`}
+                className="inline-flex items-center justify-center gap-2 px-8 py-3.5 w-full sm:w-auto bg-white border-2 border-[#4a9b7f] text-[#4a9b7f] text-sm font-semibold rounded-md hover:bg-[#4a9b7f] hover:text-white transition-all duration-300"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span>View All Treatments</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>

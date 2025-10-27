@@ -322,9 +322,8 @@ function WhyTokyoCard({ featureKey, index }: { featureKey: string; index: number
                 </button>
             </div>
             <div
-                className={`text-[0.92rem] text-[#666666] leading-[1.7] font-light overflow-hidden transition-all duration-300 ${
-                    isExpanded ? 'max-h-[500px]' : 'max-h-[60px] md:max-h-none'
-                }`}
+                className={`text-[0.92rem] text-[#666666] leading-[1.7] font-light overflow-hidden transition-all duration-300 ${isExpanded ? 'max-h-[500px]' : 'max-h-[60px] md:max-h-none'
+                    }`}
             >
                 <p>{t(`whyTokyo.features.${featureKey}.description`)}</p>
             </div>
@@ -387,7 +386,7 @@ export function ClientExperienceSection() {
     );
 }
 
-export function PricingSection() {
+export function PricingSection({ locale }: { locale: string }) {
     const t = useTranslations();
     const plans = ['essential', 'premium', 'elite'];
 
@@ -461,6 +460,22 @@ export function PricingSection() {
                 <p className="text-center text-[0.9rem] text-[#666666] mt-8 font-light italic">
                     {t('pricing.disclaimer')}
                 </p>
+
+                {/* Link to Full Treatments Page */}
+                <div className="mt-12 text-center">
+                    <a
+                        href={`/${locale}/treatments`}
+                        className="inline-flex items-center gap-3 px-8 py-4 bg-[#4a9b7f] text-white font-semibold rounded-md hover:bg-[#3d8269] transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+                    >
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                        <span className="text-base tracking-wide">View All Available Treatments</span>
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
             </div>
         </section>
     );
