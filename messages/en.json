@@ -131,9 +131,9 @@
     "badge": "Our Medical Team",
     "heading": "Meet the Team",
     "subheading": "World-renowned specialists in orthopedics, regenerative medicine, and osteoimmunology",
-    "intro": {
-      "title": "Expert Medical Leadership",
-      "description": "Guided by internationally recognized physicians and researchers advancing regenerative medicine"
+        "intro": {
+        "title": "World-Class Medical Team",
+        "description": "Internationally recognized physicians advancing regenerative medicine"
     },
     "team": {
       "doctor1": {
