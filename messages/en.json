@@ -12,6 +12,7 @@
     "about": "About",
     "pricing": "Pricing",
     "faq": "FAQ",
+    "support": "Support",
     "contact": "Contact",
     "bookOnline": "Book Online"
   },
@@ -381,7 +382,8 @@
         "State-of-the-art regenerative medicine facility with sterile processing labs",
         "Private consultation rooms ensuring complete discretion for VIP patients",
         "Premium location in Tokyo's most prestigious international district"
-      ]
+      ],
+      "learnMore": "Learn More About Our Facilities"
     },
     "stats": {
       "experience": {
@@ -607,6 +609,36 @@
       "description": "Contact us for a personalized consultation and to discuss which treatment options are best for you.",
       "bookConsultation": "Book Consultation",
       "contactUs": "Contact Us"
+    }
+  },
+  "facilities": {
+    "badge": "Our Facilities",
+    "heading": "Premier Medical Facility in Tokyo",
+    "description": "Experience world-class regenerative medicine in a state-of-the-art facility designed for excellence, privacy, and healing.",
+    "mainImage": {
+      "alt": "Rakan Clinic Tokyo - Azabudai Hills Entrance",
+      "title": "Rakan Clinic Tokyo Azabudai",
+      "description": "Located in the heart of Tokyo's most prestigious international district, our facility represents the pinnacle of regenerative medicine."
+    },
+    "features": {
+      "sterile": {
+        "title": "Sterile Processing Labs",
+        "description": "State-of-the-art regenerative medicine facility with sterile processing labs ensuring the highest standards of safety and efficacy for all cell-based treatments."
+      },
+      "private": {
+        "title": "Private Consultation Rooms",
+        "description": "Private consultation rooms ensuring complete discretion for VIP patients. Our facility is designed to provide the utmost privacy and comfort."
+      },
+      "location": {
+        "title": "Premium Location",
+        "description": "Premium location in Tokyo's most prestigious international district. Azabudai Hills represents the pinnacle of luxury and medical excellence."
+      }
+    },
+    "cta": {
+      "title": "Experience World-Class Care",
+      "description": "Ready to begin your treatment journey? Contact us to schedule a consultation and tour our facilities.",
+      "contact": "Contact Us",
+      "book": "Book an Appointment"
     }
   }
 }

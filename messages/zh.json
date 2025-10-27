@@ -12,6 +12,7 @@
     "about": "关于我们",
     "pricing": "价格",
     "faq": "常见问题",
+    "support": "支持",
     "contact": "联系我们",
     "bookOnline": "在线预约"
   },
@@ -318,7 +319,8 @@
         "配备无菌处理实验室的最先进再生医学设施",
         "确保VIP患者完全保密的私人咨询室",
         "位于东京最负盛名的国际区的优质位置"
-      ]
+      ],
+      "learnMore": "了解更多关于我们的设施"
     },
     "stats": {
       "experience": {
@@ -587,6 +589,36 @@
       "description": "联系我们进行个性化咨询，讨论最适合您的治疗方案。",
       "bookConsultation": "预约咨询",
       "contactUs": "联系我们"
+    }
+  },
+  "facilities": {
+    "badge": "我们的设施",
+    "heading": "东京首屈一指的医疗设施",
+    "description": "在世界一流的设施中体验世界级的再生医学，专为卓越、隐私和康复而设计。",
+    "mainImage": {
+      "alt": "Rakan Clinic Tokyo - Azabudai Hills Entrance",
+      "title": "Rakan Clinic Tokyo Azabudai",
+      "description": "位于东京最负盛名的国际区中心，我们的设施代表了再生医学的巅峰。"
+    },
+    "features": {
+      "sterile": {
+        "title": "无菌处理实验室",
+        "description": "配备无菌处理实验室的最先进再生医学设施，确保所有细胞治疗的最高安全和有效性标准。"
+      },
+      "private": {
+        "title": "私人咨询室",
+        "description": "确保VIP患者完全保密的私人咨询室。我们的设施旨在提供最大的隐私和舒适。"
+      },
+      "location": {
+        "title": "优质位置",
+        "description": "位于东京最负盛名的国际区的优质位置。麻布台山代表了奢华和医学卓越的巅峰。"
+      }
+    },
+    "cta": {
+      "title": "体验世界级护理",
+      "description": "准备开始您的治疗之旅吗？联系我们预约咨询并参观我们的设施。",
+      "contact": "联系我们",
+      "book": "预约"
     }
   }
 }

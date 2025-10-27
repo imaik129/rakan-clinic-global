@@ -189,46 +189,24 @@ export default async function Home({
                   </p>
                 </div>
               </div>
-            </div>
-          </div>
 
-          {/* Stats and Trust */}
-          <div className="max-w-[900px] mx-auto">
-            {/* Stats */}
-            <div className="grid md:grid-cols-2 gap-12 mb-8 border-t border-gray-200 pt-8">
-              <div className="text-center">
-                <div className="text-[3.5rem] font-['Cormorant_Garamond'] text-[#4a9b7f] font-light leading-none mb-2">
-                  35+
-                </div>
-                <div className="text-xs font-semibold text-gray-700 uppercase tracking-wider">
-                  {t('about.stats.experience.label')}
+              {/* Trusted By */}
+              <div className="mt-8 pt-6 border-t border-gray-200">
+                <div className="inline-flex items-center gap-2 text-xs text-gray-600 font-medium">
+                  <svg className="w-4 h-4 text-[#c9a962]" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  {t('about.trustedBy.title')}
                 </div>
               </div>
-              <div className="text-center">
-                <div className="text-[3.5rem] font-['Cormorant_Garamond'] text-[#4a9b7f] font-light leading-none mb-2">
-                  100%
-                </div>
-                <div className="text-xs font-semibold text-gray-700 uppercase tracking-wider">
-                  {t('about.stats.standards.label')}
-                </div>
-              </div>
-            </div>
 
-            {/* Trust Statement */}
-            <div className="text-center mb-6">
-              <p className="text-[0.95rem] text-gray-600 leading-[1.8] font-light max-w-[800px] mx-auto">
-                {t('about.trustStatement')}
-              </p>
-            </div>
-
-            {/* Trusted By */}
-            <div className="text-center">
-              <div className="inline-flex items-center gap-2 text-xs text-gray-500 font-medium">
-                <svg className="w-4 h-4 text-[#c9a962]" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                </svg>
-                {t('about.trustedBy.title')}
-              </div>
+              {/* Learn More Button */}
+              <Link
+                href={`/${locale}/facilities`}
+                className="inline-block mt-6 px-6 py-3 bg-[#4a9b7f] text-white font-semibold rounded-lg hover:bg-[#3d8269] transition-colors duration-300"
+              >
+                {t('about.facility.learnMore')}
+              </Link>
             </div>
           </div>
         </div>
