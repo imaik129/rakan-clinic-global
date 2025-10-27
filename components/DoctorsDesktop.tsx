@@ -56,7 +56,7 @@ export default function DoctorsDesktop({ doctors, introTitle, introDescription }
                 {doctors.map((doctor) => (
                     <div key={doctor.key} className="flex-shrink-0 w-[300px] snap-center">
                         {/* Image */}
-                        <div className="relative w-full h-[340px] overflow-hidden mb-3 group">
+                        <div className="relative w-full h-[340px] overflow-hidden rounded-md mb-3 group">
                             <Image
                                 src={doctor.image}
                                 alt={doctor.name}

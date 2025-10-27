@@ -88,7 +88,7 @@ export default function HeroCarousel() {
             </div>
 
             {/* Content Overlay */}
-            <div className="absolute inset-0 flex items-center justify-center z-10 pt-[120px] md:pt-[140px]">
+            <div className="absolute inset-0 flex items-center justify-center z-10 pt-[100px] md:pt-0">
                 <div className="text-center text-white px-[5%] max-w-[1200px] mx-auto">
                     {/* Enhanced Text Container with Better Spacing */}
                     <div className="mb-8">

@@ -43,8 +43,8 @@ export default function DoctorsMobile({ doctors }: DoctorsMobileProps) {
                 <div className="flex gap-4 px-4">
                     {doctors.map((doctor) => (
                         <div key={doctor.key} className="flex-shrink-0 w-[75vw] max-w-[340px] snap-center">
-                            {/* Image Section - No rounded corners */}
-                            <div className="relative w-full h-[400px] overflow-hidden mb-4 group">
+                            {/* Image Section */}
+                            <div className="relative w-full h-[400px] overflow-hidden rounded-md mb-4 group">
                                 <Image
                                     src={doctor.image}
                                     alt={doctor.name}
