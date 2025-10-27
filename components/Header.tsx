@@ -20,9 +20,12 @@ export default function Header({ locale }: HeaderProps) {
 
     // Check if we're on the homepage
     const isHomepage = pathname === `/${locale}` || pathname === `/${locale}/`;
-    
+
     // Check if we're on the treatments page
     const isTreatmentsPage = pathname?.includes('/treatments');
+    
+    // Check if we're on the facilities page
+    const isFacilitiesPage = pathname?.includes('/facilities');
 
     useEffect(() => {
         const handleScroll = () => {
@@ -112,7 +115,7 @@ export default function Header({ locale }: HeaderProps) {
                             {t('header.doctors')}
                         </a>
                         <div className={`w-[1px] h-4 transition-colors ${(isHomepage && !isScrolled) ? 'bg-white/20' : 'bg-[#4a9b7f]/20'}`} />
-                        <a href={isHomepage ? '#about' : `/${locale}#about`} className={`text-[0.8rem] font-medium transition-colors relative after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[2px] after:bg-[#4a9b7f] after:transition-[width] after:duration-300 hover:after:w-full ${(isHomepage && !isScrolled) ? 'text-white hover:text-[#4a9b7f]' : 'text-[#1a1a1a] hover:text-[#4a9b7f]'}`}>
+                        <a href={isFacilitiesPage ? `/${locale}/facilities` : (isHomepage ? '#about' : `/${locale}#about`)} className={`text-[0.8rem] font-medium transition-colors relative after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:h-[2px] after:bg-[#4a9b7f] after:transition-[width] after:duration-300 hover:after:w-full ${isFacilitiesPage ? 'after:w-full' : 'after:w-0'} ${(isHomepage && !isScrolled) ? 'text-white hover:text-[#4a9b7f]' : 'text-[#1a1a1a] hover:text-[#4a9b7f]'}`}>
                             {t('header.about')}
                         </a>
                         <div className={`w-[1px] h-4 transition-colors ${(isHomepage && !isScrolled) ? 'bg-white/20' : 'bg-[#4a9b7f]/20'}`} />

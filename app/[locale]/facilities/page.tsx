@@ -2,18 +2,24 @@ import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 import Link from 'next/link';
+import Header from '@/components/Header';
+import BackToTopButton from '@/components/BackToTopButton';
 
 export default async function FacilitiesPage({
-  params: { locale }
+  params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
+  const { locale } = await params;
   const t = await getTranslations({ locale });
 
   return (
     <div className="min-h-screen bg-white">
+      <Header locale={locale} />
+      <BackToTopButton />
+      
       {/* Hero Section */}
-      <section className="px-[5%] py-[6rem] bg-gradient-to-b from-gray-50 to-white">
+      <section className="pt-[120px] px-[5%] pb-[6rem] bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-[1200px] mx-auto">
           <div className="text-center max-w-[800px] mx-auto mb-[4rem]">
             <div className="inline-block px-4 py-2 text-[0.7rem] tracking-[2px] uppercase text-[#4a9b7f] font-bold bg-[#4a9b7f]/10 rounded-full mb-4">
