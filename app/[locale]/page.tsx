@@ -235,9 +235,9 @@ export default async function Home({
 
           <div className="grid md:grid-cols-3 gap-8 max-w-[1200px] mx-auto">
             {/* Single Session */}
-            <div className="bg-white rounded-md p-8 border border-gray-200 hover:border-[#4a9b7f]/30 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+            <div className="bg-white rounded-sm p-8 border border-gray-200 hover:border-[#4a9b7f]/30 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
               <div className="text-center mb-6">
-                <div className="inline-block px-4 py-2 bg-[#c9a962] text-white rounded-lg mb-4">
+                <div className="inline-block px-4 py-2 bg-[#c9a962] text-white rounded-sm mb-4">
                   <span className="text-sm font-bold tracking-wide">{t('pricing.packages.single.name')}</span>
                 </div>
                 <div className="text-[3rem] font-['Cormorant_Garamond'] text-[#4a9b7f] font-light mb-2">
@@ -264,12 +264,12 @@ export default async function Home({
             </div>
 
             {/* 3 Sessions Per Year */}
-            <div className="bg-white rounded-md p-8 border-2 border-[#4a9b7f] hover:border-[#3d8269] transition-all duration-300 hover:-translate-y-2 hover:shadow-xl relative">
+            <div className="bg-white rounded-sm p-8 border-2 border-[#4a9b7f] hover:border-[#3d8269] transition-all duration-300 hover:-translate-y-2 hover:shadow-xl relative">
               <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#4a9b7f] text-white px-6 py-2 rounded-full text-xs font-bold tracking-wide">
                 {t('pricing.packages.three.featured')}
               </div>
               <div className="text-center mb-6">
-                <div className="inline-block px-4 py-2 bg-[#c9a962] text-white rounded-lg mb-4">
+                <div className="inline-block px-4 py-2 bg-[#c9a962] text-white rounded-sm mb-4">
                   <span className="text-sm font-bold tracking-wide">{t('pricing.packages.three.name')}</span>
                 </div>
                 <div className="text-[3rem] font-['Cormorant_Garamond'] text-[#4a9b7f] font-light mb-2">
@@ -297,9 +297,9 @@ export default async function Home({
             </div>
 
             {/* 6 Sessions Over 2 Years */}
-            <div className="bg-white rounded-md p-8 border border-gray-200 hover:border-[#4a9b7f]/30 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+            <div className="bg-white rounded-sm p-8 border border-gray-200 hover:border-[#4a9b7f]/30 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
               <div className="text-center mb-6">
-                <div className="inline-block px-4 py-2 bg-[#c9a962] text-white rounded-lg mb-4">
+                <div className="inline-block px-4 py-2 bg-[#c9a962] text-white rounded-sm mb-4">
                   <span className="text-sm font-bold tracking-wide">{t('pricing.packages.six.name')}</span>
                 </div>
                 <div className="text-[3rem] font-['Cormorant_Garamond'] text-[#4a9b7f] font-light mb-2">
