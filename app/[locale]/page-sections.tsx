@@ -344,15 +344,15 @@ export function ClientExperienceSection() {
 
     return (
         <div className="py-[4rem] bg-white">
-            <div className="max-w-[1400px] mx-auto px-[5%]">
-                {/* Header */}
-                <div className="text-center mb-[3rem]">
-                    <h2 className="font-['Cormorant_Garamond'] text-[clamp(2rem,4vw,2.8rem)] text-[#1a1a1a] mb-2 font-medium">
-                        {t('clientExperience.heading')}
-                    </h2>
-                </div>
+            {/* Header */}
+            <div className="text-center mb-[3rem] px-[5%]">
+                <h2 className="font-['Cormorant_Garamond'] text-[clamp(2rem,4vw,2.8rem)] text-[#1a1a1a] mb-2 font-medium">
+                    {t('clientExperience.heading')}
+                </h2>
+            </div>
 
-                {/* Auto-scrolling Slider */}
+            {/* Auto-scrolling Slider - Full Width */}
+            <div className="w-full">
                 <ClientSlideshow />
             </div>
         </div>
