@@ -25,7 +25,7 @@ export default function Header({ locale }: HeaderProps) {
                 {/* Top Row - Brand and Contact */}
                 <div className="flex items-center justify-between mb-2 md:mb-3">
                     {/* Logo and Brand */}
-                    <Link href="#" className="flex items-center gap-2 md:gap-3 group">
+                    <Link href={`/${locale}`} className="flex items-center gap-2 md:gap-3 group">
                         <div className="relative w-8 h-8 md:w-10 md:h-10 flex-shrink-0">
                             <Image
                                 src="/logo_nobg.png"
