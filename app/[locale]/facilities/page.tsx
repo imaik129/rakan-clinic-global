@@ -17,18 +17,18 @@ export default async function FacilitiesPage({
     <div className="min-h-screen bg-white">
       <Header locale={locale} />
       <BackToTopButton />
-      
+
       {/* Hero Section */}
-      <section className="pt-[120px] px-[5%] pb-[3rem] bg-white">
+      <section className="pt-[120px] px-[5%] pb-[4rem] bg-white">
         <div className="max-w-[1200px] mx-auto">
-          <div className="text-center max-w-[700px] mx-auto mb-[3rem]">
-            <div className="inline-block px-3 py-1 text-[0.65rem] tracking-[1.5px] uppercase text-[#4a9b7f] font-bold bg-[#4a9b7f]/10 rounded-sm mb-3">
+          <div className="text-center max-w-[800px] mx-auto">
+            <div className="inline-block px-3 py-1.5 text-[0.65rem] tracking-[1.5px] uppercase text-[#4a9b7f] font-bold bg-[#4a9b7f]/10 rounded-sm mb-6">
               {t('facilities.badge')}
             </div>
-            <h1 className="font-['Cormorant_Garamond'] text-[clamp(2rem,4vw,3.5rem)] mb-3 leading-[1.15] font-bold text-gray-900">
+            <h1 className="font-['Cormorant_Garamond'] text-[clamp(2.5rem,5vw,4rem)] mb-6 leading-[1.1] font-bold text-gray-900">
               {t('facilities.heading')}
             </h1>
-            <p className="text-[0.95rem] text-gray-600 leading-[1.6] font-light max-w-[600px] mx-auto">
+            <p className="text-[1.1rem] text-gray-600 leading-[1.75] font-light max-w-[700px] mx-auto">
               {t('facilities.description')}
             </p>
           </div>
@@ -153,7 +153,7 @@ export default async function FacilitiesPage({
           <h2 className="font-['Cormorant_Garamond'] text-[1.6rem] md:text-[2rem] text-gray-900 mb-6 font-bold">
             {t('facilities.equipment.title')}
           </h2>
-          
+
           <div className="space-y-6">
             {/* Safety Cabinet */}
             <div className="bg-gray-50 rounded-md overflow-hidden border border-gray-200">
