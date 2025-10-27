@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { useTranslations } from 'next-intl';
 import DoctorsMobile from '../../components/DoctorsMobile';
+import DoctorsDesktop from '../../components/DoctorsDesktop';
 
 export function StemCellSection() {
     const t = useTranslations();
@@ -158,13 +159,13 @@ function DoctorCard({ doctor, doctorImage }: { doctor: string; doctorImage: stri
 
     return (
         <div className="w-full">
-            {/* Doctor Photo - Image on Top with Minimal Rounded Corners */}
-            <div className="relative w-full h-[340px] overflow-hidden rounded-lg mb-3">
+            {/* Doctor Photo - Image on Top with No Rounded Corners */}
+            <div className="relative w-full h-[340px] overflow-hidden mb-3 group">
                 <Image
                     src={doctorImage}
                     alt={t(`doctors.team.${doctor}.name`)}
                     fill
-                    className="object-cover object-top"
+                    className="object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-500"
                     sizes="(max-width: 768px) 100vw, 25vw"
                 />
             </div>
@@ -280,15 +281,13 @@ export function DoctorsSection() {
                 <DoctorsMobile doctors={doctorsData} />
             </div>
 
-            {/* Desktop: 4 in a Row */}
-            <div className="hidden md:grid grid-cols-4 gap-6 max-w-[1400px] mx-auto px-[5%]">
-                {doctors.map((doctor) => (
-                    <DoctorCard
-                        key={doctor}
-                        doctor={doctor}
-                        doctorImage={doctorImages[doctor as keyof typeof doctorImages]}
-                    />
-                ))}
+            {/* Desktop: Intro Box + Scrollable Doctors */}
+            <div className="hidden md:block max-w-[1400px] mx-auto px-[5%]">
+                <DoctorsDesktop 
+                    doctors={doctorsData}
+                    introTitle={t('doctors.intro.title')}
+                    introDescription={t('doctors.intro.description')}
+                />
             </div>
         </section>
     );

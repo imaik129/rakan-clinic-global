@@ -43,13 +43,13 @@ export default function DoctorsMobile({ doctors }: DoctorsMobileProps) {
                 <div className="flex gap-4 px-4">
                     {doctors.map((doctor) => (
                         <div key={doctor.key} className="flex-shrink-0 w-[75vw] max-w-[340px] snap-center">
-                            {/* Image Section - Rounded corners with shadow */}
-                            <div className="relative w-full h-[400px] overflow-hidden rounded-lg mb-4">
+                            {/* Image Section - No rounded corners */}
+                            <div className="relative w-full h-[400px] overflow-hidden mb-4 group">
                                 <Image
                                     src={doctor.image}
                                     alt={doctor.name}
                                     fill
-                                    className="object-cover object-top"
+                                    className="object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-500"
                                     sizes="(max-width: 340px) 75vw, 340px"
                                 />
                             </div>

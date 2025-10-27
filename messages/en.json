@@ -129,8 +129,12 @@
   },
   "doctors": {
     "badge": "Our Medical Team",
-    "heading": "Distinguished Physicians & Researchers",
+    "heading": "Meet the Team",
     "subheading": "World-renowned specialists in orthopedics, regenerative medicine, and osteoimmunology",
+    "intro": {
+      "title": "Expert Medical Leadership",
+      "description": "Guided by internationally recognized physicians and researchers advancing regenerative medicine"
+    },
     "team": {
       "doctor1": {
         "name": "Dr. Shimizu",

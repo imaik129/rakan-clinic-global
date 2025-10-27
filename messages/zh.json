@@ -140,8 +140,12 @@
   },
   "doctors": {
     "badge": "我们的医疗团队",
-    "heading": "杰出的医生与研究人员",
+    "heading": "认识我们的团队",
     "subheading": "世界知名的骨科、再生医学和骨免疫学专家",
+    "intro": {
+      "title": "专家医疗领导力",
+      "description": "由国际知名的医师和研究人员指导，推进再生医学发展"
+    },
     "team": {
       "doctor1": {
         "name": "Dr. Shimizu",
