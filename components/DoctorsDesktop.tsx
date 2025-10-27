@@ -43,7 +43,7 @@ export default function DoctorsDesktop({ doctors, introTitle, introDescription }
                 ref={scrollContainerRef}
             >
                 {/* Intro Box */}
-                <div className="flex-shrink-0 w-[300px] snap-center">
+                <div className="flex-shrink-0 w-[250px] snap-center">
                     <div className="relative w-full h-[340px] bg-[#4a9b7f] rounded-md flex items-center justify-center mb-3">
                         <div className="text-white text-center px-6">
                             <h3 className="font-['Cormorant_Garamond'] text-2xl mb-3">{introTitle}</h3>
@@ -54,7 +54,7 @@ export default function DoctorsDesktop({ doctors, introTitle, introDescription }
                 </div>
 
                 {doctors.map((doctor) => (
-                    <div key={doctor.key} className="flex-shrink-0 w-[300px] snap-center">
+                    <div key={doctor.key} className="flex-shrink-0 w-[250px] snap-center">
                         {/* Image */}
                         <div className="relative w-full h-[340px] overflow-hidden rounded-md mb-3 group">
                             <Image
