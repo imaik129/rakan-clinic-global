@@ -337,14 +337,14 @@ export function WhyTokyoSection() {
     const featureKeys = ['expertise', 'location', 'standards', 'research', 'facility', 'support'];
 
     return (
-        <section id="services" className="px-[5%] py-[6rem] bg-white">
+        <section id="services" className="px-[5%] py-[3rem] bg-white">
             <div className="max-w-[1400px] mx-auto">
                 {/* Header */}
-                <div className="text-center max-w-[900px] mx-auto mb-[4rem]">
+                <div className="text-center max-w-[900px] mx-auto mb-[3rem]">
                     <div className="text-[0.68rem] tracking-[2.5px] uppercase text-[#4a9b7f] mb-3 font-semibold">
                         {t('whyTokyo.badge')}
                     </div>
-                    <h2 className="font-['Cormorant_Garamond'] text-[clamp(2rem,4.5vw,3.4rem)] mb-5 leading-[1.1] font-bold">
+                    <h2 className="font-['Cormorant_Garamond'] text-[clamp(2rem,4.5vw,3.4rem)] mb-4 leading-[1.1] font-bold">
                         {t('whyTokyo.heading')}
                     </h2>
                     <p className="text-[1.05rem] text-[#666666] leading-[1.8] font-light max-w-[750px] mx-auto">
