@@ -157,8 +157,8 @@ function DoctorCard({ doctor, doctorImage }: { doctor: string; doctorImage: stri
 
     return (
         <div className="flex-shrink-0 w-[300px]">
-            {/* Doctor Photo - Image on Top with Rounded Corners and Shadow */}
-            <div className="relative w-full h-[360px] overflow-hidden rounded-2xl shadow-lg mb-4">
+            {/* Doctor Photo - Image on Top with Minimal Rounded Corners */}
+            <div className="relative w-full h-[360px] overflow-hidden rounded-lg mb-4">
                 <Image
                     src={doctorImage}
                     alt={t(`doctors.team.${doctor}.name`)}
