@@ -19,120 +19,323 @@ export default async function FacilitiesPage({
       <BackToTopButton />
       
       {/* Hero Section */}
-      <section className="pt-[120px] px-[5%] pb-[6rem] bg-gradient-to-b from-gray-50 to-white">
+      <section className="pt-[120px] px-[5%] pb-[3rem] bg-white">
         <div className="max-w-[1200px] mx-auto">
-          <div className="text-center max-w-[800px] mx-auto mb-[4rem]">
-            <div className="inline-block px-4 py-2 text-[0.7rem] tracking-[2px] uppercase text-[#4a9b7f] font-bold bg-[#4a9b7f]/10 rounded-full mb-4">
+          <div className="text-center max-w-[700px] mx-auto mb-[3rem]">
+            <div className="inline-block px-3 py-1 text-[0.65rem] tracking-[1.5px] uppercase text-[#4a9b7f] font-bold bg-[#4a9b7f]/10 rounded-sm mb-3">
               {t('facilities.badge')}
             </div>
-            <h1 className="font-['Cormorant_Garamond'] text-[clamp(2.5rem,5vw,4.5rem)] mb-4 leading-[1.15] font-light text-gray-900">
+            <h1 className="font-['Cormorant_Garamond'] text-[clamp(2rem,4vw,3.5rem)] mb-3 leading-[1.15] font-bold text-gray-900">
               {t('facilities.heading')}
             </h1>
-            <p className="text-[1.1rem] text-gray-600 leading-[1.75] font-light max-w-[600px] mx-auto">
+            <p className="text-[0.95rem] text-gray-600 leading-[1.6] font-light max-w-[600px] mx-auto">
               {t('facilities.description')}
             </p>
           </div>
         </div>
       </section>
 
-      {/* Main Facility Image */}
-      <section className="px-[5%] py-[3rem] bg-white">
-        <div className="max-w-[1200px] mx-auto mb-[4rem]">
-          <div className="relative h-[500px] overflow-hidden rounded-lg shadow-xl">
+      {/* 1. Introduction Section */}
+      <section className="px-[5%] py-[2rem] bg-gray-50">
+        <div className="max-w-[1200px] mx-auto">
+          <div className="grid md:grid-cols-2 gap-6 items-center mb-[2rem]">
+            <div>
+              <div className="inline-block px-3 py-1 bg-[#4a9b7f]/10 rounded-sm mb-3">
+                <span className="text-[0.65rem] font-semibold text-[#4a9b7f] uppercase tracking-wide">
+                  {t('facilities.introduction.badge')}
+                </span>
+              </div>
+              <h2 className="font-['Cormorant_Garamond'] text-[1.6rem] md:text-[2rem] text-gray-900 mb-3 font-bold">
+                {t('facilities.introduction.title')}
+              </h2>
+              <p className="text-gray-700 leading-relaxed text-[0.9rem] mb-2">
+                {t('facilities.introduction.paragraph1')}
+              </p>
+              <p className="text-gray-700 leading-relaxed text-[0.9rem]">
+                {t('facilities.introduction.paragraph2')}
+              </p>
+            </div>
+            <div className="relative h-[320px] rounded-md overflow-hidden">
+              <Image
+                src="/images/facilities/lab.webp"
+                alt="Cell Processing Center"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 2. What is CPC Section */}
+      <section className="px-[5%] py-[2rem] bg-white">
+        <div className="max-w-[1200px] mx-auto">
+          <div className="inline-block px-3 py-1 bg-[#4a9b7f]/10 rounded-sm mb-4">
+            <span className="text-[0.65rem] font-semibold text-[#4a9b7f] uppercase tracking-wide">
+              {t('facilities.cpc.badge')}
+            </span>
+          </div>
+          <h2 className="font-['Cormorant_Garamond'] text-[1.6rem] md:text-[2rem] text-gray-900 mb-3 font-bold">
+            {t('facilities.cpc.title')}
+          </h2>
+          <p className="text-gray-700 text-[0.9rem] leading-relaxed mb-4">
+            {t('facilities.cpc.description')}
+          </p>
+          <ul className="space-y-2.5 mb-4">
+            {[0, 1, 2].map((index) => (
+              <li key={index} className="flex items-start gap-2.5">
+                <div className="w-1.5 h-1.5 bg-[#4a9b7f] rounded-full mt-2 flex-shrink-0"></div>
+                <p className="text-gray-700 leading-relaxed text-[0.9rem]">
+                  {t(`facilities.cpc.features.${index}`)}
+                </p>
+              </li>
+            ))}
+          </ul>
+          <div className="relative h-[320px] rounded-md overflow-hidden">
             <Image
-              src="/images/rakan_entrance.png"
-              alt={t('facilities.mainImage.alt')}
+              src="/images/facilities/working.gif"
+              alt="Cell culture process"
               fill
               className="object-cover"
               sizes="(max-width: 1200px) 100vw, 1200px"
-              priority
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent flex items-end">
-              <div className="text-white p-8 max-w-[700px]">
-                <h2 className="font-['Cormorant_Garamond'] text-[2.5rem] mb-4 font-light leading-tight">
-                  {t('facilities.mainImage.title')}
-                </h2>
-                <p className="text-[1rem] leading-relaxed opacity-90">
-                  {t('facilities.mainImage.description')}
-                </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. Quality Appeal Section */}
+      <section className="px-[5%] py-[2rem] bg-gray-50">
+        <div className="max-w-[1200px] mx-auto">
+          <div className="inline-block px-3 py-1 bg-[#4a9b7f]/10 rounded-sm mb-4">
+            <span className="text-[0.65rem] font-semibold text-[#4a9b7f] uppercase tracking-wide">
+              {t('facilities.quality.badge')}
+            </span>
+          </div>
+          <h2 className="font-['Cormorant_Garamond'] text-[1.6rem] md:text-[2rem] text-gray-900 mb-3 font-bold">
+            {t('facilities.quality.title')}
+          </h2>
+          <p className="text-gray-700 text-[0.9rem] leading-relaxed mb-4">
+            {t('facilities.quality.description')}
+          </p>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="relative h-[250px] rounded-md overflow-hidden">
+              <Image
+                src="/images/facilities/stemcells.webp"
+                alt="Healthy stem cells"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
+            <div className="space-y-2.5">
+              {[0, 1, 2, 3].map((index) => (
+                <div key={index} className="flex items-start gap-2.5">
+                  <div className="w-1.5 h-1.5 bg-[#4a9b7f] rounded-full mt-2 flex-shrink-0"></div>
+                  <p className="text-gray-700 leading-relaxed text-[0.9rem]">
+                    {t(`facilities.quality.features.${index}`)}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. Latest Equipment Section */}
+      <section className="px-[5%] py-[2rem] bg-white">
+        <div className="max-w-[1200px] mx-auto">
+          <div className="inline-block px-3 py-1 bg-[#4a9b7f]/10 rounded-sm mb-4">
+            <span className="text-[0.65rem] font-semibold text-[#4a9b7f] uppercase tracking-wide">
+              {t('facilities.equipment.badge')}
+            </span>
+          </div>
+          <h2 className="font-['Cormorant_Garamond'] text-[1.6rem] md:text-[2rem] text-gray-900 mb-6 font-bold">
+            {t('facilities.equipment.title')}
+          </h2>
+          
+          <div className="space-y-6">
+            {/* Safety Cabinet */}
+            <div className="bg-gray-50 rounded-md overflow-hidden border border-gray-200">
+              <div className="grid md:grid-cols-2 gap-6 items-center">
+                <div className="p-6">
+                  <h3 className="font-['Cormorant_Garamond'] text-[1.4rem] text-gray-900 mb-2 font-bold">
+                    {t('facilities.equipment.safetyCabinet.title')}
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed text-[0.85rem]">
+                    {t('facilities.equipment.safetyCabinet.description')}
+                  </p>
+                </div>
+                <div className="relative h-[220px] rounded-md overflow-hidden">
+                  <Image
+                    src="/images/facilities/biological_safety_cabinet.jpg"
+                    alt="Biological Safety Cabinet"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* CO2 Incubator */}
+            <div className="bg-gray-50 rounded-md overflow-hidden border border-gray-200">
+              <div className="grid md:grid-cols-2 gap-6 items-center">
+                <div className="md:order-2 p-6">
+                  <h3 className="font-['Cormorant_Garamond'] text-[1.4rem] text-gray-900 mb-2 font-bold">
+                    {t('facilities.equipment.co2Incubator.title')}
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed text-[0.85rem]">
+                    {t('facilities.equipment.co2Incubator.description')}
+                  </p>
+                </div>
+                <div className="md:order-1 relative h-[220px] rounded-md overflow-hidden">
+                  <Image
+                    src="/images/facilities/co2incubator.webp"
+                    alt="CO2 Incubator"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Inverted Microscope */}
+            <div className="bg-gray-50 rounded-md overflow-hidden border border-gray-200">
+              <div className="grid md:grid-cols-2 gap-6 items-center">
+                <div className="p-6">
+                  <h3 className="font-['Cormorant_Garamond'] text-[1.4rem] text-gray-900 mb-2 font-bold">
+                    {t('facilities.equipment.microscope.title')}
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed text-[0.85rem]">
+                    {t('facilities.equipment.microscope.description')}
+                  </p>
+                </div>
+                <div className="relative h-[220px] rounded-md overflow-hidden">
+                  <Image
+                    src="/images/facilities/inverted_microscope.jpg"
+                    alt="Inverted Microscope"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Pass Box */}
+            <div className="bg-gray-50 rounded-md overflow-hidden border border-gray-200">
+              <div className="grid md:grid-cols-2 gap-6 items-center">
+                <div className="md:order-2 p-6">
+                  <h3 className="font-['Cormorant_Garamond'] text-[1.4rem] text-gray-900 mb-2 font-bold">
+                    {t('facilities.equipment.passBox.title')}
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed text-[0.85rem]">
+                    {t('facilities.equipment.passBox.description')}
+                  </p>
+                </div>
+                <div className="md:order-1 relative h-[220px] rounded-md overflow-hidden">
+                  <Image
+                    src="/images/facilities/passbox.jpg"
+                    alt="Pass Box"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Centrifuge */}
+            <div className="bg-gray-50 rounded-md overflow-hidden border border-gray-200">
+              <div className="grid md:grid-cols-2 gap-6 items-center">
+                <div className="p-6">
+                  <h3 className="font-['Cormorant_Garamond'] text-[1.4rem] text-gray-900 mb-2 font-bold">
+                    {t('facilities.equipment.centrifuge.title')}
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed text-[0.85rem]">
+                    {t('facilities.equipment.centrifuge.description')}
+                  </p>
+                </div>
+                <div className="relative h-[220px] rounded-md overflow-hidden">
+                  <Image
+                    src="/images/facilities/centrifuge.webp"
+                    alt="Centrifuge"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Facilities Grid */}
-      <section className="px-[5%] py-[4rem] bg-gradient-to-b from-white to-gray-50">
+      {/* 5. Quality Management & Safety Section */}
+      <section className="px-[5%] py-[2rem] bg-gray-50">
         <div className="max-w-[1200px] mx-auto">
-          <div className="grid md:grid-cols-2 gap-8 mb-[3rem]">
-            {/* Sterile Processing Labs */}
-            <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="relative h-[300px] bg-gradient-to-br from-[#4a9b7f]/10 to-transparent flex items-center justify-center">
-                <div className="text-center p-8">
-                  <svg className="w-16 h-16 text-[#4a9b7f] mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
-                  </svg>
-                  <h3 className="font-['Cormorant_Garamond'] text-[2rem] text-gray-900 mb-3">
-                    {t('facilities.features.sterile.title')}
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    {t('facilities.features.sterile.description')}
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Private Consultation Rooms */}
-            <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="relative h-[300px] bg-gradient-to-br from-[#c9a962]/10 to-transparent flex items-center justify-center">
-                <div className="text-center p-8">
-                  <svg className="w-16 h-16 text-[#c9a962] mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                  </svg>
-                  <h3 className="font-['Cormorant_Garamond'] text-[2rem] text-gray-900 mb-3">
-                    {t('facilities.features.private.title')}
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    {t('facilities.features.private.description')}
-                  </p>
-                </div>
-              </div>
-            </div>
+          <div className="inline-block px-3 py-1 bg-[#4a9b7f]/10 rounded-sm mb-4">
+            <span className="text-[0.65rem] font-semibold text-[#4a9b7f] uppercase tracking-wide">
+              {t('facilities.management.badge')}
+            </span>
           </div>
-
-          {/* Premium Location */}
-          <div className="bg-white rounded-lg overflow-hidden shadow-lg">
-            <div className="relative h-[350px] bg-gradient-to-br from-gray-900 to-gray-700 flex items-center justify-center">
-              <div className="text-center text-white p-8 max-w-[800px]">
-                <svg className="w-16 h-16 text-[#c9a962] mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-                <h3 className="font-['Cormorant_Garamond'] text-[2.5rem] mb-4">
-                  {t('facilities.features.location.title')}
-                </h3>
-                <p className="text-[1.1rem] leading-relaxed opacity-90">
-                  {t('facilities.features.location.description')}
-                </p>
+          <h2 className="font-['Cormorant_Garamond'] text-[1.6rem] md:text-[2rem] text-gray-900 mb-6 font-bold">
+            {t('facilities.management.title')}
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[0, 1, 2, 3, 4].map((index) => (
+              <div key={index} className="bg-white rounded-md p-5 border border-gray-200">
+                <div className="flex items-start gap-2.5">
+                  <div className="w-1.5 h-1.5 bg-[#4a9b7f] rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-1.5 text-[0.9rem]">
+                      {t(`facilities.management.items.${index}.title`)}
+                    </h4>
+                    <p className="text-xs text-gray-600 leading-relaxed">
+                      {t(`facilities.management.items.${index}.description`)}
+                    </p>
+                  </div>
+                </div>
               </div>
-            </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 6. Conclusion Section */}
+      <section className="px-[5%] py-[2rem] bg-white">
+        <div className="max-w-[1200px] mx-auto">
+          <div className="inline-block px-3 py-1 bg-[#4a9b7f]/10 rounded-sm mb-4">
+            <span className="text-[0.65rem] font-semibold text-[#4a9b7f] uppercase tracking-wide">
+              {t('facilities.conclusion.badge')}
+            </span>
+          </div>
+          <div className="space-y-4 text-gray-700 leading-relaxed">
+            <p className="text-[0.95rem]">
+              {t('facilities.conclusion.paragraph1')}
+            </p>
+            <p className="text-[0.95rem]">
+              {t('facilities.conclusion.paragraph2')}
+            </p>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="px-[5%] py-[5rem] bg-gradient-to-b from-gray-50 to-white">
+      <section className="px-[5%] py-[4rem] bg-gray-50">
         <div className="max-w-[800px] mx-auto text-center">
-          <h2 className="font-['Cormorant_Garamond'] text-[2.5rem] mb-4 text-gray-900">
+          <h2 className="font-['Cormorant_Garamond'] text-[2rem] mb-3 text-gray-900 font-bold">
             {t('facilities.cta.title')}
           </h2>
-          <p className="text-gray-600 mb-8 leading-relaxed">
+          <p className="text-gray-600 mb-6 leading-relaxed text-[0.9rem]">
             {t('facilities.cta.description')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href={`/${locale}#contact`}
-              className="inline-block px-8 py-3 bg-[#4a9b7f] text-white font-semibold rounded-lg hover:bg-[#3d8269] transition-colors duration-300"
+              className="inline-block px-6 py-2.5 bg-[#4a9b7f] text-white font-semibold rounded-md hover:bg-[#3d8269] transition-colors duration-300 text-sm"
             >
               {t('facilities.cta.contact')}
             </Link>
@@ -140,7 +343,7 @@ export default async function FacilitiesPage({
               href="https://reservation.medical-force.com/c/b04884e74e2542e0a3e0ae50ce50c26b"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-8 py-3 border-2 border-[#4a9b7f] text-[#4a9b7f] font-semibold rounded-lg hover:bg-[#4a9b7f] hover:text-white transition-colors duration-300"
+              className="inline-block px-6 py-2.5 border-2 border-[#4a9b7f] text-[#4a9b7f] font-semibold rounded-md hover:bg-[#4a9b7f] hover:text-white transition-colors duration-300 text-sm"
             >
               {t('facilities.cta.book')}
             </a>

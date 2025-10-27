@@ -622,26 +622,90 @@
   },
   "facilities": {
     "badge": "Our Facilities",
-    "heading": "Premier Medical Facility in Tokyo",
-    "description": "Experience world-class regenerative medicine in a state-of-the-art facility designed for excellence, privacy, and healing.",
-    "mainImage": {
-      "alt": "Rakan Clinic Tokyo - Azabudai Hills Entrance",
-      "title": "Rakan Clinic Tokyo Azabudai",
-      "description": "Located in the heart of Tokyo's most prestigious international district, our facility represents the pinnacle of regenerative medicine."
+    "heading": "Cell Processing Center (CPC)",
+    "description": "Our in-house CPC ensures maximum cell freshness, safety, and treatment effectiveness through pharmaceutical-grade sterile processing.",
+    "introduction": {
+      "badge": "Introduction",
+      "title": "Introduction",
+      "paragraph1": "To maximize the effectiveness of stem cell treatment, our clinic has established a Cell Processing Center (CPC) within our medical facility.",
+      "paragraph2": "We are committed to delivering highly fresh and high-quality stem cells to patients in the best possible condition."
     },
-    "features": {
-      "sterile": {
-        "title": "Sterile Processing Labs",
-        "description": "State-of-the-art regenerative medicine facility with sterile processing labs ensuring the highest standards of safety and efficacy for all cell-based treatments."
+    "cpc": {
+      "badge": "What is CPC?",
+      "title": "What is CPC?",
+      "description": "CPC (Cell Processing Center: 細胞培養加工室) is a specialized facility for processing and culturing cells used in regenerative medicine and cell therapy, ensuring a sterile and clean environment.",
+      "features": [
+        "Managed under strict standards equivalent to pharmaceutical manufacturing",
+        "High cleanliness due to cleanroom structure",
+        "24-hour quality control system by dedicated culture specialists"
+      ]
+    },
+    "quality": {
+      "badge": "Stem Cell Quality",
+      "title": "Quality Appeal of Stem Cells",
+      "description": "Our self-fat-derived stem cells maintain a survival rate of over 95%. Under a microscope, they appear healthy, uniform, and spindle-shaped — a crucial sign of their good condition.",
+      "features": [
+        "Maintaining a uniform and beautiful form",
+        "Retaining proliferative capacity and differentiation potential",
+        "Being delivered in a fresh state at the time of administration",
+        "Directly contributing to the stability and safety of clinical effects"
+      ]
+    },
+    "equipment": {
+      "badge": "Latest Equipment",
+      "title": "Latest Equipment to Protect Stem Cells",
+      "safetyCabinet": {
+        "title": "Biological Safety Cabinet",
+        "description": "A device for aseptic operations. It protects cells and specimens aseptically, while also protecting operators and the environment from biohazards. It ensures a thoroughly clean space with HEPA filters and UV sterilization."
       },
-      "private": {
-        "title": "Private Consultation Rooms",
-        "description": "Private consultation rooms ensuring complete discretion for VIP patients. Our facility is designed to provide the utmost privacy and comfort."
+      "co2Incubator": {
+        "title": "CO2 Incubator",
+        "description": "Constantly maintains the temperature, humidity, and CO2 concentration essential for stem cell culture. Enables stable proliferation of cells in an optimal environment."
       },
-      "location": {
-        "title": "Premium Location",
-        "description": "Premium location in Tokyo's most prestigious international district. Azabudai Hills represents the pinnacle of luxury and medical excellence."
+      "microscope": {
+        "title": "Inverted Microscope",
+        "description": "A microscope that allows observation of living cells directly in their culture vessels. It continuously confirms cell morphology and growth processes, always grasping their healthy state."
+      },
+      "passBox": {
+        "title": "Pass Box",
+        "description": "A system used for transferring items between clean rooms or sterile rooms and the outside environment. With an interlock function that prevents both doors from opening simultaneously, thereby maintaining constant cleanliness and airtightness."
+      },
+      "centrifuge": {
+        "title": "Centrifuge",
+        "description": "Essential for cell separation and processing. Ensures precise handling of cell samples with controlled centrifugal force for optimal cell quality and viability."
       }
+    },
+    "management": {
+      "badge": "Quality & Safety",
+      "title": "Quality Management and Safety",
+      "items": [
+        {
+          "title": "High Cell Survival Rate (95% or more)",
+          "description": "Cultivation starts immediately after fat collection to minimize damage."
+        },
+        {
+          "title": "Long-term Preservation with Liquid Nitrogen (-196°C)",
+          "description": "Preserved in a semi-permanently usable state, can be administered at the necessary timing."
+        },
+        {
+          "title": "Administered in a Highly Fresh State",
+          "description": "After cultivation, it is quickly administered intravenously to maximize regenerative power."
+        },
+        {
+          "title": "Passage Limit (up to 4 times)",
+          "description": "Prevents aging and risks due to excessive cell division, ensuring safety."
+        },
+        {
+          "title": "Culture Specialists Permanently Stationed at CPC",
+          "description": "Experienced cultivation specialists constantly monitor and manage cells, protecting quality."
+        }
+      ]
+    },
+    "conclusion": {
+      "badge": "Conclusion",
+      "title": "Conclusion",
+      "paragraph1": "We are thoroughly committed to the \"quality\" and \"safety\" of stem cell treatment. Our in-house CPC and state-of-the-art equipment, along with a management system by experienced cultivation specialists.",
+      "paragraph2": "All of these form the foundation for patients to receive treatment with peace of mind. We will continue to deliver the highest standard of stem cell treatment."
     },
     "cta": {
       "title": "Experience World-Class Care",
