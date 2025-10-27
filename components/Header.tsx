@@ -20,6 +20,9 @@ export default function Header({ locale }: HeaderProps) {
 
     // Check if we're on the homepage
     const isHomepage = pathname === `/${locale}` || pathname === `/${locale}/`;
+    
+    // Check if we're on the treatments page
+    const isTreatmentsPage = pathname?.includes('/treatments');
 
     useEffect(() => {
         const handleScroll = () => {
@@ -97,35 +100,35 @@ export default function Header({ locale }: HeaderProps) {
                 {/* Bottom Row - Desktop Navigation Only */}
                 <div className="hidden md:flex items-center justify-center">
                     <nav className="flex items-center gap-8">
-                        <a href="#" className={`text-[0.8rem] font-medium transition-colors relative after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[2px] after:bg-[#4a9b7f] after:transition-[width] after:duration-300 hover:after:w-full ${(isHomepage && !isScrolled) ? 'text-white hover:text-[#4a9b7f]' : 'text-[#1a1a1a] hover:text-[#4a9b7f]'}`}>
+                        <a href={`/${locale}`} className={`text-[0.8rem] font-medium transition-colors relative after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[2px] after:bg-[#4a9b7f] after:transition-[width] after:duration-300 hover:after:w-full ${(isHomepage && !isScrolled) ? 'text-white hover:text-[#4a9b7f]' : 'text-[#1a1a1a] hover:text-[#4a9b7f]'}`}>
                             {t('header.home')}
                         </a>
                         <div className={`w-[1px] h-4 transition-colors ${(isHomepage && !isScrolled) ? 'bg-white/20' : 'bg-[#4a9b7f]/20'}`} />
-                        <a href={`/${locale}/treatments`} className={`text-[0.8rem] font-medium transition-colors relative after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[2px] after:bg-[#4a9b7f] after:transition-[width] after:duration-300 hover:after:w-full ${(isHomepage && !isScrolled) ? 'text-white hover:text-[#4a9b7f]' : 'text-[#1a1a1a] hover:text-[#4a9b7f]'}`}>
+                        <a href={`/${locale}/treatments`} className={`text-[0.8rem] font-medium transition-colors relative after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:h-[2px] after:bg-[#4a9b7f] after:transition-[width] after:duration-300 hover:after:w-full ${isTreatmentsPage ? 'after:w-full' : 'after:w-0'} ${(isHomepage && !isScrolled) ? 'text-white hover:text-[#4a9b7f]' : 'text-[#1a1a1a] hover:text-[#4a9b7f]'}`}>
                             {t('header.treatments')}
                         </a>
                         <div className={`w-[1px] h-4 transition-colors ${(isHomepage && !isScrolled) ? 'bg-white/20' : 'bg-[#4a9b7f]/20'}`} />
-                        <a href="#doctors" className={`text-[0.8rem] font-medium transition-colors relative after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[2px] after:bg-[#4a9b7f] after:transition-[width] after:duration-300 hover:after:w-full ${(isHomepage && !isScrolled) ? 'text-white hover:text-[#4a9b7f]' : 'text-[#1a1a1a] hover:text-[#4a9b7f]'}`}>
+                        <a href={isHomepage ? '#doctors' : `/${locale}#doctors`} className={`text-[0.8rem] font-medium transition-colors relative after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[2px] after:bg-[#4a9b7f] after:transition-[width] after:duration-300 hover:after:w-full ${(isHomepage && !isScrolled) ? 'text-white hover:text-[#4a9b7f]' : 'text-[#1a1a1a] hover:text-[#4a9b7f]'}`}>
                             {t('header.doctors')}
                         </a>
                         <div className={`w-[1px] h-4 transition-colors ${(isHomepage && !isScrolled) ? 'bg-white/20' : 'bg-[#4a9b7f]/20'}`} />
-                        <a href="#about" className={`text-[0.8rem] font-medium transition-colors relative after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[2px] after:bg-[#4a9b7f] after:transition-[width] after:duration-300 hover:after:w-full ${(isHomepage && !isScrolled) ? 'text-white hover:text-[#4a9b7f]' : 'text-[#1a1a1a] hover:text-[#4a9b7f]'}`}>
+                        <a href={isHomepage ? '#about' : `/${locale}#about`} className={`text-[0.8rem] font-medium transition-colors relative after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[2px] after:bg-[#4a9b7f] after:transition-[width] after:duration-300 hover:after:w-full ${(isHomepage && !isScrolled) ? 'text-white hover:text-[#4a9b7f]' : 'text-[#1a1a1a] hover:text-[#4a9b7f]'}`}>
                             {t('header.about')}
                         </a>
                         <div className={`w-[1px] h-4 transition-colors ${(isHomepage && !isScrolled) ? 'bg-white/20' : 'bg-[#4a9b7f]/20'}`} />
-                        <a href="#pricing" className={`text-[0.8rem] font-medium transition-colors relative after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[2px] after:bg-[#4a9b7f] after:transition-[width] after:duration-300 hover:after:w-full ${(isHomepage && !isScrolled) ? 'text-white hover:text-[#4a9b7f]' : 'text-[#1a1a1a] hover:text-[#4a9b7f]'}`}>
+                        <a href={isHomepage ? '#pricing' : `/${locale}#pricing`} className={`text-[0.8rem] font-medium transition-colors relative after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[2px] after:bg-[#4a9b7f] after:transition-[width] after:duration-300 hover:after:w-full ${(isHomepage && !isScrolled) ? 'text-white hover:text-[#4a9b7f]' : 'text-[#1a1a1a] hover:text-[#4a9b7f]'}`}>
                             {t('header.pricing')}
                         </a>
                         <div className={`w-[1px] h-4 transition-colors ${(isHomepage && !isScrolled) ? 'bg-white/20' : 'bg-[#4a9b7f]/20'}`} />
-                        <a href="#faq" className={`text-[0.8rem] font-medium transition-colors relative after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[2px] after:bg-[#4a9b7f] after:transition-[width] after:duration-300 hover:after:w-full ${(isHomepage && !isScrolled) ? 'text-white hover:text-[#4a9b7f]' : 'text-[#1a1a1a] hover:text-[#4a9b7f]'}`}>
+                        <a href={isHomepage ? '#faq' : `/${locale}#faq`} className={`text-[0.8rem] font-medium transition-colors relative after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[2px] after:bg-[#4a9b7f] after:transition-[width] after:duration-300 hover:after:w-full ${(isHomepage && !isScrolled) ? 'text-white hover:text-[#4a9b7f]' : 'text-[#1a1a1a] hover:text-[#4a9b7f]'}`}>
                             {t('header.faq')}
                         </a>
                         <div className={`w-[1px] h-4 transition-colors ${(isHomepage && !isScrolled) ? 'bg-white/20' : 'bg-[#4a9b7f]/20'}`} />
-                        <a href="#support" className={`text-[0.8rem] font-medium transition-colors relative after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[2px] after:bg-[#4a9b7f] after:transition-[width] after:duration-300 hover:after:w-full ${(isHomepage && !isScrolled) ? 'text-white hover:text-[#4a9b7f]' : 'text-[#1a1a1a] hover:text-[#4a9b7f]'}`}>
+                        <a href={isHomepage ? '#support' : `/${locale}#support`} className={`text-[0.8rem] font-medium transition-colors relative after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[2px] after:bg-[#4a9b7f] after:transition-[width] after:duration-300 hover:after:w-full ${(isHomepage && !isScrolled) ? 'text-white hover:text-[#4a9b7f]' : 'text-[#1a1a1a] hover:text-[#4a9b7f]'}`}>
                             {t('header.support')}
                         </a>
                         <div className={`w-[1px] h-4 transition-colors ${(isHomepage && !isScrolled) ? 'bg-white/20' : 'bg-[#4a9b7f]/20'}`} />
-                        <a href="#contact" className={`text-[0.8rem] font-medium transition-colors relative after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[2px] after:bg-[#4a9b7f] after:transition-[width] after:duration-300 hover:after:w-full ${(isHomepage && !isScrolled) ? 'text-white hover:text-[#4a9b7f]' : 'text-[#1a1a1a] hover:text-[#4a9b7f]'}`}>
+                        <a href={isHomepage ? '#contact' : `/${locale}#contact`} className={`text-[0.8rem] font-medium transition-colors relative after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[2px] after:bg-[#4a9b7f] after:transition-[width] after:duration-300 hover:after:w-full ${(isHomepage && !isScrolled) ? 'text-white hover:text-[#4a9b7f]' : 'text-[#1a1a1a] hover:text-[#4a9b7f]'}`}>
                             {t('header.contact')}
                         </a>
                     </nav>
@@ -151,7 +154,7 @@ export default function Header({ locale }: HeaderProps) {
                                 {/* Mobile Navigation Links */}
                                 <nav className="space-y-6">
                                     <a
-                                        href="#"
+                                        href={`/${locale}`}
                                         className="block text-[#1a1a1a] text-lg font-medium hover:text-[#4a9b7f] transition-colors py-2"
                                         onClick={toggleMobileMenu}
                                     >
@@ -165,42 +168,42 @@ export default function Header({ locale }: HeaderProps) {
                                         {t('header.treatments')}
                                     </a>
                                     <a
-                                        href="#doctors"
+                                        href={isHomepage ? '#doctors' : `/${locale}#doctors`}
                                         className="block text-[#1a1a1a] text-lg font-medium hover:text-[#4a9b7f] transition-colors py-2"
                                         onClick={toggleMobileMenu}
                                     >
                                         {t('header.doctors')}
                                     </a>
                                     <a
-                                        href="#about"
+                                        href={isHomepage ? '#about' : `/${locale}#about`}
                                         className="block text-[#1a1a1a] text-lg font-medium hover:text-[#4a9b7f] transition-colors py-2"
                                         onClick={toggleMobileMenu}
                                     >
                                         {t('header.about')}
                                     </a>
                                     <a
-                                        href="#pricing"
+                                        href={isHomepage ? '#pricing' : `/${locale}#pricing`}
                                         className="block text-[#1a1a1a] text-lg font-medium hover:text-[#4a9b7f] transition-colors py-2"
                                         onClick={toggleMobileMenu}
                                     >
                                         {t('header.pricing')}
                                     </a>
                                     <a
-                                        href="#faq"
+                                        href={isHomepage ? '#faq' : `/${locale}#faq`}
                                         className="block text-[#1a1a1a] text-lg font-medium hover:text-[#4a9b7f] transition-colors py-2"
                                         onClick={toggleMobileMenu}
                                     >
                                         {t('header.faq')}
                                     </a>
                                     <a
-                                        href="#support"
+                                        href={isHomepage ? '#support' : `/${locale}#support`}
                                         className="block text-[#1a1a1a] text-lg font-medium hover:text-[#4a9b7f] transition-colors py-2"
                                         onClick={toggleMobileMenu}
                                     >
                                         {t('header.support')}
                                     </a>
                                     <a
-                                        href="#contact"
+                                        href={isHomepage ? '#contact' : `/${locale}#contact`}
                                         className="block text-[#1a1a1a] text-lg font-medium hover:text-[#4a9b7f] transition-colors py-2"
                                         onClick={toggleMobileMenu}
                                     >
