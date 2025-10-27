@@ -1,7 +1,7 @@
 'use client';
 
-import { useState } from 'react';
-import { useTranslations } from 'next-intl';
+import { useState, useEffect } from 'react';
+import { useTranslations, useLocale } from 'next-intl';
 
 // International country codes with flags and names
 const countryCodes = [
@@ -66,18 +66,40 @@ interface FormData {
 
 export default function ContactForm() {
     const t = useTranslations();
+    const locale = useLocale();
+    
+    // Map locale to default country code
+    const getDefaultCountry = () => {
+        const localeCountryMap: Record<string, string> = {
+            'zh': '+86',  // China
+            'en': '+1',   // US/Canada (default English)
+        };
+        const code = localeCountryMap[locale] || '+1';
+        return countryCodes.find(c => c.code === code) || countryCodes[0];
+    };
+    
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-    const [selectedCountry, setSelectedCountry] = useState(countryCodes[0]);
+    const [selectedCountry, setSelectedCountry] = useState(getDefaultCountry());
     const [formData, setFormData] = useState<FormData>({
         firstName: '',
         lastName: '',
         email: '',
-        countryCode: '+1',
+        countryCode: getDefaultCountry().code,
         phone: '',
         message: ''
     });
+    
+    // Update country when locale changes
+    useEffect(() => {
+        const defaultCountry = getDefaultCountry();
+        setSelectedCountry(defaultCountry);
+        setFormData(prev => ({
+            ...prev,
+            countryCode: defaultCountry.code
+        }));
+    }, [locale]);
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
@@ -160,13 +182,13 @@ export default function ContactForm() {
     }
 
     return (
-        <form onSubmit={handleSubmit} className="bg-white p-10 shadow-lg">
-            <h3 className="font-['Cormorant_Garamond'] text-[1.5rem] mb-8 font-normal">
+        <form onSubmit={handleSubmit} className="bg-white p-4 md:p-10 shadow-lg">
+            <h3 className="font-['Cormorant_Garamond'] text-[1.5rem] mb-6 md:mb-8 font-normal">
                 {t('contact.form.title')}
             </h3>
 
-            <div className="space-y-6">
-                <div className="grid sm:grid-cols-2 gap-6">
+            <div className="space-y-4 md:space-y-6">
+                <div className="grid sm:grid-cols-2 gap-4 md:gap-6">
                     <div>
                         <label className="block text-[0.75rem] uppercase tracking-[1px] text-[#666666] mb-2 font-medium">
                             {t('contact.form.firstName.label')}
@@ -177,7 +199,7 @@ export default function ContactForm() {
                             value={formData.firstName}
                             onChange={handleInputChange}
                             required
-                            className="w-full p-4 border border-black/10 bg-white text-[0.95rem] font-light transition-all focus:outline-none focus:border-[#4a9b7f] focus:shadow-[0_0_0_3px_rgba(74,155,127,0.1)]"
+                            className="w-full p-3 md:p-4 border border-black/10 bg-white text-[0.95rem] font-light transition-all focus:outline-none focus:border-[#4a9b7f] focus:shadow-[0_0_0_3px_rgba(74,155,127,0.1)]"
                             placeholder={t('contact.form.firstName.placeholder')}
                         />
                     </div>
@@ -191,13 +213,13 @@ export default function ContactForm() {
                             value={formData.lastName}
                             onChange={handleInputChange}
                             required
-                            className="w-full p-4 border border-black/10 bg-white text-[0.95rem] font-light transition-all focus:outline-none focus:border-[#4a9b7f] focus:shadow-[0_0_0_3px_rgba(74,155,127,0.1)]"
+                            className="w-full p-3 md:p-4 border border-black/10 bg-white text-[0.95rem] font-light transition-all focus:outline-none focus:border-[#4a9b7f] focus:shadow-[0_0_0_3px_rgba(74,155,127,0.1)]"
                             placeholder={t('contact.form.lastName.placeholder')}
                         />
                     </div>
                 </div>
 
-                <div className="grid sm:grid-cols-2 gap-6">
+                <div className="grid sm:grid-cols-2 gap-4 md:gap-6">
                     <div>
                         <label className="block text-[0.75rem] uppercase tracking-[1px] text-[#666666] mb-2 font-medium">
                             {t('contact.form.email.label')}
@@ -208,7 +230,7 @@ export default function ContactForm() {
                             value={formData.email}
                             onChange={handleInputChange}
                             required
-                            className="w-full p-4 border border-black/10 bg-white text-[0.95rem] font-light transition-all focus:outline-none focus:border-[#4a9b7f] focus:shadow-[0_0_0_3px_rgba(74,155,127,0.1)]"
+                            className="w-full p-3 md:p-4 border border-black/10 bg-white text-[0.95rem] font-light transition-all focus:outline-none focus:border-[#4a9b7f] focus:shadow-[0_0_0_3px_rgba(74,155,127,0.1)]"
                             placeholder={t('contact.form.email.placeholder')}
                         />
                     </div>
@@ -222,7 +244,7 @@ export default function ContactForm() {
                                 <button
                                     type="button"
                                     onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                                    className="flex items-center gap-2 px-4 py-4 border border-black/10 border-r-0 bg-white text-[0.95rem] font-light transition-all focus:outline-none focus:border-[#4a9b7f] focus:shadow-[0_0_0_3px_rgba(74,155,127,0.1)]"
+                                    className="flex items-center gap-2 px-3 md:px-4 py-3 md:py-4 border border-black/10 border-r-0 bg-white text-[0.85rem] md:text-[0.95rem] font-light transition-all focus:outline-none focus:border-[#4a9b7f] focus:shadow-[0_0_0_3px_rgba(74,155,127,0.1)]"
                                 >
                                     <span className="text-lg">{selectedCountry.flag}</span>
                                     <span className="text-[0.9rem]">{selectedCountry.code}</span>
@@ -258,7 +280,7 @@ export default function ContactForm() {
                                 value={formData.phone}
                                 onChange={handleInputChange}
                                 required
-                                className="flex-1 p-4 border border-black/10 bg-white text-[0.95rem] font-light transition-all focus:outline-none focus:border-[#4a9b7f] focus:shadow-[0_0_0_3px_rgba(74,155,127,0.1)]"
+                                className="flex-1 p-3 md:p-4 border border-black/10 bg-white text-[0.95rem] font-light transition-all focus:outline-none focus:border-[#4a9b7f] focus:shadow-[0_0_0_3px_rgba(74,155,127,0.1)]"
                                 placeholder={t('contact.form.phone.placeholderNumber')}
                             />
                         </div>
@@ -275,7 +297,7 @@ export default function ContactForm() {
                         onChange={handleInputChange}
                         required
                         rows={4}
-                        className="w-full p-4 border border-black/10 bg-white text-[0.95rem] font-light resize-none transition-all focus:outline-none focus:border-[#4a9b7f] focus:shadow-[0_0_0_3px_rgba(74,155,127,0.1)]"
+                        className="w-full p-3 md:p-4 border border-black/10 bg-white text-[0.95rem] font-light resize-none transition-all focus:outline-none focus:border-[#4a9b7f] focus:shadow-[0_0_0_3px_rgba(74,155,127,0.1)]"
                         placeholder={t('contact.form.message.placeholder')}
                     />
                 </div>
@@ -283,7 +305,7 @@ export default function ContactForm() {
                 <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full py-[1.2rem] bg-[#1a1a1a] text-white text-[0.85rem] font-medium tracking-[2px] uppercase transition-all duration-300 hover:bg-[#4a9b7f] hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(74,155,127,0.3)] disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                    className="w-full py-3 md:py-[1.2rem] bg-[#1a1a1a] text-white text-[0.8rem] md:text-[0.85rem] font-medium tracking-[2px] uppercase transition-all duration-300 hover:bg-[#4a9b7f] hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(74,155,127,0.3)] disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                 >
                     {isSubmitting ? t('contact.form.sending') : t('contact.form.submit')}
                 </button>

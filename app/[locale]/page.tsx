@@ -13,7 +13,6 @@ import {
   WhyTokyoSection,
   ClientExperienceSection,
   PatientJourneySection,
-  TestimonialsSection,
   FAQSection
 } from './page-sections';
 
@@ -42,7 +41,7 @@ export default async function Home({
           <div className="text-center max-w-[700px] mx-auto mb-[4rem] md:mb-[4rem] mb-[2.5rem]">
             <span className="inline-block px-4 py-2 text-[0.7rem] tracking-[2px] uppercase text-[#4a9b7f] font-bold bg-[#4a9b7f]/10 rounded-full mb-3 md:mb-4">
               {t('treatmentGoals.badge')}
-            </span>
+              </span>
             <h2 className="font-['Cormorant_Garamond'] text-[clamp(1.8rem,4.5vw,3.8rem)] mb-3 md:mb-4 leading-[1.15] font-light text-gray-900">
               {t('treatmentGoals.heading')}
             </h2>
@@ -96,15 +95,15 @@ export default async function Home({
               ].map((goal) => (
                 <div key={goal.key}>
                   {/* Image Section - Rounded corners with shadow */}
-                  <div className="relative w-full h-[280px] overflow-hidden rounded-2xl shadow-lg mb-3">
-                    <Image
-                      src={goal.image}
-                      alt=""
-                      fill
+                  <div className="relative w-full h-[280px] overflow-hidden rounded-md shadow-lg mb-3">
+                  <Image
+                    src={goal.image}
+                    alt=""
+                    fill
                       className="object-cover"
                       sizes="(max-width: 1200px) 25vw, 300px"
-                    />
-                  </div>
+                  />
+                </div>
                   {/* Content Section */}
                   <div className="space-y-1">
                     <p className="text-[0.7rem] text-gray-500 font-medium uppercase tracking-wider">
@@ -112,14 +111,14 @@ export default async function Home({
                     </p>
                     <h3 className="font-['Cormorant_Garamond'] text-[1.2rem] font-bold text-gray-900">
                       {t(`treatmentGoals.goals.${goal.key}.title`)}
-                    </h3>
+                  </h3>
                     <p className="text-[0.85rem] text-gray-600 font-light leading-[1.5]">
                       {t(`treatmentGoals.goals.${goal.key}.description`)}
                     </p>
                   </div>
                 </div>
               ))}
-            </div>
+              </div>
           </div>
         </div>
       </section>
@@ -150,10 +149,10 @@ export default async function Home({
           <div className="grid md:grid-cols-2 gap-8 items-start mb-[4rem]">
             {/* Left: Image */}
             <div className="relative h-[400px] overflow-hidden rounded-lg">
-              <Image
-                src="/images/rakan_entrance.png"
-                alt="Rakan Clinic Tokyo - Azabudai Hills Entrance"
-                fill
+                <Image
+                  src="/images/rakan_entrance.png"
+                  alt="Rakan Clinic Tokyo - Azabudai Hills Entrance"
+                  fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
@@ -170,33 +169,33 @@ export default async function Home({
                 </h3>
               </div>
 
-              <div className="space-y-3">
-                <div className="flex items-start gap-3">
+                  <div className="space-y-3">
+                    <div className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 bg-[#4a9b7f] rounded-full mt-2 flex-shrink-0"></div>
                   <p className="text-sm text-gray-700 leading-relaxed">
                     {t('about.facility.features.0')}
-                  </p>
-                </div>
-                <div className="flex items-start gap-3">
+                      </p>
+                    </div>
+                    <div className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 bg-[#4a9b7f] rounded-full mt-2 flex-shrink-0"></div>
                   <p className="text-sm text-gray-700 leading-relaxed">
                     {t('about.facility.features.1')}
-                  </p>
-                </div>
-                <div className="flex items-start gap-3">
+                      </p>
+                    </div>
+                    <div className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 bg-[#4a9b7f] rounded-full mt-2 flex-shrink-0"></div>
                   <p className="text-sm text-gray-700 leading-relaxed">
                     {t('about.facility.features.2')}
                   </p>
-                </div>
-              </div>
+            </div>
+          </div>
 
               {/* Trusted By */}
               <div className="mt-8 pt-6 border-t border-gray-200">
                 <div className="inline-flex items-center gap-2 text-xs text-gray-600 font-medium">
-                  <svg className="w-4 h-4 text-[#c9a962]" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
+                <svg className="w-4 h-4 text-[#c9a962]" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
                   {t('about.trustedBy.title')}
                 </div>
               </div>
@@ -236,7 +235,7 @@ export default async function Home({
 
           <div className="grid md:grid-cols-3 gap-8 max-w-[1200px] mx-auto">
             {/* Single Session */}
-            <div className="bg-white rounded-2xl p-8 border border-gray-200 hover:border-[#4a9b7f]/30 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+            <div className="bg-white rounded-md p-8 border border-gray-200 hover:border-[#4a9b7f]/30 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
               <div className="text-center mb-6">
                 <div className="inline-block px-4 py-2 bg-[#c9a962] text-white rounded-lg mb-4">
                   <span className="text-sm font-bold tracking-wide">{t('pricing.packages.single.name')}</span>
@@ -253,11 +252,11 @@ export default async function Home({
                   <ul className="space-y-2 text-sm text-gray-700">
                     {(t.raw('pricing.packages.single.features') as string[]).map((feature, i) => (
                       <li key={i} className="flex items-center gap-2">
-                        <svg className="w-4 h-4 text-[#4a9b7f] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
+                      <svg className="w-4 h-4 text-[#4a9b7f] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
                         {feature}
-                      </li>
+                    </li>
                     ))}
                   </ul>
                 </div>
@@ -265,7 +264,7 @@ export default async function Home({
             </div>
 
             {/* 3 Sessions Per Year */}
-            <div className="bg-white rounded-2xl p-8 border-2 border-[#4a9b7f] hover:border-[#3d8269] transition-all duration-300 hover:-translate-y-2 hover:shadow-xl relative">
+            <div className="bg-white rounded-md p-8 border-2 border-[#4a9b7f] hover:border-[#3d8269] transition-all duration-300 hover:-translate-y-2 hover:shadow-xl relative">
               <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#4a9b7f] text-white px-6 py-2 rounded-full text-xs font-bold tracking-wide">
                 {t('pricing.packages.three.featured')}
               </div>
@@ -286,11 +285,11 @@ export default async function Home({
                   <ul className="space-y-2 text-sm text-gray-700">
                     {(t.raw('pricing.packages.three.features') as string[]).map((feature, i) => (
                       <li key={i} className="flex items-center gap-2">
-                        <svg className="w-4 h-4 text-[#4a9b7f] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
+                      <svg className="w-4 h-4 text-[#4a9b7f] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
                         {feature}
-                      </li>
+                    </li>
                     ))}
                   </ul>
                 </div>
@@ -298,7 +297,7 @@ export default async function Home({
             </div>
 
             {/* 6 Sessions Over 2 Years */}
-            <div className="bg-white rounded-2xl p-8 border border-gray-200 hover:border-[#4a9b7f]/30 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+            <div className="bg-white rounded-md p-8 border border-gray-200 hover:border-[#4a9b7f]/30 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
               <div className="text-center mb-6">
                 <div className="inline-block px-4 py-2 bg-[#c9a962] text-white rounded-lg mb-4">
                   <span className="text-sm font-bold tracking-wide">{t('pricing.packages.six.name')}</span>
@@ -316,11 +315,11 @@ export default async function Home({
                   <ul className="space-y-2 text-sm text-gray-700">
                     {(t.raw('pricing.packages.six.features') as string[]).map((feature, i) => (
                       <li key={i} className="flex items-center gap-2">
-                        <svg className="w-4 h-4 text-[#4a9b7f] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
+                      <svg className="w-4 h-4 text-[#4a9b7f] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
                         {feature}
-                      </li>
+                    </li>
                     ))}
                   </ul>
                 </div>
@@ -357,8 +356,6 @@ export default async function Home({
       <PatientJourneySection />
 
       {/* 8. Client Testimonials */}
-      <TestimonialsSection />
-
       {/* 9. FAQ Section */}
       <FAQSection />
 

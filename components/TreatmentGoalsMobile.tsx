@@ -42,7 +42,7 @@ export default function TreatmentGoalsMobile({
                     {goals.map((goal) => (
                         <div key={goal.key} className="flex-shrink-0 w-[75vw] max-w-[340px] snap-center">
                             {/* Image Section - Rounded corners with shadow */}
-                            <div className="relative w-full h-[380px] overflow-hidden rounded-2xl shadow-lg mb-4">
+                            <div className="relative w-full h-[380px] overflow-hidden rounded-md shadow-lg mb-4">
                                 <Image
                                     src={goal.image}
                                     alt=""
