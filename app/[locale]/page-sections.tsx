@@ -268,7 +268,7 @@ export function DoctorsSection() {
                     <div className="text-[0.7rem] tracking-[3px] uppercase text-[#4a9b7f] mb-3 font-semibold">
                         {t('doctors.badge')}
                     </div>
-                    <h2 className="font-['Cormorant_Garamond'] text-[clamp(2.2rem,5vw,4rem)] mb-5 leading-[1.1] font-light">
+                    <h2 className="font-['Cormorant_Garamond'] text-[clamp(2rem,4.5vw,3.6rem)] mb-5 leading-[1.1] font-bold">
                         {t('doctors.heading')}
                     </h2>
                     <p className="text-[1rem] text-[#666666] leading-[1.75] font-light">
@@ -307,7 +307,7 @@ export function WhyTokyoSection() {
                     <div className="text-[0.68rem] tracking-[2.5px] uppercase text-[#4a9b7f] mb-3 font-semibold">
                         {t('whyTokyo.badge')}
                     </div>
-                    <h2 className="font-['Cormorant_Garamond'] text-[clamp(2.2rem,5vw,3.8rem)] mb-5 leading-[1.1] font-light">
+                    <h2 className="font-['Cormorant_Garamond'] text-[clamp(2rem,4.5vw,3.4rem)] mb-5 leading-[1.1] font-bold">
                         {t('whyTokyo.heading')}
                     </h2>
                     <p className="text-[1.05rem] text-[#666666] leading-[1.8] font-light max-w-[750px] mx-auto">
@@ -504,7 +504,7 @@ export function PatientJourneySection() {
                             {t('patientJourney.badge')}
                         </span>
                     </div>
-                    <h2 className="font-['Cormorant_Garamond'] text-[clamp(2.2rem,5vw,4.2rem)] mb-6 leading-[1.1] font-light text-gray-900">
+                    <h2 className="font-['Cormorant_Garamond'] text-[clamp(2rem,4.5vw,3.8rem)] mb-6 leading-[1.1] font-bold text-gray-900">
                         {t('patientJourney.heading')}
                     </h2>
                     <p className="text-[1.1rem] text-gray-600 leading-[1.8] font-light max-w-[600px] mx-auto">

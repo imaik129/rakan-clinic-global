@@ -44,7 +44,7 @@ export default function DoctorsDesktop({ doctors, introTitle, introDescription }
             >
                 {/* Intro Box */}
                 <div className="flex-shrink-0 w-[300px] snap-center">
-                    <div className="relative w-full h-[340px] bg-[#4a9b7f] flex items-center justify-center mb-3">
+                    <div className="relative w-full h-[340px] bg-[#4a9b7f] rounded-md flex items-center justify-center mb-3">
                         <div className="text-white text-center px-6">
                             <h3 className="font-['Cormorant_Garamond'] text-2xl mb-3">{introTitle}</h3>
                             <p className="text-sm opacity-90">{introDescription}</p>

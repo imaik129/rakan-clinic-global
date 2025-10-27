@@ -37,18 +37,18 @@ export default async function Home({
 
       {/* 2. Treatment Goals / Who We Help */}
       <section className="px-[5%] md:py-[5rem] py-[3.5rem] bg-gradient-to-b from-white via-gray-50/50 to-white">
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-[1400px] mx-auto">
           <div className="text-center max-w-[700px] mx-auto mb-[4rem] md:mb-[4rem] mb-[2.5rem]">
             <span className="inline-block px-4 py-2 text-[0.7rem] tracking-[2px] uppercase text-[#4a9b7f] font-bold bg-[#4a9b7f]/10 rounded-full mb-3 md:mb-4">
               {t('treatmentGoals.badge')}
               </span>
-            <h2 className="font-['Cormorant_Garamond'] text-[clamp(1.8rem,4.5vw,3.8rem)] mb-3 md:mb-4 leading-[1.15] font-light text-gray-900">
+            <h2 className="font-['Cormorant_Garamond'] text-[clamp(1.6rem,4vw,3.2rem)] mb-3 md:mb-4 leading-[1.15] font-bold text-gray-900">
               {t('treatmentGoals.heading')}
             </h2>
           </div>
 
           {/* Olympics-Style Circular Layout */}
-          <div className="max-w-[1100px] mx-auto px-0 md:px-0">
+          <div className="max-w-[1200px] mx-auto px-0 md:px-0">
             {/* Mobile: Horizontal Scroll with Nav Buttons */}
             <div className="md:hidden">
               <TreatmentGoalsMobile
@@ -137,7 +137,7 @@ export default async function Home({
             <div className="inline-block px-4 py-2 text-[0.7rem] tracking-[2px] uppercase text-[#4a9b7f] font-bold bg-[#4a9b7f]/10 rounded-full mb-4">
               {t('about.badge')}
             </div>
-            <h2 className="font-['Cormorant_Garamond'] text-[clamp(2.2rem,4.5vw,3.8rem)] mb-4 leading-[1.15] font-light text-gray-900">
+            <h2 className="font-['Cormorant_Garamond'] text-[clamp(2rem,4vw,3.4rem)] mb-4 leading-[1.15] font-bold text-gray-900">
               {t('about.heading')}
             </h2>
             <p className="text-[1rem] text-gray-600 leading-[1.75] font-light">
@@ -225,7 +225,7 @@ export default async function Home({
                 {t('pricing.badge')}
               </span>
             </div>
-            <h2 className="font-['Cormorant_Garamond'] text-[clamp(2.2rem,5vw,4.2rem)] mb-6 leading-[1.1] font-light text-gray-900">
+            <h2 className="font-['Cormorant_Garamond'] text-[clamp(2rem,4.5vw,3.8rem)] mb-6 leading-[1.1] font-bold text-gray-900">
               {t('pricing.heading')}
             </h2>
             <p className="text-[1.1rem] text-gray-600 leading-[1.8] font-light max-w-[600px] mx-auto">
@@ -366,7 +366,7 @@ export default async function Home({
             <div className="text-[0.75rem] tracking-[3px] uppercase text-[#4a9b7f] mb-4 font-medium">
               {t('contact.badge')}
             </div>
-            <h2 className="font-['Cormorant_Garamond'] text-[clamp(2.5rem,6vw,5rem)] mb-6 leading-[1.1] font-light">
+            <h2 className="font-['Cormorant_Garamond'] text-[clamp(2.2rem,5vw,4.2rem)] mb-6 leading-[1.1] font-bold">
               {t('contact.heading')}
             </h2>
           </div>

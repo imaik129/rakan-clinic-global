@@ -29,11 +29,10 @@ export default function Header({ locale }: HeaderProps) {
     };
 
     return (
-        <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-            isScrolled 
-                ? 'bg-white border-b border-[rgba(74,155,127,0.08)] shadow-[0_2px_10px_rgba(0,0,0,0.03)]' 
+        <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled
+                ? 'bg-white border-b border-[rgba(74,155,127,0.08)] shadow-[0_2px_10px_rgba(0,0,0,0.03)]'
                 : 'bg-transparent'
-        }`}>
+            }`}>
             <nav className="max-w-[1600px] mx-auto px-[3%] md:px-[5%] py-2 md:py-3">
                 {/* Top Row - Brand and Contact */}
                 <div className="flex items-center justify-between mb-2 md:mb-3">
