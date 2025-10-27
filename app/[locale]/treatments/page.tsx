@@ -17,7 +17,7 @@ export default async function TreatmentsPage({
             <BackToTopButton />
 
             {/* Hero Section */}
-            <section className="pt-24 pb-10 px-[5%] bg-gradient-to-b from-white to-gray-50">
+            <section className="pt-[120px] pb-10 px-[5%] bg-gradient-to-b from-white to-gray-50">
                 <div className="max-w-[1400px] mx-auto text-center">
                     <div className="inline-flex items-center px-3 py-1.5 bg-[#4a9b7f]/10 rounded-full mb-4">
                         <span className="text-[0.65rem] tracking-[2px] uppercase text-[#4a9b7f] font-bold">
