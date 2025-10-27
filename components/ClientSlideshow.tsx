@@ -1,10 +1,12 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 
 export default function ClientSlideshow() {
     const scrollRef = useRef<HTMLDivElement>(null);
+    const [scrollAmount, setScrollAmount] = useState(0);
+    const animationRef = useRef<number | null>(null);
 
     const clientImages = [
         '/images/client/S__142327935.jpg',
@@ -22,28 +24,36 @@ export default function ClientSlideshow() {
         const scrollElement = scrollRef.current;
         if (!scrollElement) return;
 
-        let scrollAmount = 0;
-        const scrollSpeed = 0.5; // pixels per frame
+        const scrollSpeed = 1.2; // pixels per frame (increased from 0.5)
 
         const scroll = () => {
-            scrollAmount += scrollSpeed;
-            scrollElement.style.transform = `translateX(-${scrollAmount}px)`;
+            setScrollAmount(prev => {
+                const newAmount = prev + scrollSpeed;
+                const singleSetWidth = clientImages.length * (280 + 24); // width + gap
+                
+                if (newAmount >= singleSetWidth) {
+                    scrollElement.style.transform = 'translateX(0)';
+                    return 0;
+                }
+                
+                scrollElement.style.transform = `translateX(-${newAmount}px)`;
+                return newAmount;
+            });
 
-            // Reset position when we've scrolled one complete set
-            const singleSetWidth = clientImages.length * (280 + 24); // width + gap
-            if (scrollAmount >= singleSetWidth) {
-                scrollAmount = 0;
-                scrollElement.style.transform = 'translateX(0)';
-            }
-
-            requestAnimationFrame(scroll);
+            animationRef.current = requestAnimationFrame(scroll);
         };
 
-        scroll();
+        animationRef.current = requestAnimationFrame(scroll);
+
+        return () => {
+            if (animationRef.current) {
+                cancelAnimationFrame(animationRef.current);
+            }
+        };
     }, [clientImages.length]);
 
     return (
-        <div className="relative overflow-hidden">
+        <div className="relative overflow-x-auto scrollbar-hide cursor-grab active:cursor-grabbing">
             <div ref={scrollRef} className="flex gap-6 will-change-transform">
                 {allImages.map((image, index) => (
                     <div 
