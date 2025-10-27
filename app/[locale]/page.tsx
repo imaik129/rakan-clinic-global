@@ -42,7 +42,7 @@ export default async function Home({
             <span className="inline-block px-4 py-2 text-[0.7rem] tracking-[2px] uppercase text-[#4a9b7f] font-bold bg-[#4a9b7f]/10 rounded-full mb-3 md:mb-4">
               {t('treatmentGoals.badge')}
             </span>
-            <h2 className="font-['Cormorant_Garamond'] text-[clamp(1.6rem,4vw,3.2rem)] mb-3 md:mb-4 leading-[1.15] font-bold text-gray-900">
+            <h2 className="font-['Cormorant_Garamond'] text-[clamp(1.4rem,3.5vw,2.4rem)] mb-2 md:mb-3 leading-[1.15] font-bold text-gray-900">
               {t('treatmentGoals.heading')}
             </h2>
           </div>
@@ -228,7 +228,7 @@ export default async function Home({
                 {t('pricing.badge')}
               </span>
             </div>
-            <h2 className="font-['Cormorant_Garamond'] text-[clamp(2rem,4vw,3.2rem)] mb-3 leading-[1.15] font-bold text-gray-900">
+            <h2 className="font-['Cormorant_Garamond'] text-[clamp(1.5rem,3.5vw,2.4rem)] mb-3 leading-[1.15] font-bold text-gray-900">
               {t('pricing.heading')}
             </h2>
             <p className="text-[0.95rem] text-gray-600 leading-[1.6] font-light max-w-[600px] mx-auto">
