@@ -23,6 +23,7 @@ export default function HeroCarousel() {
     const t = useTranslations();
     const [currentImage, setCurrentImage] = useState(0);
     const [scrollY, setScrollY] = useState(0);
+    const [isMobile, setIsMobile] = useState(false);
 
     const images = carouselData.map(item => ({
         src: item.src,
@@ -30,6 +31,17 @@ export default function HeroCarousel() {
         title: t(`heroCarousel.${item.translationKey}.title`),
         subtitle: t(`heroCarousel.${item.translationKey}.subtitle`)
     }));
+
+    useEffect(() => {
+        // Detect mobile device
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
+        
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -40,13 +52,18 @@ export default function HeroCarousel() {
     }, [images.length]);
 
     useEffect(() => {
+        // Disable parallax on mobile devices for better performance
+        if (isMobile) {
+            return;
+        }
+
         const handleScroll = () => {
             setScrollY(window.scrollY);
         };
 
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+    }, [isMobile]);
 
     const scrollToSection = (sectionId: string) => {
         const element = document.getElementById(sectionId);
@@ -64,7 +81,7 @@ export default function HeroCarousel() {
             <div
                 className="relative w-full h-full overflow-hidden"
                 style={{
-                    transform: `translateY(${scrollY * 0.5}px)`
+                    transform: !isMobile ? `translateY(${scrollY * 0.5}px)` : 'none'
                 }}
             >
                 {images.map((image, index) => (
