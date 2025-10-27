@@ -37,66 +37,26 @@ export default async function Home({
             <div className="inline-flex items-center px-4 py-2 bg-[#4a9b7f]/10 rounded-full mb-4">
               <div className="w-2 h-2 bg-[#4a9b7f] rounded-full mr-3"></div>
               <span className="text-[0.7rem] tracking-[2px] uppercase text-[#4a9b7f] font-bold">
-                Treatment Goals
+                {t('treatmentGoals.badge')}
               </span>
             </div>
             <h2 className="font-['Cormorant_Garamond'] text-[clamp(2rem,4vw,3.5rem)] mb-4 leading-[1.1] font-light text-gray-900">
-              Regenerative Medicine Tailored to Your Life Goals
+              {t('treatmentGoals.heading')}
             </h2>
             <p className="text-[1rem] text-gray-600 leading-[1.6] font-light">
-              From athletic performance to healthy aging, our advanced regenerative treatments are designed to help you achieve your specific health and wellness objectives.
+              {t('treatmentGoals.description')}
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-6">
             {[
-              {
-                title: "Longevity & Vitality",
-                image: "/images/reuseable/1.png",
-                description: "Reverse cellular aging with advanced stem cell therapies. Boost energy, enhance metabolism, and maintain youthful vitality through cutting-edge regenerative medicine.",
-                benefits: [
-                  "Cellular regeneration boost",
-                  "Metabolic optimization",
-                  "Energy & vitality increase",
-                  "Anti-aging support"
-                ]
-              },
-              {
-                title: "Enhanced Performance",
-                image: "/images/reuseable/2.png",
-                description: "Maximize athletic potential with PRP and stem cell treatments. Accelerate recovery, build resilience, and achieve peak performance naturally.",
-                benefits: [
-                  "Faster muscle recovery",
-                  "Joint flexibility boost",
-                  "Inflammation reduction",
-                  "Endurance enhancement"
-                ]
-              },
-              {
-                title: "Chronic Disease Management",
-                image: "/images/reuseable/3.png",
-                description: "Combat chronic conditions with evidence-based regenerative protocols. Slow disease progression and restore quality of life through advanced cellular therapy.",
-                benefits: [
-                  "Chronic inflammation relief",
-                  "Joint function improvement",
-                  "Disease progression slowdown",
-                  "Daily mobility restoration"
-                ]
-              },
-              {
-                title: "Pain & Injury Recovery",
-                image: "/images/reuseable/4.png",
-                description: "Accelerate healing from sports injuries and trauma. Natural pain relief and tissue repair through targeted PRP and stem cell injections.",
-                benefits: [
-                  "Rapid tissue repair",
-                  "Natural pain relief",
-                  "Scar tissue minimization",
-                  "Full function restoration"
-                ]
-              }
-            ].map((goal, index) => (
+              { key: 'longevity', image: "/images/reuseable/1.png" },
+              { key: 'performance', image: "/images/reuseable/2.png" },
+              { key: 'disease', image: "/images/reuseable/3.png" },
+              { key: 'recovery', image: "/images/reuseable/4.png" }
+            ].map((goal) => (
               <div
-                key={index}
+                key={goal.key}
                 className="group relative overflow-hidden bg-white rounded-xl border border-gray-100 hover:border-[#4a9b7f]/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
               >
                 {/* Image Background - Top 25% */}
@@ -114,17 +74,17 @@ export default async function Home({
                 <div className="relative z-10 pt-[25%] p-5">
                   {/* Title */}
                   <h3 className="font-['Cormorant_Garamond'] text-[1.4rem] mb-2 font-semibold text-gray-900 leading-tight">
-                    {goal.title}
+                    {t(`treatmentGoals.goals.${goal.key}.title`)}
                   </h3>
 
                   {/* Description */}
                   <p className="text-gray-600 text-[0.9rem] leading-[1.5] font-light mb-4">
-                    {goal.description}
+                    {t(`treatmentGoals.goals.${goal.key}.description`)}
                   </p>
 
                   {/* Benefits */}
                   <div className="grid grid-cols-2 gap-2">
-                    {goal.benefits.map((benefit, i) => (
+                    {(t.raw(`treatmentGoals.goals.${goal.key}.benefits`) as string[]).map((benefit, i) => (
                       <div key={i} className="flex items-center gap-2">
                         <div className="w-3 h-3 bg-[#4a9b7f] rounded-full flex items-center justify-center flex-shrink-0">
                           <svg className="w-1.5 h-1.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -158,13 +118,13 @@ export default async function Home({
         <div className="max-w-[1400px] mx-auto">
           <div className="text-center max-w-[750px] mx-auto mb-[3rem]">
             <div className="text-[0.68rem] tracking-[2.5px] uppercase text-[#4a9b7f] mb-3 font-semibold">
-              About Us
+              {t('about.badge')}
             </div>
             <h2 className="font-['Cormorant_Garamond'] text-[clamp(2rem,4.5vw,3.8rem)] mb-4 leading-[1.15] font-light">
               {t('about.heading')}
             </h2>
             <p className="text-[0.98rem] text-[#666666] leading-[1.75] font-light">
-              Advanced orthopedic and regenerative care in Azabudai Hills, central Tokyo.
+              {t('about.description')}
             </p>
           </div>
 
@@ -187,11 +147,11 @@ export default async function Home({
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                     </svg>
                     <p className="text-[0.65rem] text-[#4a9b7f] font-semibold tracking-[2px] uppercase">
-                      Our Facility
+                      {t('about.facility.title')}
                     </p>
                   </div>
                   <h3 className="font-['Cormorant_Garamond'] text-[2.3rem] mb-4 font-light leading-tight">
-                    Rakan Clinic Tokyo Azabudai
+                    {t('about.facility.clinicName')}
                   </h3>
                   <div className="space-y-3">
                     <div className="flex items-start gap-3">
@@ -199,7 +159,7 @@ export default async function Home({
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                       <p className="text-[0.92rem] font-light leading-[1.75] text-white/90">
-                        State-of-the-art regenerative medicine facility with sterile processing labs
+                        {t('about.facility.features.0')}
                       </p>
                     </div>
                     <div className="flex items-start gap-3">
@@ -207,7 +167,7 @@ export default async function Home({
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                       <p className="text-[0.92rem] font-light leading-[1.75] text-white/90">
-                        Private consultation rooms ensuring complete discretion for VIP patients
+                        {t('about.facility.features.1')}
                       </p>
                     </div>
                     <div className="flex items-start gap-3">
@@ -215,7 +175,7 @@ export default async function Home({
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                       <p className="text-[0.92rem] font-light leading-[1.75] text-white/90">
-                        Premium location in Tokyo's most prestigious international district
+                        {t('about.facility.features.2')}
                       </p>
                     </div>
                   </div>
@@ -233,7 +193,7 @@ export default async function Home({
                   35+
                 </div>
                 <div className="text-[0.75rem] font-semibold text-[#1a1a1a] uppercase tracking-[1px]">
-                  Years Experience
+                  {t('about.stats.experience.label')}
                 </div>
               </div>
               <div className="text-center">
@@ -241,7 +201,7 @@ export default async function Home({
                   100%
                 </div>
                 <div className="text-[0.75rem] font-semibold text-[#1a1a1a] uppercase tracking-[1px]">
-                  Japanese Standards
+                  {t('about.stats.standards.label')}
                 </div>
               </div>
             </div>
@@ -249,7 +209,7 @@ export default async function Home({
             {/* Description */}
             <div className="text-center max-w-[800px] mx-auto mb-6">
               <p className="text-[0.9rem] text-[#666666] leading-[1.8] font-light">
-                Trusted by global executives, Olympic athletes, and political leaders worldwide. Our 35+ years of JOA-certified expertise has made us the premier destination for regenerative medicine, serving elite clientele who demand the highest standards of care and discretion.
+                {t('about.trustStatement')}
               </p>
             </div>
 
@@ -260,7 +220,7 @@ export default async function Home({
                   <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                 </svg>
                 <p className="text-[0.8rem] text-[#666666] font-medium">
-                  Trusted by Olympic Athletes, Global Executives, and Political Leaders
+                  {t('about.trustedBy.title')}
                 </p>
               </div>
             </div>
@@ -278,14 +238,14 @@ export default async function Home({
             <div className="inline-flex items-center px-4 py-2 bg-[#4a9b7f]/10 rounded-full mb-6">
               <div className="w-2 h-2 bg-[#4a9b7f] rounded-full mr-3"></div>
               <span className="text-[0.7rem] tracking-[2px] uppercase text-[#4a9b7f] font-bold">
-                Treatment Packages
+                {t('pricing.badge')}
               </span>
             </div>
             <h2 className="font-['Cormorant_Garamond'] text-[clamp(2.2rem,5vw,4.2rem)] mb-6 leading-[1.1] font-light text-gray-900">
-              Transparent Pricing for Regenerative Medicine
+              {t('pricing.heading')}
             </h2>
             <p className="text-[1.1rem] text-gray-600 leading-[1.8] font-light max-w-[600px] mx-auto">
-              Choose the treatment package that best fits your needs. All packages include comprehensive care and follow-up support.
+              {t('pricing.subheading')}
             </p>
           </div>
 
@@ -294,36 +254,26 @@ export default async function Home({
             <div className="bg-white rounded-2xl p-8 border border-gray-200 hover:border-[#4a9b7f]/30 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
               <div className="text-center mb-6">
                 <div className="inline-block px-4 py-2 bg-[#c9a962] text-white rounded-lg mb-4">
-                  <span className="text-sm font-bold tracking-wide">SINGLE SESSION</span>
+                  <span className="text-sm font-bold tracking-wide">{t('pricing.packages.single.name')}</span>
                 </div>
                 <div className="text-[3rem] font-['Cormorant_Garamond'] text-[#4a9b7f] font-light mb-2">
-                  $25,000~
+                  {t('pricing.packages.single.price')}
                 </div>
               </div>
               <div className="space-y-4">
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Adipose tissue collection and cell cultivation are performed each time. No cryopreservation. No blood test monitoring.
+                  {t('pricing.packages.single.description')}
                 </p>
                 <div className="pt-4 border-t border-gray-100">
                   <ul className="space-y-2 text-sm text-gray-700">
-                    <li className="flex items-center gap-2">
-                      <svg className="w-4 h-4 text-[#4a9b7f] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      One-time treatment
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <svg className="w-4 h-4 text-[#4a9b7f] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      Fresh cell cultivation
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <svg className="w-4 h-4 text-[#4a9b7f] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      Immediate treatment
-                    </li>
+                    {(t.raw('pricing.packages.single.features') as string[]).map((feature, i) => (
+                      <li key={i} className="flex items-center gap-2">
+                        <svg className="w-4 h-4 text-[#4a9b7f] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                        {feature}
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>
@@ -332,47 +282,31 @@ export default async function Home({
             {/* 3 Sessions Per Year */}
             <div className="bg-white rounded-2xl p-8 border-2 border-[#4a9b7f] hover:border-[#3d8269] transition-all duration-300 hover:-translate-y-2 hover:shadow-xl relative">
               <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#4a9b7f] text-white px-6 py-2 rounded-full text-xs font-bold tracking-wide">
-                MOST POPULAR
+                {t('pricing.packages.three.featured')}
               </div>
               <div className="text-center mb-6">
                 <div className="inline-block px-4 py-2 bg-[#c9a962] text-white rounded-lg mb-4">
-                  <span className="text-sm font-bold tracking-wide">3 SESSIONS PER YEAR</span>
+                  <span className="text-sm font-bold tracking-wide">{t('pricing.packages.three.name')}</span>
                 </div>
                 <div className="text-[3rem] font-['Cormorant_Garamond'] text-[#4a9b7f] font-light mb-2">
-                  $60,500~
+                  {t('pricing.packages.three.price')}
                 </div>
-                <div className="text-sm text-gray-500">$20,167~ per session</div>
+                <div className="text-sm text-gray-500">{t('pricing.packages.three.pricePerSession')}</div>
               </div>
               <div className="space-y-4">
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Cells collected and frozen at first session. Used for 3 treatments in 1 year. Includes storage fee and blood test at each visit.
+                  {t('pricing.packages.three.description')}
                 </p>
                 <div className="pt-4 border-t border-gray-100">
                   <ul className="space-y-2 text-sm text-gray-700">
-                    <li className="flex items-center gap-2">
-                      <svg className="w-4 h-4 text-[#4a9b7f] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      3 treatments over 1 year
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <svg className="w-4 h-4 text-[#4a9b7f] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      Cell cryopreservation
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <svg className="w-4 h-4 text-[#4a9b7f] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      Blood test monitoring
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <svg className="w-4 h-4 text-[#4a9b7f] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      Storage fees included
-                    </li>
+                    {(t.raw('pricing.packages.three.features') as string[]).map((feature, i) => (
+                      <li key={i} className="flex items-center gap-2">
+                        <svg className="w-4 h-4 text-[#4a9b7f] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                        {feature}
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>
@@ -382,43 +316,27 @@ export default async function Home({
             <div className="bg-white rounded-2xl p-8 border border-gray-200 hover:border-[#4a9b7f]/30 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
               <div className="text-center mb-6">
                 <div className="inline-block px-4 py-2 bg-[#c9a962] text-white rounded-lg mb-4">
-                  <span className="text-sm font-bold tracking-wide">6 SESSIONS OVER 2 YEARS</span>
+                  <span className="text-sm font-bold tracking-wide">{t('pricing.packages.six.name')}</span>
                 </div>
                 <div className="text-[3rem] font-['Cormorant_Garamond'] text-[#4a9b7f] font-light mb-2">
-                  $115,000~
+                  {t('pricing.packages.six.price')}
                 </div>
-                <div className="text-sm text-gray-500">$19,167~ per session</div>
+                <div className="text-sm text-gray-500">{t('pricing.packages.six.pricePerSession')}</div>
               </div>
               <div className="space-y-4">
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Cells collected and frozen at first session. Used for up to 6 treatments over 2 years. Includes storage fee and blood test at each visit.
+                  {t('pricing.packages.six.description')}
                 </p>
                 <div className="pt-4 border-t border-gray-100">
                   <ul className="space-y-2 text-sm text-gray-700">
-                    <li className="flex items-center gap-2">
-                      <svg className="w-4 h-4 text-[#4a9b7f] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      6 treatments over 2 years
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <svg className="w-4 h-4 text-[#4a9b7f] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      Long-term cell storage
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <svg className="w-4 h-4 text-[#4a9b7f] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      Comprehensive monitoring
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <svg className="w-4 h-4 text-[#4a9b7f] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      Best value option
-                    </li>
+                    {(t.raw('pricing.packages.six.features') as string[]).map((feature, i) => (
+                      <li key={i} className="flex items-center gap-2">
+                        <svg className="w-4 h-4 text-[#4a9b7f] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                        {feature}
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>
@@ -428,14 +346,14 @@ export default async function Home({
           {/* Pricing Disclaimer */}
           <div className="mt-12 max-w-[800px] mx-auto text-center">
             <p className="text-sm text-gray-500 italic">
-              *Includes consultation, treatment coordination, and comprehensive patient care services
+              {t('pricing.includes')}
             </p>
           </div>
 
           {/* Additional Services Notice */}
           <div className="mt-8 max-w-[800px] mx-auto text-center p-6 bg-[#f8f6f3] rounded-xl border border-gray-200">
             <p className="text-sm text-gray-600 font-light">
-              <strong className="text-[#4a9b7f]">Additional Services:</strong> An additional fee applies for producing exosomes from your own cells. Please contact us for details.
+              {t('pricing.additionalServices')}
             </p>
           </div>
 
@@ -443,7 +361,7 @@ export default async function Home({
           <div className="mt-12 text-center">
             <a href="#contact">
               <button className="bg-[#4a9b7f] text-white px-8 py-4 text-sm font-semibold tracking-[1.5px] uppercase transition-all duration-300 hover:bg-[#3d8269] hover:-translate-y-1 hover:shadow-lg">
-                Get Personalized Quote
+                {t('pricing.cta')}
               </button>
             </a>
           </div>
@@ -464,7 +382,7 @@ export default async function Home({
         <div className="max-w-[1600px] mx-auto">
           <div className="text-center max-w-[900px] mx-auto mb-[4rem]">
             <div className="text-[0.75rem] tracking-[3px] uppercase text-[#4a9b7f] mb-4 font-medium">
-              Get in Touch
+              {t('contact.badge')}
             </div>
             <h2 className="font-['Cormorant_Garamond'] text-[clamp(2.5rem,6vw,5rem)] mb-6 leading-[1.1] font-light">
               {t('contact.heading')}
@@ -476,7 +394,7 @@ export default async function Home({
             <div className="space-y-8">
               <div>
                 <h3 className="font-['Cormorant_Garamond'] text-[2.5rem] mb-6 font-light leading-tight">
-                  Contact<br />Information
+                  {t('contact.infoTitle')}
                 </h3>
               </div>
 

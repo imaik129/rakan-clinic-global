@@ -291,15 +291,6 @@ export function DoctorsSection() {
                     <div key={i} className="w-2 h-2 rounded-full bg-[#4a9b7f]/30" />
                 ))}
             </div>
-
-            {/* Trust Statement */}
-            <div className="mt-[3rem] max-w-[800px] mx-auto px-[5%]">
-                <div className="p-6 bg-white shadow-sm border-l-4 border-[#4a9b7f]">
-                    <p className="text-[0.92rem] text-[#1a1a1a] leading-[1.75] font-light">
-                        <span className="font-['Cormorant_Garamond'] text-[1.25rem] font-medium text-[#4a9b7f]">Combined 105+ years</span> of orthopedic, regenerative, and immunological expertise dedicated to advancing patient care through evidence-based treatments and cutting-edge research.
-                    </p>
-                </div>
-            </div>
         </section>
     );
 }
@@ -307,63 +298,41 @@ export function DoctorsSection() {
 export function WhyTokyoSection() {
     const t = useTranslations();
 
-    const features = [
-        {
-            icon: (
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-            ),
-            title: "35+ Years Orthopedic Expertise",
-            description: "JOA-certified orthopedic specialists with extensive experience in regenerative treatments, sports medicine, and integrative orthopedic care. Proven track record serving elite athletes, executives, and discerning patients worldwide."
-        },
-        {
-            icon: (
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-            ),
-            title: "Azabudai Hills - Premium Medical District",
-            description: "Situated in Tokyo's premier international district — home to luxury residences, Michelin-starred dining, and seamless transit connections. Minutes from Roppongi, Ginza, and Haneda Airport with premium accessibility."
-        },
-        {
-            icon: (
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-            ),
-            title: "Strictest Regulatory Standards",
-            description: "Japan's Regenerative Medicine Safety Act ensures rigorous ethical oversight, quality control, and patient safety — among the world's most comprehensive frameworks for cell-based therapies. Full compliance with Japanese medical laws."
-        },
-        {
-            icon: (
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                </svg>
-            ),
-            title: "Nobel Prize-Winning Research",
-            description: "Japan leads global stem cell science with multiple Nobel Prizes, including Dr. Shinya Yamanaka's groundbreaking iPS cell discovery. Our partnership with the University of Tokyo grants access to cutting-edge protocols."
-        },
-        {
-            icon: (
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                </svg>
-            ),
-            title: "In-House Lab Facility",
-            description: "Our on-site sterile processing laboratory ensures same-day cell preparation, eliminates transport risks, maintains cold-chain integrity, and provides full quality traceability — critical for optimal treatment outcomes."
-        },
-        {
-            icon: (
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-            ),
-            title: "International Patient Concierge",
-            description: "Comprehensive support for overseas patients — English-speaking coordinators, travel planning assistance, hotel guidance, interpreter services, and telemedicine follow-up."
-        }
-    ];
+    const featureIcons = {
+        expertise: (
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+        ),
+        location: (
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+        ),
+        standards: (
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+        ),
+        research: (
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+            </svg>
+        ),
+        facility: (
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+            </svg>
+        ),
+        support: (
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+        )
+    };
+
+    const featureKeys = ['expertise', 'location', 'standards', 'research', 'facility', 'support'];
 
     return (
         <section id="services" className="px-[5%] py-[5rem] bg-gradient-to-b from-white to-[#f8f6f3]">
@@ -371,32 +340,32 @@ export function WhyTokyoSection() {
                 {/* Header */}
                 <div className="text-center max-w-[900px] mx-auto mb-[3.5rem]">
                     <div className="text-[0.68rem] tracking-[2.5px] uppercase text-[#4a9b7f] mb-3 font-semibold">
-                        Why Choose Us
+                        {t('whyTokyo.badge')}
                     </div>
                     <h2 className="font-['Cormorant_Garamond'] text-[clamp(2rem,4.5vw,3.5rem)] mb-4 leading-[1.15] font-light">
-                        Why Rakan Clinic Tokyo?
+                        {t('whyTokyo.heading')}
                     </h2>
                     <p className="text-[0.98rem] text-[#666666] leading-[1.8] font-light">
-                        World-class regenerative orthopedic care in Azabudai Hills — combining 35+ years of expertise, Japan's strictest medical standards, Nobel Prize-winning research access, and comprehensive international patient support.
+                        {t('whyTokyo.intro')}
                     </p>
                 </div>
 
                 {/* Features Grid */}
                 <div className="grid md:grid-cols-3 gap-6 max-w-[1200px] mx-auto">
-                    {features.map((feature, index) => (
+                    {featureKeys.map((key) => (
                         <div
-                            key={index}
+                            key={key}
                             className="flex flex-col gap-4 items-start p-6 bg-white hover:shadow-[0_10px_40px_rgba(0,0,0,0.08)] transition-all duration-300 hover:-translate-y-1 border border-[#f0f0f0]"
                         >
                             <div className="w-12 h-12 bg-[#4a9b7f] rounded-lg flex-shrink-0 flex items-center justify-center text-white">
-                                {feature.icon}
+                                {featureIcons[key as keyof typeof featureIcons]}
                             </div>
                             <div>
                                 <h3 className="font-['Cormorant_Garamond'] text-[1.25rem] mb-2 font-medium text-[#1a1a1a]">
-                                    {feature.title}
+                                    {t(`whyTokyo.features.${key}.title`)}
                                 </h3>
                                 <p className="text-[0.88rem] text-[#666666] leading-[1.7] font-light">
-                                    {feature.description}
+                                    {t(`whyTokyo.features.${key}.description`)}
                                 </p>
                             </div>
                         </div>
@@ -410,7 +379,7 @@ export function WhyTokyoSection() {
                             <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                         </svg>
                         <p className="text-[0.78rem] text-white font-medium tracking-[0.5px]">
-                            Tokyo's Premier Regenerative Orthopedic Clinic
+                            {t('whyTokyo.footer')}
                         </p>
                     </div>
                 </div>
@@ -502,148 +471,57 @@ export function PatientJourneySection() {
     const t = useTranslations();
     const [expandedStep, setExpandedStep] = useState<number | null>(null);
 
-    const journeySteps = [
-        {
-            number: 1,
-            title: "Contact & Records Review",
-            description: "Send your inquiry with prior imaging and medical records for preliminary suitability screening",
-            icon: (
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-            )
-        },
-        {
-            number: 2,
-            title: "Remote Consultation",
-            description: "Discuss symptoms, goals, and treatment options with our medical team to determine if regenerative care is appropriate",
-            icon: (
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                </svg>
-            )
-        },
-        {
-            number: 3,
-            title: "Travel Planning Support",
-            description: "If you're a candidate, we provide visa letters (if needed), hotel recommendations, and airport/clinic transfers",
-            icon: (
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-            )
-        },
-        {
-            number: 4,
-            title: "In-Clinic Evaluation",
-            description: "On arrival in Tokyo, receive comprehensive examination and imaging to finalize your treatment plan",
-            icon: (
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                </svg>
-            )
-        },
-        {
-            number: 5,
-            title: "Treatment Day",
-            description: "Undergo your planned procedure (PRP or cell therapy) with clear pre- and post-procedure instructions",
-            icon: (
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                </svg>
-            ),
-            hasDetails: true,
-            details: [
-                {
-                    step: 1,
-                    title: "Counseling",
-                    icon: (
-                        <svg className="w-4 h-4 text-[#4a9b7f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                        </svg>
-                    ),
-                    details: [
-                        "The doctor will explain the treatment content and plan to you.",
-                        "We will confirm the reservation date for pre-operative blood draw and fat collection.",
-                        "Full payment will be required on the day of treatment consent."
-                    ]
-                },
-                {
-                    step: 2,
-                    title: "Blood Draw and Pre-Treatment Examination",
-                    icon: (
-                        <svg className="w-4 h-4 text-[#4a9b7f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                        </svg>
-                    ),
-                    details: [
-                        "Collection of fat cells and blood (60-80 cc)"
-                    ]
-                },
-                {
-                    step: 3,
-                    title: "Notification of Blood Test Results and Start of Cell Culture",
-                    icon: (
-                        <svg className="w-4 h-4 text-[#4a9b7f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                    ),
-                    details: [
-                        "Stem cell culture will begin under strict management in the in-house CPC",
-                        "The culture period is approximately 6-8 weeks."
-                    ]
-                },
-                {
-                    step: 4,
-                    title: "Determination of Stem Cell Injection Date",
-                    icon: (
-                        <svg className="w-4 h-4 text-[#4a9b7f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                        </svg>
-                    ),
-                    details: [
-                        "The injection date will be adjusted based on the information available around day 9 of the culture."
-                    ]
-                },
-                {
-                    step: 5,
-                    title: "Stem Cell Injection Day",
-                    icon: (
-                        <svg className="w-4 h-4 text-[#4a9b7f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                        </svg>
-                    ),
-                    details: [
-                        "After confirming your condition, the stem cells will be administered via infusion.",
-                        "The procedure will take approximately 60 minutes."
-                    ]
-                },
-                {
-                    step: 6,
-                    title: "Treatment Completion",
-                    icon: (
-                        <svg className="w-4 h-4 text-[#4a9b7f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                    ),
-                    details: [
-                        "After confirming your condition, you will be able to go home."
-                    ]
-                }
-            ]
-        },
-        {
-            number: 6,
-            title: "Recovery & Follow-up",
-            description: "Receive aftercare guidelines and arrange telemedicine follow-ups once you return home",
-            icon: (
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                </svg>
-            )
-        }
+    const stepIcons = [
+        (
+            <svg key="1" className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+        ),
+        (
+            <svg key="2" className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+            </svg>
+        ),
+        (
+            <svg key="3" className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+        ),
+        (
+            <svg key="4" className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+            </svg>
+        ),
+        (
+            <svg key="5" className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+            </svg>
+        ),
+        (
+            <svg key="6" className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+            </svg>
+        )
     ];
+
+    const steps = ['step1', 'step2', 'step3', 'step4', 'step5', 'step6'];
+
+    const journeySteps = steps.map((stepKey, index) => ({
+        number: index + 1,
+        title: t(`patientJourney.steps.${stepKey}.title`),
+        description: t(`patientJourney.steps.${stepKey}.description`),
+        icon: stepIcons[index],
+        hasDetails: index === 4, // Only step 5 has details
+        details: index === 4 ? [
+            { step: 1, title: "Counseling", icon: <svg className="w-4 h-4 text-[#4a9b7f]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>, details: ["The doctor will explain the treatment content and plan to you.", "We will confirm the reservation date for pre-operative blood draw and fat collection.", "Full payment will be required on the day of treatment consent."] },
+            { step: 2, title: "Blood Draw and Pre-Treatment Examination", icon: <svg className="w-4 h-4 text-[#4a9b7f]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>, details: ["Collection of fat cells and blood (60-80 cc)"] },
+            { step: 3, title: "Notification of Blood Test Results and Start of Cell Culture", icon: <svg className="w-4 h-4 text-[#4a9b7f]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>, details: ["Stem cell culture will begin under strict management in the in-house CPC", "The culture period is approximately 6-8 weeks."] },
+            { step: 4, title: "Determination of Stem Cell Injection Date", icon: <svg className="w-4 h-4 text-[#4a9b7f]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>, details: ["The injection date will be adjusted based on the information available around day 9 of the culture."] },
+            { step: 5, title: "Stem Cell Injection Day", icon: <svg className="w-4 h-4 text-[#4a9b7f]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>, details: ["After confirming your condition, the stem cells will be administered via infusion.", "The procedure will take approximately 60 minutes."] },
+            { step: 6, title: "Treatment Completion", icon: <svg className="w-4 h-4 text-[#4a9b7f]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>, details: ["After confirming your condition, you will be able to go home."] }
+        ] : undefined
+    }));
 
     return (
         <section className="px-[5%] py-[6rem] bg-gradient-to-b from-white to-gray-50">
@@ -652,14 +530,14 @@ export function PatientJourneySection() {
                     <div className="inline-flex items-center px-4 py-2 bg-[#4a9b7f]/10 rounded-full mb-6">
                         <div className="w-2 h-2 bg-[#4a9b7f] rounded-full mr-3"></div>
                         <span className="text-[0.7rem] tracking-[2px] uppercase text-[#4a9b7f] font-bold">
-                            Your Treatment Journey
+                            {t('patientJourney.badge')}
                         </span>
                     </div>
                     <h2 className="font-['Cormorant_Garamond'] text-[clamp(2.2rem,5vw,4.2rem)] mb-6 leading-[1.1] font-light text-gray-900">
-                        International Patient Process
+                        {t('patientJourney.heading')}
                     </h2>
                     <p className="text-[1.1rem] text-gray-600 leading-[1.8] font-light max-w-[600px] mx-auto">
-                        A clear, step-by-step path from initial inquiry to post-treatment follow-up. We guide you through every stage of your regenerative medicine journey.
+                        {t('patientJourney.subheading')}
                     </p>
                 </div>
 
@@ -732,7 +610,7 @@ export function PatientJourneySection() {
                                                 </div>
 
                                                 <div className="space-y-3">
-                                                    {step.details.map((detail, detailIndex) => (
+                                                    {step.details && step.details.map((detail, detailIndex) => (
                                                         <div key={detailIndex} className="flex gap-3 p-3 bg-white rounded-lg border border-gray-100">
                                                             {/* Detail Step Number and Icon */}
                                                             <div className="flex-shrink-0">
@@ -837,20 +715,20 @@ export function PatientJourneySection() {
                                 </svg>
                             </div>
                             <h3 className="font-['Cormorant_Garamond'] text-[1.8rem] mb-4 font-semibold text-white drop-shadow-lg">
-                                Journey Complete
+                                {t('patientJourney.journeyComplete')}
                             </h3>
                             <p className="text-[1rem] text-white/90 leading-[1.7] font-light mb-6 max-w-[500px] mx-auto drop-shadow-md">
-                                From initial contact to full recovery, we guide you through every step of your regenerative medicine journey with personalized care and support.
+                                {t('patientJourney.journeyDescription')}
                             </p>
                             <div className="flex flex-col sm:flex-row gap-3 justify-center">
                                 <a href="#contact" className="inline-flex items-center px-6 py-3 bg-[#4a9b7f] text-white rounded-lg text-sm font-semibold tracking-[1px] uppercase transition-all duration-300 hover:bg-[#3d8269] hover:-translate-y-1 hover:shadow-lg">
                                     <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                                     </svg>
-                                    Start Your Journey
+                                    {t('patientJourney.ctaStart')}
                                 </a>
                                 <a href="#pricing" className="inline-flex items-center px-6 py-3 border-2 border-white text-white rounded-lg text-sm font-semibold tracking-[1px] uppercase transition-all duration-300 hover:bg-white hover:text-[#4a9b7f]">
-                                    View Pricing
+                                    {t('patientJourney.ctaPricing')}
                                 </a>
                             </div>
                         </div>
@@ -868,7 +746,7 @@ export function PatientJourneySection() {
                         <span className="text-xs font-semibold text-[#4a9b7f] uppercase tracking-wide">Compliance & Ethics</span>
                     </div>
                     <p className="text-[0.8rem] text-gray-600 font-light">
-                        All treatments adhere to Japanese medical laws and ethical standards. Your safety and well-being are our top priorities throughout your entire journey.
+                        {t('patientJourney.compliance')}
                     </p>
                 </div>
             </div>

@@ -2,56 +2,34 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { useLocale } from 'next-intl';
+import { useTranslations } from 'next-intl';
 
-const heroImages = {
-    en: [
-        {
-            src: '/images/azabudai_hills.png',
-            alt: 'Azabudai Hills - Tokyo\'s Premier Medical District',
-            title: 'Tokyo\'s Premier Medical District',
-            subtitle: 'Located in Azabudai Hills, Tokyo\'s most prestigious international medical hub'
-        },
-        {
-            src: '/images/injection.png',
-            alt: 'Advanced Regenerative Medicine Treatment',
-            title: 'A Pain-Free Future with Regenerative Medicine',
-            subtitle: 'PRP therapy and shockwave treatment fundamentally improve pain without relying on surgery'
-        },
-        {
-            src: '/images/rakan_entrance.png',
-            alt: 'Rakan Clinic Tokyo - Premium Medical Facility',
-            title: 'World-Class Medical Excellence',
-            subtitle: 'State-of-the-art facility with JOA-certified specialists and 35+ years of experience'
-        }
-    ],
-    ja: [
-        {
-            src: '/images/azabudai_hills.png',
-            alt: 'Azabudai Hills - Tokyo\'s Premier Medical District',
-            title: '東京の最高級医療地区',
-            subtitle: '麻布台ヒルズに位置する、東京で最も権威ある国際医療ハブ'
-        },
-        {
-            src: '/images/injection.png',
-            alt: 'Advanced Regenerative Medicine Treatment',
-            title: 'つらい関節の痛みに\n再生医療という選択肢を',
-            subtitle: 'PRP療法や衝撃波治療で\n手術に頼らず痛みを根本から改善します'
-        },
-        {
-            src: '/images/rakan_entrance.png',
-            alt: 'Rakan Clinic Tokyo - Premium Medical Facility',
-            title: '世界クラスの医療技術',
-            subtitle: 'JOA認定専門医と35年以上の経験を持つ最先端施設'
-        }
-    ]
-};
+const carouselData = [
+    {
+        src: '/images/azabudai_hills.png',
+        translationKey: 'location'
+    },
+    {
+        src: '/images/injection.png',
+        translationKey: 'painFree'
+    },
+    {
+        src: '/images/rakan_entrance.png',
+        translationKey: 'excellence'
+    }
+];
 
 export default function HeroCarousel() {
+    const t = useTranslations();
     const [currentImage, setCurrentImage] = useState(0);
     const [scrollY, setScrollY] = useState(0);
-    const locale = useLocale();
-    const images = heroImages[locale as keyof typeof heroImages] || heroImages.en;
+
+    const images = carouselData.map(item => ({
+        src: item.src,
+        alt: t(`heroCarousel.${item.translationKey}.alt`),
+        title: t(`heroCarousel.${item.translationKey}.title`),
+        subtitle: t(`heroCarousel.${item.translationKey}.subtitle`)
+    }));
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -128,13 +106,13 @@ export default function HeroCarousel() {
                             onClick={() => scrollToSection('pricing')}
                             className="bg-[#4a9b7f] text-white px-8 py-4 text-sm font-semibold tracking-[1.5px] uppercase transition-all duration-300 hover:bg-[#3d8269] hover:-translate-y-1 hover:shadow-lg rounded-sm"
                         >
-                            Get an Estimate
+                            {t('heroCarousel.cta.estimate')}
                         </button>
                         <button
                             onClick={() => scrollToSection('stem-cell')}
                             className="border border-white text-white px-8 py-4 text-sm font-medium tracking-[1.5px] uppercase transition-all duration-300 hover:bg-white hover:text-[#4a9b7f] rounded-sm"
                         >
-                            Learn More
+                            {t('heroCarousel.cta.learnMore')}
                         </button>
                     </div>
                 </div>

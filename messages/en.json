@@ -27,6 +27,74 @@
       "secondary": "Learn More"
     }
   },
+  "heroCarousel": {
+    "excellence": {
+      "alt": "Rakan Clinic Tokyo - Premium Medical Facility",
+      "title": "World-Class Medical Excellence",
+      "subtitle": "State-of-the-art facility with JOA-certified specialists and 35+ years of experience"
+    },
+    "painFree": {
+      "alt": "Advanced Regenerative Medicine Treatment",
+      "title": "A Pain-Free Future with Regenerative Medicine",
+      "subtitle": "PRP therapy and shockwave treatment fundamentally improve pain without relying on surgery"
+    },
+    "location": {
+      "alt": "Azabudai Hills - Tokyo's Premier Medical District",
+      "title": "Tokyo's Premier Medical District",
+      "subtitle": "Located in Azabudai Hills, Tokyo's most prestigious international medical hub"
+    },
+    "cta": {
+      "estimate": "Get an Estimate",
+      "learnMore": "Learn More"
+    }
+  },
+  "treatmentGoals": {
+    "badge": "Treatment Goals",
+    "heading": "Regenerative Medicine Tailored to Your Life Goals",
+    "description": "From athletic performance to healthy aging, our advanced regenerative treatments are designed to help you achieve your specific health and wellness objectives.",
+    "goals": {
+      "longevity": {
+        "title": "Longevity & Vitality",
+        "description": "Reverse cellular aging with advanced stem cell therapies. Boost energy, enhance metabolism, and maintain youthful vitality through cutting-edge regenerative medicine.",
+        "benefits": [
+          "Cellular regeneration boost",
+          "Metabolic optimization",
+          "Energy & vitality increase",
+          "Anti-aging support"
+        ]
+      },
+      "performance": {
+        "title": "Enhanced Performance",
+        "description": "Maximize athletic potential with PRP and stem cell treatments. Accelerate recovery, build resilience, and achieve peak performance naturally.",
+        "benefits": [
+          "Faster muscle recovery",
+          "Joint flexibility boost",
+          "Inflammation reduction",
+          "Endurance enhancement"
+        ]
+      },
+      "disease": {
+        "title": "Chronic Disease Management",
+        "description": "Combat chronic conditions with evidence-based regenerative protocols. Slow disease progression and restore quality of life through advanced cellular therapy.",
+        "benefits": [
+          "Chronic inflammation relief",
+          "Joint function improvement",
+          "Disease progression slowdown",
+          "Daily mobility restoration"
+        ]
+      },
+      "recovery": {
+        "title": "Pain & Injury Recovery",
+        "description": "Accelerate healing from sports injuries and trauma. Natural pain relief and tissue repair through targeted PRP and stem cell injections.",
+        "benefits": [
+          "Rapid tissue repair",
+          "Natural pain relief",
+          "Scar tissue minimization",
+          "Full function restoration"
+        ]
+      }
+    }
+  },
   "stemCell": {
     "badge": "Advanced Regenerative Medicine",
     "heading": "Regenerative Orthopedic Treatments",
@@ -103,40 +171,67 @@
     }
   },
   "whyTokyo": {
-    "badge": "Why Azabudai Hills, Tokyo",
-    "heading": "Japan's Leadership in Regenerative Medicine",
-    "intro": "Located in Azabudai Hills - just minutes from central Tokyo - our clinic offers world-class orthopedic regenerative care in a premium, easily accessible environment.",
-    "reasons": {
-      "excellence": {
-        "title": "Regulatory Excellence",
-        "description": "Japanese medical laws ensure the highest safety and ethical standards for regenerative treatments"
+    "badge": "Why Choose Us",
+    "heading": "Why Rakan Clinic Tokyo?",
+    "intro": "World-class regenerative orthopedic care in Azabudai Hills — combining 35+ years of expertise, Japan's strictest medical standards, Nobel Prize-winning research access, and comprehensive international patient support.",
+    "features": {
+      "expertise": {
+        "title": "35+ Years Orthopedic Expertise",
+        "description": "JOA-certified orthopedic specialists with extensive experience in regenerative treatments, sports medicine, and integrative orthopedic care. Proven track record serving elite athletes, executives, and discerning patients worldwide."
       },
-      "technology": {
-        "title": "Evidence-Based Protocols",
-        "description": "Access to advanced PRP and cell-based therapies with rigorous quality controls"
+      "location": {
+        "title": "Azabudai Hills - Premium Medical District",
+        "description": "Situated in Tokyo's premier international district — home to luxury residences, Michelin-starred dining, and seamless transit connections. Minutes from Roppongi, Ginza, and Haneda Airport with premium accessibility."
       },
-      "safety": {
-        "title": "Sterile Processing",
-        "description": "Reputable partner labs and strict sterility protocols for all cell handling procedures"
+      "standards": {
+        "title": "Strictest Regulatory Standards",
+        "description": "Japan's Regenerative Medicine Safety Act ensures rigorous ethical oversight, quality control, and patient safety — among the world's most comprehensive frameworks for cell-based therapies. Full compliance with Japanese medical laws."
       },
-      "accessibility": {
-        "title": "Central Location",
-        "description": "Azabudai Hills offers premium accessibility by subway and car from major Tokyo hubs"
+      "research": {
+        "title": "Nobel Prize-Winning Research",
+        "description": "Japan leads global stem cell science with multiple Nobel Prizes, including Dr. Shinya Yamanaka's groundbreaking iPS cell discovery. Our partnership with the University of Tokyo grants access to cutting-edge protocols."
       },
-      "experience": {
-        "title": "Integrated Approach",
-        "description": "Unique fusion of Western orthopedics and Eastern medicine (acupuncture) for optimal results"
+      "facility": {
+        "title": "In-House Lab Facility",
+        "description": "Our on-site sterile processing laboratory ensures same-day cell preparation, eliminates transport risks, maintains cold-chain integrity, and provides full quality traceability — critical for optimal treatment outcomes."
       },
-      "service": {
-        "title": "International Support",
-        "description": "English-speaking coordinators, travel planning, hotel guidance, and telemedicine follow-up"
+      "support": {
+        "title": "International Patient Concierge",
+        "description": "Comprehensive support for overseas patients — English-speaking coordinators, travel planning assistance, hotel guidance, interpreter services, and telemedicine follow-up."
       }
-    }
+    },
+    "footer": "Tokyo's Premier Regenerative Orthopedic Clinic"
   },
   "pricing": {
-    "badge": "Investment in Your Health",
-    "heading": "Treatment Programs",
-    "subheading": "Transparent pricing with comprehensive care packages tailored to your needs",
+    "badge": "Treatment Packages",
+    "heading": "Transparent Pricing for Regenerative Medicine",
+    "subheading": "Choose the treatment package that best fits your needs. All packages include comprehensive care and follow-up support.",
+    "packages": {
+      "single": {
+        "name": "SINGLE SESSION",
+        "price": "$25,000~",
+        "description": "Adipose tissue collection and cell cultivation are performed each time. No cryopreservation. No blood test monitoring.",
+        "features": ["One-time treatment", "Fresh cell cultivation", "Immediate treatment"]
+      },
+      "three": {
+        "name": "3 SESSIONS PER YEAR",
+        "price": "$60,500~",
+        "pricePerSession": "$20,167~ per session",
+        "featured": "MOST POPULAR",
+        "description": "Cells collected and frozen at first session. Used for 3 treatments in 1 year. Includes storage fee and blood test at each visit.",
+        "features": ["3 treatments over 1 year", "Cell cryopreservation", "Blood test monitoring", "Storage fees included"]
+      },
+      "six": {
+        "name": "6 SESSIONS OVER 2 YEARS",
+        "price": "$115,000~",
+        "pricePerSession": "$19,167~ per session",
+        "description": "Cells collected and frozen at first session. Used for up to 6 treatments over 2 years. Includes storage fee and blood test at each visit.",
+        "features": ["6 treatments over 2 years", "Long-term cell storage", "Comprehensive monitoring", "Best value option"]
+      }
+    },
+    "includes": "*Includes consultation, treatment coordination, and comprehensive patient care services",
+    "additionalServices": "Additional Services: An additional fee applies for producing exosomes from your own cells. Please contact us for details.",
+    "cta": "Get Personalized Quote",
     "plans": {
       "essential": {
         "name": "Essential",
@@ -214,7 +309,13 @@
         "description": "Receive aftercare guidelines and arrange telemedicine follow-ups once you return home"
       }
     },
-    "compliance": "All treatments adhere to Japanese medical laws and ethical standards. Eligibility is determined case-by-case following physician evaluation."
+    "compliance": "All treatments adhere to Japanese medical laws and ethical standards. Your safety and well-being are our top priorities throughout your entire journey.",
+    "journeyComplete": "Journey Complete",
+    "journeyDescription": "From initial contact to full recovery, we guide you through every step of your regenerative medicine journey with personalized care and support.",
+    "location": "Azabudai Hills - Tokyo's Premier Medical District",
+    "ctaStart": "Start Your Journey",
+    "ctaPricing": "View Pricing",
+    "viewDetails": "View Treatment Details"
   },
   "testimonials": {
     "badge": "Patient Success Stories",
@@ -266,28 +367,38 @@
     }
   },
   "about": {
+    "badge": "About Us",
     "heading": "About Rakan Clinic Tokyo",
-    "paragraph1": "Rakan Clinic Tokyo provides advanced orthopedic and regenerative care in Azabudai Hills, central Tokyo. Our team blends evidence-based Western medicine with proven Eastern techniques to address joint pain, sports injuries, and chronic musculoskeletal conditions while prioritizing safety, outcomes, and patient comfort.",
-    "paragraph2": "Licensed acupuncturists collaborate with board-certified orthopedic surgeons to address chronic issues like shoulder stiffness, back pain, and autonomic imbalance with a multi-faceted approach—targeting deep muscle tension and constitution, beyond where Western medicine alone may reach.",
+    "description": "Advanced orthopedic and regenerative care in Azabudai Hills, central Tokyo.",
+    "facility": {
+      "title": "Our Facility",
+      "clinicName": "Rakan Clinic Tokyo Azabudai",
+      "features": [
+        "State-of-the-art regenerative medicine facility with sterile processing labs",
+        "Private consultation rooms ensuring complete discretion for VIP patients",
+        "Premium location in Tokyo's most prestigious international district"
+      ]
+    },
     "stats": {
       "experience": {
-        "number": "15+",
         "label": "Years Experience"
       },
-      "specialists": {
-        "number": "50+",
-        "label": "Specialists"
-      },
-      "patients": {
-        "number": "10K+",
-        "label": "Patients Served"
+      "standards": {
+        "label": "Japanese Standards"
       }
+    },
+    "trustStatement": "Trusted by global executives, Olympic athletes, and political leaders worldwide. Our 35+ years of JOA-certified expertise has made us the premier destination for regenerative medicine, serving elite clientele who demand the highest standards of care and discretion.",
+    "trustedBy": {
+      "title": "Trusted by Olympic Athletes, Global Executives, and Political Leaders"
     }
   },
   "contact": {
+    "badge": "Get in Touch",
     "heading": "Get in Touch",
     "subheading": "Ready to start your health journey? Contact us today for a free consultation.",
+    "infoTitle": "Contact\nInformation",
     "form": {
+      "title": "Request a Consultation",
       "firstName": {
         "label": "First Name",
         "placeholder": "John"
@@ -302,13 +413,18 @@
       },
       "phone": {
         "label": "Phone",
-        "placeholder": "+1 (555) 123-4567"
+        "placeholder": "+1 (555) 123-4567",
+        "placeholderNumber": "Phone number"
       },
       "message": {
         "label": "Message",
         "placeholder": "Tell us about your medical needs..."
       },
-      "submit": "Send Message"
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "thankYou": "Thank You!",
+      "thankYouMessage": "Your consultation request has been received. Our medical team will review your information and contact you within 24-48 hours to discuss your treatment options.",
+      "submitAnother": "Submit Another Request"
     }
   },
   "safetyNotice": {

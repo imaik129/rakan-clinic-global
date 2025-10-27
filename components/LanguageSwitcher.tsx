@@ -47,7 +47,7 @@ export default function LanguageSwitcher({ currentLocale }: { currentLocale: Loc
             {/* Dropdown - Sleek */}
             <div className="absolute right-0 mt-2 w-40 bg-white shadow-[0_15px_50px_rgba(0,0,0,0.12)] border border-[rgba(74,155,127,0.1)] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 rounded-sm overflow-hidden">
                 <div className="py-1">
-                    {locales.map((locale) => (
+                    {locales.filter(locale => locale === 'en' || locale === 'zh').map((locale) => (
                         <button
                             key={locale}
                             onClick={() => changeLocale(locale)}

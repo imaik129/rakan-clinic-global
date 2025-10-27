@@ -45,8 +45,11 @@ export default function Header({ locale }: HeaderProps) {
                         </div>
                     </Link>
 
-                    {/* Right Side - Mobile Menu + Desktop CTA */}
-                    <div className="flex items-center gap-2 md:gap-4">
+                                        {/* Right Side - Language Toggle + Mobile Menu + Desktop CTA */}
+                    <div className="flex items-center gap-2 md:gap-3">
+                        {/* Language Switcher */}
+                        <LanguageSwitcher currentLocale={locale as Locale} />
+
                         {/* Mobile Hamburger Menu */}
                         <button
                             onClick={toggleMobileMenu}
@@ -58,9 +61,9 @@ export default function Header({ locale }: HeaderProps) {
                         </button>
 
                         {/* Desktop CTA */}
-                        <a
-                            href="https://reservation.medical-force.com/c/b04884e74e2542e0a3e0ae50ce50c26b"
-                            target="_blank"
+                        <a 
+                            href="https://reservation.medical-force.com/c/b04884e74e2542e0a3e0ae50ce50c26b" 
+                            target="_blank" 
                             rel="noopener noreferrer"
                             className="hidden md:block"
                         >

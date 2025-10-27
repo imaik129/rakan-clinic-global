@@ -144,16 +144,16 @@ export default function ContactForm() {
                     </svg>
                 </div>
                 <h3 className="font-['Cormorant_Garamond'] text-[1.5rem] mb-4 font-semibold text-gray-900">
-                    Thank You!
+                    {t('contact.form.thankYou')}
                 </h3>
                 <p className="text-[0.95rem] text-gray-600 leading-[1.6] font-light mb-6">
-                    Your consultation request has been received. Our medical team will review your information and contact you within 24-48 hours to discuss your treatment options.
+                    {t('contact.form.thankYouMessage')}
                 </p>
                 <button
                     onClick={() => setIsSubmitted(false)}
                     className="px-6 py-3 bg-[#4a9b7f] text-white text-sm font-semibold tracking-[1px] uppercase transition-all duration-300 hover:bg-[#3d8269] hover:-translate-y-1 hover:shadow-lg rounded"
                 >
-                    Submit Another Request
+                    {t('contact.form.submitAnother')}
                 </button>
             </div>
         );
@@ -162,7 +162,7 @@ export default function ContactForm() {
     return (
         <form onSubmit={handleSubmit} className="bg-white p-10 shadow-lg">
             <h3 className="font-['Cormorant_Garamond'] text-[1.5rem] mb-8 font-normal">
-                Request a Consultation
+                {t('contact.form.title')}
             </h3>
 
             <div className="space-y-6">
@@ -259,7 +259,7 @@ export default function ContactForm() {
                                 onChange={handleInputChange}
                                 required
                                 className="flex-1 p-4 border border-black/10 bg-white text-[0.95rem] font-light transition-all focus:outline-none focus:border-[#4a9b7f] focus:shadow-[0_0_0_3px_rgba(74,155,127,0.1)]"
-                                placeholder="Phone number"
+                                placeholder={t('contact.form.phone.placeholderNumber')}
                             />
                         </div>
                     </div>
@@ -285,7 +285,7 @@ export default function ContactForm() {
                     disabled={isSubmitting}
                     className="w-full py-[1.2rem] bg-[#1a1a1a] text-white text-[0.85rem] font-medium tracking-[2px] uppercase transition-all duration-300 hover:bg-[#4a9b7f] hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(74,155,127,0.3)] disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                 >
-                    {isSubmitting ? 'Sending...' : t('contact.form.submit')}
+                    {isSubmitting ? t('contact.form.sending') : t('contact.form.submit')}
                 </button>
             </div>
         </form>

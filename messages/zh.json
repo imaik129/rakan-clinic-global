@@ -5,87 +5,401 @@
   },
   "header": {
     "brand": "Rakan Clinic",
-    "nav": {
-      "services": "Services",
-      "about": "About",
-      "contact": "Contact"
-    },
-    "cta": "Book Consultation"
+    "home": "首页",
+    "treatments": "治疗项目",
+    "symptoms": "症状",
+    "doctors": "医生介绍",
+    "about": "关于我们",
+    "pricing": "价格",
+    "faq": "常见问题",
+    "contact": "联系我们",
+    "bookOnline": "在线预约"
   },
   "hero": {
-    "badge": "World-Class Medical Tourism",
+    "badge": "骨科与再生医学",
     "title": {
-      "line1": "Your Health Journey",
-      "line2": "Starts Here"
+      "line1": "无痛未来",
+      "line2": "再生医学为您实现"
     },
-    "description": "Experience exceptional medical care with Rakan Clinic. We combine cutting-edge technology, expert physicians, and personalized care to deliver outstanding health outcomes.",
+    "description": "在东京麻布台山的先进骨科护理和再生治疗。我们将循证西医与成熟东方技术相结合，解决关节疼痛、运动损伤和慢性肌肉骨骼疾病。",
     "cta": {
-      "primary": "Schedule Consultation",
-      "secondary": "Learn More"
+      "primary": "获取估价",
+      "secondary": "了解更多"
     }
   },
-  "services": {
-    "heading": "Why Choose Rakan Clinic?",
-    "subheading": "We provide comprehensive medical tourism services designed to make your healthcare journey seamless.",
-    "features": {
-      "experts": {
-        "title": "Expert Medical Team",
-        "description": "Board-certified physicians with international training and decades of experience."
+  "heroCarousel": {
+    "excellence": {
+      "alt": "Rakan Clinic Tokyo - 高级医疗设施",
+      "title": "世界级医疗卓越",
+      "subtitle": "配备JOA认证专家和最先进设施的35年以上经验"
+    },
+    "painFree": {
+      "alt": "先进再生医学治疗",
+      "title": "通过再生医学实现无痛未来",
+      "subtitle": "PRP疗法和冲击波治疗从根本上改善疼痛，无需依赖手术"
+    },
+    "location": {
+      "alt": "麻布台山 - 东京首屈一指的医疗区",
+      "title": "东京首屈一指的医疗区",
+      "subtitle": "位于麻布台山，东京最负盛名的国际医疗中心"
+    },
+    "cta": {
+      "estimate": "获取估价",
+      "learnMore": "了解更多"
+    }
+  },
+  "treatmentGoals": {
+    "badge": "治疗目标",
+    "heading": "适合您人生目标的再生医学",
+    "description": "从运动表现到健康老龄化，我们的先进再生治疗旨在帮助您实现特定的健康和保健目标。",
+    "goals": {
+      "longevity": {
+        "title": "长寿与活力",
+        "description": "通过先进的干细胞疗法逆转细胞衰老。增强能量，改善新陈代谢，并通过尖端再生医学保持年轻活力。",
+        "benefits": [
+          "细胞再生增强",
+          "代谢优化",
+          "能量与活力提升",
+          "抗衰老支持"
+        ]
       },
-      "standards": {
-        "title": "Global Standards",
-        "description": "State-of-the-art facilities meeting international healthcare accreditation standards."
+      "performance": {
+        "title": "增强表现",
+        "description": "通过PRP和干细胞治疗最大化运动潜力。加速恢复，增强韧性，自然达到峰值表现。",
+        "benefits": [
+          "更快的肌肉恢复",
+          "关节灵活性增强",
+          "炎症减少",
+          "耐力提升"
+        ]
       },
-      "support": {
-        "title": "Full Support",
-        "description": "Complete assistance from consultation through treatment and recovery."
+      "disease": {
+        "title": "慢性疾病管理",
+        "description": "通过循证再生方案对抗慢性疾病。减缓疾病进展，通过先进细胞治疗恢复生活质量。",
+        "benefits": [
+          "慢性炎症缓解",
+          "关节功能改善",
+          "疾病进展减缓",
+          "日常活动能力恢复"
+        ]
+      },
+      "recovery": {
+        "title": "疼痛与损伤恢复",
+        "description": "加速运动损伤和创伤的愈合。通过靶向PRP和干细胞注射实现自然疼痛缓解和组织修复。",
+        "benefits": [
+          "快速组织修复",
+          "自然疼痛缓解",
+          "疤痕组织最小化",
+          "功能完全恢复"
+        ]
+      }
+    }
+  },
+  "stemCell": {
+    "badge": "先进再生医学",
+    "heading": "再生骨科治疗",
+    "intro": "我们提供尖端再生选择，包括PRP治疗和自体细胞治疗，无需手术即可解决关节疼痛和运动损伤。",
+    "description": "我们的治疗包括富血小板血浆（PRP）治疗和脂肪干细胞治疗——这些基于证据的方法利用您身体的自然愈合能力。所有治疗均遵循日本医疗法律和道德标准，资格由医生评估后逐案确定。",
+    "benefits": {
+      "title": "常见治疗应用",
+      "items": {
+        "regeneration": {
+          "title": "膝骨关节炎",
+          "description": "PRP和细胞治疗用于软骨保护和关节疼痛缓解"
+        },
+        "inflammation": {
+          "title": "运动损伤",
+          "description": "肌腱损伤、韧带问题和软组织问题"
+        },
+        "recovery": {
+          "title": "肩部和髋部疼痛",
+          "description": "慢性关节疾病的非手术治疗选择"
+        },
+        "pain": {
+          "title": "脊柱疾病",
+          "description": "背部和颈部疼痛的微创方法"
+        }
+      }
+    }
+  },
+  "safetyNotice": {
+    "heading": "安全与合规",
+    "points": {
+      "evidence": "基于循证医学的治疗方法",
+      "certification": "日本骨科协会认证的专科医生",
+      "sterility": "严格的无菌处理程序",
+      "consent": "全面的知情同意流程",
+      "followup": "持续的患者跟进护理"
+    },
+    "disclaimer": "所有治疗均遵循日本医疗法律和道德标准。安全和知情同意是我们护理的基石。"
+  },
+  "doctors": {
+    "badge": "我们的医疗团队",
+    "heading": "杰出的医生与研究人员",
+    "subheading": "世界知名的骨科、再生医学和骨免疫学专家",
+    "team": {
+      "doctor1": {
+        "name": "清水医生",
+        "nameJa": "清水医師",
+        "title": "骨科医生和再生医学专家",
+        "specialties": "骨科、运动医学、再生医学（干细胞和PRP治疗）",
+        "credentials": "日本骨科协会认证骨科专家 | JOA运动医学认证 | 认证健康运动医师",
+        "experience": "35年以上",
+        "bio": "拥有35年以上一线骨科实践经验的委员会认证骨科医生。专长于高级再生医学，包括自体脂肪干细胞治疗和PRP治疗。专注于慢性关节疼痛和运动功能的根本改善，这在常规治疗中以前是困难的。提供高度个性化、量身定制的医疗护理，最大限度地考虑患者的时间和隐私。"
+      },
+      "doctor2": {
+        "name": "高柳 广 教授",
+        "nameJa": "高柳 広 教授",
+        "title": "东京大学免疫学教授",
+        "specialties": "骨科、免疫疾病、骨免疫学",
+        "credentials": "医学博士、哲学博士 | 东京大学医学院研究生院教授",
+        "experience": "30多年的研究和临床实践",
+        "bio": "开创性研究人员，建立了骨免疫学领域——骨-免疫系统相互作用的研究。毕业于东京大学医学院（1990年），在东京大学医院和东京都老年医院接受培训。自2012年以来一直担任东京大学教授。担任多个领导职务，包括日本骨与骨矿物质研究学会主席和日本骨免疫学会理事。"
+      },
+      "doctor3": {
+        "name": "桃原 茂树",
+        "nameJa": "桃原 茂樹 医師",
+        "title": "博英会医疗法人理事长",
+        "specialties": "骨科、类风湿性关节炎、运动障碍",
+        "credentials": "医学博士、哲学博士（庆应义塾大学）| JOA专家 | 风湿病学专家和导师",
+        "experience": "40多年的骨科和风湿病学经验",
+        "bio": "毕业于庆应义塾大学医学院，并在同一机构获得博士学位。在拉什大学医学中心（美国）进行研究，并参与了日本-欧洲类风湿手术交流项目。在担任东京女子医科大学风湿病中心助理、讲师、教授和副主任后，成为庆应义塾大学的特邀教授，然后在2025年担任现职。"
+      },
+      "doctor4": {
+        "name": "住谷 隆博 医生",
+        "nameJa": "住谷 隆博 医師",
+        "title": "创始人兼主任，Rakan Clinic Tokyo Azabudai",
+        "specialties": "再生医学、干细胞治疗、外泌体治疗、美容医学",
+        "credentials": "Rakan Clinic Tokyo Azabudai创始人兼主任——领导循证再生和美容项目。东京大学免疫学访问研究员",
+        "bio": "Rakan Clinic Tokyo Azabudai创始人兼主任，领导循证再生和美容项目。专业从事干细胞和外泌体治疗，通过合规的患者特定协议提供。作为东京大学免疫学访问研究员，将前沿研究与临床实践相结合，提供创新的再生治疗。",
+        "expertise": "专业从事干细胞和外泌体治疗，通过合规的患者特定协议提供。领导以个性化治疗方法为重点的循证再生和美容项目。"
+      }
+    }
+  },
+  "pricing": {
+    "badge": "治疗套餐",
+    "heading": "再生医学透明定价",
+    "subheading": "选择最适合您需求的治疗套餐。所有套餐包括全面护理和后续支持。",
+    "packages": {
+      "single": {
+        "name": "单次疗程",
+        "price": "$25,000~",
+        "description": "每次进行脂肪组织采集和细胞培养。无冷冻保存。无血液检测监测。",
+        "features": ["一次性治疗", "新鲜细胞培养", "立即治疗"]
+      },
+      "three": {
+        "name": "每年3次疗程",
+        "price": "$60,500~",
+        "pricePerSession": "每次$20,167~",
+        "featured": "最受欢迎",
+        "description": "首次疗程采集并冷冻细胞。在1年内用于3次治疗。包括每次就诊的储存费和血液检测。",
+        "features": ["1年内3次治疗", "细胞冷冻保存", "血液检测监测", "包括储存费"]
+      },
+      "six": {
+        "name": "2年6次疗程",
+        "price": "$115,000~",
+        "pricePerSession": "每次$19,167~",
+        "description": "首次疗程采集并冷冻细胞。在2年内用于最多6次治疗。包括每次就诊的储存费和血液检测。",
+        "features": ["2年内6次治疗", "长期细胞储存", "全面监测", "最佳价值选择"]
+      }
+    },
+    "includes": "*包括咨询、治疗协调和全面的患者护理服务",
+    "additionalServices": "附加服务：从您自己的细胞生产外泌体需要支付额外费用。请联系我们了解详情。",
+    "cta": "获取个性化报价",
+    "plans": {
+      "essential": {
+        "name": "基础套餐",
+        "price": "定制价格",
+        "description": "全面咨询和治疗",
+        "features": [
+          "初步健康评估",
+          "干细胞治疗（单次）",
+          "随访咨询",
+          "治疗计划设计",
+          "英语语言支持"
+        ],
+        "note": "起价80万日元"
+      },
+      "premium": {
+        "name": "高级套餐",
+        "price": "定制价格",
+        "description": "延长护理与豪华设施",
+        "features": [
+          "全面健康评估",
+          "先进干细胞方案（2-3次）",
+          "多专科会诊",
+          "豪华住宿协助",
+          "多语言礼宾服务",
+          "3个月随访计划"
+        ],
+        "note": "起价150万日元"
+      },
+      "elite": {
+        "name": "精英套餐",
+        "price": "定制价格",
+        "description": "完整健康优化",
+        "features": [
+          "VIP全面评估",
+          "铂金干细胞方案（4次以上）",
+          "优先访问所有专科医生",
+          "白手套礼宾服务",
+          "包含豪华住宿",
+          "6个月全面随访",
+          "完整健康优化"
+        ],
+        "note": "起价300万日元"
+      }
+    },
+    "disclaimer": "最终价格在咨询期间根据个人治疗计划确定"
+  },
+  "faq": {
+    "badge": "常见问题",
+    "heading": "关于我们服务的常见问题",
+    "description": "有关再生医学治疗、国际患者服务和诊所流程的问题解答",
+    "items": {
+      "question1": "你们提供哪些类型的再生医学治疗？",
+      "answer1": "我们提供富血小板血浆（PRP）治疗和自体脂肪干细胞治疗。这些基于证据的治疗方法利用您身体的自然愈合能力，无需手术即可解决关节疼痛、运动损伤和慢性肌肉骨骼疾病。所有治疗均由日本骨科协会认证的骨科专家执行，并遵循日本医疗法律和道德标准。",
+      "question2": "如何知道我是否适合再生医学治疗？",
+      "answer2": "资格由我们的医生在全面医学评估后逐案确定。我们在远程咨询期间审查您的病史、影像学检查和当前症状。常见候选者包括膝骨关节炎、运动损伤、肩髋疼痛和脊柱疾病患者。在您前往东京之前，我们提供初步适用性筛查。",
+      "question3": "治疗费用是多少，包括哪些内容？",
+      "answer3": "我们的治疗方案从单次治疗的25,000美元到年度护理计划的200,000美元不等。单次治疗包括咨询、治疗和1个月的随访。三次治疗套餐包括个性化治疗计划和3个月的随访。年度计划包括无限治疗和专属礼宾服务。所有价格均为估计值，最终费用取决于个人治疗需求。",
+      "question4": "治疗过程需要多长时间？",
+      "answer4": "完整过程通常需要3-5天在东京。第1天：初次咨询和评估。第2天：治疗日（PRP或干细胞治疗）。第3-5天：恢复和随访指导。我们提供详细的术前和术后指导，并安排远程医疗随访。国际患者包括旅行规划支持。",
+      "question5": "再生医学安全吗，有哪些风险？",
+      "answer5": "是的，当由合格的专家执行时，我们的治疗非常安全。所有程序均由日本骨科协会认证的骨科医生在我们最先进的设施中执行。我们使用您自己的细胞（自体），消除排斥风险。潜在的副作用很小，通常包括注射部位的轻微不适、肿胀或瘀伤。我们提供全面的术前筛查以确保安全。",
+      "question6": "你们是否为国际患者提供支持？",
+      "answer6": "是的，我们提供全面的国际患者服务，包括签证函（如需要）、酒店推荐、机场接送和多语言支持。我们的英语协调员确保您在整个逗留期间顺利沟通。我们提供旅行规划协助，可以安排东京高档麻布台山区的住宿，距离羽田机场仅20分钟。",
+      "question7": "Rakan诊所与其他医疗机构有何不同？",
+      "answer7": "我们结合35年以上的日本骨科协会认证骨科专业知识与尖端再生医学研究。我们的团队包括东京大学教授和骨免疫学领域的领先研究人员。我们提供最先进的内部实验室设施、VIP患者的私人咨询室，以及西方骨科与东方医学方法的独特融合。我们的麻布台山位置为精英客户提供优质、私密的护理。",
+      "question8": "治疗后多久可以看到效果？",
+      "answer8": "效果因个人和病情而异，但许多患者报告在2-4周内出现初步改善。随着再生过程的继续，全面益处通常在3-6个月内显现。我们提供详细的恢复时间表和定期随访护理以监测进展。我们的远程医疗随访系统确保您在回家后继续获得支持，根据需要提供进展跟踪和调整建议。"
+    }
+  },
+  "testimonials": {
+    "badge": "患者见证",
+    "heading": "患者评价",
+    "subheading": "真实患者的真实体验",
+    "reviews": {
+      "review1": {
+        "quote": "绝对出色的护理体验。医疗团队专业且富有同情心。强烈推荐。",
+        "name": "张先生",
+        "location": "中国上海",
+        "treatment": "膝关节干细胞治疗",
+        "result": "疼痛显著减轻，活动能力改善70%"
+      },
+      "review2": {
+        "quote": "从咨询到治疗再到术后随访，每一步都得到了悉心照料。五星体验。",
+        "name": "李女士",
+        "location": "中国北京",
+        "treatment": "肩周炎PRP治疗",
+        "result": "症状完全缓解，生活质量大幅提升"
+      },
+      "review3": {
+        "quote": "诊所设施一流，医生经验丰富。整个治疗过程非常顺利。",
+        "name": "王先生",
+        "location": "中国广州",
+        "treatment": "脊柱再生治疗",
+        "result": "慢性背痛明显改善，可以重新运动"
       }
     }
   },
   "about": {
-    "heading": "About Rakan Clinic",
-    "paragraph1": "Rakan Clinic is a leading destination for medical tourism, offering world-class healthcare services to patients from around the globe. Our mission is to provide accessible, affordable, and exceptional medical care in a comfortable and welcoming environment.",
-    "paragraph2": "With years of experience serving international patients, we understand the unique needs of medical tourists and have developed comprehensive programs to ensure your satisfaction.",
+    "badge": "关于我们",
+    "heading": "关于Rakan诊所",
+    "description": "在东京市中心麻布台山提供的先进骨科和再生护理。",
+    "facility": {
+      "title": "我们的设施",
+      "clinicName": "Rakan Clinic Tokyo Azabudai",
+      "features": [
+        "配备无菌处理实验室的最先进再生医学设施",
+        "确保VIP患者完全保密的私人咨询室",
+        "位于东京最负盛名的国际区的优质位置"
+      ]
+    },
     "stats": {
       "experience": {
-        "number": "15+",
-        "label": "Years Experience"
+        "label": "年经验"
       },
-      "specialists": {
-        "number": "50+",
-        "label": "Specialists"
-      },
-      "patients": {
-        "number": "10K+",
-        "label": "Patients Served"
+      "standards": {
+        "label": "日本标准"
       }
+    },
+    "trustStatement": "受到全球高管、奥运运动员和世界各国政治领导人的信赖。我们35年以上的日本骨科协会认证专业知识使我们成为再生医学的首选目的地，为要求最高护理和保密标准的精英客户提供服务。",
+    "trustedBy": {
+      "title": "受到奥运运动员、全球高管和政治领导人的信赖"
     }
   },
+  "patientJourney": {
+    "badge": "您的治疗之旅",
+    "heading": "国际患者流程",
+    "subheading": "从初步咨询到治疗后随访的清晰、循序渐进之路。我们指导您完成再生医学之旅的每个阶段。",
+    "steps": {
+      "step1": {
+        "title": "联系与病历审查",
+        "description": "发送您的咨询，附上既往影像学和医疗记录，以进行初步适合性筛查"
+      },
+      "step2": {
+        "title": "远程咨询",
+        "description": "与我们的医疗团队讨论症状、目标和治疗方案，以确定再生护理是否合适"
+      },
+      "step3": {
+        "title": "旅行规划支持",
+        "description": "如果您符合条件，我们提供签证信（如需要）、酒店推荐以及机场/诊所接送服务"
+      },
+      "step4": {
+        "title": "诊所评估",
+        "description": "抵达东京后，接受全面检查和影像学检查，以确定您的治疗方案"
+      },
+      "step5": {
+        "title": "治疗日",
+        "description": "接受计划的程序（PRP或细胞治疗），并附有明确的手术前后说明"
+      },
+      "step6": {
+        "title": "恢复与随访",
+        "description": "接受术后护理指导，并在您回家后安排远程医疗随访"
+      }
+    },
+    "compliance": "所有治疗均遵循日本医疗法律和道德标准。在整个治疗过程中，您的安全和福祉是我们的首要任务。",
+    "journeyComplete": "旅程完成",
+    "journeyDescription": "从初次联系到完全恢复，我们通过个性化护理和支持指导您完成再生医学之旅的每一步。",
+    "location": "麻布台山 - 东京首屈一指的医疗区",
+    "ctaStart": "开始您的旅程",
+    "ctaPricing": "查看价格",
+    "viewDetails": "查看治疗详情"
+  },
   "contact": {
-    "heading": "Get in Touch",
-    "subheading": "Ready to start your health journey? Contact us today for a free consultation.",
+    "badge": "联系我们",
+    "heading": "联系我们",
+    "subheading": "准备开始您的健康之旅吗？今天就联系我们进行免费咨询。",
+    "infoTitle": "联系\n信息",
     "form": {
+      "title": "请求咨询",
       "firstName": {
-        "label": "First Name",
-        "placeholder": "John"
+        "label": "名字",
+        "placeholder": "张"
       },
       "lastName": {
-        "label": "Last Name",
-        "placeholder": "Doe"
+        "label": "姓氏",
+        "placeholder": "三"
       },
       "email": {
-        "label": "Email",
-        "placeholder": "john@example.com"
+        "label": "电子邮件",
+        "placeholder": "zhang@example.com"
       },
       "phone": {
-        "label": "Phone",
-        "placeholder": "+1 (555) 123-4567"
+        "label": "电话",
+        "placeholder": "+86 123 4567 8900",
+        "placeholderNumber": "电话号码"
       },
       "message": {
-        "label": "Message",
-        "placeholder": "Tell us about your medical needs..."
+        "label": "留言",
+        "placeholder": "请告诉我们您的医疗需求..."
       },
-      "submit": "Send Message"
+      "submit": "发送消息",
+      "sending": "发送中...",
+      "thankYou": "谢谢！",
+      "thankYouMessage": "您的咨询请求已收到。我们的医疗团队将审核您的信息，并在24-48小时内与您联系讨论治疗方案。",
+      "submitAnother": "提交另一个请求"
     }
   },
   "footer": {
@@ -122,6 +436,42 @@
     "emailNote": "供国际患者使用",
     "location": "地址",
     "access": "交通"
+  },
+  "contactInfo": {
+    "address": "Azabudai Hills Tower Plaza 4F\n1-3-1 Azabudai, Minato-ku\nTokyo 106-0041, Japan\n\n〒106-0041\n東京都港区麻布台1-3-1\n麻布台ヒルズ タワープラザ4F",
+    "access": "从羽田机场驾车约20分钟"
+  },
+  "whyTokyo": {
+    "badge": "为什么选择我们",
+    "heading": "为什么选择Rakan Clinic Tokyo？",
+    "intro": "在麻布台山提供世界一流的再生骨科护理——结合35年以上的专业知识、日本最严格的医疗标准、诺贝尔奖研究成果以及对国际患者的全面支持。",
+    "features": {
+      "expertise": {
+        "title": "35+年骨科专业知识",
+        "description": "日本骨科协会认证的骨科专家，在再生治疗、运动医学和综合骨科护理方面经验丰富。在服务精英运动员、高管和全球挑剔患者方面有着良好的记录。"
+      },
+      "location": {
+        "title": "麻布台山 - 优质医疗区",
+        "description": "位于东京首屈一指的国际区——豪华住宅、米其林餐厅和便捷的交通连接。距六本木、银座和羽田机场仅几分钟路程，交通便利。"
+      },
+      "standards": {
+        "title": "最严格的监管标准",
+        "description": "日本的《再生医学安全法》确保严格的道德监督、质量控制和患者安全——是世界上细胞治疗最全面的框架之一。完全符合日本医疗法律。"
+      },
+      "research": {
+        "title": "诺贝尔奖研究成果",
+        "description": "日本在干细胞科学领域处于世界领先地位，获得多项诺贝尔奖，包括山中伸弥博士开创性的iPS细胞发现。我们与东京大学的合作使我们能够获得尖端协议。"
+      },
+      "facility": {
+        "title": "内部实验室设施",
+        "description": "我们的现场无菌处理实验室确保当日细胞制备，消除运输风险，维持冷链完整性，并提供完整的质量可追溯性——对最佳治疗效果至关重要。"
+      },
+      "support": {
+        "title": "国际患者礼宾服务",
+        "description": "为海外患者提供全面支持——英语协调员、旅行规划协助、酒店指导、口译服务和远程医疗随访。"
+      }
+    },
+    "footer": "东京首屈一指的再生骨科诊所"
   }
 }
 
