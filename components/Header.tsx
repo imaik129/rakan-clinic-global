@@ -85,10 +85,6 @@ export default function Header({ locale }: HeaderProps) {
                             {t('header.treatments')}
                         </a>
                         <div className="w-[1px] h-4 bg-[#4a9b7f]/20" />
-                        <a href="#" className="text-[#1a1a1a] text-[0.8rem] font-medium hover:text-[#4a9b7f] transition-colors relative after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[2px] after:bg-[#4a9b7f] after:transition-[width] after:duration-300 hover:after:w-full">
-                            {t('header.symptoms')}
-                        </a>
-                        <div className="w-[1px] h-4 bg-[#4a9b7f]/20" />
                         <a href="#doctors" className="text-[#1a1a1a] text-[0.8rem] font-medium hover:text-[#4a9b7f] transition-colors relative after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[2px] after:bg-[#4a9b7f] after:transition-[width] after:duration-300 hover:after:w-full">
                             {t('header.doctors')}
                         </a>
@@ -143,13 +139,6 @@ export default function Header({ locale }: HeaderProps) {
                                         onClick={toggleMobileMenu}
                                     >
                                         {t('header.treatments')}
-                                    </a>
-                                    <a
-                                        href="#"
-                                        className="block text-[#1a1a1a] text-lg font-medium hover:text-[#4a9b7f] transition-colors py-2"
-                                        onClick={toggleMobileMenu}
-                                    >
-                                        {t('header.symptoms')}
                                     </a>
                                     <a
                                         href="#doctors"
