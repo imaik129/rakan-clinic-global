@@ -664,7 +664,7 @@ export function PatientJourneySection() {
 
                 {/* Journey Completion */}
                 <div className="mt-12 max-w-[900px] mx-auto">
-                    <div className="relative overflow-hidden">
+                    <div className="relative overflow-hidden rounded-tl-2xl rounded-br-2xl">
                         {/* Background Image */}
                         <div className="absolute inset-0">
                             <Image
@@ -692,13 +692,13 @@ export function PatientJourneySection() {
                                 {t('patientJourney.journeyDescription')}
                             </p>
                             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                                <a href="#contact" className="inline-flex items-center px-6 py-3 bg-[#4a9b7f] text-white rounded-lg text-sm font-semibold tracking-[1px] uppercase transition-all duration-300 hover:bg-[#3d8269] hover:-translate-y-1 hover:shadow-lg">
+                                <a href="#contact" className="inline-flex items-center px-6 py-3 bg-[#4a9b7f] text-white rounded-md text-sm font-semibold tracking-[1px] uppercase transition-all duration-300 hover:bg-[#3d8269] hover:-translate-y-1 hover:shadow-lg">
                                     <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                                     </svg>
                                     {t('patientJourney.ctaStart')}
                                 </a>
-                                <a href="#pricing" className="inline-flex items-center px-6 py-3 border-2 border-white text-white rounded-lg text-sm font-semibold tracking-[1px] uppercase transition-all duration-300 hover:bg-white hover:text-[#4a9b7f]">
+                                <a href="#pricing" className="inline-flex items-center px-6 py-3 border-2 border-white text-white rounded-md text-sm font-semibold tracking-[1px] uppercase transition-all duration-300 hover:bg-white hover:text-[#4a9b7f]">
                                     {t('patientJourney.ctaPricing')}
                                 </a>
                             </div>
