@@ -45,6 +45,13 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
+      <head>
+        <link
+          rel="preload"
+          href="/images/rakan_entrance.png"
+          as="image"
+        />
+      </head>
       <body
         className={`${cormorantGaramond.variable} ${montserrat.variable} antialiased`}
       >
