@@ -1,76 +1,425 @@
 {
   "metadata": {
-    "title": "Rakan Clinic Tokyo - Premier Regenerative Therapy at Azabudai Hills",
-    "description": "Leading regenerative medicine clinic specializing in orthopedic treatments and stem cell therapy in the heart of Tokyo's prestigious Azabudai Hills"
+    "title": "Rakan Clinic Tokyo — передовые регенеративные терапии в Azabudai Hills",
+    "description": "Клиника регенеративной медицины мирового уровня, специализирующаяся на ортопедии и клеточных технологиях, расположенная в престижном районе Azabudai Hills (Токио)"
   },
   "header": {
     "brand": "Rakan Clinic",
-    "nav": {
-      "services": "Services",
-      "about": "About",
-      "contact": "Contact"
-    },
-    "cta": "Book Consultation"
+    "home": "Главная",
+    "treatments": "Лечения",
+    "symptoms": "Симптомы",
+    "doctors": "Врачи",
+    "about": "О клинике",
+    "pricing": "Цены",
+    "faq": "Вопросы",
+    "support": "Поддержка",
+    "contact": "Контакты",
+    "bookOnline": "Онлайн-запись"
   },
   "hero": {
-    "badge": "World-Class Medical Tourism",
+    "badge": "Ортопедия и регенеративная медицина",
     "title": {
-      "line1": "Your Health Journey",
-      "line2": "Starts Here"
+      "line1": "Будущее без боли",
+      "line2": "с регенеративной медициной"
     },
-    "description": "Experience exceptional medical care with Rakan Clinic. We combine cutting-edge technology, expert physicians, and personalized care to deliver outstanding health outcomes.",
+    "description": "Передовая ортопедическая помощь и регенеративные методики в Azabudai Hills (Токио). Мы объединяем доказательные западные подходы и эффективные восточные практики для лечения болей в суставах, спортивных травм и хронических заболеваний опорно‑двигательного аппарата.",
     "cta": {
-      "primary": "Schedule Consultation",
-      "secondary": "Learn More"
+      "primary": "Получить оценку",
+      "secondary": "Узнать больше"
+    }
+  },
+  "heroCarousel": {
+    "excellence": {
+      "alt": "Rakan Clinic Tokyo — современная медицинская инфраструктура",
+      "title": "Медицинское превосходство мирового уровня",
+      "subtitle": "Современное оснащение, специалисты с сертификацией JOA и более 35 лет опыта"
+    },
+    "painFree": {
+      "alt": "Передовые регенеративные методики",
+      "title": "Будущее без боли с регенеративной медициной",
+      "subtitle": "PRP‑терапия и ударно‑волновое лечение уменьшают боль без операции"
+    },
+    "location": {
+      "alt": "Azabudai Hills — ведущий медицинский кластер Токио",
+      "title": "Премьер‑квартал медицины Токио",
+      "subtitle": "В самом престижном международном медицинском центре Azabudai Hills"
+    },
+    "cta": {
+      "estimate": "Получить оценку",
+      "learnMore": "Подробнее"
+    }
+  },
+  "treatmentGoals": {
+    "badge": "Цели лечения",
+    "heading": "Регенеративная медицина под ваши жизненные цели",
+    "description": "От спортивных результатов до здорового долголетия — наши методики помогают достигать именно ваших задач по здоровью и самочувствию.",
+    "goals": {
+      "longevity": {
+        "category": "РЕГЕНЕРАЦИЯ",
+        "title": "Долголетие и энергия",
+        "description": "Замедление клеточного старения с помощью передовых клеточных технологий. Больше энергии, улучшение обмена веществ и поддержание жизненного тонуса.",
+        "benefits": [
+          "Усиление клеточной регенерации",
+          "Оптимизация метаболизма",
+          "Повышение энергии и тонуса",
+          "Антивозрастная поддержка"
+        ]
+      },
+      "performance": {
+        "category": "УЛУЧШИТЬ",
+        "title": "Спортивная результативность",
+        "description": "PRP и клеточные методики для ускорения восстановления и устойчивости к нагрузкам — естественный путь к пиковым результатам.",
+        "benefits": [
+          "Более быстрое восстановление мышц",
+          "Лучше подвижность суставов",
+          "Снижение воспаления",
+          "Рост выносливости"
+        ]
+      },
+      "disease": {
+        "category": "КОНТРОЛЬ",
+        "title": "Хронические заболевания",
+        "description": "Доказательные регенеративные протоколы для замедления прогрессирования и улучшения качества жизни.",
+        "benefits": [
+          "Снижение хронического воспаления",
+          "Улучшение функции суставов",
+          "Замедление прогрессирования",
+          "Восстановление повседневной подвижности"
+        ]
+      },
+      "recovery": {
+        "category": "ВОССТАНОВЛЕНИЕ",
+        "title": "Боль и травмы",
+        "description": "Ускоренное заживление при спортивных травмах и перегрузках. Естественное обезболивание и регенерация тканей с помощью PRP и клеточных инъекций.",
+        "benefits": [
+          "Быстрое восстановление тканей",
+          "Естественное снижение боли",
+          "Минимизация рубцевания",
+          "Возврат полной функции"
+        ]
+      }
+    }
+  },
+  "stemCell": {
+    "badge": "Современные методики",
+    "heading": "Регенеративные ортопедические процедуры",
+    "intro": "Мы предлагаем PRP‑терапию и аутологичные клеточные методики для лечения болей в суставах и спортивных травм без операции.",
+    "description": "Наши подходы — PRP и терапия адипозными (жировыми) стволовыми клетками — используют естественные ресурсы организма. Все процедуры проводятся в соответствии с японским законодательством и этическими стандартами, а показания определяются врачом индивидуально.",
+    "benefits": {
+      "title": "Частые показания",
+      "items": {
+        "regeneration": {
+          "title": "Остеоартрит коленного сустава",
+          "description": "PRP и клеточная терапия для сохранения хряща и уменьшения боли"
+        },
+        "inflammation": {
+          "title": "Спортивные травмы",
+          "description": "Поражения сухожилий, связок и мягких тканей"
+        },
+        "recovery": {
+          "title": "Боль в плечах и тазобедренных суставах",
+          "description": "Безоперационные решения при хронических заболеваниях суставов"
+        },
+        "pain": {
+          "title": "Патологии позвоночника",
+          "description": "Малоинвазивные подходы при болях в спине и шее"
+        }
+      }
+    }
+  },
+  "doctors": {
+    "badge": "Наша медицинская команда",
+    "heading": "Meet the Team",
+    "subheading": "Ведущие специалисты в ортопедии, регенеративной медицине и остеоиммунологии",
+        "intro": {
+        "title": "Мировой уровень медицинской команды",
+        "description": "Международно признанные специалисты, развивающие регенеративную медицину"
+    },
+    "team": {
+      "doctor1": {
+        "name": "Dr. Shimizu",
+        "nameJa": "清水医師",
+        "title": "Ортопед‑хирург, специалист по регенеративной медицине",
+        "motto": "Передовой медицинский опыт для вашего будущего",
+        "specialties": "Ортопедия, спортивная медицина, регенеративная медицина (клеточная терапия и PRP)",
+        "credentials": "JOA‑сертифицированный ортопед, JOA Sports Medicine Certified, Certified Health Sports Physician",
+        "experience": "35+ лет",
+        "bio": "Сертифицированный ортопед с более чем 35‑летним клиническим опытом. Специализируется на аутологичной клеточной терапии и PRP. Сфокусирован на фундаментальном улучшении хронической боли и функции движений. Индивидуальный подход и конфиденциальность.",
+        "societies": "Japanese Orthopaedic Association; Japanese Society for Regenerative Medicine; Japanese Society for Joint Disease"
+      },
+      "doctor2": {
+        "name": "Prof. Hiroshi Takayanagi",
+        "nameJa": "高柳 広 教授",
+        "title": "Профессор иммунологии, The University of Tokyo",
+        "specialties": "Ортопедия, иммунные заболевания, остеоиммунология",
+        "credentials": "MD, PhD | Professor, Graduate School of Medicine, The University of Tokyo",
+        "experience": "30+ лет научной и клинической работы",
+        "bio": "Один из основателей направления «остеоиммунология» — взаимодействия костной и иммунной систем. Выпускник медицинского факультета The University of Tokyo (1990), клиническая подготовка в Tokyo University Hospital и Tokyo Metropolitan Geriatric Hospital. Профессор Токийского университета с 2012 г., занимает ряд руководящих постов в профильных обществах.",
+        "awards": "Награда Japanese Society for Rheumatology (2004), Japan Medical Association Medical Award (2017), Uehara Prize (2019), Japan Academy Prize (2019)",
+        "publications": "Nature (2000, 2002, 2010, 2024), Nature Immunology (2022)"
+      },
+      "doctor3": {
+        "name": "Shigeki Momohara",
+        "nameJa": "桃原 茂樹 医師",
+        "title": "Председатель, Hakuei‑kai Medical Corporation",
+        "specialties": "Ортопедия, ревматоидный артрит, заболевания опорно‑двигательного аппарата",
+        "credentials": "MD, PhD (Keio University) | JOA Specialist | Rheumatology Specialist & Supervisor",
+        "experience": "40+ лет в ортопедии и ревматологии",
+        "bio": "Окончил Keio University School of Medicine, докторская степень Keio University. Исследования в Rush University Medical Center (США), участник японско‑европейской программы по ревматологической хирургии. Занимал должности ассистента, доцента, профессора и зам. директора в Tokyo Women's Medical University Rheumatology Center; затем — специальный приглашённый профессор Keio University; текущая должность с 2025 г.",
+        "expertise": "Ведущий японский эксперт в ортопедии и ревматологии; высокий авторитет в лечении и исследованиях остеоартрита, РА, заболеваний позвоночника, остеопороза, подагры и псевдоподагры. Активно занимается медицинским образованием и международным обменом."
+      },
+      "doctor4": {
+        "name": "Dr. Sumiya Takahiro",
+        "nameJa": "住谷 隆博 医師",
+        "title": "Основатель и директор, Rakan Clinic Tokyo Azabudai",
+        "specialties": "Регенеративная медицина, клеточная терапия, экзосомы, эстетическая медицина",
+        "credentials": "Founder & Director, Rakan Clinic Tokyo Azabudai; Visiting Researcher (Immunology), The University of Tokyo",
+        "bio": "Основатель и директор Rakan Clinic Tokyo Azabudai. Ведёт программы доказательной регенеративной и эстетической медицины. Специализируется на клеточной и экзосомной терапии по индивидуальным протоколам. Как Visiting Researcher в The University of Tokyo совмещает передовые исследования и клиническую практику.",
+        "expertise": "Клеточная и экзосомная терапия по соответствующим стандартам; персонализированные, доказательные протоколы лечения."
+      }
+    }
+  },
+  "whyTokyo": {
+    "badge": "Почему мы",
+    "heading": "Почему Rakan Clinic Tokyo?",
+    "intro": "Ортопедическая регенеративная помощь мирового уровня в Azabudai Hills: более 35 лет опыта, самые строгие японские стандарты, доступ к нобелевским исследованиям и полная поддержка иностранных пациентов.",
+    "features": {
+      "expertise": {
+        "title": "35+ лет ортопедической экспертизы",
+        "description": "Сертифицированные JOA ортопеды с большим опытом в регенеративных методиках и спортивной медицине. Доверие со стороны спортсменов, руководителей и требовательных пациентов по всему миру."
+      },
+      "location": {
+        "title": "Azabudai Hills — премиальный медицинский квартал",
+        "description": "Престижный международный район Токио с первоклассной инфраструктурой и удобной транспортной доступностью: рядом Roppongi, Ginza и аэропорт Haneda."
+      },
+      "standards": {
+        "title": "Строгие регуляторные стандарты",
+        "description": "Закон Японии о безопасности регенеративной медицины обеспечивает этический надзор, контроль качества и безопасность пациентов — одна из самых строгих систем в мире. Полное соответствие японскому законодательству."
+      },
+      "research": {
+        "title": "Исследования нобелевского уровня",
+        "description": "Япония — лидер клеточной науки (включая открытие iPS‑клеток Dr. Shinya Yamanaka). Партнёрство с The University of Tokyo предоставляет доступ к передовым протоколам."
+      },
+      "facility": {
+        "title": "Собственная лаборатория",
+        "description": "Стерильная лаборатория на территории клиники: подготовка клеток в день процедуры, отсутствие рисков транспортировки, контроль «холодовой цепи» и полная прослеживаемость качества."
+      },
+      "support": {
+        "title": "Консьерж‑поддержка иностранных пациентов",
+        "description": "Координаторы, говорящие на английском, помощь с поездкой и отелями, услуги переводчика, телемедицинское сопровождение."
+      }
+    },
+    "footer": "Премьер‑клиника регенеративной ортопедии Токио"
+  },
+  "clientExperience": {
+    "badge": "Опыт клиентов",
+    "heading": "Нам доверяют лидеры и чемпионы",
+    "subheading": "К нам обращаются спортсмены мирового уровня, руководители и инноваторы."
+  },
+  "pricing": {
+    "badge": "Пакеты лечения",
+    "heading": "Пакеты лечения стволовыми клетками",
+    "subheading": "Выберите пакет под ваши задачи. Во все пакеты включены комплексное ведение и последующее сопровождение.",
+    "packages": {
+      "single": {
+        "name": "ОДНА СЕССИЯ",
+        "price": "$25,000~",
+        "description": "Каждый раз проводится забор жировой ткани и культивирование клеток. Без криосохранения. Без мониторинга анализов крови.",
+        "features": ["Разовая процедура", "Свежая культура клеток", "Немедленное лечение"]
+      },
+      "three": {
+        "name": "3 СЕССИИ В ГОД",
+        "price": "$60,500~",
+        "pricePerSession": "$20,167~ за сессию",
+        "featured": "ПОПУЛЯРНО",
+        "description": "Забор и заморозка клеток на первой сессии. Использование для трёх процедур в течение года. Хранение и анализы включены в стоимость.",
+        "features": ["3 процедуры за 1 год", "Криосохранение клеток", "Мониторинг анализов", "Включена стоимость хранения"]
+      },
+      "six": {
+        "name": "6 СЕССИЙ ЗА 2 ГОДА",
+        "price": "$115,000~",
+        "pricePerSession": "$19,167~ за сессию",
+        "description": "Забор и заморозка клеток на первой сессии. Использование до 6 процедур за 2 года. Хранение и анализы включены.",
+        "features": ["До 6 процедур за 2 года", "Долговременное хранение клеток", "Комплексный мониторинг", "Максимально выгодный вариант"]
+      }
+    },
+    "includes": "*Включены консультация, координация лечения и полное пациентское сопровождение",
+    "additionalServices": "Дополнительно: производство экзосом из ваших клеток — за отдельную плату. Подробности по запросу.",
+    "cta": "Получить персональное предложение",
+    "plans": {
+      "essential": {
+        "name": "Essential",
+        "price": "Индивидуально",
+        "description": "Комплексная консультация и лечение",
+        "features": [
+          "Первичная оценка состояния",
+          "Клеточная терапия (1 сессия)",
+          "Повторная консультация",
+          "Проектирование плана лечения",
+          "Поддержка на английском языке"
+        ],
+        "note": "От ¥800,000"
+      },
+      "premium": {
+        "name": "Premium",
+        "price": "Индивидуально",
+        "description": "Расширенный уход и премиальные условия",
+        "features": [
+          "Расширенная оценка здоровья",
+          "Продвинутый клеточный протокол (2–3 сессии)",
+          "Несколько консультаций специалистов",
+          "Помощь с премиальным размещением",
+          "Многоязычная консьерж‑служба",
+          "Программа сопровождения 3 месяца"
+        ],
+        "note": "От ¥1,500,000",
+        "featured": true
+      },
+      "elite": {
+        "name": "Elite",
+        "price": "Индивидуально",
+        "description": "Полная оптимизация здоровья",
+        "features": [
+          "VIP‑обследование",
+          "Платиновый клеточный протокол (4+ сессии)",
+          "Приоритетный доступ к специалистам",
+          "White‑glove concierge‑сервис",
+          "Премиальное размещение включено",
+          "Сопровождение 6 месяцев",
+          "Глубокая оптимизация самочувствия"
+        ],
+        "note": "От ¥3,000,000"
+      }
+    },
+    "disclaimer": "Окончательная стоимость определяется на консультации и зависит от индивидуального плана"
+  },
+  "patientJourney": {
+    "badge": "Ваш путь лечения",
+    "heading": "Процесс для международных пациентов",
+    "subheading": "Пошаговый маршрут — от первого обращения до последующего сопровождения",
+    "steps": {
+      "step1": {
+        "title": "Контакт и оценка документов",
+        "description": "Отправьте обращение и имеющиеся обследования для предварительной оценки показаний"
+      },
+      "step2": {
+        "title": "Дистанционная консультация",
+        "description": "Обсуждаем симптомы, цели и варианты терапии, подтверждаем целесообразность лечения"
+      },
+      "step3": {
+        "title": "Организация поездки",
+        "description": "Помогаем с визовым письмом (при необходимости), отелями и трансферами"
+      },
+      "step4": {
+        "title": "Очная диагностика",
+        "description": "После прибытия — комплексное обследование и финализация плана лечения"
+      },
+      "step5": {
+        "title": "День процедуры",
+        "description": "Проведение запланированного вмешательства (PRP или клеточная терапия) с подробными инструкциями"
+      },
+      "step6": {
+        "title": "Восстановление и сопровождение",
+        "description": "Рекомендации по уходу и телемедицинские консультации после возвращения домой"
+      }
+    },
+    "compliance": "Все процедуры соответствуют законам и этическим стандартам Японии. Ваша безопасность и благополучие — наш безусловный приоритет.",
+    "journeyComplete": "Путь завершён",
+    "journeyDescription": "От первого контакта до полного восстановления — мы сопровождаем вас на каждом этапе.",
+    "location": "Azabudai Hills — ведущий медицинский кластер Токио",
+    "ctaStart": "Начать путь",
+    "ctaPricing": "Смотреть цены",
+    "viewDetails": "Подробнее о лечении"
+  },
+  "testimonials": {
+    "badge": "Истории пациентов",
+    "heading": "Опыт международных пациентов",
+    "subheading": "Реальные результаты пациентов, посетивших Токио для регенеративного лечения",
+    "reviews": {
+      "review1": {
+        "name": "International Patient",
+        "location": "Singapore",
+        "treatment": "PRP‑терапия при остеоартрите колена",
+        "rating": 5,
+        "quote": "После многих лет хронической боли PRP в Rakan Clinic заметно улучшила подвижность. Сочетание с акупунктурой оказалось особенно эффективным.",
+        "result": "Существенное уменьшение боли и рост подвижности"
+      },
+      "review2": {
+        "name": "International Patient",
+        "location": "United States",
+        "treatment": "Терапия адипозными клетками",
+        "rating": 5,
+        "quote": "Всё прошло профессионально и с полной поддержкой: помощь в поездке, понятные объяснения и телемедицинское сопровождение после возвращения.",
+        "result": "Безоперационное решение, превзошедшее ожидания"
+      },
+      "review3": {
+        "name": "International Patient",
+        "location": "Australia",
+        "treatment": "Лечение спортивной травмы плеча",
+        "rating": 5,
+        "quote": "Строгие японские стандарты внушают доверие. Сочетание западной ортопедии и восточной медицины в Rakan Clinic дало комплексный результат.",
+        "result": "Возврат к спорту без операции"
+      }
     }
   },
   "services": {
-    "heading": "Why Choose Rakan Clinic?",
-    "subheading": "We provide comprehensive medical tourism services designed to make your healthcare journey seamless.",
+    "heading": "Почему выбирают Rakan Clinic Tokyo?",
+    "subheading": "Доказательная регенеративная помощь при болях в суставах — безопасно, этично и с полной поддержкой иностранных пациентов.",
     "features": {
       "experts": {
-        "title": "Expert Medical Team",
-        "description": "Board-certified physicians with international training and decades of experience."
+        "title": "35+ лет экспертизы",
+        "description": "Сертифицированные JOA специалисты с большим опытом регенеративного и интегративного лечения."
       },
       "standards": {
-        "title": "Global Standards",
-        "description": "State-of-the-art facilities meeting international healthcare accreditation standards."
+        "title": "Японские медицинские стандарты",
+        "description": "Все процедуры соответствуют законам и этическим правилам Японии с прозрачным информированием."
       },
       "support": {
-        "title": "Full Support",
-        "description": "Complete assistance from consultation through treatment and recovery."
+        "title": "International Concierge",
+        "description": "Поддержка на английском языке, помощь с поездкой и отелями, телемедицинское сопровождение."
       }
     }
   },
   "about": {
-    "heading": "About Rakan Clinic",
-    "paragraph1": "Rakan Clinic is a leading destination for medical tourism, offering world-class healthcare services to patients from around the globe. Our mission is to provide accessible, affordable, and exceptional medical care in a comfortable and welcoming environment.",
-    "paragraph2": "With years of experience serving international patients, we understand the unique needs of medical tourists and have developed comprehensive programs to ensure your satisfaction.",
+    "badge": "О нас",
+    "heading": "О Rakan Clinic Tokyo",
+    "description": "Передовая ортопедическая и регенеративная помощь в центре Токио — Azabudai Hills.",
+    "facility": {
+      "title": "Наши помещения",
+      "clinicName": "Rakan Clinic Tokyo Azabudai",
+      "features": [
+        "Современная инфраструктура регенеративной медицины со стерильными лабораториями",
+        "Приватные кабинеты для консультаций и конфиденциальности VIP‑пациентов",
+        "Премиальная локация в самом престижном международном районе Токио"
+      ],
+      "learnMore": "Подробнее о наших помещениях"
+    },
     "stats": {
       "experience": {
-        "number": "15+",
-        "label": "Years Experience"
+        "label": "Лет опыта"
       },
-      "specialists": {
-        "number": "50+",
-        "label": "Specialists"
-      },
-      "patients": {
-        "number": "10K+",
-        "label": "Patients Served"
+      "standards": {
+        "label": "Японские стандарты"
       }
+    },
+    "trustStatement": "Нам доверяют руководители, олимпийские спортсмены и лидеры по всему миру. Более 35 лет сертифицированной JOA экспертизы делают нас выбором №1 для регенеративной медицины.",
+    "trustedBy": {
+      "title": "Нам доверяют олимпийцы, международные руководители и лидеры"
     }
   },
   "contact": {
-    "heading": "Get in Touch",
-    "subheading": "Ready to start your health journey? Contact us today for a free consultation.",
+    "badge": "Связаться",
+    "heading": "Связаться с нами",
+    "subheading": "Готовы начать путь к здоровью? Напишите нам для бесплатной консультации.",
+    "infoTitle": "Contact\nInformation",
     "form": {
+      "title": "Запросить консультацию",
       "firstName": {
-        "label": "First Name",
+        "label": "Имя",
         "placeholder": "John"
       },
       "lastName": {
-        "label": "Last Name",
+        "label": "Фамилия",
         "placeholder": "Doe"
       },
       "email": {
@@ -78,50 +427,292 @@
         "placeholder": "john@example.com"
       },
       "phone": {
-        "label": "Phone",
-        "placeholder": "+1 (555) 123-4567"
+        "label": "Телефон",
+        "placeholder": "+1 (555) 123-4567",
+        "placeholderNumber": "Номер телефона"
       },
       "message": {
-        "label": "Message",
-        "placeholder": "Tell us about your medical needs..."
+        "label": "Сообщение",
+        "placeholder": "Расскажите о вашей ситуации..."
       },
-      "submit": "Send Message"
+      "submit": "Отправить",
+      "sending": "Отправка...",
+      "thankYou": "Спасибо!",
+      "thankYouMessage": "Мы получили ваш запрос. В течение 24–48 часов наша команда свяжется с вами для обсуждения вариантов лечения.",
+      "submitAnother": "Отправить ещё один запрос"
     }
+  },
+  "safetyNotice": {
+    "heading": "Безопасность и соответствие",
+    "points": {
+      "evidence": "Доказательная медицина и прозрачное информирование",
+      "certification": "Сертифицированные ортопеды и лицензированные специалисты",
+      "sterility": "Стерильные протоколы и надёжные партнёрские лаборатории",
+      "consent": "Информированное согласие и реалистичные ожидания",
+      "followup": "Продолжительное сопровождение иностранных пациентов"
+    },
+    "disclaimer": "Все процедуры выполняются согласно законам и этическим нормам Японии. Показания и результат зависят от индивидуальных факторов. Обратитесь к нашим врачам за персональными рекомендациями."
   },
   "footer": {
     "brand": {
-      "name": "Rakan Clinic",
-      "tagline": "Excellence in medical tourism and patient care."
+      "name": "Rakan Clinic Tokyo",
+      "tagline": "Ортопедия и регенеративная медицина — Azabudai Hills"
     },
     "services": {
-      "title": "Services",
-      "consultations": "Medical Consultations",
-      "procedures": "Surgical Procedures",
-      "wellness": "Wellness Programs",
-      "travel": "Travel Assistance"
+      "title": "Услуги",
+      "consultations": "Медицинские консультации",
+      "procedures": "Хирургические процедуры",
+      "wellness": "Программы здоровья",
+      "travel": "Помощь в поездке"
     },
     "company": {
-      "title": "Company",
-      "about": "About Us",
-      "team": "Our Team",
-      "testimonials": "Testimonials",
-      "contact": "Contact"
+      "title": "Компания",
+      "about": "О нас",
+      "team": "Команда",
+      "testimonials": "Отзывы",
+      "contact": "Контакты"
     },
-    "contactInfo": {
-      "title": "Contact",
-      "address": "Azabudai Hills Tower Plaza 4F\n1-3-1 Azabudai, Minato-ku\nTokyo 106-0041, Japan\n\n〒106-0041\n東京都港区麻布台1-3-1\n麻布台ヒルズ タワープラザ4F",
-      "access": "Всего 20 минут на машине от станции Токио",
-      "phone": "+81-3-6277-6112",
-      "support": "24/7 Support Available"
-    },
-    "copyright": "© 2025 Rakan Clinic. All rights reserved."
+    "copyright": "© 2025 Rakan Clinic. Все права защищены."
+  },
+  "contactInfo": {
+    "address": "Azabudai Hills Tower Plaza 4F\n1-3-1 Azabudai, Minato-ku\nTokyo 106-0041, Japan\n\n〒106-0041\n東京都港区麻布台1-3-1\n麻布台ヒルズ タワープラザ4F",
+    "access": "Всего ~20 минут на автомобиле от аэропорта Haneda"
   },
   "contactSection": {
     "phone": "Телефон",
-    "email": "Электронная почта",
+    "email": "Email",
     "emailNote": "Для иностранных пациентов",
     "location": "Адрес",
     "access": "Как добраться"
+  },
+  "faq": {
+    "badge": "Часто задаваемые вопросы",
+    "heading": "Популярные вопросы о наших услугах",
+    "description": "Ответы на частые вопросы о регенеративном лечении, сервисе для иностранных пациентов и работе клиники.",
+    "items": {
+      "question1": "Какие виды регенеративного лечения вы предлагаете?",
+      "answer1": "We offer Platelet-Rich Plasma (PRP) therapy and autologous adipose-derived stem cell therapy. These evidence-based treatments harness your body's natural healing capabilities to address joint pain, sports injuries, and chronic musculoskeletal conditions without surgery. All treatments are performed by JOA-certified orthopedic specialists and adhere to Japanese medical laws and ethical standards.",
+      "question2": "Подхожу ли я для регенеративной терапии?",
+      "answer2": "Eligibility is determined on a case-by-case basis following a thorough medical evaluation by our physicians. We review your medical history, imaging studies, and current symptoms during a remote consultation. Common candidates include those with knee osteoarthritis, sports injuries, shoulder and hip pain, and spine conditions. We provide preliminary suitability screening before you travel to Tokyo.",
+      "question3": "Какова стоимость и что входит?",
+      "answer3": "Our treatment packages range from $25,000~ for a single session to $200,000~ for an annual care program. Single sessions include consultation, treatment, and 1-month follow-up. Three-session packages include personalized treatment plans and 3-month follow-up. Annual programs include unlimited treatments and dedicated concierge service. All prices are estimates and final costs depend on individual treatment requirements.",
+      "question4": "Сколько длится процесс лечения?",
+      "answer4": "The complete process typically takes 3-5 days in Tokyo. Day 1: Initial consultation and evaluation. Day 2: Treatment day (PRP or stem cell therapy). Days 3-5: Recovery and follow-up instructions. We provide detailed pre- and post-procedure instructions, and arrange telemedicine follow-ups once you return home. Travel planning support is included for international patients.",
+      "question5": "Это безопасно? Какие риски?",
+      "answer5": "Yes, our treatments are very safe when performed by qualified specialists. All procedures are performed by JOA-certified orthopedic surgeons in our state-of-the-art facility. We use your own cells (autologous), eliminating rejection risks. Potential side effects are minimal and typically include mild discomfort, swelling, or bruising at the injection site. We provide comprehensive pre-treatment screening to ensure safety.",
+      "question6": "Помогаете ли вы иностранным пациентам?",
+      "answer6": "Yes, we offer comprehensive international patient services including visa letters (if needed), hotel recommendations, airport transfers, and multilingual support. Our English-speaking coordinators ensure smooth communication throughout your stay. We provide travel planning assistance and can arrange accommodations in Tokyo's premium Azabudai Hills district, just 20 minutes from Haneda Airport.",
+      "question7": "Чем Rakan Clinic отличается от других?",
+      "answer7": "We combine 35+ years of JOA-certified orthopedic expertise with cutting-edge regenerative medicine research. Our team includes University of Tokyo professors and leading researchers in osteoimmunology. We offer state-of-the-art in-house laboratory facilities, private consultation rooms for VIP patients, and a unique blend of Western orthopedics with Eastern medicine approaches. Our Azabudai Hills location provides premium, discreet care for elite clientele.",
+      "question8": "Когда будут заметны результаты?",
+      "answer8": "Results vary by individual and condition, but many patients report initial improvements within 2-4 weeks. Full benefits typically develop over 3-6 months as the regenerative process continues. We provide detailed recovery timelines and regular follow-up care to monitor progress. Our telemedicine follow-up system ensures continued support after you return home, with progress tracking and adjustment recommendations as needed."
+    }
+  },
+  "treatmentsPage": {
+    "badge": "Стоимость процедур",
+    "heading": "Регенеративная медицина и IV‑терапия",
+    "description": "Подробные цены на PRP, экзосомы, NMN, NAD⁺ и профилактическую диагностику",
+    "sections": {
+      "stemCell": {
+        "title": "Клеточная терапия"
+      },
+      "prp": {
+        "title": "PRP‑терапия"
+      },
+      "exosome": {
+        "title": "Экзосомная терапия"
+      },
+      "nmn": {
+        "title": "NMN IV‑терапия"
+      },
+      "nad": {
+        "title": "NAD⁺ IV‑терапия"
+      },
+      "testing": {
+        "title": "Диагностика и профилактика"
+      }
+    },
+    "table": {
+      "treatment": "Процедура",
+      "test": "Тест",
+      "jpy": "JPY",
+      "usd": "USD",
+      "description": "Описание"
+    },
+    "treatments": {
+      "stemCellSingle": {
+        "name": "Клеточная терапия — одна сессия",
+        "description": "Каждый раз — забор жировой ткани и культивирование клеток. Без криосохранения и мониторинга анализов. Разовая процедура со свежей культурой."
+      },
+      "stemCellThree": {
+        "name": "3 сессии в год",
+        "description": "Забор и заморозка клеток на первой сессии. Использование для трёх процедур в течение года. Хранение и анализы включены. Популярный вариант."
+      },
+      "stemCellSix": {
+        "name": "6 сессий за 2 года",
+        "description": "Забор и заморозка клеток на первой сессии. Использование до 6 процедур за 2 года. Хранение и анализы включены. Выгодное предложение."
+      },
+      "superRichPRP": {
+        "name": "Super Rich PRP",
+        "description": "Высокая концентрация факторов роста тромбоцитов для ускорения регенерации суставов, снижения воспаления и улучшения долгосрочной функции. Индивидуальная настройка концентрации."
+      },
+      "exosome": {
+        "name": "Инфузия экзосом (UC/DP/BM)",
+        "description": "Регенеративные «посланники», способствующие восстановлению тканей, иммуномодуляции и противовоспалительному эффекту. Для лучших результатов рекомендованы несколько флаконов."
+      },
+      "nmn150": {
+        "name": "NMN капельно 150 мг",
+        "description": "NMN превращается в NAD⁺, повышая энергетику митохондрий, обмен и выносливость."
+      },
+      "nmn300": {
+        "name": "NMN капельно 300 мг",
+        "description": "Повышенная доза для более выраженного антивозрастного эффекта."
+      },
+      "nmn450": {
+        "name": "NMN капельно 450 мг",
+        "description": "Мощная регенеративная поддержка — для максимальной работоспособности."
+      },
+      "nmnSupplement": {
+        "name": "NMN (перорально) — Made in Japan",
+        "description": "Производится в Японии. Поддержка синтеза NAD⁺ для энергии, метаболизма и анти‑эйдж эффекта."
+      },
+      "nad50": {
+        "name": "NAD⁺ капельно 50 мг",
+        "description": "Поддержка когнитивной функции и быстрое восстановление после усталости."
+      },
+      "nad100": {
+        "name": "NAD⁺ капельно 100 мг",
+        "description": "Устойчивость к стрессу и концентрация внимания."
+      },
+      "nad200": {
+        "name": "NAD⁺ капельно 200 мг",
+        "description": "Выраженное улучшение когнитивных и метаболических функций."
+      },
+      "nad300": {
+        "name": "NAD⁺ капельно 300 мг",
+        "description": "Максимальная мощность для высоких нагрузок."
+      },
+      "nadTest": {
+        "name": "Тест NAD⁺",
+        "description": "Оценка клеточного старения через уровень NAD⁺."
+      },
+      "telomereTest": {
+        "name": "Тест теломер",
+        "description": "Генетический маркёр для оценки биологического возраста."
+      },
+      "vitaminTest": {
+        "name": "Анализ витаминов и минералов",
+        "description": "Определение дефицитов и метаболического баланса."
+      },
+      "gutTest": {
+        "name": "Анализ микробиоты кишечника",
+        "description": "Оценка микрофлоры для оптимизации иммунитета и пищеварения."
+      },
+      "ageTest": {
+        "name": "Тест AGEs",
+        "description": "Измерение конечных продуктов гликирования, связанных со старением кожи и сосудов."
+      }
+    },
+    "cta": {
+      "title": "Готовы начать лечение?",
+      "description": "Свяжитесь с нами для персональной консультации и подбора оптимальных вариантов.",
+      "bookConsultation": "Записаться на консультацию",
+      "contactUs": "Связаться"
+    }
+  },
+  "facilities": {
+    "badge": "Наши помещения",
+    "heading": "Cell Processing Center (CPC)",
+    "description": "Собственный CPC обеспечивает максимальную свежесть клеток, безопасность и эффективность благодаря стерильной обработке фармацевтического уровня.",
+    "introduction": {
+      "badge": "Введение",
+      "title": "Введение",
+      "paragraph1": "Для максимальной эффективности клеточной терапии мы создали собственный Cell Processing Center (CPC).",
+      "paragraph2": "Наша цель — доставлять пациентам максимально свежие и качественные клетки в наилучших условиях."
+    },
+    "cpc": {
+      "badge": "Что такое CPC?",
+      "title": "Что такое CPC?",
+      "description": "CPC — специализированное помещение для обработки и культивирования клеток, используемых в регенеративной медицине, с обеспечением стерильности и чистоты.",
+      "features": [
+        "Стандарты, сопоставимые с фармпроизводством",
+        "Чистые помещения с высоким классом стерильности",
+        "Круглосуточный контроль качества специалистами по культивированию"
+      ]
+    },
+    "quality": {
+      "badge": "Качество клеток",
+      "title": "Преимущества качества",
+      "description": "Наши аутологичные (жировые) клетки сохраняют выживаемость >95%. Под микроскопом — здоровые, однородные, веретенообразные — ключевой признак хорошего состояния.",
+      "features": [
+        "Однородная морфология",
+        "Сохранение пролиферации и потенциала дифференцировки",
+        "Доставка в максимально свежем состоянии",
+        "Вклад в стабильность и безопасность клинического эффекта"
+      ]
+    },
+    "equipment": {
+      "badge": "Оборудование",
+      "title": "Современное оборудование для защиты клеток",
+      "safetyCabinet": {
+        "title": "Биологический бокс",
+        "description": "Устройство для асептических манипуляций: защищает клетки и образцы, а также персонал и окружающую среду. HEPA‑фильтры и UV‑стерилизация."
+      },
+      "co2Incubator": {
+        "title": "CO2‑инкубатор",
+        "description": "Поддерживает температуру, влажность и CO2, необходимые для стабильного культивирования."
+      },
+      "microscope": {
+        "title": "Инвертированный микроскоп",
+        "description": "Наблюдение живых клеток прямо в культуральных сосудах: постоянный контроль морфологии и роста."
+      },
+      "passBox": {
+        "title": "Pass Box",
+        "description": "Система передачи между чистыми зонами и внешней средой с блокировкой одновременного открытия дверей."
+      },
+      "centrifuge": {
+        "title": "Центрифуга",
+        "description": "Ключевой инструмент для разделения и обработки: точность и жизнеспособность клеток."
+      }
+    },
+    "management": {
+      "badge": "Качество и безопасность",
+      "title": "Управление качеством и безопасность",
+      "items": [
+        {
+          "title": "Высокая выживаемость клеток (≥95%)",
+          "description": "Культивирование начинается сразу после забора, чтобы минимизировать повреждение."
+        },
+        {
+          "title": "Долговременное хранение в жидком азоте (−196°C)",
+          "description": "Сохранность с возможностью введения в оптимальные сроки."
+        },
+        {
+          "title": "Введение в максимально свежем состоянии",
+          "description": "После культивирования клетки оперативно вводятся для наилучшего эффекта."
+        },
+        {
+          "title": "Ограничение пассажей (до 4)",
+          "description": "Предотвращает старение и риски избыточных делений, обеспечивая безопасность."
+        },
+        {
+          "title": "Постоянное присутствие специалистов по культивированию",
+          "description": "Эксперты CPC круглосуточно контролируют процесс, сохраняя качество."
+        }
+      ]
+    },
+    "conclusion": {
+      "badge": "Итоги",
+      "title": "Итоги",
+      "paragraph1": "Мы полностью привержены качеству и безопасности клеточной терапии. Собственный CPC, современное оборудование и опытная команда — наш стандарт.",
+      "paragraph2": "Это основа, которая позволяет пациентам проходить лечение спокойно и уверенно. Мы продолжим поддерживать самый высокий уровень."
+    },
+    "cta": {
+      "title": "Медицинская помощь мирового уровня",
+      "description": "Готовы начать? Свяжитесь с нами, чтобы записаться на консультацию и осмотр наших помещений.",
+      "contact": "Связаться",
+      "book": "Записаться"
+    }
   }
 }
 
