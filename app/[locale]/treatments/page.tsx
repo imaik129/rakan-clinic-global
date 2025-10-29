@@ -80,6 +80,13 @@ export default async function TreatmentsPage({
                             </tbody>
                         </table>
                     </div>
+
+                    {/* Disclaimer */}
+                    <div className="mt-6 p-4 bg-gray-50 rounded-md border border-gray-200">
+                        <p className="text-xs text-gray-600 italic">
+                            *Includes consultation, treatment coordination, and comprehensive patient care services
+                        </p>
+                    </div>
                 </div>
             </section>
 
