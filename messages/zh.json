@@ -139,8 +139,8 @@
     "disclaimer": "所有治疗均遵循日本医疗法律和道德标准。安全和知情同意是我们护理的基石。"
   },
   "doctors": {
-    "badge": "我们的医疗团队",
-    "heading": "认识我们的团队",
+    "badge": "",
+    "heading": "我们的医疗团队",
     "subheading": "世界知名的骨科、再生医学和骨免疫学专家",
     "intro": {
       "title": "世界级医疗团队",
@@ -186,7 +186,7 @@
     }
   },
   "pricing": {
-    "badge": "治疗套餐",
+    "badge": "",
     "heading": "干细胞治疗套餐",
     "subheading": "选择最适合您需求的治疗套餐。所有套餐包括全面护理和后续支持。",
     "packages": {
@@ -313,8 +313,8 @@
     }
   },
   "about": {
-    "badge": "关于我们",
-    "heading": "关于Rakan诊所",
+    "badge": "",
+    "heading": "关于我们Rakan诊所",
     "description": "在东京市中心麻布台山提供的先进骨科和再生护理。",
     "facility": {
       "title": "我们的设施",
@@ -370,10 +370,10 @@
       }
     },
     "compliance": "所有治疗均遵循日本医疗法律和道德标准。在整个治疗过程中，您的安全和福祉是我们的首要任务。",
-    "journeyComplete": "旅程完成",
+    "journeyComplete": "",
     "journeyDescription": "从初次联系到完全恢复，我们通过个性化护理和支持指导您完成再生医学之旅的每一步。",
     "location": "麻布台山 - 东京首屈一指的医疗区",
-    "ctaStart": "开始您的旅程",
+    "ctaStart": "开始您的医療",
     "ctaPricing": "查看价格",
     "viewDetails": "查看治疗详情"
   },
@@ -452,8 +452,8 @@
     "access": "从羽田机场驾车约20分钟"
   },
   "whyTokyo": {
-    "badge": "为什么选择我们",
-    "heading": "为什么选择Rakan Clinic Tokyo？",
+    "badge": "",
+    "heading": "为什么选择我们 Rakan Clinic Tokyo？",
     "intro": "在麻布台山提供世界一流的再生骨科护理——结合35年以上的专业知识、日本最严格的医疗标准、诺贝尔奖研究成果以及对国际患者的全面支持。",
     "features": {
       "expertise": {
