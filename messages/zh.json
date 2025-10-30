@@ -339,6 +339,31 @@
       "title": "受到奥运运动员、全球高管和政治领导人的信赖"
     }
   },
+  "partners": {
+    "badge": "合作伙伴",
+    "heading": "合作伙伴与支持",
+    "description": "与领先机构和合作伙伴合作，推进再生医学发展",
+    "university": {
+      "name": "东京大学",
+      "department": "骨免疫学系",
+      "description": "通过与东京大学医学研究生院免疫学系的合作研究以及对骨免疫学捐赠基金的支持，我们正在推进前沿医学发展。",
+      "learnMore": "了解更多"
+    },
+    "hariup": {
+      "name": "HARI-UP",
+      "description": "通过与HARI-UP的合作，擅长临床实践和技术的临床针灸专家，我们追求融合东方和西方医学的创新治疗。"
+    },
+    "januTokyo": {
+      "name": "Janu Tokyo",
+      "location": "距离我院2分钟步行路程",
+      "description": "Rakan Clinic Tokyo Azabudai与Janu Tokyo合作，Janu Tokyo是位于同一麻布台山综合体的豪华酒店。我们提供新的健康体验，将专注于住宿期间舒适的高质量款待与尖端再生医学相结合。"
+    },
+    "lychee": {
+      "name": "荔枝诊所麻布台",
+      "location": "距离我院2分钟步行路程，对面是麻布台山",
+      "description": "荔枝诊所麻布台是同一医疗公司经营的合作伙伴诊所。我们从美学医学和再生医学的角度提供先进和安全的治疗，包括脂肪衍生干细胞治疗、美容静脉注射和皮肤再生医学。我们与Rakan Clinic合作，为每个个体提供全面的护理。"
+    }
+  },
   "patientJourney": {
     "badge": "您的治疗之旅",
     "heading": "国际患者流程",
@@ -354,7 +379,7 @@
       },
       "step3": {
         "title": "旅行规划支持",
-        "description": "如果您符合条件，我们提供签证信（如需要）、酒店推荐以及机场/诊所接送服务"
+        "description": "如需要，我们可以协助办理签证信、机场/诊所接送服务，并推荐酒店选择，如Janu Tokyo。"
       },
       "step4": {
         "title": "诊所评估",

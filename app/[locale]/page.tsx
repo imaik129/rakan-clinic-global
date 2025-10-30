@@ -13,7 +13,8 @@ import {
   WhyTokyoSection,
   ClientExperienceSection,
   PatientJourneySection,
-  FAQSection
+  FAQSection,
+  PartnersSection
 } from './page-sections';
 
 export default async function Home({
@@ -215,6 +216,9 @@ export default async function Home({
           </div>
         </div>
       </section>
+
+      {/* Partners Section */}
+      <PartnersSection />
 
       {/* 6. Why Choose Rakan Clinic Tokyo */}
       <WhyTokyoSection />

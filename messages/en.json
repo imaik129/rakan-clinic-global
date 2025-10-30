@@ -308,7 +308,7 @@
       },
       "step3": {
         "title": "Travel Planning Support",
-        "description": "If you're a candidate, we provide visa letters (if needed), hotel recommendations, and airport/clinic transfers"
+        "description": "If needed, we can assist with visa letters, airport/clinic transfers, and recommend hotel options such as Janu Tokyo."
       },
       "step4": {
         "title": "In-Clinic Evaluation",
@@ -405,6 +405,31 @@
     "trustStatement": "Trusted by global executives, Olympic athletes, and political leaders worldwide. Our 35+ years of JOA-certified expertise has made us the premier destination for regenerative medicine, serving elite clientele who demand the highest standards of care and discretion.",
     "trustedBy": {
       "title": "Trusted by Olympic Athletes, Global Executives, and Political Leaders"
+    }
+  },
+  "partners": {
+    "badge": "Partnerships",
+    "heading": "Partnerships & Support",
+    "description": "Collaborating with leading institutions and partners to advance regenerative medicine",
+    "university": {
+      "name": "University of Tokyo",
+      "department": "Department of Bone Immunology",
+      "description": "Through collaborative research with the University of Tokyo Graduate School of Medicine's Department of Immunology and support for the Bone Immunology endowed chair, we are advancing cutting-edge medical development.",
+      "learnMore": "Learn More"
+    },
+    "hariup": {
+      "name": "HARI-UP",
+      "description": "Through our partnership with HARI-UP, clinical acupuncture specialists who master both clinical practice and technique, we pursue innovative treatments that fuse Eastern and Western medicine."
+    },
+    "januTokyo": {
+      "name": "Janu Tokyo",
+      "location": "2-minute walk from our clinic",
+      "description": "Rakan Clinic Tokyo Azabudai partners with Janu Tokyo, a luxury hotel located within the same Azabudai Hills complex. We deliver a new wellness experience that combines quality hospitality focused on comfort during your stay with cutting-edge regenerative medicine."
+    },
+    "lychee": {
+      "name": "Lychee Clinic Azabudai",
+      "location": "2-minute walk from our clinic, across from Azabudai Hills",
+      "description": "Lychee Clinic Azabudai is a partner clinic operated by the same medical corporation. We provide advanced and safe treatments from both aesthetic medicine and regenerative medicine perspectives, including adipose-derived stem cell therapy, beauty IV drips, and skin regenerative medicine. We collaborate with Rakan Clinic to provide total care tailored to each individual."
     }
   },
   "contact": {

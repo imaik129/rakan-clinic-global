@@ -1,7 +1,7 @@
 // Reusable section components for the homepage
 'use client';
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useTranslations } from 'next-intl';
 import DoctorsMobile from '../../components/DoctorsMobile';
 import DoctorsDesktop from '../../components/DoctorsDesktop';
@@ -205,8 +205,8 @@ function DoctorCard({ doctor, doctorImage }: { doctor: string; doctorImage: stri
                 {/* Credentials */}
                 <div>
                     <p className="text-[0.7rem] text-gray-500 leading-snug">
-                            {t(`doctors.team.${doctor}.credentials`)}
-                        </p>
+                        {t(`doctors.team.${doctor}.credentials`)}
+                    </p>
                 </div>
 
                 {/* Expandable Bio */}
@@ -320,7 +320,7 @@ function WhyTokyoCard({ featureKey, index }: { featureKey: string; index: number
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                 </button>
-                </div>
+            </div>
             <div
                 className={`text-[0.95rem] text-[#555555] leading-[1.7] font-light overflow-hidden transition-all duration-300 ${isExpanded ? 'max-h-[500px]' : 'max-h-[60px] md:max-h-none'
                     }`}
@@ -383,8 +383,8 @@ export function ClientExperienceSection() {
                             <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                         </svg>
                     ))}
-                    </div>
                 </div>
+            </div>
 
             {/* Auto-scrolling Slider - Full Width */}
             <div className="w-full">
@@ -496,35 +496,35 @@ export function PatientJourneySection() {
     const stepIcons = [
         (
             <svg key="1" className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
         ),
         (
             <svg key="2" className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                </svg>
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+            </svg>
         ),
         (
             <svg key="3" className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
         ),
         (
             <svg key="4" className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                </svg>
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+            </svg>
         ),
         (
             <svg key="5" className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                        </svg>
-                    ),
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+            </svg>
+        ),
         (
             <svg key="6" className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                </svg>
-            )
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+            </svg>
+        )
     ];
 
     const steps = ['step1', 'step2', 'step3', 'step4', 'step5', 'step6'];
@@ -919,6 +919,193 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
                 </div>
             </div>
         </div>
+    );
+}
+
+export function PartnersSection() {
+    const t = useTranslations();
+    const scrollRef = useRef<HTMLDivElement>(null);
+    const [isPaused, setIsPaused] = useState(false);
+    const [expandedCards, setExpandedCards] = useState<Set<string>>(new Set());
+
+    const toggleCard = (cardKey: string) => {
+        setExpandedCards(prev => {
+            const newSet = new Set(prev);
+            if (newSet.has(cardKey)) {
+                newSet.delete(cardKey);
+            } else {
+                newSet.add(cardKey);
+            }
+            return newSet;
+        });
+    };
+
+    const partners = [
+        {
+            key: 'university',
+            logo: '/images/partners/tokyouni.svg',
+            hasLearnMore: true
+        },
+        {
+            key: 'hariup',
+            logo: '/images/partners/hariup.svg',
+            hasLearnMore: false
+        },
+        {
+            key: 'januTokyo',
+            logo: null,
+            hasLearnMore: false
+        },
+        {
+            key: 'lychee',
+            logo: '/images/partners/lychee.svg',
+            hasLearnMore: false
+        }
+    ];
+
+    useEffect(() => {
+        if (!scrollRef.current) return;
+
+        const scrollContainer = scrollRef.current;
+        const scrollSpeed = 0.5; // pixels per frame
+        let animationId: number;
+
+        const animate = () => {
+            if (!isPaused) {
+                scrollContainer.scrollLeft += scrollSpeed;
+
+                // Reset scroll position when we've scrolled through one complete set
+                const maxScroll = scrollContainer.scrollWidth / 3; // Since we have 3 sets
+                if (scrollContainer.scrollLeft >= maxScroll) {
+                    scrollContainer.scrollLeft = 0;
+                }
+            }
+            animationId = requestAnimationFrame(animate);
+        };
+
+        animationId = requestAnimationFrame(animate);
+
+        return () => {
+            if (animationId) {
+                cancelAnimationFrame(animationId);
+            }
+        };
+    }, [isPaused]);
+
+    return (
+        <section className="px-[5%] py-[2rem] bg-white">
+            <div className="max-w-[1400px] mx-auto">
+                {/* Header */}
+                <div className="text-center max-w-[600px] mx-auto mb-[2rem]">
+                    <div className="inline-block px-3 py-1 text-[0.6rem] tracking-[2px] uppercase text-[#4a9b7f] font-bold bg-[#4a9b7f]/10 rounded-full mb-3">
+                        Partnerships & Support
+                    </div>
+                    <h2 className="font-['Cormorant_Garamond'] text-[clamp(1.5rem,3vw,2.2rem)] mb-3 leading-[1.15] font-bold text-gray-900">
+                        {t('partners.heading')}
+                    </h2>
+                    <p className="text-[0.9rem] text-gray-600 leading-[1.6] font-light">
+                        {t('partners.description')}
+                    </p>
+                </div>
+
+                {/* Infinite Horizontal Scroll */}
+                <div className="relative overflow-hidden">
+                    {/* Gradient Fades */}
+                    <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-white via-white/80 to-transparent z-10 pointer-events-none"></div>
+                    <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-white via-white/80 to-transparent z-10 pointer-events-none"></div>
+
+                    {/* Scrollable Container */}
+                    <div
+                        ref={scrollRef}
+                        className="flex gap-6 overflow-x-auto scrollbar-hide pb-4"
+                        style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+                        onMouseEnter={() => setIsPaused(true)}
+                        onMouseLeave={() => setIsPaused(false)}
+                    >
+                        {/* Duplicate partners for infinite effect */}
+                        {[...partners, ...partners, ...partners].map((partner, index) => {
+                            const cardKey = `${partner.key}-${index}`;
+                            const isExpanded = expandedCards.has(cardKey);
+
+                            return (
+                                <div key={cardKey} className="flex-shrink-0 w-[280px]">
+                                    <div className="bg-white border border-gray-200 rounded-lg p-4 hover:border-[#4a9b7f]/30 transition-all duration-300 h-full relative">
+                                        {/* Watermark Logo */}
+                                        <div className="absolute top-2 right-2 opacity-30 pointer-events-none">
+                                            {partner.logo ? (
+                                                <Image
+                                                    src={partner.logo}
+                                                    alt={`${t(`partners.${partner.key}.name`)} Logo`}
+                                                    width={60}
+                                                    height={60}
+                                                    className="object-contain"
+                                                />
+                                            ) : partner.key === 'lychee' ? (
+                                                <span className="text-[#4a9b7f] font-bold text-4xl">LC</span>
+                                            ) : null}
+                                        </div>
+
+                                        {/* Header with Title */}
+                                        <div className="relative z-10 mb-3">
+                                            <h3 className="font-['Cormorant_Garamond'] text-[1.2rem] font-semibold text-gray-900">
+                                                {t(`partners.${partner.key}.name`)}
+                                            </h3>
+                                        </div>
+
+                                        {/* Expandable Content */}
+                                        <div className={`overflow-hidden transition-all duration-300 relative z-10 ${isExpanded ? 'max-h-[300px] opacity-100' : 'max-h-0 opacity-0'}`}>
+                                            {/* Department/Location */}
+                                            {t.has(`partners.${partner.key}.department`) && (
+                                                <p className="text-xs text-[#4a9b7f] font-medium mb-2">
+                                                    {t(`partners.${partner.key}.department`)}
+                                                </p>
+                                            )}
+                                            {t.has(`partners.${partner.key}.location`) && (
+                                                <p className="text-xs text-[#4a9b7f] font-medium mb-2">
+                                                    {t(`partners.${partner.key}.location`)}
+                                                </p>
+                                            )}
+
+                                            {/* Description */}
+                                            <p className="text-xs text-gray-700 leading-relaxed mb-3">
+                                                {t(`partners.${partner.key}.description`)}
+                                            </p>
+
+                                            {/* Learn More Button */}
+                                            {partner.hasLearnMore && (
+                                                <button className="text-[#4a9b7f] text-xs font-medium hover:text-[#3d8269] transition-colors duration-300 flex items-center gap-1">
+                                                    {t(`partners.${partner.key}.learnMore`)}
+                                                    <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                                    </svg>
+                                                </button>
+                                            )}
+                                        </div>
+
+                                        {/* Toggle Button */}
+                                        <button
+                                            onClick={() => toggleCard(cardKey)}
+                                            className="w-full mt-2 py-2 text-xs font-medium text-[#4a9b7f] hover:text-[#3d8269] transition-all duration-300 flex items-center justify-center gap-2 relative z-10"
+                                        >
+                                            <span>{isExpanded ? 'Show Less' : 'Learn More'}</span>
+                                            <svg
+                                                className={`w-3 h-3 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}
+                                                fill="none"
+                                                stroke="currentColor"
+                                                viewBox="0 0 24 24"
+                                            >
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </div>
+
+            </div>
+        </section>
     );
 }
 
