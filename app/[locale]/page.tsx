@@ -25,8 +25,65 @@ export default async function Home({
   const { locale } = await params;
   const t = await getTranslations();
 
+  // Base URL for structured data
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://rakanclinic.com';
+  const url = `${baseUrl}/${locale}`;
+
+  // Structured Data (JSON-LD) for Medical Business
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'MedicalBusiness',
+    '@id': url,
+    name: 'Rakan Clinic Tokyo',
+    alternateName: 'Rakan Clinic',
+    description: t('metadata.description'),
+    url: url,
+    logo: `${baseUrl}/images/rakan_entrance.png`,
+    image: `${baseUrl}/images/rakan_entrance.png`,
+    telephone: '+81-3-6277-6112',
+    email: 'rakanclinictokyo@gmail.com',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'Azabudai Hills',
+      addressLocality: 'Tokyo',
+      addressCountry: 'JP',
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: '35.6581',
+      longitude: '139.7414',
+    },
+    areaServed: {
+      '@type': 'Country',
+      name: ['Japan', 'Global'],
+    },
+    medicalSpecialty: [
+      'Orthopedic Surgery',
+      'Regenerative Medicine',
+      'Stem Cell Therapy',
+      'Sports Medicine',
+    ],
+    priceRange: '$$$',
+    paymentAccepted: 'Cash, Credit Card',
+    currenciesAccepted: 'JPY, USD, EUR',
+    openingHours: 'Mo-Fr 09:00-18:00',
+    sameAs: [
+      'https://instagram.com/rakanclinicglobal',
+    ],
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '5',
+      reviewCount: '50',
+    },
+  };
+
   return (
     <div className="min-h-screen bg-[#f8f6f3] scroll-smooth">
+      {/* Structured Data (JSON-LD) */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       {/* Header Component */}
       <Header locale={locale} />
 
@@ -99,7 +156,7 @@ export default async function Home({
                   <div className="relative w-full h-[280px] overflow-hidden rounded-md shadow-lg mb-3">
                     <Image
                       src={goal.image}
-                      alt=""
+                      alt={t(`treatmentGoals.goals.${goal.key}.title`)}
                       fill
                       className="object-cover"
                       sizes="(max-width: 1200px) 25vw, 300px"

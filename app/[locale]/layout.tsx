@@ -25,11 +25,84 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const messages = await getMessages({ locale });
-  const metadata = messages.metadata as { title: string; description: string };
+  const metadata = messages.metadata as { 
+    title: string; 
+    description: string;
+    keywords?: string;
+    ogImage?: string;
+  };
+
+  // Base URL - Update this with your actual domain
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://rakanclinic.com';
+  const url = `${baseUrl}/${locale}`;
+  const ogImage = metadata.ogImage || `${baseUrl}/images/rakan_entrance.png`;
+
+  // Get all locales for hreflang
+  const { locales } = await import('@/i18n');
+  const alternateLanguages: Record<string, string> = {};
+  locales.forEach((loc) => {
+    alternateLanguages[loc] = `${baseUrl}/${loc}`;
+  });
 
   return {
     title: metadata.title,
     description: metadata.description,
+    keywords: metadata.keywords || 'regenerative medicine, stem cell therapy, orthopedic treatment, PRP therapy, Tokyo, Azabudai Hills, medical tourism, joint pain, sports injury',
+    authors: [{ name: 'Rakan Clinic Tokyo' }],
+    creator: 'Rakan Clinic Tokyo',
+    publisher: 'Rakan Clinic Tokyo',
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
+    alternates: {
+      canonical: url,
+      languages: alternateLanguages,
+    },
+    openGraph: {
+      type: 'website',
+      locale: locale === 'ja' ? 'ja_JP' : 
+              locale === 'zh' ? 'zh_CN' : 
+              locale === 'ar' ? 'ar_SA' : 
+              locale === 'es' ? 'es_ES' :
+              locale === 'fr' ? 'fr_FR' :
+              locale === 'de' ? 'de_DE' :
+              locale === 'ru' ? 'ru_RU' :
+              'en_US',
+      url: url,
+      siteName: 'Rakan Clinic Tokyo',
+      title: metadata.title,
+      description: metadata.description,
+      images: [
+        {
+          url: ogImage,
+          width: 1200,
+          height: 630,
+          alt: metadata.title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: metadata.title,
+      description: metadata.description,
+      images: [ogImage],
+      creator: '@rakanclinicglobal',
+      site: '@rakanclinicglobal',
+    },
+    verification: {
+      // Add your verification codes here when available
+      // google: 'your-google-verification-code',
+      // yandex: 'your-yandex-verification-code',
+      // yahoo: 'your-yahoo-verification-code',
+    },
   };
 }
 
@@ -46,11 +119,17 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
       <head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+        <meta name="theme-color" content="#4a9b7f" />
+        <meta name="format-detection" content="telephone=no" />
         <link
           rel="preload"
           href="/images/rakan_entrance.png"
           as="image"
         />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/favicon.ico" />
       </head>
       <body
         className={`${cormorantGaramond.variable} ${montserrat.variable} antialiased`}
