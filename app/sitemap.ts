@@ -1,25 +1,52 @@
 import { MetadataRoute } from 'next';
 import { locales } from '@/i18n';
 
+// Article slugs - must match the ones in articles pages
+const articleSlugs = [
+  'what-is-stem-cell-therapy',
+  'does-stem-cell-therapy-work',
+  'stem-cell-therapy-for-joint-pain',
+  'stem-cell-therapy-vs-surgery',
+  'stem-cell-therapy-recovery-time',
+  'stem-cell-therapy-cost',
+];
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://rakanclinic.com';
 
   // Generate sitemap entries for all locales
-  const routes = ['', '/treatments', '/facilities'];
+  const routes = ['', '/treatments', '/facilities', '/articles'];
   
   const sitemapEntries: MetadataRoute.Sitemap = [];
 
   locales.forEach((locale) => {
+    // Add main routes
     routes.forEach((route) => {
       const url = `${baseUrl}/${locale}${route}`;
       sitemapEntries.push({
         url,
         lastModified: new Date(),
-        changeFrequency: route === '' ? 'daily' : 'weekly',
-        priority: route === '' ? 1.0 : 0.8,
+        changeFrequency: route === '' ? 'daily' : route === '/articles' ? 'weekly' : 'weekly',
+        priority: route === '' ? 1.0 : route === '/articles' ? 0.9 : 0.8,
         alternates: {
           languages: Object.fromEntries(
             locales.map((loc) => [loc, `${baseUrl}/${loc}${route}`])
+          ),
+        },
+      });
+    });
+
+    // Add individual article pages
+    articleSlugs.forEach((slug) => {
+      const url = `${baseUrl}/${locale}/articles/${slug}`;
+      sitemapEntries.push({
+        url,
+        lastModified: new Date(),
+        changeFrequency: 'monthly',
+        priority: 0.7,
+        alternates: {
+          languages: Object.fromEntries(
+            locales.map((loc) => [loc, `${baseUrl}/${loc}/articles/${slug}`])
           ),
         },
       });
