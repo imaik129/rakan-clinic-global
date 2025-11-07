@@ -22,11 +22,11 @@ const articleSlugs = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://rakanclinic.com';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://global.rakanclinic-tokyo.jp';
 
   // Generate sitemap entries for all locales
   const routes = ['', '/treatments', '/facilities', '/articles'];
-  
+
   const sitemapEntries: MetadataRoute.Sitemap = [];
 
   locales.forEach((locale) => {
