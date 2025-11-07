@@ -162,38 +162,41 @@ export default async function ArticlesPage({
       <BackToTopButton />
 
       {/* Hero Section */}
-      <section className="pt-[120px] pb-12 px-[5%] bg-gradient-to-b from-white to-gray-50">
+      <section className="relative overflow-hidden px-[5%] pt-[120px] pb-16">
+        <div className="absolute inset-0 -z-10 bg-gradient-to-br from-white via-[#f4faf6] to-white" />
+        <div className="absolute inset-x-0 top-0 -z-10 h-[240px] bg-gradient-to-b from-[#4a9b7f]/12 to-transparent" />
         <div className="max-w-[1200px] mx-auto">
           {/* Breadcrumb Navigation */}
           <nav aria-label="Breadcrumb" className="mb-8">
-            <ol className="flex items-center gap-2 text-[0.85rem] text-gray-600">
+            <ol className="flex items-center gap-2 text-[0.9rem] text-gray-600">
               <li>
                 <Link
                   href={`/${locale}`}
-                  className="hover:text-[#4a9b7f] transition-colors duration-300"
+                  className="inline-flex items-center gap-1 rounded-full bg-white/80 px-3 py-1 text-[#2f5c4d] shadow-sm ring-1 ring-[#4a9b7f]/20 hover:text-[#4a9b7f]"
                 >
                   Home
                 </Link>
               </li>
               <li>
-                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-3 h-3 text-[#4a9b7f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </li>
-              <li className="text-gray-900 font-medium" aria-current="page">
+              <li className="text-[#1f3d33] font-semibold" aria-current="page">
                 Articles
               </li>
             </ol>
           </nav>
-          
+
           <div className="text-center">
-            <div className="inline-block px-4 py-2 text-[0.7rem] tracking-[2px] uppercase text-[#4a9b7f] font-bold bg-[#4a9b7f]/10 rounded-full mb-4">
+            <div className="inline-flex items-center gap-2 rounded-full bg-[#4a9b7f]/12 px-4 py-1 text-[0.72rem] font-semibold uppercase tracking-[1.8px] text-[#2f5c4d] mb-4">
+              <span className="inline-block h-2 w-2 rounded-full bg-[#4a9b7f]" />
               {t('badge')}
             </div>
-            <h1 className="font-['Cormorant_Garamond'] text-[clamp(2rem,5vw,3.5rem)] mb-4 leading-[1.1] font-bold text-gray-900">
+            <h1 className="font-['Cormorant_Garamond'] text-[clamp(2.3rem,5vw,4rem)] mb-4 leading-[1.08] font-semibold text-[#142923]">
               {t('heading')}
             </h1>
-            <p className="text-[1rem] text-gray-600 max-w-[700px] mx-auto leading-[1.7] font-light">
+            <p className="mx-auto max-w-[760px] text-[1.05rem] leading-[1.75] text-[#425750]">
               {t('description')}
             </p>
           </div>
@@ -201,52 +204,44 @@ export default async function ArticlesPage({
       </section>
 
       {/* Articles Grid */}
-      <section className="px-[5%] py-[4rem]">
+      <section className="px-[5%] pb-[4.5rem]">
         <div className="max-w-[1200px] mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid gap-7 md:grid-cols-2 xl:grid-cols-3">
             {articles.map((article) => (
               <Link
                 key={article.slug}
                 href={`/${locale}/articles/${article.slug}`}
-                className="group bg-white rounded-lg overflow-hidden border border-gray-200 hover:border-[#4a9b7f]/30 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                className="group relative overflow-hidden rounded-[22px] border border-[#e1ece6] bg-white/85 p-7 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
               >
-                {/* Article Content */}
-                <div className="p-6">
-                  {/* Category Badge */}
-                  <div className="inline-block px-3 py-1 text-[0.65rem] tracking-[1px] uppercase text-[#4a9b7f] font-semibold bg-[#4a9b7f]/10 rounded-full mb-3">
+                <span className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-[#4a9b7f] via-[#3d8269] to-[#c9a962] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                <div className="mb-4 flex items-center justify-between text-[0.75rem] text-[#4a5e55]">
+                  <span className="inline-flex items-center gap-2 rounded-full bg-[#4a9b7f]/12 px-3 py-1 font-semibold uppercase tracking-[1px] text-[#2f5c4d]">
+                    <span className="inline-block h-2 w-2 rounded-full bg-[#4a9b7f]" />
                     {article.category}
-                  </div>
-
-                  {/* Title */}
-                  <h2 className="font-['Cormorant_Garamond'] text-[1.5rem] mb-3 font-semibold text-gray-900 group-hover:text-[#4a9b7f] transition-colors duration-300 leading-tight">
-                    {article.title}
-                  </h2>
-
-                  {/* Excerpt */}
-                  <p className="text-[0.9rem] text-gray-600 leading-[1.6] font-light mb-4 line-clamp-3">
-                    {article.excerpt}
-                  </p>
-
-                  {/* Meta Info */}
-                  <div className="flex items-center justify-between text-[0.75rem] text-gray-500 pt-4 border-t border-gray-100">
-                    <span>{article.readTime}</span>
-                    <span className="flex items-center gap-1 text-[#4a9b7f] font-medium group-hover:gap-2 transition-all duration-300">
-                      {t('readMore')}
-                      <svg
-                        className="w-4 h-4"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M9 5l7 7-7 7"
-                        />
-                      </svg>
-                    </span>
-                  </div>
+                  </span>
+                  <span className="rounded-full bg-[#eef4f1] px-3 py-1 text-[0.72rem] font-medium">
+                    {article.date}
+                  </span>
+                </div>
+                <h2 className="font-['Cormorant_Garamond'] text-[clamp(1.5rem,2.6vw,2.1rem)] leading-tight text-[#1e342c] mb-3 transition-colors duration-300 group-hover:text-[#4a9b7f]">
+                  {article.title}
+                </h2>
+                <p className="mb-5 line-clamp-3 text-[0.95rem] leading-[1.7] text-[#4a4f4d]">
+                  {article.excerpt}
+                </p>
+                <div className="flex items-center justify-between pt-5 text-[0.8rem] text-[#436054]">
+                  <span className="inline-flex items-center gap-1 rounded-full bg-[#edf4f1] px-3 py-1">
+                    <svg className="h-4 w-4 text-[#4a9b7f]" fill="none" stroke="currentColor" strokeWidth={1.6} viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m6-6H6" />
+                    </svg>
+                    {article.readTime}
+                  </span>
+                  <span className="inline-flex items-center gap-2 font-medium text-[#4a9b7f] group-hover:gap-3">
+                    {t('readMore')}
+                    <svg className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                  </span>
                 </div>
               </Link>
             ))}
