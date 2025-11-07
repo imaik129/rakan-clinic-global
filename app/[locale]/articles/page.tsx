@@ -12,6 +12,16 @@ const articleSlugs = [
   'stem-cell-therapy-vs-surgery',
   'stem-cell-therapy-recovery-time',
   'stem-cell-therapy-cost',
+  'stem-cell-therapy-japan-safety',
+  'stem-cell-therapy-results-timeline',
+  'anti-aging-stem-cell-therapy-tokyo',
+  'cpc-cell-processing-center-japan',
+  'azabudai-hills-stem-table',
+  'knee-osteoarthritis-stem-cells-tokyo',
+  'adipose-vs-bone-marrow-stem-cells',
+  'conditions-stem-cell-therapy',
+  'stem-cell-therapy-exclusions',
+  'culture-supernatant-explained',
 ];
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
