@@ -132,9 +132,9 @@
     "badge": "Our Medical Team",
     "heading": "Meet the Team",
     "subheading": "World-renowned specialists in orthopedics, regenerative medicine, and osteoimmunology",
-        "intro": {
-        "title": "World-Class Medical Team",
-        "description": "Internationally recognized physicians advancing regenerative medicine"
+    "intro": {
+      "title": "World-Class Medical Team",
+      "description": "Internationally recognized physicians advancing regenerative medicine"
     },
     "team": {
       "doctor1": {
@@ -226,7 +226,11 @@
         "name": "SINGLE SESSION",
         "price": "$25,000~",
         "description": "Adipose tissue collection and cell cultivation are performed each time. No cryopreservation. No blood test monitoring.",
-        "features": ["One-time treatment", "Fresh cell cultivation", "Immediate treatment"]
+        "features": [
+          "One-time treatment",
+          "Fresh cell cultivation",
+          "Immediate treatment"
+        ]
       },
       "three": {
         "name": "3 SESSIONS PER YEAR",
@@ -234,14 +238,24 @@
         "pricePerSession": "$20,167~ per session",
         "featured": "MOST POPULAR",
         "description": "Cells collected and frozen at first session. Used for 3 treatments in 1 year. Includes storage fee and blood test at each visit.",
-        "features": ["3 treatments over 1 year", "Cell cryopreservation", "Blood test monitoring", "Storage fees included"]
+        "features": [
+          "3 treatments over 1 year",
+          "Cell cryopreservation",
+          "Blood test monitoring",
+          "Storage fees included"
+        ]
       },
       "six": {
         "name": "6 SESSIONS OVER 2 YEARS",
         "price": "$115,000~",
         "pricePerSession": "$19,167~ per session",
         "description": "Cells collected and frozen at first session. Used for up to 6 treatments over 2 years. Includes storage fee and blood test at each visit.",
-        "features": ["6 treatments over 2 years", "Long-term cell storage", "Comprehensive monitoring", "Best value option"]
+        "features": [
+          "6 treatments over 2 years",
+          "Long-term cell storage",
+          "Comprehensive monitoring",
+          "Best value option"
+        ]
       }
     },
     "includes": "*Includes consultation, treatment coordination, and comprehensive patient care services",
@@ -806,18 +820,18 @@
           {
             "question": "Is stem cell therapy approved in Japan?",
             "answer": "Yes. Japan has a comprehensive regulatory framework for regenerative medicine under the Act on Regenerative Medicine. All treatments at Rakan Clinic Tokyo comply with PMDA regulations and CPC certification requirements."
-        },
-        {
-          "question": "How long does stem cell therapy last?",
-          "answer": "Many patients experience benefits for 12–36 months, especially when they follow recommended booster schedules and rehabilitation plans."
-        },
-        {
-          "question": "Does the procedure hurt?",
-          "answer": "Fat collection may cause mild soreness for a day or two. Infusions themselves are typically painless and performed in a comfortable lounge."
-        },
-        {
-          "question": "How many sessions will I need?",
-          "answer": "We usually begin with one session and personalise booster frequency—often every four months—based on your goals and progress."
+          },
+          {
+            "question": "How long does stem cell therapy last?",
+            "answer": "Many patients experience benefits for 12–36 months, especially when they follow recommended booster schedules and rehabilitation plans."
+          },
+          {
+            "question": "Does the procedure hurt?",
+            "answer": "Fat collection may cause mild soreness for a day or two. Infusions themselves are typically painless and performed in a comfortable lounge."
+          },
+          {
+            "question": "How many sessions will I need?",
+            "answer": "We usually begin with one session and personalise booster frequency—often every four months—based on your goals and progress."
           }
         ]
       },
@@ -886,14 +900,14 @@
           {
             "question": "Are there before and after results I can see?",
             "answer": "We can discuss treatment outcomes during your consultation. Individual results vary, and we focus on evidence-based outcomes rather than anecdotal cases. Our medical team can provide information about expected outcomes for your specific condition."
-        },
-        {
-          "question": "Does the procedure hurt?",
-          "answer": "The adipose collection step may cause mild soreness, but infusions are typically painless and performed in a relaxing clinical suite."
-        },
-        {
-          "question": "How many sessions will I need?",
-          "answer": "Most patients begin with one session and schedule boosters every four months, adjusted according to progress and imaging findings."
+          },
+          {
+            "question": "Does the procedure hurt?",
+            "answer": "The adipose collection step may cause mild soreness, but infusions are typically painless and performed in a relaxing clinical suite."
+          },
+          {
+            "question": "How many sessions will I need?",
+            "answer": "Most patients begin with one session and schedule boosters every four months, adjusted according to progress and imaging findings."
           }
         ]
       },
@@ -931,18 +945,18 @@
           {
             "question": "Is stem cell therapy available for hip pain in Tokyo?",
             "answer": "Yes, Rakan Clinic Tokyo in Azabudai Hills offers stem cell therapy for hip pain and hip arthritis. Our certified CPC facility processes autologous stem cells for hip joint injections."
-        },
-        {
-          "question": "How long do results last?",
-          "answer": "Many patients experience reduced pain and better mobility for 12–24 months, especially when they complete prescribed rehabilitation programmes."
-        },
-        {
-          "question": "Does the procedure hurt?",
-          "answer": "The harvesting site can be tender briefly, and joint injections are completed under local anaesthesia to maximise comfort."
-        },
-        {
-          "question": "How many sessions will I need?",
-          "answer": "We generally start with a single session and reassess after 4–6 months. Booster infusions are scheduled according to imaging and functional goals."
+          },
+          {
+            "question": "How long do results last?",
+            "answer": "Many patients experience reduced pain and better mobility for 12–24 months, especially when they complete prescribed rehabilitation programmes."
+          },
+          {
+            "question": "Does the procedure hurt?",
+            "answer": "The harvesting site can be tender briefly, and joint injections are completed under local anaesthesia to maximise comfort."
+          },
+          {
+            "question": "How many sessions will I need?",
+            "answer": "We generally start with a single session and reassess after 4–6 months. Booster infusions are scheduled according to imaging and functional goals."
           }
         ]
       },
@@ -978,8 +992,8 @@
           "The first month is a critical period for healing. During this time, the stem cells are actively working to reduce inflammation and begin the regeneration process. Many patients start to notice initial improvements during this period, though significant changes may take longer to manifest.",
           "Between months 2-3, you'll typically see more noticeable improvements. Pain reduction becomes more apparent, and mobility often improves. This is when the regenerative effects of the stem cells become more evident. However, it's important to continue following your doctor's recommendations regarding activity levels and any prescribed physical therapy.",
           "The full benefits of stem cell therapy may take 3-6 months to fully develop. This is because tissue regeneration is a gradual process. The stem cells need time to integrate, differentiate, and stimulate the body's natural healing mechanisms.",
-        "Throughout the recovery period, it's essential to support the healing process. This includes maintaining a healthy diet, staying hydrated, getting adequate rest, and following any prescribed physical therapy or exercise programs. Avoiding activities that could stress or damage the treated area is crucial during the early stages.",
-        "It's also important to have realistic expectations. While stem cell therapy can provide significant improvements, it's not an instant fix. The healing process is gradual, and results vary from person to person. Regular follow-up appointments with your medical team help monitor progress and adjust treatment plans as needed."
+          "Throughout the recovery period, it's essential to support the healing process. This includes maintaining a healthy diet, staying hydrated, getting adequate rest, and following any prescribed physical therapy or exercise programs. Avoiding activities that could stress or damage the treated area is crucial during the early stages.",
+          "It's also important to have realistic expectations. While stem cell therapy can provide significant improvements, it's not an instant fix. The healing process is gradual, and results vary from person to person. Regular follow-up appointments with your medical team help monitor progress and adjust treatment plans as needed."
         ],
         "faq": [
           {
@@ -1046,14 +1060,14 @@
           {
             "question": "Are there payment plans available for stem cell therapy?",
             "answer": "We offer different treatment plans to accommodate various needs and budgets. During your consultation, we'll discuss payment options and can provide flexible arrangements for qualified patients."
-        },
-        {
-          "question": "How long do stem cell therapy results last?",
-          "answer": "Results typically remain for 12–36 months. Booster infusions and supportive rehabilitation help extend the value of your investment."
-        },
-        {
-          "question": "Does the procedure hurt?",
-          "answer": "Fat collection may cause mild soreness for a short period. Infusions themselves are comfortable and performed in a private treatment suite."
+          },
+          {
+            "question": "How long do stem cell therapy results last?",
+            "answer": "Results typically remain for 12–36 months. Booster infusions and supportive rehabilitation help extend the value of your investment."
+          },
+          {
+            "question": "Does the procedure hurt?",
+            "answer": "Fat collection may cause mild soreness for a short period. Infusions themselves are comfortable and performed in a private treatment suite."
           }
         ]
       },
@@ -1472,6 +1486,19 @@
         ]
       }
     }
+  },
+  "demographics": {
+    "title": "PERCENTAGE OF FOREIGN PATIENTS TREATED",
+    "countries": {
+      "usa": "America",
+      "australia": "Australia",
+      "kazakhstan": "Kazakhstan",
+      "russia": "Russia",
+      "philippines": "Philippines",
+      "indonesia": "Indonesia",
+      "singapore": "Singapore",
+      "hongkong": "Hong Kong",
+      "others": "Others"
+    }
   }
 }
-

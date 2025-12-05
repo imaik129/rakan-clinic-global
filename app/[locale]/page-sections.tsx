@@ -6,6 +6,7 @@ import { useTranslations } from 'next-intl';
 import DoctorsMobile from '../../components/DoctorsMobile';
 import DoctorsDesktop from '../../components/DoctorsDesktop';
 import ClientSlideshow from '../../components/ClientSlideshow';
+import PatientDemographics from '../../components/PatientDemographics';
 
 export function StemCellSection() {
     const t = useTranslations();
@@ -390,6 +391,8 @@ export function ClientExperienceSection() {
             <div className="w-full">
                 <ClientSlideshow />
             </div>
+
+            <PatientDemographics />
         </div>
     );
 }

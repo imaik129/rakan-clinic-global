@@ -122,6 +122,19 @@
     "emailNote": "للمرضى الدوليين",
     "location": "الموقع",
     "access": "الوصول"
+  },
+  "demographics": {
+    "title": "PERCENTAGE OF FOREIGN PATIENTS TREATED",
+    "countries": {
+      "usa": "America",
+      "australia": "Australia",
+      "kazakhstan": "Kazakhstan",
+      "russia": "Russia",
+      "philippines": "Philippines",
+      "indonesia": "Indonesia",
+      "singapore": "Singapore",
+      "hongkong": "Hong Kong",
+      "others": "Others"
+    }
   }
 }
-

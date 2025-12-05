@@ -194,7 +194,11 @@
         "name": "单次疗程",
         "price": "$25,000~",
         "description": "每次进行脂肪组织采集和细胞培养。无冷冻保存。无血液检测监测。",
-        "features": ["一次性治疗", "新鲜细胞培养", "立即治疗"]
+        "features": [
+          "一次性治疗",
+          "新鲜细胞培养",
+          "立即治疗"
+        ]
       },
       "three": {
         "name": "每年3次疗程",
@@ -202,14 +206,24 @@
         "pricePerSession": "每次$20,167~",
         "featured": "最受欢迎",
         "description": "首次疗程采集并冷冻细胞。在1年内用于3次治疗。包括每次就诊的储存费和血液检测。",
-        "features": ["1年内3次治疗", "细胞冷冻保存", "血液检测监测", "包括储存费"]
+        "features": [
+          "1年内3次治疗",
+          "细胞冷冻保存",
+          "血液检测监测",
+          "包括储存费"
+        ]
       },
       "six": {
         "name": "2年6次疗程",
         "price": "$115,000~",
         "pricePerSession": "每次$19,167~",
         "description": "首次疗程采集并冷冻细胞。在2年内用于最多6次治疗。包括每次就诊的储存费和血液检测。",
-        "features": ["2年内6次治疗", "长期细胞储存", "全面监测", "最佳价值选择"]
+        "features": [
+          "2年内6次治疗",
+          "长期细胞储存",
+          "全面监测",
+          "最佳价值选择"
+        ]
       }
     },
     "includes": "*包括咨询、治疗协调和全面的患者护理服务",
@@ -718,6 +732,19 @@
       "contact": "联系我们",
       "book": "预约"
     }
+  },
+  "demographics": {
+    "title": "PERCENTAGE OF FOREIGN PATIENTS TREATED",
+    "countries": {
+      "usa": "America",
+      "australia": "Australia",
+      "kazakhstan": "Kazakhstan",
+      "russia": "Russia",
+      "philippines": "Philippines",
+      "indonesia": "Indonesia",
+      "singapore": "Singapore",
+      "hongkong": "Hong Kong",
+      "others": "Others"
+    }
   }
 }
-
