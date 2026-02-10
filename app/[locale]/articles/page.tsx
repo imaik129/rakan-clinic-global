@@ -27,7 +27,7 @@ const articleSlugs = [
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations('articles');
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://rakanclinic.com';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://global.rakanclinic-tokyo.jp';
   const url = `${baseUrl}/${locale}/articles`;
 
   // Get all locales for hreflang
@@ -88,7 +88,7 @@ export default async function ArticlesPage({
 }) {
   const { locale } = await params;
   const t = await getTranslations('articles');
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://rakanclinic.com';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://global.rakanclinic-tokyo.jp';
 
   // Get all articles data
   const articles = articleSlugs.map((slug) => ({

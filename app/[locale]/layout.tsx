@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 
   // Base URL - Update this with your actual domain
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://rakanclinic.com';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://global.rakanclinic-tokyo.jp';
   const url = `${baseUrl}/${locale}`;
   const ogImage = metadata.ogImage || `${baseUrl}/images/rakan_entrance.png`;
 

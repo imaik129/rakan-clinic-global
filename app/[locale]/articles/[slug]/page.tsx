@@ -41,7 +41,7 @@ export async function generateMetadata({
   }
 
   const t = await getTranslations('articles');
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://rakanclinic.com';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://global.rakanclinic-tokyo.jp';
   const url = `${baseUrl}/${locale}/articles/${slug}`;
 
   const title = t(`articles.${slug}.title`);
@@ -177,7 +177,7 @@ export default async function ArticlePage({
   }
 
   // Structured data for article
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://rakanclinic.com';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://global.rakanclinic-tokyo.jp';
   const articleUrl = `${baseUrl}/${locale}/articles/${slug}`;
   
   // Article structured data

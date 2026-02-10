@@ -26,7 +26,7 @@ export default async function Home({
   const t = await getTranslations();
 
   // Base URL for structured data
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://rakanclinic.com';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://global.rakanclinic-tokyo.jp';
   const url = `${baseUrl}/${locale}`;
 
   // Structured Data (JSON-LD) for Medical Business

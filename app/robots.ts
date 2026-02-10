@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://rakanclinic.com';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://global.rakanclinic-tokyo.jp';
 
   return {
     rules: [
@@ -10,13 +10,7 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
         disallow: ['/api/', '/_next/'],
       },
-      {
-        userAgent: 'Googlebot',
-        allow: '/',
-        disallow: ['/api/'],
-      },
     ],
     sitemap: `${baseUrl}/sitemap.xml`,
   };
 }
-
