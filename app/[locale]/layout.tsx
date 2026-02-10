@@ -98,8 +98,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       site: '@rakanclinicglobal',
     },
     verification: {
-      // Add your verification codes here when available
-      // google: 'your-google-verification-code',
+      google: 'R3Lj0camYGW0eoGxDdLC_Ld1FX-nKc77fSCpXivhisw',
       // yandex: 'your-yandex-verification-code',
       // yahoo: 'your-yahoo-verification-code',
     },
