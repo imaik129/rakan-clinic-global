@@ -19,6 +19,11 @@ const articles = [
   { slug: 'conditions-stem-cell-therapy', date: '2024-02-23' },
   { slug: 'stem-cell-therapy-exclusions', date: '2024-02-23' },
   { slug: 'culture-supernatant-explained', date: '2024-02-24' },
+  { slug: 'best-stem-cell-clinics-tokyo', date: '2025-02-10' },
+  { slug: 'stem-cell-therapy-cost-tokyo', date: '2025-02-10' },
+  { slug: 'medical-tourism-tokyo-stem-cell', date: '2025-02-10' },
+  { slug: 'stem-cell-therapy-legal-japan', date: '2025-02-10' },
+  { slug: 'choose-safe-stem-cell-clinic-tokyo', date: '2025-02-10' },
 ];
 
 // Main pages with SEO-tuned priorities and update frequencies

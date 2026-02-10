@@ -23,6 +23,11 @@ const articleSlugs = [
   'conditions-stem-cell-therapy',
   'stem-cell-therapy-exclusions',
   'culture-supernatant-explained',
+  'best-stem-cell-clinics-tokyo',
+  'stem-cell-therapy-cost-tokyo',
+  'medical-tourism-tokyo-stem-cell',
+  'stem-cell-therapy-legal-japan',
+  'choose-safe-stem-cell-clinic-tokyo',
 ];
 
 export async function generateStaticParams() {

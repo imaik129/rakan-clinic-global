@@ -26,9 +26,15 @@ export default getRequestConfig(async ({ requestLocale }) => {
         locale = defaultLocale;
     }
 
+    // Always load English as fallback, then merge locale-specific messages on top
+    const enMessages = (await import('./messages/en.json')).default;
+    const localeMessages = locale === 'en'
+        ? enMessages
+        : { ...enMessages, ...(await import(`./messages/${locale}.json`)).default };
+
     return {
         locale,
-        messages: (await import(`./messages/${locale}.json`)).default
+        messages: localeMessages
     };
 });
 
