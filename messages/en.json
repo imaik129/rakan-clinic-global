@@ -6,6 +6,9 @@
   },
   "header": {
     "brand": "Rakan Clinic",
+    "brandFull": "RAKAN CLINIC TOKYO",
+    "brandSublocation": "AZABUDAI",
+    "brandLogoAlt": "Rakan Clinic",
     "home": "Home",
     "treatments": "Treatments",
     "symptoms": "Symptoms",
@@ -549,6 +552,11 @@
     }
   },
   "treatmentsPage": {
+    "metadata": {
+      "title": "Treatment Pricing | Rakan Clinic Tokyo - Regenerative Medicine",
+      "description": "Comprehensive pricing for stem cell therapy, PRP, Exosome, NMN, NAD⁺ IV therapy, and preventive testing. Transparent costs for regenerative medicine at Azabudai Hills, Tokyo.",
+      "keywords": "stem cell therapy cost, PRP therapy price Tokyo, regenerative medicine pricing, NMN IV therapy Japan, NAD+ cost, Rakan Clinic pricing"
+    },
     "badge": "Treatment Pricing",
     "heading": "Regenerative Medicine & IV Therapy",
     "description": "Comprehensive pricing for PRP, Exosome, NMN, NAD⁺, and preventive testing services",
@@ -658,9 +666,20 @@
       "description": "Contact us for a personalized consultation and to discuss which treatment options are best for you.",
       "bookConsultation": "Book Consultation",
       "contactUs": "Contact Us"
+    },
+    "disclaimer": "*Includes consultation, treatment coordination, and comprehensive patient care services",
+    "footer": {
+      "brand": "Rakan Clinic Tokyo",
+      "tagline": "Regenerative Medicine Excellence",
+      "copyright": "© 2025 Rakan Clinic Tokyo. All rights reserved."
     }
   },
   "facilities": {
+    "metadata": {
+      "title": "Cell Processing Center (CPC) | Rakan Clinic Tokyo",
+      "description": "Our in-house Cell Processing Center ensures maximum stem cell freshness, safety, and effectiveness. Pharmaceutical-grade sterile processing at Azabudai Hills, Tokyo.",
+      "keywords": "Cell Processing Center, CPC Japan, stem cell facility Tokyo, regenerative medicine lab, Azabudai Hills clinic, sterile cell culture"
+    },
     "badge": "Our Facilities",
     "heading": "Cell Processing Center (CPC)",
     "description": "Our in-house CPC ensures maximum cell freshness, safety, and treatment effectiveness through pharmaceutical-grade sterile processing.",
@@ -747,6 +766,16 @@
       "paragraph1": "We are thoroughly committed to the \"quality\" and \"safety\" of stem cell treatment. Our in-house CPC and state-of-the-art equipment, along with a management system by experienced cultivation specialists.",
       "paragraph2": "All of these form the foundation for patients to receive treatment with peace of mind. We will continue to deliver the highest standard of stem cell treatment."
     },
+    "imageAlts": {
+      "cpc": "Cell Processing Center",
+      "cellCulture": "Cell culture process",
+      "stemCells": "Healthy stem cells",
+      "safetyCabinet": "Biological Safety Cabinet",
+      "co2Incubator": "CO2 Incubator",
+      "microscope": "Inverted Microscope",
+      "passBox": "Pass Box",
+      "centrifuge": "Centrifuge"
+    },
     "cta": {
       "title": "Experience World-Class Care",
       "description": "Ready to begin your treatment journey? Contact us to schedule a consultation and tour our facilities.",
@@ -766,6 +795,11 @@
     "readMore": "Read Article",
     "filterAll": "All",
     "backToArticles": "Back to Articles",
+    "breadcrumbHome": "Home",
+    "breadcrumbArticles": "Articles",
+    "quickAnswerLabel": "Quick Answer",
+    "faqHeading": "Frequently Asked Questions",
+    "relatedArticlesHeading": "Related Articles",
     "cta": {
       "title": "Ready to Learn More?",
       "description": "Schedule a consultation with our specialists to discuss how stem cell therapy can help you. Learn whether adipose stem cells are right for your joint condition.",

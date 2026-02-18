@@ -3,56 +3,7 @@ import { getTranslations } from 'next-intl/server';
 import Header from '@/components/Header';
 import BackToTopButton from '@/components/BackToTopButton';
 import ArticlesGrid from '@/components/ArticlesGrid';
-
-// Article slugs - these will be used for routing
-const articleSlugs = [
-  'what-is-stem-cell-therapy',
-  'does-stem-cell-therapy-work',
-  'stem-cell-therapy-for-joint-pain',
-  'stem-cell-therapy-vs-surgery',
-  'stem-cell-therapy-recovery-time',
-  'stem-cell-therapy-cost',
-  'stem-cell-therapy-japan-safety',
-  'stem-cell-therapy-results-timeline',
-  'anti-aging-stem-cell-therapy-tokyo',
-  'cpc-cell-processing-center-japan',
-  'azabudai-hills-stem-table',
-  'knee-osteoarthritis-stem-cells-tokyo',
-  'adipose-vs-bone-marrow-stem-cells',
-  'conditions-stem-cell-therapy',
-  'stem-cell-therapy-exclusions',
-  'culture-supernatant-explained',
-  'best-stem-cell-clinics-tokyo',
-  'stem-cell-therapy-cost-tokyo',
-  'medical-tourism-tokyo-stem-cell',
-  'stem-cell-therapy-legal-japan',
-  'choose-safe-stem-cell-clinic-tokyo',
-];
-
-// Map each article slug to a relevant image
-const articleImages: Record<string, string> = {
-  'what-is-stem-cell-therapy': '/images/facilities/stemcells.webp',
-  'does-stem-cell-therapy-work': '/images/facilities/inverted_microscope.jpg',
-  'stem-cell-therapy-for-joint-pain': '/images/reuseable/4.png',
-  'stem-cell-therapy-vs-surgery': '/images/injection.png',
-  'stem-cell-therapy-recovery-time': '/images/reuseable/2.png',
-  'stem-cell-therapy-cost': '/images/azabudai_hills.png',
-  'stem-cell-therapy-japan-safety': '/images/facilities/biological_safety_cabinet.jpg',
-  'stem-cell-therapy-results-timeline': '/images/facilities/working.gif',
-  'anti-aging-stem-cell-therapy-tokyo': '/images/reuseable/1.png',
-  'cpc-cell-processing-center-japan': '/images/facilities/lab.webp',
-  'azabudai-hills-stem-table': '/images/rakan_entrance.png',
-  'knee-osteoarthritis-stem-cells-tokyo': '/images/reuseable/3.png',
-  'adipose-vs-bone-marrow-stem-cells': '/images/facilities/stemcells.webp',
-  'conditions-stem-cell-therapy': '/images/reuseable/5.png',
-  'stem-cell-therapy-exclusions': '/images/facilities/co2incubator.webp',
-  'culture-supernatant-explained': '/images/facilities/centrifuge.webp',
-  'best-stem-cell-clinics-tokyo': '/images/azabudai_hills.png',
-  'stem-cell-therapy-cost-tokyo': '/images/facilities/passbox.jpg',
-  'medical-tourism-tokyo-stem-cell': '/images/azabudai_hills.png',
-  'stem-cell-therapy-legal-japan': '/images/rakan_entrance.png',
-  'choose-safe-stem-cell-clinic-tokyo': '/images/facilities/lab.webp',
-};
+import { articleSlugs, getArticleImage } from '@/lib/articles';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -100,11 +51,20 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       siteName: 'Rakan Clinic Tokyo',
       title: t('metadata.title'),
       description: t('metadata.description'),
+      images: [
+        {
+          url: `${baseUrl}/images/facilities/lab.webp`,
+          width: 1200,
+          height: 630,
+          alt: t('metadata.title'),
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title: t('metadata.title'),
       description: t('metadata.description'),
+      images: [`${baseUrl}/images/facilities/lab.webp`],
       creator: '@rakanclinicglobal',
       site: '@rakanclinicglobal',
     },
@@ -129,7 +89,7 @@ export default async function ArticlesPage({
     category: t(`articles.${slug}.category`),
     date: t(`articles.${slug}.date`),
     href: `/${locale}/articles/${slug}`,
-    image: articleImages[slug] || '/images/facilities/lab.webp',
+    image: getArticleImage(slug),
   }));
 
   // CollectionPage structured data for articles listing
@@ -156,7 +116,9 @@ export default async function ArticlesPage({
     },
   };
 
-  // Breadcrumb structured data
+  // Breadcrumb structured data (localized for SEO)
+  const breadcrumbHome = t('breadcrumbHome');
+  const breadcrumbArticles = t('breadcrumbArticles');
   const breadcrumbStructuredData = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -164,13 +126,13 @@ export default async function ArticlesPage({
       {
         '@type': 'ListItem',
         position: 1,
-        name: 'Home',
+        name: breadcrumbHome,
         item: `${baseUrl}/${locale}`,
       },
       {
         '@type': 'ListItem',
         position: 2,
-        name: 'Articles',
+        name: breadcrumbArticles,
         item: `${baseUrl}/${locale}/articles`,
       },
     ],
@@ -203,7 +165,7 @@ export default async function ArticlesPage({
                   href={`/${locale}`}
                   className="transition-colors hover:text-[#4a9b7f]"
                 >
-                  Home
+                  {t('breadcrumbHome')}
                 </Link>
               </li>
               <li>
@@ -212,7 +174,7 @@ export default async function ArticlesPage({
                 </svg>
               </li>
               <li className="text-[#142923] font-medium" aria-current="page">
-                Articles
+                {t('breadcrumbArticles')}
               </li>
             </ol>
           </nav>

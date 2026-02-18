@@ -5,6 +5,9 @@
   },
   "header": {
     "brand": "Rakan Clinic",
+    "brandFull": "RAKAN CLINIC TOKYO",
+    "brandSublocation": "Азабудай",
+    "brandLogoAlt": "Rakan Clinic",
     "home": "Главная",
     "treatments": "Лечения",
     "symptoms": "Симптомы",
@@ -547,7 +550,19 @@
       "answer8": "Results vary by individual and condition, but many patients report initial improvements within 2-4 weeks. Full benefits typically develop over 3-6 months as the regenerative process continues. We provide detailed recovery timelines and regular follow-up care to monitor progress. Our telemedicine follow-up system ensures continued support after you return home, with progress tracking and adjustment recommendations as needed."
     }
   },
+  "articles": {
+    "breadcrumbHome": "Главная",
+    "breadcrumbArticles": "Статьи",
+    "quickAnswerLabel": "Краткий ответ",
+    "faqHeading": "Частые вопросы",
+    "relatedArticlesHeading": "Похожие статьи"
+  },
   "treatmentsPage": {
+    "metadata": {
+      "title": "Стоимость процедур | Rakan Clinic Tokyo — Регенеративная медицина",
+      "description": "Подробные цены на клеточную терапию, PRP, экзосомы, NMN, NAD⁺ и профилактическую диагностику. Прозрачные цены в Azabudai Hills, Токио.",
+      "keywords": "стоимость клеточной терапии, цена PRP Токио, цены регенеративная медицина, NMN Япония, NAD+ стоимость"
+    },
     "badge": "Стоимость процедур",
     "heading": "Регенеративная медицина и IV‑терапия",
     "description": "Подробные цены на PRP, экзосомы, NMN, NAD⁺ и профилактическую диагностику",
@@ -657,9 +672,30 @@
       "description": "Свяжитесь с нами для персональной консультации и подбора оптимальных вариантов.",
       "bookConsultation": "Записаться на консультацию",
       "contactUs": "Связаться"
+    },
+    "disclaimer": "*Включает консультацию, координацию лечения и комплексное сопровождение пациента",
+    "footer": {
+      "brand": "Rakan Clinic Tokyo",
+      "tagline": "Регенеративная медицина мирового уровня",
+      "copyright": "© 2025 Rakan Clinic Tokyo. Все права защищены."
     }
   },
   "facilities": {
+    "metadata": {
+      "title": "Cell Processing Center (CPC) | Rakan Clinic Tokyo",
+      "description": "Собственный CPC обеспечивает максимальную свежесть клеток, безопасность и эффективность. Стерильная обработка фармацевтического уровня в Azabudai Hills, Токио.",
+      "keywords": "Cell Processing Center, CPC Япония, клеточная лаборатория Токио, регенеративная медицина"
+    },
+    "imageAlts": {
+      "cpc": "Центр обработки клеток",
+      "cellCulture": "Процесс культивирования клеток",
+      "stemCells": "Здоровые стволовые клетки",
+      "safetyCabinet": "Биологический бокс",
+      "co2Incubator": "CO2‑инкубатор",
+      "microscope": "Инвертированный микроскоп",
+      "passBox": "Pass Box",
+      "centrifuge": "Центрифуга"
+    },
     "badge": "Наши помещения",
     "heading": "Cell Processing Center (CPC)",
     "description": "Собственный CPC обеспечивает максимальную свежесть клеток, безопасность и эффективность благодаря стерильной обработке фармацевтического уровня.",

@@ -5,6 +5,9 @@
   },
   "header": {
     "brand": "Rakan Clinic",
+    "brandFull": "RAKAN CLINIC TOKYO",
+    "brandSublocation": "麻布台",
+    "brandLogoAlt": "Rakan Clinic",
     "home": "首页",
     "treatments": "治疗项目",
     "symptoms": "症状",
@@ -527,7 +530,19 @@
     "heading": "顶级专业人士的选择",
     "subheading": "加入选择了Rakan Clinic满足再生医学需求的世界级运动员、高管和创新者。"
   },
+  "articles": {
+    "breadcrumbHome": "首页",
+    "breadcrumbArticles": "文章",
+    "quickAnswerLabel": "简要回答",
+    "faqHeading": "常见问题",
+    "relatedArticlesHeading": "相关文章"
+  },
   "treatmentsPage": {
+    "metadata": {
+      "title": "治疗价格 | Rakan Clinic Tokyo - 再生医学",
+      "description": "干细胞疗法、PRP、外泌体、NMN、NAD⁺静脉治疗及预防检测的全面定价。东京麻布台山透明价格。",
+      "keywords": "干细胞治疗费用，PRP价格东京，再生医学定价，NMN日本，NAD+费用"
+    },
     "badge": "治疗定价",
     "heading": "再生医学与静脉治疗",
     "description": "PRP、外泌体、NMN、NAD⁺和预防性检测服务的全面定价",
@@ -637,9 +652,30 @@
       "description": "联系我们进行个性化咨询，讨论最适合您的治疗方案。",
       "bookConsultation": "预约咨询",
       "contactUs": "联系我们"
+    },
+    "disclaimer": "*包括咨询、治疗协调和全面的患者护理服务",
+    "footer": {
+      "brand": "Rakan Clinic Tokyo",
+      "tagline": "再生医学卓越",
+      "copyright": "© 2025 Rakan Clinic Tokyo. 版权所有。"
     }
   },
   "facilities": {
+    "metadata": {
+      "title": "细胞处理中心（CPC）| Rakan Clinic Tokyo",
+      "description": "我们的内部细胞处理中心确保最大的干细胞新鲜度、安全性和有效性。东京麻布台山药物级无菌处理。",
+      "keywords": "细胞处理中心，CPC日本，干细胞设施东京，再生医学实验室"
+    },
+    "imageAlts": {
+      "cpc": "细胞处理中心",
+      "cellCulture": "细胞培养过程",
+      "stemCells": "健康干细胞",
+      "safetyCabinet": "生物安全柜",
+      "co2Incubator": "CO2培养箱",
+      "microscope": "倒置显微镜",
+      "passBox": "传递窗",
+      "centrifuge": "离心机"
+    },
     "badge": "我们的设施",
     "heading": "细胞处理中心（CPC）",
     "description": "我们的内部CPC通过药物级无菌处理确保最大的细胞新鲜度、安全性和治疗效果。",

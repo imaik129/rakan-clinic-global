@@ -55,7 +55,7 @@ export default function Header({ locale }: HeaderProps) {
                         <div className="relative w-8 h-8 md:w-10 md:h-10 flex-shrink-0">
                             <Image
                                 src="/logo_nobg.png"
-                                alt="Rakan Clinic"
+                                alt={t('header.brandLogoAlt')}
                                 fill
                                 className="object-contain transition-transform duration-300 group-hover:scale-105"
                                 sizes="40px"
@@ -63,10 +63,10 @@ export default function Header({ locale }: HeaderProps) {
                         </div>
                         <div className="flex flex-col">
                             <h1 className={`font-['Cormorant_Garamond'] text-[0.9rem] md:text-[1.1rem] font-semibold tracking-[0.3px] transition-colors group-hover:text-[#4a9b7f] ${(isHomepage && !isScrolled) ? 'text-white' : 'text-[#1a1a1a]'}`}>
-                                RAKAN CLINIC TOKYO
+                                {t('header.brandFull')}
                             </h1>
                             <div className={`text-[0.55rem] md:text-[0.6rem] font-medium tracking-[1px] uppercase transition-colors ${(isHomepage && !isScrolled) ? 'text-white opacity-90' : 'text-[#4a9b7f] opacity-70'}`}>
-                                AZABUDAI
+                                {t('header.brandSublocation')}
                             </div>
                         </div>
                     </Link>

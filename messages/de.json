@@ -5,6 +5,11 @@
   },
   "header": {
     "brand": "Rakan Clinic",
+    "brandFull": "RAKAN CLINIC TOKYO",
+    "brandSublocation": "AZABUDAI",
+    "brandLogoAlt": "Rakan Clinic",
+    "home": "Startseite",
+    "treatments": "Behandlungen",
     "nav": {
       "services": "Services",
       "about": "About",

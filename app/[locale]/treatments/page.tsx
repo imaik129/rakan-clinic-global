@@ -1,7 +1,26 @@
 import { getTranslations } from 'next-intl/server';
 import Header from '@/components/Header';
 import BackToTopButton from '@/components/BackToTopButton';
-import { type Locale } from '@/i18n';
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = await getTranslations('treatmentsPage');
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://global.rakanclinic-tokyo.jp';
+  const url = `${baseUrl}/${locale}/treatments`;
+
+  const { locales } = await import('@/i18n');
+  const alternateLanguages: Record<string, string> = {};
+  locales.forEach((loc: string) => {
+    alternateLanguages[loc] = `${baseUrl}/${loc}/treatments`;
+  });
+
+  return {
+    title: t('metadata.title'),
+    description: t('metadata.description'),
+    keywords: t('metadata.keywords'),
+    alternates: { canonical: url, languages: alternateLanguages },
+  };
+}
 
 export default async function TreatmentsPage({
     params,
@@ -84,7 +103,7 @@ export default async function TreatmentsPage({
                     {/* Disclaimer */}
                     <div className="mt-6 p-4 bg-gray-50 rounded-md border border-gray-200">
                         <p className="text-xs text-gray-600 italic">
-                            *Includes consultation, treatment coordination, and comprehensive patient care services
+                            {t('treatmentsPage.disclaimer')}
                         </p>
                     </div>
                 </div>
@@ -372,13 +391,13 @@ export default async function TreatmentsPage({
             <footer className="bg-[#1a1a1a] text-white/60 px-[5%] py-12 border-t border-white/5">
                 <div className="max-w-[1600px] mx-auto text-center">
                     <div className="font-['Cormorant_Garamond'] text-[1.5rem] text-white mb-2">
-                        Rakan Clinic Tokyo
+                        {t('treatmentsPage.footer.brand')}
                     </div>
                     <p className="text-[0.75rem] text-white/40 mb-6 uppercase tracking-[2px]">
-                        Regenerative Medicine Excellence
+                        {t('treatmentsPage.footer.tagline')}
                     </p>
                     <p className="text-[0.85rem] font-light">
-                        © 2024 Rakan Clinic Tokyo. All rights reserved.
+                        {t('treatmentsPage.footer.copyright')}
                     </p>
                 </div>
             </footer>

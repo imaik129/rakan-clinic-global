@@ -5,6 +5,9 @@
   },
   "header": {
     "brand": "ラカンクリニック",
+    "brandFull": "ラカンクリニック東京",
+    "brandSublocation": "麻布台",
+    "brandLogoAlt": "ラカンクリニック",
     "home": "トップページ",
     "treatments": "診療メニュー",
     "symptoms": "症状から探す",

@@ -1,9 +1,28 @@
-import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 import Link from 'next/link';
 import Header from '@/components/Header';
 import BackToTopButton from '@/components/BackToTopButton';
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = await getTranslations('facilities');
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://global.rakanclinic-tokyo.jp';
+  const url = `${baseUrl}/${locale}/facilities`;
+
+  const { locales } = await import('@/i18n');
+  const alternateLanguages: Record<string, string> = {};
+  locales.forEach((loc: string) => {
+    alternateLanguages[loc] = `${baseUrl}/${loc}/facilities`;
+  });
+
+  return {
+    title: t('metadata.title'),
+    description: t('metadata.description'),
+    keywords: t('metadata.keywords'),
+    alternates: { canonical: url, languages: alternateLanguages },
+  };
+}
 
 export default async function FacilitiesPage({
   params,
@@ -58,7 +77,7 @@ export default async function FacilitiesPage({
             <div className="relative h-[320px] rounded-md overflow-hidden">
               <Image
                 src="/images/facilities/lab.webp"
-                alt="Cell Processing Center"
+                alt={t('facilities.imageAlts.cpc')}
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -95,7 +114,7 @@ export default async function FacilitiesPage({
           <div className="relative h-[320px] rounded-md overflow-hidden">
             <Image
               src="/images/facilities/working.gif"
-              alt="Cell culture process"
+              alt={t('facilities.imageAlts.cellCulture')}
               fill
               className="object-cover"
               sizes="(max-width: 1200px) 100vw, 1200px"
@@ -122,7 +141,7 @@ export default async function FacilitiesPage({
             <div className="relative h-[250px] rounded-md overflow-hidden">
               <Image
                 src="/images/facilities/stemcells.webp"
-                alt="Healthy stem cells"
+                alt={t('facilities.imageAlts.stemCells')}
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -169,7 +188,7 @@ export default async function FacilitiesPage({
                 <div className="relative h-[220px] rounded-md overflow-hidden">
                   <Image
                     src="/images/facilities/biological_safety_cabinet.jpg"
-                    alt="Biological Safety Cabinet"
+                    alt={t('facilities.imageAlts.safetyCabinet')}
                     fill
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, 50vw"
@@ -192,7 +211,7 @@ export default async function FacilitiesPage({
                 <div className="md:order-1 relative h-[220px] rounded-md overflow-hidden">
                   <Image
                     src="/images/facilities/co2incubator.webp"
-                    alt="CO2 Incubator"
+                    alt={t('facilities.imageAlts.co2Incubator')}
                     fill
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, 50vw"
@@ -215,7 +234,7 @@ export default async function FacilitiesPage({
                 <div className="relative h-[220px] rounded-md overflow-hidden">
                   <Image
                     src="/images/facilities/inverted_microscope.jpg"
-                    alt="Inverted Microscope"
+                    alt={t('facilities.imageAlts.microscope')}
                     fill
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, 50vw"
@@ -238,7 +257,7 @@ export default async function FacilitiesPage({
                 <div className="md:order-1 relative h-[220px] rounded-md overflow-hidden">
                   <Image
                     src="/images/facilities/passbox.jpg"
-                    alt="Pass Box"
+                    alt={t('facilities.imageAlts.passBox')}
                     fill
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, 50vw"
@@ -261,7 +280,7 @@ export default async function FacilitiesPage({
                 <div className="relative h-[220px] rounded-md overflow-hidden">
                   <Image
                     src="/images/facilities/centrifuge.webp"
-                    alt="Centrifuge"
+                    alt={t('facilities.imageAlts.centrifuge')}
                     fill
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, 50vw"
